@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="description" content="{% if page.description == null %}{{ site.description }}{% else %}{{ page.description }}{% endif %}" />
+    <meta name="keywords" content="yizeng,{% if page.tags != null %}{{ page.tags | join: ',' }}{% else %}software,engineer,testing,christchurch,newzealand{% endif %}" />
+    {% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url=/">{% endif %}
+    <title>{% if page.url != "/index.html" %} {{ page.title }} - {% endif %}{{ site.title }}</title>
+
+    <link href='/assets/css/style.css' rel="stylesheet" type="text/css">
+    <link href="/rss.xml" rel="alternate" title="{{ site.title }}" type="application/rss+xml">
+
+    <!--[if lt IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+        <script>window.Modernizr || document.write('<script src="/assets/js/modernizr-2.0.6.min.js"><\/script>')</script>
+    <![endif]-->
+    <!--[if gte IE 9]>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+        <script>window.Modernizr || document.write('<script src="/assets/js/modernizr-2.6.2.min.js"><\/script>')</script>
+    <![endif]-->
+    <!--[if !IE]> -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+        <script>window.Modernizr || document.write('<script src="/assets/js/modernizr-2.6.2.min.js"><\/script>')</script>
+    <!-- <![endif]-->
+</head>
+
+<body>
+    <!--[if lt IE 9]>
+        <p class="chromeframe">You are using an outdated browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+    <![endif]-->
+    <div id="page" class="hentry">
+        <header class="the-header">
+            <div class="unit-head">
+                <div class="unit-inner unit-head-inner">
+                    <nav class="nav-global">
+                        <ul>
+                            <li class="logo"><a href="/">{{ site.title }}</a></li>
+                            <li class="article"><a href="/articles">articles</a></li>
+                            <li class="note"><a href="/notes">notes</a></li>
+                            <li class="category"><a href="/categories">categories</a></li>
+                            <li class="tag"><a href="/tags">tags</a></li>
+                        </ul>
+                    </nav>
+                </div><!-- unit-inner -->
+            </div><!-- unit-head -->
+        </header>
+
+        <div class="body" role="main">
+            <div class="unit-body">
+                <div class="unit-inner unit-body-inner">
+                    <div class="entry-content">
+                        {{ content }}
+                    </div>
+                </div><!-- unit-inner -->
+            </div><!-- unit-body -->
+        </div><!-- body -->
+
+        <footer class="the-footer">
+            <div class="unit-foot">
+                <div class="unit-inner unit-foot-inner">
+                    <div class="misc vcard">
+                        <h4><a href="/about">about</a></h4>
+                        <p>Software developer/Test automator based in Christchurch, New Zealand.</p><br />
+                        <div class="social-icons">
+                            <a href="http://scr.im/{{ site.author.username }}/" rel="me">
+                                <img src='/assets/images/social/Mail-36.png' alt="Yi Zeng's Email address" height="42" width="42">
+                            </a>
+                            <a href="http://linkedin.com/in/{{ site.author.username }}nz/" rel="me">
+                                <img src='/assets/images/social/LinkedIn-36.png' alt="Yi Zeng's LinkedIn page" height="42" width="42">
+                            </a>
+                            <a href="/rss.xml" rel="me">
+                                <img src='/assets/images/social/RSS-36.png' alt="Yi Zeng's rss feeds" height="42" width="42">
+                            </a>
+                            <a href="http://github.com/{{ site.author.username }}/" rel="me">
+                                <img src='/assets/images/social/Github-36.png' alt="Yi Zeng's Github page" height="42" width="42">
+                            </a>
+                            <a href="http://stackoverflow.com/users/1177636/user1177636" rel="me">
+                                <img src='/assets/images/social/StackOverFlow-36.png' alt="Yi Zeng's StackOverflow page" height="42" width="42">
+                            </a>
+                        </div>
+                    </div><!-- misc -->
+                    <!--p class="licence"></p-->
+                </div><!-- unit-foot-inner -->
+            </div><!-- unit-foot -->
+            <a href="#" class="back-to-top">Back to Top</a>
+        </footer>
+    </div><!-- page -->
+
+    {% if page.js_utils != null %}
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/assets/js/jquery-1.10.2.min.js"><\/script>')</script>
+
+        {% if page.js_utils contains "fancybox" %}
+            <script src="/assets/js/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+            <script src="/assets/js/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+            <script type="text/javascript">
+                $("head").append('<link rel="stylesheet" href="/assets/js/fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" />');
+                $("head").append('<link rel="stylesheet" href="/assets/js/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" />');
+                $(".post-image").fancybox({
+                    prevEffect      : 'none',
+                    nextEffect      : 'none',
+                    closeBtn        : true,
+                    helpers     : {
+                        title   : { type : 'inside' },
+                        buttons : {}
+                    }
+                });
+            </script>
+        {% endif %}
+
+        {% if page.js_utils contains "unveil" %}
+            <script src="/assets/js/unveil/jquery.unveil.min.js"></script>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $(".post-image > img").unveil(150);
+                });
+            </script>
+        {% endif %}
+
+        {% if page.js_utils contains "toc" %}
+            <script type="text/javascript">
+                function createListItem(heading) {
+                    var link = "#" + heading.children("a").attr("id");
+                    return "<li>" + "<a href='" + link + "'>" + heading.text() + "</a>" + "</li>";
+                }
+
+                var ToC = "<nav role='navigation' class='toc'><ol>";
+                $("article h2").each(function () {
+                    var secondHeading, thirdHeadingInside;
+
+                    secondHeading = $(this);
+                    ToC += createListItem(secondHeading);
+
+                    thirdHeadingInside = secondHeading.nextUntil("article h2", "h3");
+                    if (thirdHeadingInside.length !== 0) {
+                        ToC += "<ul>";
+                        thirdHeadingInside.each(function () {
+                            ToC += createListItem($(this));
+                        });
+                        ToC += "</ul>";
+                    }
+                });
+                ToC += "</ol>" + "</nav>";
+
+                $("#toc").prepend(ToC);
+            </script>
+        {% endif %}
+
+        {% if page.js_utils contains "toc" or page.js_utils contains "back-to-top" %}
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    var offset = 220, duration = 500;
+                    $(window).scroll(function () {
+                        if ($(window).width() > 960) {
+                            if ($(this).scrollTop() > offset) {
+                                $('.back-to-top').fadeIn(duration);
+                            } else {
+                                $('.back-to-top').fadeOut(duration);
+                            }
+                        }
+                    });
+                    $(window).resize(function () {
+                        if ($(window).width() < 960) {
+                            $('.back-to-top').fadeOut(duration);
+                        }
+                        if ($(window).width() >= 960 && $(this).scrollTop() > offset) {
+                            $('.back-to-top').fadeIn(duration);
+                        }
+                    });
+
+                    $('.back-to-top').click(function (event) {
+                        event.preventDefault();
+                        $('html, body').animate({scrollTop: 0}, duration);
+                        return false;
+                    });
+                });
+            </script>
+        {% endif %}
+    {% endif %}
+
+    {% include JB/analytics %}
+</body>
+</html>
