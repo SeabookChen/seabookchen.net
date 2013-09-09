@@ -6,16 +6,18 @@ using Selenium WebDriver Ruby binding with headless PhantomJS."
 category: articles
 tags: [github, phantomjs, ruby, selenium, travis-ci, webdriver]
 alias: [/2013/06/15/]
+last_updated: September 10, 2013
 js_utils: fancybox, toc, unveil
 ---
 {% include JB/setup %}
 
 <div id="toc"></div>
 
-## <a id="create-repo"></a>Create a repository on Github
+## <a id="create-repo"></a>Create a Github repository
 
-A Github repository is needed in order to build it on Travis CI.
-If haven't done so, go to Github's ['Create a New Repository'](https://github.com/repositories/new) page and create a new public repository.
+In order to build a project on Travis CI, a Github repository is needed.
+If haven't done so, create a new public repository at
+Github's ['Create a New Repository'](https://github.com/repositories/new) page.
 
 ## <a id="create-project"></a>Create a Selenium WebDriver Ruby project
 
@@ -32,8 +34,9 @@ Here is how this sample Selenium Ruby project is structured:
 ### <a id="create-sample-test"></a>Create a sample UI test with headless PhantomJS
 - `Test::Unit` framework is used as the testing framework in this example.
 - Headless WebKit [PhantomJS](http://phantomjs.org/) will be the browser to run the UI tests.
-- PhantomJS binary should be installed by default in [Travis CI servers](http://about.travis-ci.org/docs/user/ci-environment/),
-which is `1.9.1` as of 05/07/2013.
+- PhantomJS binary should be installed by default in
+[Travis CI servers](http://about.travis-ci.org/docs/user/ci-environment/),
+which is `1.9.1` as of 10/09/2013.
 - Travis CI supports tests which require GUI, see documentation
 [here](http://about.travis-ci.org/docs/user/gui-and-headless-browsers).
 
@@ -69,7 +72,7 @@ Travis CI uses `Rakefile` to build project and execute the tests, if the file is
 	No Rakefile found (looking for: rakefile, Rakefile, rakefile.rb, Rakefile.rb)
 	The command "rake" exited with 1.
 
-Here is a sample Rakefile:
+Therefore here comes the sample Rakefile:
 {% highlight ruby %}
 require 'rake/testtask'
 
@@ -109,7 +112,7 @@ rvm: # the Ruby versions to be used
 before_install:
   - gem update # optional, update all gems
   - gem install selenium-webdriver
-  - phantomjs --version # output the phantomjs version
+  - phantomjs --version # optional, output the phantomjs version
 {% endhighlight %}
 
 ## <a id="push-to-github"></a>Push to Github
@@ -130,7 +133,8 @@ If the repository does not appear on the list, make sure
 
 ## <a id="run-project"></a>Run project on Travis CI
 
-Travis CI should be able to build to the project automatically whenever new changesets are pushed to Github.
+Travis CI should be able to build to the project automatically
+whenever new changesets are pushed to Github.
 
 However, to kick off a test run manually:
 
@@ -141,7 +145,7 @@ However, to kick off a test run manually:
 
 ## <a id="analyze-results"></a>Analyze results on Travis CI
 
-### <a id="results-page"></a>Project page on Travis CI
+### <a id="results-page"></a>Project page
 The project page on Travis CI is: `https://travis-ci.org/[GITHUB_USERNAME]/[REPO_NAME]`
 
 <a class="post-image" href="/assets/images/posts/2013-06-15-results-page-on-travis-ci.png" title="Results page on Travis CI">
@@ -170,10 +174,10 @@ For example, here are the test results inside [this particular job's build log](
 
 ### <a id="build-status-images"></a>Build status images
 Travis CI provides [build status images](http://about.travis-ci.org/docs/user/status-images/) for projects,
-which are encouraged to be added to project sites, README files as good software development practices.
+which are encouraged to be added to project sites or README files as good software development practices.
 
 The status image can be found at `https://travis-ci.org/[GITHUB_USERNAME]/[REPO_NAME].png`,
-with branches can be specified by URL query string like `?branch=master,staging,production`optionally.
+with branches can be specified by URL query string like `?branch=master,staging,production` optionally.
 
 Alternatively, in the repository page of Travis CI, click settings icon button, then select `Status Image`,
 a dialog with all the options will be displayed, as shown in the screenshot below:
@@ -182,4 +186,4 @@ a dialog with all the options will be displayed, as shown in the screenshot belo
   <img itemprop="image" data-src="/assets/images/posts/2013-07-05-travis-ci-status-image-options.png" src="/assets/js/unveil/loader.gif" alt="Travis CI status image options" />
 </a>
 
-The sample project's status is currently: <a class="image-link" href="https://travis-ci.org/yizeng/setup-selenium-webdriver-ruby-project-on-travis-ci" title="Travis CI build status"><img src="https://travis-ci.org/yizeng/setup-selenium-webdriver-ruby-project-on-travis-ci.png" alt="Travis CI build status" /></a>
+The sample project's current status is: <a class="image-link" href="https://travis-ci.org/yizeng/setup-selenium-webdriver-ruby-project-on-travis-ci" title="Travis CI build status"><img src="https://travis-ci.org/yizeng/setup-selenium-webdriver-ruby-project-on-travis-ci.png" alt="Travis CI build status" /></a>

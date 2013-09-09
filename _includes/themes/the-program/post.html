@@ -27,6 +27,9 @@
                                 <a class="license image-link" rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB">
                                     <img alt="Creative Commons Licence" style="border-width:0" src="/assets/images/cc-by-sa.png"  height="16" width="80"/>
                                 </a>
+                                {% if page.last_updated %}
+                                (Last updated: <time class="date-updated" title="{{ page.last_updated | date_to_xmlschema }}" datetime="{{ page.last_updated | date_to_xmlschema }}">{{ page.last_updated }})</time>
+                                {% endif %}
                             </p>
                             <ul class="list-category list-linear">
                                 <li class="list-head">category: </li>
