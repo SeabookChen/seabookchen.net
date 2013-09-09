@@ -27,6 +27,9 @@
                                 <a class="license image-link" rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB">
                                     <img alt="Creative Commons Licence" style="border-width:0" src="/assets/images/cc-by-sa.png"  height="16" width="80"/>
                                 </a>
+                                {% if page.updated %}
+                                (Last updated: <time class="date-updated" title="{{ site.time | date_to_xmlschema }}" datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%B' }} {{ site.time | date: '%d' }}, {{ site.time | date: '%Y' }})</time>
+                                {% endif %}
                             </p>
                             <ul class="list-category list-linear">
                                 <li class="list-head">category: </li>

@@ -5,6 +5,7 @@ description: "How to install and setup Jekyll on a Windows machine."
 category: notes
 tags: [jekyll, ruby]
 alias: [/2013/05/10/]
+updated: true
 js_utils: fancybox, toc, unveil
 ---
 {% include JB/setup %}
