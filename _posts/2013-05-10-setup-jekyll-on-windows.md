@@ -2,7 +2,7 @@
 layout: post
 title: "Setup Jekyll on Windows"
 description: "How to install and setup Jekyll on a Windows machine."
-category: notes
+category: articles
 tags: [jekyll, ruby]
 alias: [/2013/05/10/]
 last_updated: September 10, 2013
