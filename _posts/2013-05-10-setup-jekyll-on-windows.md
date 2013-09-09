@@ -95,6 +95,13 @@ Note that Python 2 is preferred since Python 3 might not be working as intended 
 2. Install Pygments
 > easy_install Pygments
 
+## <a id="start-jekyll"></a>Start Jekyll
+Following the official [Jekyll Quick-start guide](http://jekyllrb.com/docs/quickstart/),
+the new blog should be able to be created now and browsed at [http://localhost:4000](http://localhost:4000).
+> jekyll new myblog<br />
+> cd myblog<br />
+> jekyll serve<br />
+
 ## <a id="troubleshooting"></a>Troubleshooting
 1. Error message:
 
