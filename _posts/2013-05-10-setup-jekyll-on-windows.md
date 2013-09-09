@@ -15,7 +15,7 @@ js_utils: fancybox, toc, unveil
 
 1. Go to <http://rubyinstaller.org/downloads/>
 
-2. In "RubyInstallers" section, select a version and click download.
+2. In "RubyInstallers" section, click a version to download.
 <br />For example, `Ruby 2.0.0-p247 (x64)` is the Windows installer
 for Ruby 2.0.0 x64 on 64-bit machines.
 
@@ -38,8 +38,9 @@ automatically to avoid headaches.
 
 2. Go to <http://rubyinstaller.org/downloads/>
 
-3. Download "DEVELOPMENT KIT" installer that matches the Windows architecture and the Ruby just installed.
-For example, `DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe` for 64-bit Windows with Ruby 2.0.0 x64.
+3. Download "DEVELOPMENT KIT" installer that matches the Windows architecture
+and the Ruby version just installed.
+For example, `DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe` is for 64-bit Windows with Ruby 2.0.0 x64.
 <br />Here is a list about how to choose the correct DevKit version:
 
     > **Ruby 1.8.6 to 1.9.3**: DevKit tdm-32-4.5.2<br />
@@ -69,11 +70,19 @@ type in the following lines:
 2. Install Jekyll gem
     > gem install jekyll
 
+## <a id="start-jekyll"></a>Start Jekyll
+Following the commands on official [Jekyll Quick-start guide](http://jekyllrb.com/docs/quickstart/),
+a new Jekyll blog should be able to be created and browsed at [localhost:4000](http://localhost:4000).
+> jekyll new myblog<br />
+> cd myblog<br />
+> jekyll serve<br />
+
 ## <a id="install-pygements"></a>Install Pygments
 
 Pygments is the syntax highlighting tool used in Jekyll.
 In order to use Pygments for highlighting code snippets,
-Python needs to be installed and set `pygments` field to `true` in site’s configuration file `_config.yml`.
+Python needs to be installed and `pygments` field needs to be set to `true`
+in site’s configuration file `_config.yml`.
 
 ### <a id="install-python"></a>Install Python
 1. Go to <http://www.python.org/download/>
@@ -92,22 +101,15 @@ Note that Python 2 is preferred since Python 3 might not be working as intended 
 ### <a id="install-pygements-2"></a>Install Pygments
 1. Verify easy_install is installed properly
 > easy_install --help
-2. Install Pygments
+2. Install Pygments using "easy_install"
 > easy_install Pygments
-
-## <a id="start-jekyll"></a>Start Jekyll
-Following the official [Jekyll Quick-start guide](http://jekyllrb.com/docs/quickstart/),
-the new blog should be able to be created now and browsed at [http://localhost:4000](http://localhost:4000).
-> jekyll new myblog<br />
-> cd myblog<br />
-> jekyll serve<br />
 
 ## <a id="troubleshooting"></a>Troubleshooting
 1. Error message:
 
         “python” is not recognized as an internal or external command, operable program or batch file.
 
-    **Alternatives**: "python" here might also be "ruby", "gem" or "easy_install", etc.
+    **Alternatives**: "python" here can also be "ruby", "gem" or "easy_install", etc.
 
     **Possible Reason**: The PATH for that particular program has not been set correctly.
 
@@ -165,7 +167,7 @@ the new blog should be able to be created now and browsed at [http://localhost:4
     (This issue happened a while back with an old version of Jekyll,
     which should have been fixed by now.)
 
-    **Possible Solution**: Downgrade gem pygments.rb to version 0.4.2
+    **Possible Solution**: Downgrade pygments.rb gem to version 0.4.2
     > gem uninstall pygments.rb --version “=0.5.0”<br />
     > gem install pygments.rb --version “=0.4.2”
 
@@ -177,6 +179,6 @@ the new blog should be able to be created now and browsed at [http://localhost:4
 
     **Possible Reason**: Incompatible issue with pygments.rb versions above 0.5.0
 
-    **Possible Solution**: Downgrade gem pygments.rb from 0.5.2/0.5.1 to version 0.5.0
+    **Possible Solution**: Downgrade pygments.rb gem from 0.5.2/0.5.1 to version 0.5.0
     > gem uninstall pygments.rb --version "=0.5.2"<br />
     > gem install pygments.rb --version "=0.5.0"
