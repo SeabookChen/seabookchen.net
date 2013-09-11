@@ -1,6 +1,6 @@
 permalink: /:year/:month/:day/:title
 
-exclude: [".rvmrc", ".rbenv-version", "LICENSE", "README.md", "Rakefile", "changelog.md", "start_jekyll.sh", "build_production.sh", "tools"]
+exclude: [".rvmrc", ".rbenv-version", "LICENSE", "README.md", "Rakefile", "changelog.md", "tools"]
 pygments: true
 markdown: rdiscount
 
