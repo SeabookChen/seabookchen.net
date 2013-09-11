@@ -923,7 +923,7 @@ table.data a {
 @media only screen and (min-width: 1410px) {
     .the-header {
       float: left;
-      width: 15%;
+      width: 19%;
     }
     .the-header .unit-head {
       padding: 26px
@@ -961,7 +961,7 @@ table.data a {
       border-left: 1px solid rgba(0, 0, 0, 0.2);
       float: left;
       width: 80.5%;
-      margin-right: -450px;
+      margin-right: -325px;
     }
     .body .unit-body {
       border-right: 1px solid rgba(0, 0, 0, 0.2);
@@ -969,22 +969,22 @@ table.data a {
       -moz-box-shadow: #ffffff 0px 0px 2px;
       -o-box-shadow: #ffffff 0px 0px 2px;
       padding: 26px;
-      margin-right: 225px;
+      margin-right: 325px;
       min-height: 1000px;
     }
     .the-footer {
       position: relative;
       top: auto;
       display: block;
-      float: right;
+      float: left;
       padding: 26px 0 0 26px;
-      width: 275px;
+      width: 285px;
     }
     .the-footer h4 {
       line-height: 52px
     }
     .the-footer h4 a {
-      font-size: 1.55em
+      font-size: 1.85em
     }
 }
 .line-numbers,
