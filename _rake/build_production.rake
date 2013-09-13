@@ -17,6 +17,9 @@ task :build do
 	# copy the new _site to local production folder
 	FileUtils.cp_r(Dir.glob("./_site/*"), "#{DIR}/", :verbose => true)
 
+	# copy rake files needed by Travis CI
+	FileUtils.cp("./_rake/run_ui_tests.rake", "#{DIR}/features/", :verbose => true)
+
 	# compress html in _site
 	Dir.glob("#{DIR}/**/*.html") do |html_file|
 		puts "Compressing: #{html_file}"
