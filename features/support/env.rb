@@ -25,14 +25,14 @@ Before do
 end
 
 at_exit do
-	driver.quit
+	if ENV['browser'] != 'debug'
+		driver.quit
+	end
 end
 
 # navigation
-SITE_TITLE = 'Yi Zeng'
 SITE_URL = 'http://yizeng.me'
 NAV_LINKS = %w[articles notes categories tags]
-
 
 # window
 WINDOW_HEIGHT = 1080

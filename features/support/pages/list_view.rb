@@ -3,12 +3,12 @@ require './features/support/pages/base_page.rb'
 module Pages
 	class ListView < BasePage
 
-		def post_list
-			return body_content.find_elements(:css => '.post-list')
+		def post_lists
+			return body_content.find_elements(:class => 'post-list')
 		end
 
 		def posts
-			return body_content.find_elements(:css => '.posts')
+			return body_content.find_elements(:class => 'posts')
 		end
 	end
 end

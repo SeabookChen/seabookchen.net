@@ -1,18 +1,13 @@
-Then(/^I should have header navigation links$/) do
+Then(/^I should have header's navigation links presented$/) do
+	assert_equal(NAV_LINKS.count, @page.header.nav_links.count)
+
 	@page.header.nav_links.each do |link|
 		assert_equal(true, NAV_LINKS.include?(link.attribute('textContent')))
 	end
-	assert_equal(NAV_LINKS.count, @page.header.nav_links.count)
 end
 
-Then(/^I should "(not see|see)" header navigation links$/) do |target|
-	case target
-		when 'not see'
-			@page.header.nav_links.each do |link|
-				assert_equal(false, link.displayed?)
-				assert_equal(true, link.text.empty?)
-			end
-		when 'see'
+Then(/^I should "(not see|see)" header's navigation links$/) do |target|
+		if target == 'see'
 			@page.header.nav_links.each do |link|
 				assert_equal(false, link.text.empty?)
 
@@ -20,12 +15,20 @@ Then(/^I should "(not see|see)" header navigation links$/) do |target|
 				assert_equal(true, link.enabled?)
 				assert_equal(true, link.attribute('href').end_with?(link.text))
 			end
-	end
+		end
+		if target == 'not see'
+			@page.header.nav_links.each do |link|
+				assert_equal(false, link.displayed?)
+				assert_equal(true, link.text.empty?)
+			end
+		end
 end
 
-Then(/^I should see header logo link loaded$/) do
-	assert_equal(SITE_TITLE.downcase, @page.header.logo_link.text)
+Then(/^I should see that header's logo link has text "(.*?)"$/) do |logo_text|
+	assert_equal(logo_text, @page.header.logo_link.text)
+end
 
+Then(/^I should have clickable header's logo link$/) do
 	assert_equal(true, @page.header.logo_link.displayed?)
 	assert_equal(true, @page.header.logo_link.enabled?)
 end

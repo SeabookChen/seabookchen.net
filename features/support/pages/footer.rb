@@ -6,15 +6,15 @@ module Pages
 		end
 
 		def about_link
-			@footer.find_element(:css => 'h4')
+			@footer.find_element(:css => 'h4 > a')
 		end
 
 		def social_links
-			@footer.find_elements(:css => ".social-iconsa > a")
+			@footer.find_elements(:css => ".social-icons > a")
 		end
 
 		def social_images
-			@footer.find_elements(:css => ".social-iconsa > a > img")
+			@footer.find_elements(:css => ".social-icons > a > img")
 		end
 	end
 end
