@@ -17,7 +17,7 @@ module Pages
 		end
 
 		def title_header
-			return body_content.find_element(:css => 'header h1')
+			return body_content.find_element(:css => 'header .entry-title')
 		end
 
 		def footer
