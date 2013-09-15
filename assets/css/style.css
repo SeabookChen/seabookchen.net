@@ -248,11 +248,11 @@ pre {
   border-bottom: 1px dotted rgba(21, 25, 25, 0.8);
   margin-bottom: 26px;
 }
-.chromeframe {
+.site_notice {
   color: #969696;
   text-align: center;
 }
-.chromeframe a,
+.site_notice a,
 .unit-article a {
   font-size: .95em;
   padding-left: 3px;
@@ -262,15 +262,15 @@ pre {
   border-radius: 5px;
   border-bottom: 1px dotted #FFD18D;
 }
-.chromeframe a:link,
+.site_notice a:link,
 .unit-article a:link {
   color: #0077CC
 }
-.chromeframe a:visited,
+.site_notice a:visited,
 .unit-article a:visited {
   color: #4A6B82
 }
-.chromeframe a:hover,
+.site_notice a:hover,
 .unit-article a:hover {
   color: #2D2D2D !important;
   background-color: #FF9900;
