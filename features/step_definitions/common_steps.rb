@@ -22,6 +22,10 @@ Given(/^I set window width to (\d+)px$/) do |window_width|
 	@driver.manage.window.resize_to(window_width, WINDOW_HEIGHT)
 end
 
+When(/^I click navigation link text "(.*?)"$/) do |link_text|
+	@driver.find_element(:xpath, ".//a[text()='#{link_text}']").click
+end
+
 Then(/^I should see page title "(.*?)"$/) do |title|
 	assert_equal(title, @driver.title)
 end

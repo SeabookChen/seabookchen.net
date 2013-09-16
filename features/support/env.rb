@@ -32,7 +32,7 @@ end
 
 # navigation
 SITE_URL = 'http://yizeng.me'
-NAV_LINKS = %w[articles notes categories tags]
+NAV_LINKS = %w[Articles Notes Categories Tags]
 
 # window
 WINDOW_HEIGHT = 1080

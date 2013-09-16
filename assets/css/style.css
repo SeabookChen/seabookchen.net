@@ -608,7 +608,6 @@ pre {
   width: auto;
 }
 .the-header .unit-head .nav-global .logo a {
-  text-transform: lowercase;
   display: block;
   font-size: 1.875em;
   line-height: 52px;

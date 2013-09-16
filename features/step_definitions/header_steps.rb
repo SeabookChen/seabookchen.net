@@ -13,7 +13,7 @@ Then(/^I should "(not see|see)" header's navigation links$/) do |target|
 
 				assert_equal(true, link.displayed?)
 				assert_equal(true, link.enabled?)
-				assert_equal(true, link.attribute('href').end_with?(link.text))
+				assert_equal(true, link.attribute('href').end_with?(link.text.downcase))
 			end
 		end
 		if target == 'not see'

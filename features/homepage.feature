@@ -32,7 +32,7 @@ Feature: Test homepage
 	Scenario Outline: Header's logo link should be loaded
 		When I set window width to <width>px
 		Then I should have clickable header's logo link
-		And I should see that header's logo link has text "yi zeng"
+		And I should see that header's logo link has text "Yi Zeng"
 
 		Examples:
 			| width |
@@ -123,3 +123,19 @@ Feature: Test homepage
 			| 768   | see     |
 			| 1080  | see     |
 			| 1920  | see     |
+
+	Scenario Outline: Test navigation links
+		When I click navigation link text "<link_text>"
+		Then I should see page url "<page_url>"
+		And I should see page title "<page_title>"
+		And I should see title header "<title_header>"
+
+	Examples: 
+		| link_text  | page_url                     | page_title           | title_header |
+		| Yi Zeng    | http://yizeng.me/            | Yi Zeng              | All Posts    |
+		| Articles   | http://yizeng.me/articles/   | Articles - Yi Zeng   | Articles     |
+		| Notes      | http://yizeng.me/notes/      | Notes - Yi Zeng      | Notes        |
+		| Categories | http://yizeng.me/categories/ | Categories - Yi Zeng | Categories   |
+		| Tags       | http://yizeng.me/tags/       | Tags - Yi Zeng       | Tags         |
+		| About      | http://yizeng.me/about/      | About - Yi Zeng      | About        |
+
