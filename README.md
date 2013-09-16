@@ -1,8 +1,8 @@
 # yizeng.me [![Build Status](https://travis-ci.org/yizeng/yizeng.me.png?branch=gh-pages)](https://travis-ci.org/yizeng/yizeng.me)
 
-This repository hosts the source of [yizeng.me](http://yizeng.me), with all functional UI tests.
+This repository hosts the source of [yizeng.me](http://yizeng.me).
 
-## About me
+## About
 
 Here comes the [About](http://yizeng.me/about) page.
 
