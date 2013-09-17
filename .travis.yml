@@ -1,8 +1,8 @@
 language: ruby
 
 branches:
-  only:
-    - develop
+  except:
+    - gh-pages
 
 rvm:
   - 2.0.0
