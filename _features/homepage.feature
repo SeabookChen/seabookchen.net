@@ -120,8 +120,11 @@ Feature: Test homepage
 			| 240   | not see |
 			| 320   | not see |
 			| 640   | not see |
-			| 768   | see     |
-			| 1080  | see     |
+			| 768   | not see |
+			| 945   | see     |
+			| 1080  | not see |
+			| 1380  | see     |
+			| 1440  | not see |
 			| 1920  | see     |
 
 	Scenario Outline: Test navigation links

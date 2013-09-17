@@ -42,8 +42,8 @@
         {% endif %}
 
         <li class="posts">
-            <span class="date">{{ post.date | date: "%b %d, %Y" }} &#62;&#62; </span>
             <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
+            <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
         </li>
 
         {% if forloop.last %}

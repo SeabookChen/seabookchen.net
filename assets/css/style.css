@@ -288,8 +288,8 @@ pre {
   color: #797979 !important
 }
 .unit-article .post-list {
-  list-style-type: none !important;
-  padding: 0 !important;
+  list-style-type: disc;
+  padding: 0;
 }
 .unit-article .posts a {
   color: #2D2D2D;
@@ -445,7 +445,8 @@ pre {
   margin-left: 16px
 }
 .unit-article .date {
-  font-size: .8em
+  float: right;
+  font-size: .8em;
 }
 .unit-article .date-publish {
   margin-bottom: 0
@@ -828,13 +829,6 @@ table.data a {
       -moz-border-radius: 5px;
       border-radius: 5px;
     }
-    .unit-article .date {
-      display: none
-    }
-    .unit-article .post-list {
-      list-style-type: disc !important;
-      padding: 0 !important;
-    }
 }
 /*
     Tablet width: [675, infinity)
@@ -908,6 +902,14 @@ table.data a {
       padding: 0 0 0 26px;
       width: 275px;
     }
+}
+/*
+    Hide post date when width: (0, 900), (960, 1280)
+*/
+@media only screen and (min-width: 0px) and (max-width:900px), (min-width: 960px) and (max-width:1366px), (min-width: 1410px) and (max-width:1470px) {
+  .unit-article .date {
+    display: none
+  }
 }
 /*
     Huge-screen width: [1410, infinity)
