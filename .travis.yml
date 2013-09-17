@@ -7,7 +7,6 @@ branches:
 rvm:
   - 2.0.0
   - 1.9.3
-  - 1.9.2
 
 before_install:
   - wget http://ipecho.net/plain -O - -q ; echo # print out external ip
