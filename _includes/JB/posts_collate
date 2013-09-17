@@ -43,7 +43,11 @@
 
         <li class="posts">
             <a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a>
-            <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+            {% if post.last_updated %}
+                <span title="Last updated: {{ post.last_updated | date: "%b %d, %Y" }}" class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+            {% else %}
+                <span class="date">{{ post.date | date: "%b %d, %Y" }}</span>
+            {% endif %}
         </li>
 
         {% if forloop.last %}
