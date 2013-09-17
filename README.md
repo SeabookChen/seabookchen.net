@@ -1,4 +1,4 @@
-# yizeng.me [![Build Status](https://travis-ci.org/yizeng/yizeng.me.png?branch=gh-pages)](https://travis-ci.org/yizeng/yizeng.me)
+# yizeng.me [![Build Status](https://travis-ci.org/yizeng/yizeng.me.png?branch=develop)](https://travis-ci.org/yizeng/yizeng.me)
 
 This repository hosts the source of [yizeng.me](http://yizeng.me).
 
