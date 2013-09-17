@@ -12,6 +12,7 @@ before_install:
   - wget http://ipecho.net/plain -O - -q ; echo # print out external ip
 
   - gem update --system
+  - gem update
 
   - gem install jekyll
   - gem install rdiscount
