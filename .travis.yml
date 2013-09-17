@@ -23,7 +23,7 @@ before_install:
   - phantomjs --version # output the phantomjs version
 
 before_script:
-  - rake jekyll
+  - rake jekyll detach=true
   - sleep 3 # give Web server some time to bind to sockets, etc
 
 script:
