@@ -2,5 +2,5 @@
 desc "Run UI tests"
 task :cucumber do
 	browser = ENV['browser'].nil? ? '' : 'browser=' + ENV['browser']
-	system "cucumber features/ #{browser}"
+	system "cucumber _features/ #{browser}"
 end
