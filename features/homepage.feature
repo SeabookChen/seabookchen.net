@@ -18,7 +18,7 @@ Feature: Test homepage
 
 	Scenario Outline: Page url should be correct
 		When I set window width to <width>px
-		Then I should see page url "http://yizeng.me/"
+		Then I should see page url "http://localhost:4000/"
 
 		Examples:
 			| width |
@@ -130,12 +130,12 @@ Feature: Test homepage
 		And I should see page title "<page_title>"
 		And I should see title header "<title_header>"
 
-	Examples: 
-		| link_text  | page_url                     | page_title           | title_header |
-		| Yi Zeng    | http://yizeng.me/            | Yi Zeng              | All Posts    |
-		| Articles   | http://yizeng.me/articles/   | Articles - Yi Zeng   | Articles     |
-		| Notes      | http://yizeng.me/notes/      | Notes - Yi Zeng      | Notes        |
-		| Categories | http://yizeng.me/categories/ | Categories - Yi Zeng | Categories   |
-		| Tags       | http://yizeng.me/tags/       | Tags - Yi Zeng       | Tags         |
-		| About      | http://yizeng.me/about/      | About - Yi Zeng      | About        |
+		Examples:
+			| link_text  | page_url                          | page_title           | title_header |
+			| Yi Zeng    | http://localhost:4000/            | Yi Zeng              | All Posts    |
+			| Articles   | http://localhost:4000/articles/   | Articles - Yi Zeng   | Articles     |
+			| Notes      | http://localhost:4000/notes/      | Notes - Yi Zeng      | Notes        |
+			| Categories | http://localhost:4000/categories/ | Categories - Yi Zeng | Categories   |
+			| Tags       | http://localhost:4000/tags/       | Tags - Yi Zeng       | Tags         |
+			| About      | http://localhost:4000/about/      | About - Yi Zeng      | About        |
 

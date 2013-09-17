@@ -2,4 +2,28 @@ language: ruby
 
 branches:
   only:
-    - gh-pages
+    - develop
+
+rvm:
+  - 2.0.0
+  - 1.9.3
+  - 1.9.2
+
+before_install:
+  - wget http://ipecho.net/plain -O - -q ; echo # print out external ip
+
+  - gem update --system
+
+  - gem install jekyll
+  - gem install cucumber
+  - gem install selenium-webdriver
+
+  - gem --version
+  - phantomjs --version # output the phantomjs version
+
+before_script:
+  - rake jekyll
+  - sleep 3 # give Web server some time to bind to sockets, etc
+
+script:
+  - rake cucumber --rakefile=features/run_ui_tests.rake

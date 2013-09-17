@@ -31,7 +31,7 @@ at_exit do
 end
 
 # navigation
-SITE_URL = 'http://yizeng.me'
+SITE_URL = 'http://localhost:4000'
 NAV_LINKS = %w[Articles Notes Categories Tags]
 
 # window
