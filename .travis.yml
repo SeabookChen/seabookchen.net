@@ -27,4 +27,4 @@ before_script:
   - sleep 3 # give Web server some time to bind to sockets, etc
 
 script:
-  - rake cucumber --rakefile=features/run_ui_tests.rake
+  - rake cucumber --rakefile=_rake/run_ui_tests.rake
