@@ -14,7 +14,8 @@ Being a left-handed touchpad, right-handed mouse user,
 it bugged me that after installing Linux Mint 15 Cinnamon,
 the touchpad and mouse can't be set separately through "System Settings -> Mouse and Touchpad".
 
-However after a bit researching, a simple solution is found using GNOME's [Gsettings](https://developer.gnome.org/gio/2.34/GSettings.html), inspired by this [AskUbuntu question](http://askubuntu.com/questions/83590/how-do-i-disable-the-touchpad-using-the-upper-left-corner-on-an-hp-pavilion-dv6).
+However after a bit researching, a simple solution is found
+using GNOME's [GSettings][GSettings], inspired by this [AskUbuntu question][AskUbuntu question].
 
 <div id="toc"></div>
 
@@ -56,3 +57,6 @@ However, note that the `left-handed` entry under `peripherals.mouse` is a Boolea
 so it should be set to either "true" or "false".
 
 > gsettings set org.gnome.settings-daemon.peripherals.mouse left-handed true
+
+[GSettings]: https://developer.gnome.org/gio/2.34/GSettings.html
+[AskUbuntu question]: http://askubuntu.com/q/83590/171955

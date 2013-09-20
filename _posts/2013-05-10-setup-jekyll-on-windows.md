@@ -35,7 +35,7 @@ automatically to avoid headaches.
 
 ## <a id="install-devkit"></a>Install DevKit
 
-1. [Full installation instructions](https://github.com/oneclick/rubyinstaller/wiki/Development-Kit#installation-instructions) is on Github.
+1. [Full installation instructions][Full installation instructions] is on Github.
 
 2. Go to <http://rubyinstaller.org/downloads/>
 
@@ -72,7 +72,7 @@ type in the following lines:
     > gem install jekyll
 
 ## <a id="start-jekyll"></a>Start Jekyll
-Following the commands on official [Jekyll Quick-start guide](http://jekyllrb.com/docs/quickstart/),
+Following the commands on official [Jekyll Quick-start guide][Jekyll Quick-start guide],
 a new Jekyll blog should be able to be created and browsed at [localhost:4000](http://localhost:4000).
 > jekyll new myblog<br />
 > cd myblog<br />
@@ -183,3 +183,6 @@ Note that Python 2 is preferred since Python 3 might not be working as intended 
     **Possible Solution**: Downgrade pygments.rb gem from 0.5.2/0.5.1 to version 0.5.0
     > gem uninstall pygments.rb --version "=0.5.2"<br />
     > gem install pygments.rb --version "=0.5.0"
+
+[Full installation instructions]: https://github.com/oneclick/rubyinstaller/wiki/Development-Kit#installation-instructions
+[Jekyll Quick-start guide]: http://jekyllrb.com/docs/quickstart/

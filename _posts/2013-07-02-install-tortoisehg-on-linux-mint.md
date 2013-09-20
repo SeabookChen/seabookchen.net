@@ -8,23 +8,22 @@ alias: [/2013/07/02/]
 ---
 {% include JB/setup %}
 
-This is a note for how to install [TortoiseHg](http://tortoisehg.bitbucket.org/)
-on Linux Mint 15 via [TortoiseHg Release PPA](https://launchpad.net/~tortoisehg-ppa/+archive/releases).
+This is a note for how to install [TortoiseHg][TortoiseHg]
+on Linux Mint 15 via [TortoiseHg Release PPA][TortoiseHg Release PPA].
 
 <br />**Note**:
 
 - It is suggested that do NOT also include a
-[Mercurial PPA](https://launchpad.net/~mercurial-ppa/+archive/releases) in the system,
+[Mercurial PPA][Mercurial PPA] in the system,
 as TortoiseHg has strict version requirements for which versions of Mercurial
 it can interoperate with.
 
-- [TortoiseHg PPA Stable Snapshots](https://launchpad.net/~tortoisehg-ppa/+archive/stable-snapshots)
+- [TortoiseHg PPA Stable Snapshots][TortoiseHg PPA Stable Snapshots]
 provides packages of the latest TortoiseHg release.
 
 <br />**Steps**:
 
-1. Add [TortoiseHg Release PPA](https://launchpad.net/~tortoisehg-ppa/+archive/releases)
-to the system
+1. Add [TortoiseHg Release PPA][TortoiseHg Release PPA] to the system
 > sudo add-apt-repository ppa:tortoisehg-ppa/releases
 2. Get information on the newest versions of packages and their dependencies
 > sudo apt-get update
@@ -41,3 +40,9 @@ Terminal output for example:
 	Copyright (C) 2005-2012 Matt Mackall and others
 	This is free software; see the source for copying conditions. There is NO
 	warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+[TortoiseHg]: http://tortoisehg.bitbucket.org/
+[TortoiseHg Release PPA]: https://launchpad.net/~tortoisehg-ppa/+archive/releases
+[Mercurial PPA]: https://launchpad.net/~mercurial-ppa/+archive/releases
+[TortoiseHg PPA Stable Snapshots]: https://launchpad.net/~tortoisehg-ppa/+archive/stable-snapshots
+[TortoiseHg Release PPA]: https://launchpad.net/~tortoisehg-ppa/+archive/releases

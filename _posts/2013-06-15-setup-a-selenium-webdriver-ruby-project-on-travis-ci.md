@@ -17,7 +17,7 @@ js_utils: fancybox, toc, unveil
 
 In order to build a project on Travis CI, a Github repository is needed.
 If haven't done so, create a new public repository at
-Github's ['Create a New Repository'](https://github.com/repositories/new) page.
+Github's ['Create a New Repository']['Create a New Repository'] page.
 
 ## <a id="create-project"></a>Create a Selenium WebDriver Ruby project
 
@@ -33,12 +33,10 @@ Here is how this sample Selenium Ruby project is structured:
 
 ### <a id="create-sample-test"></a>Create a sample UI test with headless PhantomJS
 - `Test::Unit` framework is used as the testing framework in this example.
-- Headless WebKit [PhantomJS](http://phantomjs.org/) will be the browser to run the UI tests.
+- Headless WebKit [PhantomJS][PhantomJS] will be the browser to run the UI tests.
 - PhantomJS binary should be installed by default in
-[Travis CI servers](http://about.travis-ci.org/docs/user/ci-environment/),
-which is `1.9.1` as of 10/09/2013.
-- Travis CI supports tests which require GUI, see documentation
-[here](http://about.travis-ci.org/docs/user/gui-and-headless-browsers).
+[Travis CI servers][Travis CI servers], which is `1.9.1` as of 10/09/2013.
+- Travis CI supports tests which require GUI, see documentation [here][Travis CI GUI].
 
 Here is a sample test file called `test_home_page.rb`:
 {% highlight ruby %}
@@ -97,8 +95,8 @@ Travis CI uses `.travis.yml` file in the root of the repository to learn about t
 
 The sample testing project here is written in Ruby, so Ruby configurations will be used in `.travis.yml`.
 Detailed official documentation can be found [here](http://about.travis-ci.org/docs/user/languages/ruby/).
-In order to validate it, [Travis Lint](http://about.travis-ci.org/docs/user/travis-lint/) would be a handy tool, while
-the simplest way is just go to [Travis WebLint](http://lint.travis-ci.org/) and paste the content in.
+In order to validate it, [Travis Lint][Travis Lint] would be a handy tool, while
+the simplest way is just go to [Travis WebLint][Travis WebLint] and paste the content in.
 
 {% highlight yaml %}
 # Sample .travis.yml file:
@@ -121,7 +119,7 @@ Once the repository is properly created, push it to Github.
 ## <a id="enable-hook"></a>Login to Travis CI and enable hook
 
 1. Login to Travis CI with the Github account of this repository.
-2. Visit [Travis CI profile](https://travis-ci.org/profile) and find the repository.
+2. Visit [Travis CI profile][Travis CI profile] and find the repository.
 If the repository does not appear on the list, make sure
 	- It is not a private repository
 	- Travis CI has been synced with Github (click "Sync now" if necessary)
@@ -173,7 +171,7 @@ For example, here are the test results inside [this particular job's build log](
 	The command "rake" exited with 0.
 
 ### <a id="build-status-images"></a>Build status images
-Travis CI provides [build status images](http://about.travis-ci.org/docs/user/status-images/) for projects,
+Travis CI provides [build status images][build status images] for projects,
 which are encouraged to be added to project sites or README files as good software development practices.
 
 The status image can be found at `https://travis-ci.org/[GITHUB_USERNAME]/[REPO_NAME].png`,
@@ -187,3 +185,12 @@ a dialog with all the options will be displayed, as shown in the screenshot belo
 </a>
 
 The sample project's current status is: <a class="image-link" href="https://travis-ci.org/yizeng/setup-selenium-webdriver-ruby-project-on-travis-ci" title="Travis CI build status"><img src="https://travis-ci.org/yizeng/setup-selenium-webdriver-ruby-project-on-travis-ci.png" alt="Travis CI build status" /></a>
+
+['Create a New Repository']: https://github.com/repositories/new
+[PhantomJS]: http://phantomjs.org/
+[Travis CI servers]: http://about.travis-ci.org/docs/user/ci-environment/
+[Travis CI GUI]: http://about.travis-ci.org/docs/user/gui-and-headless-browsers
+[Travis Lint]: http://about.travis-ci.org/docs/user/travis-lint/
+[Travis WebLint]: http://lint.travis-ci.org/
+[Travis CI profile]: https://travis-ci.org/profile
+[build status images]: http://about.travis-ci.org/docs/user/status-images/
