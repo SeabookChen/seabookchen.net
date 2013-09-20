@@ -64,7 +64,7 @@ Feature: Test homepage
 
 		Examples:
 			| width | size |
-			| 240   | 34   |
+			| 240   | 28   |
 			| 320   | 42   |
 			| 640   | 48   |
 			| 768   | 48   |
