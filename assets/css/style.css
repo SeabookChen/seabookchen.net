@@ -749,6 +749,7 @@ table.data a {
     .the-footer .social-icons a img {
       height: 28px !important;
       width: 28px !important;
+      border: 0;
     }
 }
 /* Data table on small screens */
