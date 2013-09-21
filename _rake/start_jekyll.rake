@@ -1,4 +1,4 @@
-# Usage: rake jekyll [port=4001] [trace=true] [detach=true]
+# Usage: rake jekyll [port=4000] [trace=true] [detach=true] [os=windows]
 desc "Start Jekyll locally"
 task :jekyll do
 	port = ENV['port'] || '4000'
@@ -6,10 +6,10 @@ task :jekyll do
 	detach = ENV['detach'] == 'true' ? '--detach' : ''
 
 	# Set active code page to avoid encoding issues on Windows
-	case ENV['os'].downcase
-		when '', 'linux'
+	case ENV['os']
+		when '', 'linux', 'Linux'
 			os = 'linux'
-		when 'win', 'windows'
+		when 'win', 'windows', 'Windows'
 			os = 'windows'
 	end
 	if os == 'windows'
