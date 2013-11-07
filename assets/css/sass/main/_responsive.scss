@@ -1,0 +1,276 @@
+/*
+	Super tiny screen width: [0, 275]
+*/
+@media only screen and (max-width: 275px) {
+	.the-footer .social-icons a img {
+		height: 28px !important;
+		width: 28px !important;
+		border: 0;
+	}
+}
+
+/* Data table on small screens */
+@media only screen and (max-width: 360px) {
+	.data-table {
+		font-size: .75em
+	}
+}
+/*
+	Old mobile phone width: [0, 419]
+*/
+@media only screen and (max-width: 419px) {
+	h1,
+	h2,
+	.h1,
+	.h2 {
+		font-size: 1.325em !important;
+		line-height: 32px !important;
+	}
+	h3,
+	.h3 {
+		font-size: 1.175em !important
+	}
+
+	.the-header .unit-head {
+		padding: 21px;
+
+		.nav-global .logo a {
+			font-size: 1.575em;
+			padding-bottom: 0;
+			margin-left: 6px;
+			margin-bottom: 0;
+		}
+
+		.nav-global li {
+			display: none
+		}
+	}
+
+	.the-footer .social-icons a img {
+		height: 36px;
+		width: 36px;
+	}
+
+	.data-table {
+		font-size: .9em
+	}
+}
+/*
+	Smartphone width: [0, 674]
+*/
+@media only screen and (max-width:674px) {
+	img {
+		max-width: 95%
+	}
+	h1,
+	h2,
+	.h1,
+	.h2 {
+		font-size: 1.575em;
+		line-height: 42px;
+	}
+	h3,
+	.h3 {
+		font-size: 1.325em
+	}
+
+	.the-header,
+	.the-footer,
+	.unit-article header h1,
+	.unit-article .year {
+		text-align: center
+	}
+
+	.the-header .unit-head {
+		.nav-global .logo a {
+			font-size: 1.575em;
+			line-height: 0;
+			margin-bottom: 12px;
+		}
+
+		.nav-global li a {
+			padding: 8px
+		}
+
+		.nav-global li a:hover {
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;
+		}
+	}
+}
+/*
+	Tablet width: [675, infinity)
+*/
+@media only screen and (min-width: 675px) {
+	.the-header .unit-head {
+		padding: 0;
+
+		.nav-global li {
+			float: left;
+			border: 1px solid rgba(0, 0, 0, 0.05);
+			border-width: 0 1px 0 0;
+		}
+
+		.nav-global li a,
+		.nav-global li div {
+			text-align: left;
+			display: block;
+			padding: 26px 24px;
+			height: 26px;
+		}
+
+		.nav-global li:nth-child(2) {
+			border-width: 0 1px
+		}
+
+		.nav-global li:last-child {
+			border-width: 0
+		}
+
+		.nav-global .logo {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+			border-right: none 0;
+		}
+
+		.nav-global .logo a {
+			line-height: normal;
+			margin-bottom: 0;
+			padding-top: 18px;
+			padding-left: 36px;
+		}
+	}
+
+	.the-footer h4 a {
+		font-size: 1.25em;
+	}
+}
+/*
+	Not that old computer width: [960, infinity)
+*/
+@media only screen and (min-width: 960px) {
+	.the-header {
+		.unit-head .nav-global .logo {
+			border-bottom: 0 none;
+
+			a {
+				line-height: 18px;
+				margin-bottom: 0;
+				padding-top: 26px;
+				padding-left: 52px;
+			}
+		}
+	}
+
+	.body {
+		float: left;
+		width: 100%;
+		margin-right: -450px;
+
+		.unit-body {
+			border-top: 0 none;
+			margin-right: 300px;
+			padding: 26px 52px;
+			padding-top: 13px;
+		}
+	}
+
+	.the-footer {
+		background-color: transparent;
+		position: relative;
+		top: auto;
+		display: block;
+		float: right;
+		padding: 0 0 0 26px;
+		width: 275px;
+	}
+}
+
+/*
+	Hide post date when width: (0, 900), (960, 1280)
+*/
+@media only screen and (min-width: 0px) and (max-width:900px), (min-width: 960px) and (max-width:1366px), (min-width: 1410px) and (max-width:1470px) {
+	.unit-article .date {
+		display: none
+	}
+}
+/*
+	Huge-screen width: [1410, infinity)
+*/
+@media only screen and (min-width: 1410px) {
+	.the-header {
+		float: left;
+		width: 19%;
+	}
+
+	.the-header .unit-head {
+		padding: 26px;
+
+		.nav-global li {
+			float: none;
+			border: none;
+		}
+
+		.nav-global li a,
+		.nav-global li div {
+			text-align: right;
+			display: block;
+			padding: 2px 5px;
+			height: auto;
+		}
+
+		.nav-global li:nth-child(2) {
+			border-width: 0
+		}
+
+		.nav-global .logo {
+			border-bottom: none 0;
+			display: list-item;
+		}
+
+		.nav-global .logo a {
+			line-height: 52px;
+			padding-top: 0;
+			padding-left: 5px;
+			position: relative;
+			top: auto;
+		}
+
+		.nav-global .logo a:hover {
+			font-weight: bold;
+			font-size: 1.875em;
+		}
+	}
+
+	.body {
+		border-left: 1px solid rgba(0, 0, 0, 0.2);
+		float: left;
+		width: 80.5%;
+		margin-right: -325px;
+
+		.unit-body {
+			@include box-shadow(#ffffff 0px 0px 2px);
+			border-right: 1px solid rgba(0, 0, 0, 0.2);
+			margin-right: 325px;
+			min-height: 1000px;
+			padding: 26px;
+		}
+	}
+
+	.the-footer {
+		display: block;
+		float: left;
+		padding: 26px 0 0 26px;
+		position: relative;
+		top: auto;
+		width: 285px;
+
+		h4 {
+			line-height: 52px
+		}
+
+		h4 a {
+			font-size: 1.85em
+		}
+	}
+}
