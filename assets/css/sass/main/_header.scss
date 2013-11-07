@@ -1,0 +1,47 @@
+.the-header .unit-head {
+	padding: 26px;
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		display: inline
+	}
+
+	li a {
+		color: #969696
+	}
+
+	.nav-global .logo {
+		display: block;
+		font-weight: bold;
+		margin: 0;
+		width: auto;
+	}
+
+	.nav-global .logo a {
+		display: block;
+		font-size: 1.875em;
+		line-height: 52px;
+		padding-bottom: 26px;
+	}
+
+	.nav-global .logo a:hover {
+		background-color: transparent;
+		color: #FF9900;
+	}
+
+	.nav-global li {
+		font-size: 1em
+	}
+
+	.nav-global li a:hover,
+	.nav-global li a:active {
+		@include transition(all .3s ease-in-out);
+		background-color: #FF9900;
+		color: #2D2D2D;
+		font-weight: bold;
+	}
+}

@@ -1,0 +1,26 @@
+.data-table {
+	@include border-radius(5px);
+	background-color: #EEEEEE;
+	border-collapse: separate;
+	border: 5px solid #DDDDDD;
+
+	td, th {
+		border-color: rgba(255, 255, 255, 0.5);
+		padding: 3px;
+	}
+
+	tr:nth-child(even) td {
+		background-color: #DDDDDD
+	}
+
+	a {
+		border-bottom: none;
+		font-size: 1em;
+		padding: 0;
+	}
+}
+
+.data-table:hover {
+	@include transition(all .3s ease-in-out);
+	border-color: #FF9900;
+}

@@ -1,0 +1,151 @@
+@import "compass/css3";
+@import "compass/css3/user-interface";
+@import "compass/typography";
+
+body {
+	font-family: 'Maven Pro', consolas, Monaco, monospace;
+	font-size: 1em;
+	line-height: 1.525em;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.the-header,
+.the-footer {
+	font-family: 'Nova Square', Verdana, Tahoma, monospace
+}
+h1,
+.h1 {
+	font-size: 1.875em;
+	line-height: 52px;
+	margin-top: 52px;
+	margin-bottom: 26px;
+}
+h2,
+.h2 {
+	font-size: 1.575em;
+	line-height: 26px;
+	margin-top:34px;
+	margin-bottom: 16px;
+}
+h3,
+.h3 {
+	font-size: 1.275em;
+	line-height: 26px;
+	margin-top: 26px;
+	margin-bottom: 20px;
+}
+h4,
+.h4 {
+	line-height: 26px;
+	margin-top: 26px;
+	margin-bottom: 12px;
+}
+p,
+ul,
+ol,
+dl,
+img {
+	margin-top: 0;
+	margin-bottom: 0.5em;
+}
+small,
+.small,
+aside {
+	font-size: 0.75em
+}
+.font-size-default {
+	font-size: 1em
+}
+blockquote cite {
+	font-weight: normal
+}
+strong {
+	font-weight: bold
+}
+em {
+	font-weight: bold
+}
+.list-linear {
+	letter-spacing: -0.31em;
+	*letter-spacing: normal;
+	word-spacing: -0.43em;
+	list-style: none;
+	padding-left: 0;
+
+	li {
+		display: inline-block;
+		*display: inline;
+		zoom: 1;
+		line-height: normal;
+		letter-spacing: normal;
+		margin-right: 16px;
+		word-spacing: normal;
+		vertical-align: middle;
+	}
+
+	li:last-child {
+		margin-right: 0
+	}
+}
+
+html {
+	color: #2D2D2D;
+	background: url('/assets/images/skin/noisy_texture_150E1F.png') repeat 0 0 #150E1F
+}
+.body .unit-body {
+	border-top: 1px solid rgba(255, 255, 255, 0.6);
+	padding: 26px;
+	padding-top: 13px;
+	padding-left: 36px;
+	background: url('/assets/images/skin/noisy_texture_F9F9F9.png') repeat 0 0 #F9F9F9
+}
+/* LINK */
+a:link {
+	text-decoration: none
+}
+a:visited {
+	text-decoration: none
+}
+a:hover {
+	text-decoration: none
+}
+/* HIGHLIGHTER */
+pre,
+code,
+kbd,
+samp {
+	font-family: monospace, Consolas, 'Lucida Console', 'DejaVu Sans Mono', serif;
+	line-height: 18px !important;
+	font-size: .9em !important;
+}
+pre {
+	@include box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.6));
+	@include border-radius(5px);
+	margin-bottom: 1.625em;
+	color: #f2f2f2;
+	background-color: #272822;
+	margin-left: 0;
+	margin-right: 0;
+	padding: 1.625em;
+	overflow: auto;
+}
+.linenos pre {
+	background-color: #4b4b4b;
+	padding-left: 0.625em;
+	padding-right: 0.625em;
+	overflow: visible;
+}
+.line-numbers,
+.highlighttable .highlight {
+	font-size: .9em
+}
+
+@import "./main/header";
+@import "./main/unit-article";
+@import "./main/data-table";
+@import "./main/footer";
+@import "./main/responsive";

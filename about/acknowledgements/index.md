@@ -9,7 +9,7 @@ js_utils: back-to-top
 {% include JB/setup %}
 
 ## <a id="jekyll"></a>Jekyll
-<table border="1" class="data">
+<table border="1" class="data-table">
     <tr>
         <th>Name</th>
         <th>License</th>
@@ -48,7 +48,7 @@ js_utils: back-to-top
 </table>
 
 ## <a id="jekyll-plugins"></a>Jekyll Plugins
-<table border="1" class="data">
+<table border="1" class="data-table">
     <tr>
         <th>Name</th>
         <th>License</th>
@@ -72,7 +72,7 @@ js_utils: back-to-top
 </table>
 
 ## <a id="javascript"></a>JavaScript
-<table border="1" class="data">
+<table border="1" class="data-table">
     <tr>
         <th>Name</th>
         <th>License</th>
@@ -106,7 +106,7 @@ js_utils: back-to-top
 </table>
 
 ## <a id="css"></a>CSS
-<table border="1" class="data">
+<table border="1" class="data-table">
     <tr>
         <th>Name</th>
         <th>License</th>
@@ -125,7 +125,7 @@ js_utils: back-to-top
 </table>
 
 ## <a id="images"></a>Images
-<table border="1" class="data">
+<table border="1" class="data-table">
     <tr>
         <th>Name</th>
         <th>License</th>
@@ -164,7 +164,7 @@ js_utils: back-to-top
 </table>
 
 ## <a id="fonts"></a>Fonts
-<table border="1" class="data">
+<table border="1" class="data-table">
     <tr>
         <th>Name</th>
         <th>License</th>
@@ -188,7 +188,7 @@ js_utils: back-to-top
 </table>
 
 ## <a id="ui-testing"></a>UI Testing
-<table border="1" class="data">
+<table border="1" class="data-table">
     <tr>
         <th>Name</th>
         <th>License</th>
