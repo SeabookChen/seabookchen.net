@@ -1,4 +1,4 @@
-/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* normalize.css v2.1.3 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -925,7 +925,11 @@ pre {
   margin-top: 0;
 }
 
-.site_notice a {
+.site-notice {
+  color: #969696;
+  text-align: center;
+}
+.site-notice a {
   color: #0077cc;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -937,14 +941,13 @@ pre {
   padding-right: 3px;
   border-bottom: 1px dotted #FFD18D;
 }
-.site_notice a:visited {
+.site-notice a:visited {
   color: #4a6b82;
 }
-.site_notice a:hover {
+.site-notice a:hover {
   color: #2d2d2d;
 }
-
-.site_notice a:hover {
+.site-notice a:hover {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
