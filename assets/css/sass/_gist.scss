@@ -2,7 +2,7 @@
 @import "compass/css3/box-shadow";
 @import "compass/typography/links/link-colors";
 
-$fonts: monospace, Consolas, 'Lucida Console', 'DejaVu Sans Mono', serif;
+$fonts: 'Lucida Console', Consolas, monospace, 'DejaVu Sans Mono', serif;
 $background-color: #272822;
 
 .gist .gist-file {
