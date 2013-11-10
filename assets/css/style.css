@@ -525,7 +525,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: monospace, Consolas, 'Lucida Console', 'DejaVu Sans Mono', serif;
+  font-family: 'Lucida Console', Consolas, monospace, 'DejaVu Sans Mono', serif;
   line-height: 18px !important;
   font-size: .9em !important;
 }
@@ -1771,7 +1771,7 @@ hr {
 
 .gist .gist-file {
   border: none !important;
-  font-family: monospace, Consolas, "Lucida Console", "DejaVu Sans Mono", serif !important;
+  font-family: "Lucida Console", Consolas, monospace, "DejaVu Sans Mono", serif !important;
 }
 .gist .gist-file .gist-data {
   -webkit-border-radius: 5px;
@@ -1794,7 +1794,7 @@ hr {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  font-family: monospace, Consolas, "Lucida Console", "DejaVu Sans Mono", serif !important;
+  font-family: "Lucida Console", Consolas, monospace, "DejaVu Sans Mono", serif !important;
 }
 .gist .gist-file .gist-meta {
   display: none !important;
