@@ -113,14 +113,29 @@ js_utils: back-to-top
         <th>Description</th>
     </tr>
     <tr>
-        <td><a href="http://cssminifier.com/">CSS Minifier</a></td>
-        <td></td>
-        <td>Minify CSS</td>
+        <td><a href="http://sass-lang.com/">SASS</a></td>
+        <td><a href="https://github.com/nex3/sass/blob/stable/MIT-LICENSE">MIT license</a></td>
+        <td>CSS extension language</td>
     </tr>
     <tr>
-        <td><a href="http://procssor.com/">ProCSSor</a></td>
+        <td><a href="http://compass-style.org/">Compass</a></td>
+        <td><a href="http://compass-style.org/copyright/">CC BY-NC-SA 3.0</a></td>
+        <td>CSS Authoring Framework</td>
+    </tr>
+    <tr>
+        <td><a href="http://compass-style.org/">Koala</a></td>
+        <td><a href="https://github.com/oklai/koala/blob/master/LICENSE">Apache 2.0 License</a></td>
+        <td>GUI application for Sass and Compass compilation</td>
+    </tr>
+    <tr>
+        <td><del><a href="http://cssminifier.com/">CSS Minifier</a></del></td>
         <td></td>
-        <td>Format CSS</td>
+        <td><del>Minify CSS</del></td>
+    </tr>
+    <tr>
+        <td><del><a href="http://procssor.com/">ProCSSor</a></del></td>
+        <td></td>
+        <td><del>Format CSS</del></td>
     </tr>
 </table>
 
@@ -198,6 +213,11 @@ js_utils: back-to-top
         <td><a href="http://rubygems.org/gems/selenium-webdriver">Selenium WebDriver (Ruby binding)</a></td>
         <td><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 License</a></td>
         <td>UI automation framework</td>
+    </tr>
+    <tr>
+        <td><a href="http://cukes.info/">Cucumber</a></td>
+        <td><a href="https://github.com/cucumber/cucumber/blob/master/LICENSE">MIT license</a></td>
+        <td>BDD framework</td>
     </tr>
     <tr>
         <td><a href="http://phantomjs.org/">PhantomJS</a></td>
