@@ -11,7 +11,7 @@
 	}
 
 	li a {
-		color: #969696
+		color: $color-grey-dark
 	}
 
 	.nav-global .logo {
@@ -30,7 +30,7 @@
 
 	.nav-global .logo a:hover {
 		background-color: transparent;
-		color: #FF9900;
+		color: $color-orange;
 	}
 
 	.nav-global li {
@@ -40,8 +40,8 @@
 	.nav-global li a:hover,
 	.nav-global li a:active {
 		@include transition(all .3s ease-in-out);
-		background-color: #FF9900;
-		color: #2D2D2D;
+		background-color: $color-orange;
+		color: $color-black;
 		font-weight: bold;
 	}
 }

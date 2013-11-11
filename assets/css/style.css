@@ -395,7 +395,7 @@ table {
 }
 
 body {
-  font-family: 'Maven Pro', consolas, Monaco, monospace;
+  font-family: "Maven Pro", consolas, Monaco, monospace;
   font-size: 1em;
   line-height: 1.525em;
 }
@@ -495,7 +495,7 @@ em {
 }
 
 html {
-  color: #2D2D2D;
+  color: #2d2d2d;
   background: url("/assets/images/skin/noisy_texture_150E1F.png") repeat 0 0 #150e1f;
 }
 
@@ -525,7 +525,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: monospace, Consolas, 'Lucida Console', 'DejaVu Sans Mono', serif;
+  font-family: "Lucida Console", Consolas, monospace, "DejaVu Sans Mono", serif;
   line-height: 18px !important;
   font-size: .9em !important;
 }
@@ -587,7 +587,7 @@ pre {
 }
 .the-header .unit-head .nav-global .logo a:hover {
   background-color: transparent;
-  color: #FF9900;
+  color: #ff9900;
 }
 .the-header .unit-head .nav-global li {
   font-size: 1em;
@@ -598,8 +598,8 @@ pre {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #FF9900;
-  color: #2D2D2D;
+  background-color: #ff9900;
+  color: #2d2d2d;
   font-weight: bold;
 }
 
@@ -608,7 +608,7 @@ pre {
   margin-bottom: 8px;
 }
 .unit-article header h1 {
-  color: #2D2D2D;
+  color: #2d2d2d;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -642,7 +642,7 @@ pre {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #FF9900;
+  background-color: #ff9900;
 }
 .unit-article .meta {
   border-bottom: 1px dotted rgba(21, 25, 25, 0.8);
@@ -704,7 +704,7 @@ pre {
   -o-border-radius: 5px;
   border-radius: 5px;
   background-color: #EEEEEE;
-  border-left: .7em solid #DDDDDD;
+  border-left: 0.7em solid #dddddd;
   margin: 1em 16px;
   padding-left: 1em;
 }
@@ -723,7 +723,7 @@ pre {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  border: 5px solid #DDDDDD;
+  border: 5px solid #dddddd;
   display: inline-block;
   margin-top: 26px;
   padding: 7px;
@@ -734,7 +734,7 @@ pre {
   -moz-transition: all 0.1s ease-in-out;
   -o-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
-  border: 5px solid #FF9900;
+  border: 5px solid #ff9900;
 }
 .unit-article .toc ol,
 .unit-article .toc ul,
@@ -792,7 +792,7 @@ pre {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  background-color: #DDDDDD;
+  background-color: #dddddd;
   padding: 1px 3px;
   white-space: nowrap;
 }
@@ -856,7 +856,7 @@ pre {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   border-radius: 10px;
-  background-color: #FF9900;
+  background-color: #ff9900;
   color: white;
   display: inline-block;
   font-weight: bold;
@@ -896,7 +896,7 @@ pre {
 }
 
 .unit-article .entry-content h2, .unit-article .entry-content h3, .unit-article .entry-content h4, .unit-article .entry-content h5, .unit-article .entry-content h6 {
-  color: #2D2D2D;
+  color: #2d2d2d;
 }
 .unit-article .entry-content h2 a, .unit-article .entry-content h3 a, .unit-article .entry-content h4 a, .unit-article .entry-content h5 a, .unit-article .entry-content h6 a {
   border: 0;
@@ -952,7 +952,7 @@ pre {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background-color: #FF9900;
+  background-color: #ff9900;
 }
 
 .misc-content {
@@ -1001,8 +1001,8 @@ pre {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
   background-color: #969696;
-  border: 1px solid #2D2D2D;
-  color: #2D2D2D;
+  border: 1px solid #2d2d2d;
+  color: #2d2d2d;
   float: left;
   margin: 5px;
   padding: 3px 6px 3px 6px;
@@ -1017,12 +1017,12 @@ pre {
 }
 .layout-page .tag_box a:hover {
   font-weight: bold;
-  background-color: #FF9900;
-  border: 1px solid #2D2D2D;
+  background-color: #ff9900;
+  border: 1px solid #2d2d2d;
 }
 .layout-page .tag_box a:hover span {
-  background-color: #FF9900;
-  border: 1px solid #2D2D2D;
+  background-color: #ff9900;
+  border: 1px solid #2d2d2d;
 }
 .layout-page .tag_box span {
   -webkit-border-radius: 10px;
@@ -1034,8 +1034,8 @@ pre {
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
   background-color: #969696;
-  border: 1px solid #2D2D2D;
-  color: #2D2D2D;
+  border: 1px solid #2d2d2d;
+  color: #2d2d2d;
   display: inline-block;
   font-weight: bold;
   font-size: 0.875em;
@@ -1053,7 +1053,7 @@ pre {
   border-radius: 5px;
   background-color: #EEEEEE;
   border-collapse: separate;
-  border: 5px solid #DDDDDD;
+  border: 5px solid #dddddd;
 }
 .data-table td, .data-table th {
   border-color: rgba(255, 255, 255, 0.5);
@@ -1073,7 +1073,7 @@ pre {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  border-color: #FF9900;
+  border-color: #ff9900;
 }
 
 .the-footer {
@@ -1096,7 +1096,7 @@ pre {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  color: #FF9900;
+  color: #ff9900;
 }
 .the-footer h4 {
   margin-top: 0;
@@ -1105,7 +1105,7 @@ pre {
   color: #969696;
 }
 .the-footer h4 a:hover {
-  color: #FF9900;
+  color: #ff9900;
   font-weight: bold;
 }
 .the-footer .back-to-top {
@@ -1771,7 +1771,7 @@ hr {
 
 .gist .gist-file {
   border: none !important;
-  font-family: monospace, Consolas, "Lucida Console", "DejaVu Sans Mono", serif !important;
+  font-family: "Lucida Console", Consolas, monospace, "DejaVu Sans Mono", serif !important;
 }
 .gist .gist-file .gist-data {
   -webkit-border-radius: 5px;
@@ -1786,7 +1786,7 @@ hr {
   background-color: #272822 !important;
 }
 .gist .gist-file .gist-data .line-numbers {
-  background-color: #4B4B4B !important;
+  background-color: #4b4b4b !important;
   border-right: none !important;
   line-height: 18px;
 }
@@ -1794,7 +1794,7 @@ hr {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
   box-shadow: none;
-  font-family: monospace, Consolas, "Lucida Console", "DejaVu Sans Mono", serif !important;
+  font-family: "Lucida Console", Consolas, monospace, "DejaVu Sans Mono", serif !important;
 }
 .gist .gist-file .gist-meta {
   display: none !important;

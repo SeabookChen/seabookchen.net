@@ -1,5 +1,5 @@
 .the-footer {
-	color: #969696;
+	color: $color-grey-dark;
 	padding: 26px;
 
 	ul {
@@ -11,22 +11,22 @@
 	}
 
 	a {
-		color: #969696;
+		color: $color-grey-dark;
 		border: 0;
 	}
 	a:hover {
 		@include transition(all .3s ease-in-out);
-		color: #FF9900;
+		color: $color-orange;
 	}
 
 	h4 {
 		margin-top: 0
 	}
 	h4 a {
-		color: #969696
+		color: $color-grey-dark
 	}
 	h4 a:hover {
-		color: #FF9900;
+		color: $color-orange;
 		font-weight: bold;
 	}
 

@@ -1,3 +1,16 @@
+$fonts-header: 'Nova Square', Verdana, Tahoma, monospace;
+$fonts-body: 'Maven Pro', consolas, Monaco, monospace;
+$fonts-code: 'Lucida Console', Consolas, monospace, 'DejaVu Sans Mono', serif;
+
+$color-black: #2D2D2D;
+$color-code-background: #272822;
+$color-linenos-background: #4B4B4B;
+$color-orange: #FF9900;
+$color-orange-visited: #CC6633;
+$color-grey-dark: #969696;
+$color-grey-light: #DDDDDD;
+$color-grey-visited: #797979;
+
 @import "normalize";
 @import "fonts";
 @import "main";
