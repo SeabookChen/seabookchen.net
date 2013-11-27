@@ -1,4 +1,6 @@
-# yizeng.me [![Build Status](https://travis-ci.org/yizeng/yizeng.me.png?branch=develop)](https://travis-ci.org/yizeng/yizeng.me)
+# yizeng.me
+[![Build Status](https://travis-ci.org/yizeng/yizeng.me.png?branch=develop)](https://travis-ci.org/yizeng/yizeng.me)
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/yizeng/yizeng.me/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 This repository hosts the source of [yizeng.me](http://yizeng.me).
 
