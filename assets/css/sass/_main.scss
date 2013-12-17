@@ -93,15 +93,15 @@ em {
 }
 
 html {
-	color: $color-black;
-	background: url('/assets/images/skin/noisy_texture_150E1F.png') repeat 0 0 #150E1F
+	background: url('/assets/images/skin/noisy_texture_F9F9F9.png') repeat 0 0 #F9F9F9
 }
 .body .unit-body {
 	border-top: 1px solid rgba(255, 255, 255, 0.6);
 	padding: 26px;
 	padding-top: 13px;
 	padding-left: 36px;
-	background: url('/assets/images/skin/noisy_texture_F9F9F9.png') repeat 0 0 #F9F9F9
+	background: url('/assets/images/skin/noisy_texture_F9F9F9.spng') repeat 0 0 #FFF;
+	@include box-shadow($color-box-border 0 0 6px 1px);
 }
 /* LINK */
 a:link {

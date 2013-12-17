@@ -2,14 +2,28 @@ $fonts-header: 'Nova Square', Verdana, Tahoma, monospace;
 $fonts-body: 'Maven Pro', consolas, Monaco, monospace;
 $fonts-code: 'Lucida Console', Consolas, monospace, 'DejaVu Sans Mono', serif;
 
-$color-black: #2D2D2D;
+$color-text: #2D2D2D;
+$color-text-hover: #FF9900;
+
+$color-post-link-visited: #797979;
+$color-meta-link-hover: #797979;
+
+$color-box-border: #DDDDDD;
 $color-code-background: #272822;
+$color-inline-code-background: #DDDDDD;
 $color-linenos-background: #4B4B4B;
-$color-orange: #FF9900;
-$color-orange-visited: #CC6633;
-$color-grey-dark: #969696;
-$color-grey-light: #DDDDDD;
-$color-grey-visited: #797979;
+
+// $color-text-inside: #2D2D2D;
+// $color-text-hover: #FF9900;
+// $color-text: #969696;
+
+// $color-post-link-visited: #797979;
+// $color-meta-link-hover: #797979;
+
+// $color-box-border: #DDDDDD;
+// $color-code-background: #272822;
+// $color-inline-code-background: #DDDDDD;
+// $color-linenos-background: #4B4B4B;
 
 @import "normalize";
 @import "fonts";

@@ -2,7 +2,7 @@
 	@include border-radius(5px);
 	background-color: #EEEEEE;
 	border-collapse: separate;
-	border: 5px solid $color-grey-light;
+	border: 5px solid $color-box-border;
 
 	td, th {
 		border-color: rgba(255, 255, 255, 0.5);
@@ -10,7 +10,7 @@
 	}
 
 	tr:nth-child(even) td {
-		background-color: $color-grey-light
+		background-color: $color-inline-code-background
 	}
 
 	a {
@@ -22,5 +22,5 @@
 
 .data-table:hover {
 	@include transition(all .3s ease-in-out);
-	border-color: $color-orange;
+	border-color: $color-text-hover;
 }

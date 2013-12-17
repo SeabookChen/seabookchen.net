@@ -31,9 +31,5 @@
 	.gist-meta {
 		display: none !important;
 		visibility: hidden;
-
-		a {
-			@include link-colors($color-orange, $visited:$color-orange-visited)
-		}
 	}
 }
