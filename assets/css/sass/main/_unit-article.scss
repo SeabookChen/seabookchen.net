@@ -19,7 +19,6 @@
 .unit-article {
 	a {
 		@include link-colors(#0077CC, $visited:#4A6B82, $hover:$color-text);
-		@include border-radius(5px);
 		font-size: .95em;
 		padding-left: 3px;
 		padding-right: 3px;
@@ -91,7 +90,6 @@
 	}
 
 	.toc {
-		@include border-radius(5px);
 		border: 5px solid $color-box-border;
 		display: inline-block;
 		margin-top: 26px;
@@ -166,7 +164,6 @@
 	}
 
 	img {
-		@include border-radius(5px);
 		border: solid 5px transparent;
 		height: auto;
 		max-width: 100%;
@@ -292,7 +289,6 @@
 
 	a {
 		@include link-colors(#0077CC, $visited:#4A6B82, $hover:$color-text);
-		@include border-radius(5px);
 		font-size: .95em;
 		padding-left: 3px;
 		padding-right: 3px;
@@ -311,7 +307,6 @@
 
 /* post & page */
 .layout-page .tag_box {
-	@include border-radius(3px);
 	@include background-clip(padding-box);
 	@include box-shadow(inset 0 3px 3px rgba(0, 0, 0, 0.4), 0 3px 0 rgba(255, 255, 255, 0.4));
 	background: url('/assets/images/skin/noisy_texture_F0F0F0.png') repeat #F0F0F0;
@@ -325,9 +320,7 @@
 	}
 
 	a {
-		@include border-radius(3px);
 		@include background-clip(padding-box);
-		@include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2));
 		@include user-select(none);
 		@include transition-duration(0.2s);
 		background-color: $color-inline-code-background;
@@ -346,7 +339,6 @@
 	}
 
 	a:hover {
-		font-weight: bold;
 		background-color: $color-text-hover;
 		border: 1px solid $color-text;
 	}
@@ -358,7 +350,6 @@
 
 	span {
 		@include border-radius(10px);
-		@include box-shadow(inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2));
 		background-color: $color-inline-code-background;
 		border: 1px solid $color-text;
 		color: $color-text;

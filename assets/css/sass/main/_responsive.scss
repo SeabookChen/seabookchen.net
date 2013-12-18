@@ -32,13 +32,12 @@
 	}
 
 	.the-header .unit-head {
-		padding: 21px;
+		padding: 21px !important;
 
 		.nav-global .logo a {
 			font-size: 1.575em;
-			padding-bottom: 0;
+			padding-bottom: 8px;
 			margin-left: 6px;
-			margin-bottom: 0;
 		}
 
 		.nav-global li {

@@ -1,5 +1,4 @@
 .data-table {
-	@include border-radius(5px);
 	background-color: #EEEEEE;
 	border-collapse: separate;
 	border: 5px solid $color-box-border;
@@ -16,7 +15,6 @@
 	a {
 		border-bottom: none;
 		font-size: 1em;
-		padding: 0;
 	}
 }
 
