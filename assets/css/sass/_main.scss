@@ -96,7 +96,7 @@ html {
 	background: url('/assets/images/skin/noisy_texture_F9F9F9.png') repeat 0 0 #F9F9F9
 }
 .body .unit-body {
-	@include box-shadow($color-box-border 0 0 9px 3px);
+	@include box-shadow($color-box-border 0 0 9px);
 	border-top: 1px solid rgba(255, 255, 255, 0.6);
 	padding: 26px;
 	padding-top: 13px;
