@@ -499,14 +499,14 @@ html {
 }
 
 .body .unit-body {
+  -webkit-box-shadow: #dddddd 0 0 9px 3px;
+  -moz-box-shadow: #dddddd 0 0 9px 3px;
+  box-shadow: #dddddd 0 0 9px 3px;
   border-top: 1px solid rgba(255, 255, 255, 0.6);
   padding: 26px;
   padding-top: 13px;
   padding-left: 36px;
-  background: url("/assets/images/skin/noisy_texture_F9F9F9.spng") repeat 0 0 white;
-  -webkit-box-shadow: #dddddd 0 0 6px 1px;
-  -moz-box-shadow: #dddddd 0 0 6px 1px;
-  box-shadow: #dddddd 0 0 6px 1px;
+  background: #FFF;
 }
 
 /* LINK */
@@ -1396,6 +1396,9 @@ pre {
     margin-right: -325px;
   }
   .body .unit-body {
+    -webkit-box-shadow: #dddddd 0 0 6px 3px inset;
+    -moz-box-shadow: #dddddd 0 0 6px 3px inset;
+    box-shadow: #dddddd 0 0 6px 3px inset;
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     margin-right: 325px;
     min-height: 1000px;

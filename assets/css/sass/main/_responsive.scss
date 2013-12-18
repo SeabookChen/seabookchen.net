@@ -245,6 +245,7 @@
 		margin-right: -325px;
 
 		.unit-body {
+			@include box-shadow($color-box-border 0 0 6px 3px inset);
 			border-right: 1px solid rgba(0, 0, 0, 0.2);
 			margin-right: 325px;
 			min-height: 1000px;
