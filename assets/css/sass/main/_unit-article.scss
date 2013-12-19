@@ -18,10 +18,10 @@
 
 .unit-article {
 	a {
+		@include border-radius(2px);
 		@include link-colors(#0077CC, $visited:#4A6B82, $hover:$color-text);
 		font-size: .95em;
-		padding-left: 3px;
-		padding-right: 3px;
+		padding: 2px 5px;
 		border-bottom: 1px dotted #FFD18D;
 	}
 	a:hover {

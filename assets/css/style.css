@@ -621,10 +621,14 @@ pre {
 }
 
 .unit-article a {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  border-radius: 2px;
   color: #0077cc;
   font-size: .95em;
-  padding-left: 3px;
-  padding-right: 3px;
+  padding: 2px 5px;
   border-bottom: 1px dotted #FFD18D;
 }
 .unit-article a:visited {
@@ -1257,9 +1261,9 @@ pre {
   }
 }
 /*
-	Not that old computer width: [960, infinity)
+	Not that old computer width: [1080, infinity)
 */
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 1080px) {
   .the-header .unit-head .nav-global .logo {
     border-bottom: 0 none;
   }
@@ -1293,9 +1297,9 @@ pre {
   }
 }
 /*
-	Hide post date when width: (0, 900), (960, 1280)
+	Hide post date when width: (0, 900), (1080, 1280), (1410, 1470)
 */
-@media only screen and (min-width: 0px) and (max-width: 900px), (min-width: 960px) and (max-width: 1366px), (min-width: 1410px) and (max-width: 1470px) {
+@media only screen and (min-width: 0px) and (max-width: 900px), (min-width: 1080px) and (max-width: 1280px), (min-width: 1410px) and (max-width: 1470px) {
   .unit-article .date {
     display: none;
   }
@@ -1349,9 +1353,9 @@ pre {
     margin-bottom: 12px;
   }
   .body .unit-body {
-    -webkit-box-shadow: #dddddd 0 0 6px 3px;
-    -moz-box-shadow: #dddddd 0 0 6px 3px;
-    box-shadow: #dddddd 0 0 6px 3px;
+    -webkit-box-shadow: #dddddd 0 0 12px 3px;
+    -moz-box-shadow: #dddddd 0 0 12px 3px;
+    box-shadow: #dddddd 0 0 12px 3px;
     border-right: 1px solid rgba(0, 0, 0, 0.2);
     margin-right: 325px;
     min-height: 1000px;

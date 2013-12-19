@@ -13,7 +13,7 @@ Feature: Test homepage
 			| 320   |
 			| 640   |
 			| 768   |
-			| 1080  |
+			| 1280  |
 			| 1920  |
 
 	Scenario Outline: Page url should be correct
@@ -26,7 +26,7 @@ Feature: Test homepage
 			| 320   |
 			| 640   |
 			| 768   |
-			| 1080  |
+			| 1280  |
 			| 1920  |
 
 	Scenario Outline: Header's logo link should be loaded
@@ -40,7 +40,7 @@ Feature: Test homepage
 			| 320   |
 			| 640   |
 			| 768   |
-			| 1080  |
+			| 1280  |
 			| 1920  |
 
 	Scenario Outline: Header's navigation links shouldn't be displayed when width < 420px
@@ -54,7 +54,7 @@ Feature: Test homepage
 			| 320   | not see |
 			| 640   | see     |
 			| 768   | see     |
-			| 1080  | see     |
+			| 1280  | see     |
 			| 1920  | see     |
 
 	Scenario Outline: Footer's social icons should be in different sizes depending on window width
@@ -68,7 +68,7 @@ Feature: Test homepage
 			| 320   | 42   |
 			| 640   | 48   |
 			| 768   | 48   |
-			| 1080  | 48   |
+			| 1280  | 48   |
 			| 1920  | 48   |
 
 	Scenario Outline: Footer's 'about' link should be clickable
@@ -81,7 +81,7 @@ Feature: Test homepage
 			| 320   |
 			| 640   |
 			| 768   |
-			| 1080  |
+			| 1280  |
 			| 1920  |
 
 	Scenario Outline: Body's title header should be displayed
@@ -94,7 +94,7 @@ Feature: Test homepage
 			| 320   |
 			| 640   |
 			| 768   |
-			| 1080  |
+			| 1280  |
 			| 1920  |
 
 	Scenario Outline: Body should list all posts
@@ -108,7 +108,7 @@ Feature: Test homepage
 			| 320   |
 			| 640   |
 			| 768   |
-			| 1080  |
+			| 1280  |
 			| 1920  |
 
 	Scenario Outline: Body's post lists should show dates depending on window width
@@ -122,7 +122,7 @@ Feature: Test homepage
 			| 640   | not see |
 			| 768   | not see |
 			| 945   | see     |
-			| 1080  | not see |
+			| 1200  | not see |
 			| 1380  | see     |
 			| 1440  | not see |
 			| 1920  | see     |
