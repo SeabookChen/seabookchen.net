@@ -155,7 +155,7 @@
 	li code {
 		@include border-radius(2px);
 		background-color: $color-inline-code-background;
-		padding: 2px 5px;
+		padding: 2px 3px;
 		white-space: nowrap;
 	}
 	li pre code {
