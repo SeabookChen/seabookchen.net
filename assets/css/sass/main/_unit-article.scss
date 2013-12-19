@@ -155,7 +155,7 @@
 	li code {
 		@include border-radius(2px);
 		background-color: $color-inline-code-background;
-		padding: 1px 3px;
+		padding: 2px 5px;
 		white-space: nowrap;
 	}
 	li pre code {
@@ -180,7 +180,9 @@
 		margin-right: auto;
 	}
 	.post-image img:hover {
-		border-color: $color-box-border
+		@include transition(all .1s ease-in-out);
+		background-color: transparent;
+		border: 5px solid $color-text-hover;
 	}
 	img.left {
 		margin-right: 16px
