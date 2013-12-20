@@ -16,14 +16,14 @@
 	}
 	a:hover {
 		@include transition(all .3s ease-in-out);
-		color: $color-text-hover;
+		color: $color-hover;
 	}
 
 	h4 {
 		margin-top: 0
 	}
 	h4 a:hover {
-		color: $color-text-hover;
+		color: $color-hover;
 		font-weight: bold;
 	}
 

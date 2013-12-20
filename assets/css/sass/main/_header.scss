@@ -30,7 +30,7 @@
 
 	.nav-global .logo a:hover {
 		background-color: transparent;
-		color: $color-text-hover;
+		color: $color-hover;
 	}
 
 	.nav-global li {
@@ -40,7 +40,7 @@
 	.nav-global li a:hover,
 	.nav-global li a:active {
 		@include transition(all .3s ease-in-out);
-		background-color: $color-text-hover;
+		background-color: $color-hover;
 		color: $color-text;
 	}
 }

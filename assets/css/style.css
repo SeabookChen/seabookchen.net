@@ -661,6 +661,11 @@ pre {
 .unit-article .unit-foot a:visited {
   color: #797979;
 }
+.unit-article .meta a:hover,
+.unit-article .toc a:hover,
+.unit-article .unit-foot a:hover {
+  color: #2d2d2d;
+}
 .unit-article .post-list {
   list-style-type: disc;
   padding: 0;
@@ -673,6 +678,9 @@ pre {
 }
 .unit-article .posts a:visited {
   color: #797979;
+}
+.unit-article .posts a:hover {
+  color: #2d2d2d;
 }
 .unit-article .image-link:link {
   border-bottom: none;
@@ -909,6 +917,29 @@ pre {
 .unit-article .entry-content a.license {
   float: right;
   border-bottom: none;
+}
+.unit-article .entry-content button {
+  -webkit-background-clip: padding;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #dddddd;
+  background-repeat: repeat-x;
+  border: 0;
+  color: #2d2d2d;
+  padding: 6px 12px;
+  outline: 0;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: none;
+  vertical-align: inherit;
+  white-space: nowrap;
+}
+.unit-article .entry-content button:hover, .unit-article .entry-content button:focus, .unit-article .entry-content button:active {
+  background-color: #ff9900;
 }
 
 .unit-article .entry-content:first-child h4 {

@@ -20,5 +20,5 @@
 
 .data-table:hover {
 	@include transition(all .3s ease-in-out);
-	border-color: $color-text-hover;
+	border-color: $color-hover;
 }
