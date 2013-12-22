@@ -186,6 +186,11 @@ js_utils: back-to-top
         <th>Description</th>
     </tr>
     <tr>
+        <td><a href="http://www.fontsquirrel.com/">Font Squirrel</a></td>
+        <td></td>
+        <td>Creating web fonts files</td>
+    </tr>
+    <tr>
         <td><a href="http://www.google.com/fonts/specimen/Nova+Square">Nova Square</a></td>
         <td><a href="http://scripts.sil.org/OFL">SIL Open Font License, 1.1</a></td>
         <td></td>
@@ -194,11 +199,6 @@ js_utils: back-to-top
         <td><a href="http://www.google.com/fonts/specimen/Maven+Pro">Maven Pro</a></td>
         <td><a href="http://scripts.sil.org/OFL">SIL Open Font License, 1.1</a></td>
         <td></td>
-    </tr>
-    <tr>
-        <td><del><a href="http://www.fontsquirrel.com/">Font Squirrel</a></del></td>
-        <td></td>
-        <td><del>Creating web fonts files</del></td>
     </tr>
 </table>
 
