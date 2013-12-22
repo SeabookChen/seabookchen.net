@@ -656,11 +656,6 @@ pre {
 .unit-article .unit-foot a {
   color: #2d2d2d;
 }
-.unit-article .meta a:visited,
-.unit-article .toc a:visited,
-.unit-article .unit-foot a:visited {
-  color: #797979;
-}
 .unit-article .meta a:hover,
 .unit-article .toc a:hover,
 .unit-article .unit-foot a:hover {
@@ -674,10 +669,7 @@ pre {
   color: #2d2d2d;
   font-size: 1em;
   border-bottom: none;
-  line-height: 1.675em;
-}
-.unit-article .posts a:visited {
-  color: #797979;
+  line-height: 1.825em;
 }
 .unit-article .posts a:hover {
   color: #2d2d2d;
