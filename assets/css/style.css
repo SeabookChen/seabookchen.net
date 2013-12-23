@@ -1240,6 +1240,14 @@ pre {
     text-align: center;
   }
 
+  .unit-article .posts {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  .unit-article .posts a {
+    line-height: 1.525em;
+  }
+
   .the-header .unit-head {
     padding-bottom: 6px;
   }
