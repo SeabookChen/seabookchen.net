@@ -8,7 +8,8 @@ task :jekyll do
 		detach = ENV['detach'] == 'true' ? '--detach' : ''
 
 		# Set active code page to avoid encoding issues on Windows
-		if RUBY_PLATFORM.downcase.include? 'mswin'
+		platforms = %w[mswin mingw32]
+		if platforms.any? { |platform| RUBY_PLATFORM.downcase.include? platform }
 			system 'chcp 65001'
 		end
 
