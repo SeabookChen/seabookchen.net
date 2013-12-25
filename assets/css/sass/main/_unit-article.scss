@@ -26,7 +26,7 @@
 	}
 	a:hover {
 		@include transition(all .3s ease-in-out);
-		background-color: $color-hover-trasparent;
+		background-color: $color-hover-transparent;
 	}
 
 	.meta {
@@ -51,6 +51,7 @@
 		font-size: 1em;
 		border-bottom: none;
 		line-height: 1.825em;
+		padding-left: 0px;
 	}
 
 	.image-link:link {
@@ -182,7 +183,6 @@
 	.post-image img:hover {
 		@include transition(all .1s ease-in-out);
 		background-color: transparent;
-		border: 5px solid $color-hover;
 	}
 	img.left {
 		margin-right: 16px
@@ -278,11 +278,12 @@
 	button {
 		@include background-clip(padding-box);
 		@include transition(all .3s ease-in-out);
-		background-color: $color-inline-code-background;
+		background-color: $color-hover-transparent;
 		background-repeat: repeat-x;
-		border: 0;
+		border: 2px solid $color-hover-transparent;
 		color: $color-text;
-		padding: 6px 12px;
+		display: inline-block;
+		padding: 2px 6px;
 		outline: 0;
 		text-align: center;
 		text-decoration: none;
@@ -291,8 +292,9 @@
 		white-space: nowrap;
 	}
 
-	button:hover, button:focus, button:active {
-		background-color: $color-hover
+	button:hover {
+		background: transparent;
+		color: $color-hover;
 	}
 }
 
@@ -343,6 +345,7 @@
 
 	a {
 		@include background-clip(padding-box);
+		@include border-radius(0px);
 		@include user-select(none);
 		@include transition-duration(0.2s);
 		background-color: $color-inline-code-background;
