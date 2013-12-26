@@ -1202,9 +1202,9 @@ pre {
     padding: 21px !important;
   }
   .the-header .unit-head .nav-global .logo a {
-    font-size: 1.575em;
-    padding-bottom: 8px;
     margin-left: 6px;
+    padding-top: 6px !important;
+    padding-bottom: 6px;
   }
   .the-header .unit-head .nav-global li {
     display: none;
@@ -1259,8 +1259,9 @@ pre {
     padding-bottom: 6px;
   }
   .the-header .unit-head .nav-global .logo a {
-    font-size: 1.575em;
+    font-size: 1.375em;
     line-height: 0;
+    padding-top: 0px;
   }
   .the-header .unit-head .nav-global li a {
     padding: 8px;

@@ -35,9 +35,9 @@
 		padding: 21px !important;
 
 		.nav-global .logo a {
-			font-size: 1.575em;
-			padding-bottom: 8px;
 			margin-left: 6px;
+			padding-top: 6px !important;
+			padding-bottom: 6px;
 		}
 
 		.nav-global li {
@@ -93,8 +93,9 @@
 		padding-bottom: 6px;
 
 		.nav-global .logo a {
-			font-size: 1.575em;
+			font-size: 1.375em;
 			line-height: 0;
+			padding-top: 0px;
 		}
 
 		.nav-global li a {
