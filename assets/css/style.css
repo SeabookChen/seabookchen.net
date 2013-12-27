@@ -628,7 +628,7 @@ pre {
   border-radius: 2px;
   color: #0077cc;
   font-size: .95em;
-  padding: 2px 5px;
+  padding: 2px 3px;
   border-bottom: 1px dotted #FFD18D;
 }
 .unit-article a:visited {
@@ -670,7 +670,6 @@ pre {
   font-size: 1em;
   border-bottom: none;
   line-height: 1.825em;
-  padding-left: 0px;
 }
 .unit-article .posts a:hover {
   color: #2d2d2d;
@@ -1252,6 +1251,8 @@ pre {
   }
   .unit-article .posts a {
     line-height: 1.525em;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
   .the-header .unit-head {
