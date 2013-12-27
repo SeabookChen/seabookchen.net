@@ -8,8 +8,6 @@ alias: [/2013/05/10/]
 last_updated: September 10, 2013
 js_utils: fancybox, toc, unveil
 ---
-{% include JB/setup %}
-
 <div id="toc"></div>
 
 ## <a id="install-ruby"></a>Install Ruby

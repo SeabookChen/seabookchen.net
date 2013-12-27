@@ -8,8 +8,6 @@ tags: [c#, .net]
 alias: [/2013/08/31/]
 js_utils: toc
 ---
-{% include JB/setup %}
-
 <div id="toc"></div>
 
 ## <a id="app-config"></a>App.config file

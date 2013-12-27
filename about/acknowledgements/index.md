@@ -6,8 +6,6 @@ Yi Zeng's personal website."
 priority: 0.5
 js_utils: back-to-top
 ---
-{% include JB/setup %}
-
 ## <a id="jekyll"></a>Jekyll
 <table border="1" class="data-table">
     <tr>

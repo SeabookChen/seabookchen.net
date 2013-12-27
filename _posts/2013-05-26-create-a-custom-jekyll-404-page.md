@@ -8,8 +8,6 @@ tags: [jekyll, github]
 alias: [/2013/05/26/]
 js_utils: toc
 ---
-{% include JB/setup %}
-
 This article demonstrates how to create a custom Jekyll 404 page
 for Jekyll sites hosted on [GitHub Page][GitHub Page],
 things might be different if sites are hosted by other means.

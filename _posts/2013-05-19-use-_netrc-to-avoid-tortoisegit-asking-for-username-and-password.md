@@ -6,8 +6,6 @@ category: notes
 tags: [git, tortoisegit]
 alias: [/2013/05/19/]
 ---
-{% include JB/setup %}
-
 1. Open `%USERPROFILE%` from Windows Explorer
 2. Create a new file with name `_netrc`
 3. Put the following lines in

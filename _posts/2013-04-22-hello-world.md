@@ -7,8 +7,6 @@ category: random
 tags: [jekyll]
 alias: [/2013/04/22/]
 ---
-{% include JB/setup %}
-
 <p>This is just a paragraph.</p>
 
 <script src="https://gist.github.com/yizeng/2371e8b83c9254ed77f2.js"></script>

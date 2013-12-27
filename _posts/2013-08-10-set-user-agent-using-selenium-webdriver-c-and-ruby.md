@@ -8,8 +8,6 @@ tags: [c#, phantomjs, ruby, webdriver, selenium]
 alias: [/2013/08/10/]
 js_utils: toc
 ---
-{% include JB/setup %}
-
 This post demonstrates how to set Chrome, Firefox and PhantomJS's User Agent
 using Selenium WebDriver C# and Ruby bindings.
 

@@ -8,8 +8,6 @@ tags: [linux mint]
 alias: [/2013/07/14/]
 js_utils: fancybox, toc, unveil
 ---
-{% include JB/setup %}
-
 Being a left-handed touchpad, right-handed mouse user,
 it bugged me that after installing Linux Mint 15 Cinnamon,
 the touchpad and mouse can't be set separately through "System Settings -> Mouse and Touchpad".

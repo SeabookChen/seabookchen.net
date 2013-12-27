@@ -6,8 +6,6 @@ category: notes
 tags: [jekyll, ruby]
 alias: [/2013/05/17/]
 ---
-{% include JB/setup %}
-
 Apprently `gem --help` would be helpful but just too long to read, the following commands are just for quick references purpose.
 
 ##Install/Uninstall Gems

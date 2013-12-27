@@ -6,8 +6,6 @@ category: notes
 tags: [linux mint, tortoisehg]
 alias: [/2013/07/02/]
 ---
-{% include JB/setup %}
-
 This is a note for how to install [TortoiseHg][TortoiseHg]
 on Linux Mint 15 via [TortoiseHg Release PPA][TortoiseHg Release PPA].
 
