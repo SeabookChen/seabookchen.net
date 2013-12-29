@@ -6,6 +6,7 @@ using Selenium WebDriver C# and Ruby bindings."
 category: articles
 tags: [c#, phantomjs, ruby, webdriver, selenium]
 alias: [/2013/08/10/]
+last_updated: December 28, 2013
 js_utils: toc
 ---
 This post demonstrates how to set Chrome, Firefox and PhantomJS's User Agent
@@ -83,3 +84,7 @@ driver = Selenium::WebDriver.for :phantomjs, :desired_capabilities => capabiliti
 
 ## <a id="ie"></a>IE
 Sadly but as expected, IE doesn't allow Selenium WebDriver to override the User Agent natively.
+[Quote][Set IEDriver UA] from IE driver's developer Jim Evans:
+> The IE driver does not support changing the user agent, using capabilities or otherwise. Full stop.
+
+[Set IEDriver UA]: https://groups.google.com/d/msg/selenium-users/q1f-nIn1BJY/pjnmCc3jSz4J
