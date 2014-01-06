@@ -69,13 +69,6 @@ type in the following lines:
 2. Install Jekyll gem
     > gem install jekyll
 
-## <a id="start-jekyll"></a>Start Jekyll
-Following the commands on official [Jekyll Quick-start guide][Jekyll Quick-start guide],
-a new Jekyll blog should be able to be created and browsed at [localhost:4000](http://localhost:4000).
-> jekyll new myblog<br />
-> cd myblog<br />
-> jekyll serve<br />
-
 ## <a id="install-pygements"></a>Install Pygments
 
 Pygments is the syntax highlighting tool used in Jekyll.
@@ -102,6 +95,13 @@ Note that Python 2 is preferred since Python 3 might not be working as intended 
 > easy_install --help
 2. Install Pygments using "easy_install"
 > easy_install Pygments
+
+## <a id="start-jekyll"></a>Start Jekyll
+Following the commands on official [Jekyll Quick-start guide][Jekyll Quick-start guide],
+a new Jekyll blog should be able to be created and browsed at [localhost:4000](http://localhost:4000).
+> jekyll new myblog<br />
+> cd myblog<br />
+> jekyll serve<br />
 
 ## <a id="troubleshooting"></a>Troubleshooting
 1. Error message:
