@@ -644,6 +644,14 @@ pre {
   transition: all 0.3s ease-in-out;
   background-color: rgba(255, 153, 0, 0.7);
 }
+.unit-article h1 a,
+.unit-article h2 a,
+.unit-article h3 a,
+.unit-article h4 a,
+.unit-article h5 a,
+.unit-article h6 a {
+  padding: 0px;
+}
 .unit-article .meta {
   border-bottom: 1px dotted rgba(21, 25, 25, 0.8);
   margin-bottom: 26px;
@@ -663,6 +671,7 @@ pre {
 }
 .unit-article .post-list {
   list-style-type: disc;
+  margin: 0;
   padding: 0;
 }
 .unit-article .posts a {
