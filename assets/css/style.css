@@ -898,6 +898,10 @@ pre {
   margin-bottom: 0;
 }
 
+.unit-article .entry-content {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
 .unit-article .entry-content h2, .unit-article .entry-content h3, .unit-article .entry-content h4, .unit-article .entry-content h5, .unit-article .entry-content h6 {
   color: #2d2d2d;
 }
@@ -913,6 +917,12 @@ pre {
 }
 .unit-article .entry-content h2 a:hover, .unit-article .entry-content h3 a:hover, .unit-article .entry-content h4 a:hover, .unit-article .entry-content h5 a:hover, .unit-article .entry-content h6 a:hover {
   background-color: transparent;
+}
+.unit-article .entry-content h3[id$='-ref'],
+.unit-article .entry-content h3.category,
+.unit-article .entry-content h3.year {
+  margin-top: 12px;
+  margin-bottom: 6px;
 }
 .unit-article .entry-content a.license {
   float: right;

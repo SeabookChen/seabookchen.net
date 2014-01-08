@@ -268,6 +268,9 @@
 }
 
 .unit-article .entry-content {
+	margin-top: 8px;
+	margin-bottom: 8px;
+
 	h2, h3, h4, h5, h6 {
 		color: $color-text;
 
@@ -279,6 +282,13 @@
 		a:hover {
 			background-color: transparent
 		}
+	}
+	
+	h3[id$='-ref'],
+	h3.category,
+	h3.year {
+		margin-top: 12px;
+		margin-bottom: 6px;
 	}
 
 	a.license {
