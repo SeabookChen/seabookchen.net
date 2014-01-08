@@ -9,7 +9,7 @@ case ENV['browser']
 
 	when 'debug'
 		profile = Selenium::WebDriver::Firefox::Profile.new
-		Dir.glob('features/support/bin/*.xpi') do |extension_file|
+		Dir.glob('_features/support/bin/*.xpi') do |extension_file|
 				puts "Loading Firefox extension '#{extension_file}'"
 				profile.add_extension(extension_file)
 		end

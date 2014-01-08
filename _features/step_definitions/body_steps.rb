@@ -10,7 +10,6 @@ Then(/^I should have posts grouped by "(.*?)"$/) do |list_names|
 
 	assert_equal(true, list_names.count > 0)
 	assert_equal(list_names.count, @page.list_headers.count)
-	assert_equal(list_names.count, @page.post_lists.count)
 
 	@page.list_headers.each do |list_header|
 		assert_equal(true, list_names.include?(list_header.text))
