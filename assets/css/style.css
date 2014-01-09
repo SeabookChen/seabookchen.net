@@ -562,6 +562,23 @@ pre {
   font-size: 0.9em;
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #EAEAEA;
+  border-left: 1px solid #CCC;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #CCC;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #AAA;
+}
+
 .the-header .unit-head {
   padding: 26px;
 }
