@@ -146,7 +146,12 @@ pre {
 	margin-right: 0;
 	padding: 1.625em;
 	overflow: auto;
+
+	code {
+		white-space: pre
+	}
 }
+
 .linenos pre {
 	background-color: $color-linenos-background;
 	padding-left: 0.625em;
