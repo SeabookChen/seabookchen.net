@@ -1,24 +1,38 @@
 .data-table {
-	background-color: #EEEEEE;
-	border-collapse: separate;
-	border: 5px solid $color-box-border;
+	overflow:scroll;
 
-	td, th {
-		border-color: rgba(255, 255, 255, 0.5);
-		padding: 3px;
+	table{
+		background-color: #EEEEEE;
+		border-collapse: separate;
+		border: 5px solid $color-box-border;
+
+		td, th {
+			border-color: rgba(255, 255, 255, 0.5);
+			padding: 3px;
+		}
+
+		tr:nth-child(even) td {
+			background-color: $color-inline-code-background
+		}
+
+		a {
+			border-bottom: none;
+			font-size: 1em;
+		}
+
+		th,
+		.center {
+			text-align: center;
+		}
 	}
 
-	tr:nth-child(even) td {
-		background-color: $color-inline-code-background
-	}
-
-	a {
-		border-bottom: none;
-		font-size: 1em;
+	table:hover {
+		@include transition(all .3s ease-in-out);
+		border-color: $color-hover;
 	}
 }
 
-.data-table:hover {
-	@include transition(all .3s ease-in-out);
-	border-color: $color-hover;
+.data-table::-webkit-scrollbar-track {
+	background-color: transparent;
+	border-left: none;
 }

@@ -7,7 +7,8 @@ priority: 0.5
 js_utils: back-to-top
 ---
 ## <a id="jekyll"></a>Jekyll
-<table border="1" class="data-table">
+<div class="data-table">
+<table border="1">
     <tr>
         <th>Name</th>
         <th>License</th>
@@ -44,9 +45,11 @@ js_utils: back-to-top
         <td>Compressing the HTML files in production</td>
     </tr>
 </table>
+</div>
 
 ## <a id="jekyll-plugins"></a>Jekyll Plugins
-<table border="1" class="data-table">
+<div class="data-table">
+<table border="1">
     <tr>
         <th>Name</th>
         <th>License</th>
@@ -68,9 +71,11 @@ js_utils: back-to-top
         <td><del>Striping HTML whitespaces</del></td>
     </tr>
 </table>
+</div>
 
 ## <a id="javascript"></a>JavaScript
-<table border="1" class="data-table">
+<div class="data-table">
+<table border="1">
     <tr>
         <th>Name</th>
         <th>License</th>
@@ -102,9 +107,11 @@ js_utils: back-to-top
         <td>jQuery plugin to delay loading of images</td>
     </tr>
 </table>
+</div>
 
 ## <a id="css"></a>CSS
-<table border="1" class="data-table">
+<div class="data-table">
+<table border="1">
     <tr>
         <th>Name</th>
         <th>License</th>
@@ -136,9 +143,11 @@ js_utils: back-to-top
         <td><del>Format CSS</del></td>
     </tr>
 </table>
+</div>
 
 ## <a id="images"></a>Images
-<table border="1" class="data-table">
+<div class="data-table">
+<table border="1">
     <tr>
         <th>Name</th>
         <th>License</th>
@@ -175,9 +184,11 @@ js_utils: back-to-top
         <td><del>Social icon set</del></td>
     </tr>
 </table>
+</div>
 
 ## <a id="fonts"></a>Fonts
-<table border="1" class="data-table">
+<div class="data-table">
+<table border="1">
     <tr>
         <th>Name</th>
         <th>License</th>
@@ -199,9 +210,11 @@ js_utils: back-to-top
         <td></td>
     </tr>
 </table>
+</div>
 
 ## <a id="ui-testing"></a>UI Testing
-<table border="1" class="data-table">
+<div class="data-table">
+<table border="1">
     <tr>
         <th>Name</th>
         <th>License</th>
@@ -228,4 +241,4 @@ js_utils: back-to-top
         <td>Building and running all UI tests</td>
     </tr>
 </table>
-<br />
+</div>

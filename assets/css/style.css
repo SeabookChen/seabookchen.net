@@ -1120,28 +1120,39 @@ pre::-webkit-scrollbar-thumb:horizontal,
 }
 
 .data-table {
+  overflow: scroll;
+}
+.data-table table {
   background-color: #EEEEEE;
   border-collapse: separate;
   border: 5px solid #dddddd;
 }
-.data-table td, .data-table th {
+.data-table table td, .data-table table th {
   border-color: rgba(255, 255, 255, 0.5);
   padding: 3px;
 }
-.data-table tr:nth-child(even) td {
+.data-table table tr:nth-child(even) td {
   background-color: #dddddd;
 }
-.data-table a {
+.data-table table a {
   border-bottom: none;
   font-size: 1em;
 }
-
-.data-table:hover {
+.data-table table th,
+.data-table table .center {
+  text-align: center;
+}
+.data-table table:hover {
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-color: #ff9900;
+}
+
+.data-table::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-left: none;
 }
 
 .the-footer {
