@@ -12,7 +12,7 @@
                 <div class="entry-content">
                         <div class="meta">
                             <p class="date-publish">
-                                Published: <time itemprop="datePublished" class="date-pub{% if page.last_updated == null %}updated{% endif %}" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }} </time> by 
+                                Published: <time itemprop="datePublished" class="date-pub {% if page.last_updated == null %}updated{% endif %}" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }} </time> by 
                                 <a class="author" href="/" rel="author">
                                     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                                         <span itemprop="name">
