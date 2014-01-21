@@ -69,9 +69,16 @@
                 <div class="unit-inner unit-foot-inner">
                     <div class="misc vcard">
                         <h4><a href="/about">About</a></h4>
-                        <p>Software developer/Test automator based in Christchurch, New Zealand.</p><br />
+                        <p>
+                            <span class="fn p-name">{{ site.author.name }}</span>, 
+                            <span class="p-job-title">software developer and test automator</span> based in 
+                            <span class="adr h-adr p-adr">
+                                <abbr class="locality p-locality">Christchurch</abbr>, 
+                                <abbr class="country-name p-country-name">New Zealand</abbr>
+                            </span>.
+                        </p><br />
                         <div class="social-icons">
-                            <a class="email u-email" href="http://scr.im/{{ site.author.username }}dev/" rel="me" target="_blank">
+                            <a href="http://scr.im/{{ site.author.username }}dev/" rel="me" target="_blank">
                                 <img title="Email" src='/assets/images/social/Mail-36.png' alt="Yi Zeng's Email address" height="42" width="42">
                             </a>
                             <a href="http://linkedin.com/in/{{ site.author.username }}nz/" rel="me" target="_blank">
