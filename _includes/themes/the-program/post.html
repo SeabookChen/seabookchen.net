@@ -12,8 +12,8 @@
                 <div class="entry-content">
                         <div class="meta">
                             <p class="date-publish">
-                                Published: <time itemprop="datePublished" class="date-pub" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }} </time> by 
-                                <a rel="author" href="/">
+                                Published: <time itemprop="datePublished" class="date-pub{% if page.last_updated == null %}updated{% endif %}" title="{{ page.date | date_to_xmlschema }}" datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%B' }} {{ page.date | date: '%d' }}, {{ page.date | date: '%Y' }} </time> by 
+                                <a class="author" href="/" rel="author">
                                     <span itemprop="author" itemscope itemtype="http://schema.org/Person">
                                         <span itemprop="name">
                                             {% if page.author == null %}
@@ -28,7 +28,7 @@
                                     <img alt="Creative Commons Licence" style="border-width:0" src="/assets/images/cc-by-sa.png"  height="16" width="80"/>
                                 </a>
                                 {% if page.last_updated %}
-                                (Last updated: <time class="date-updated" title="{{ page.last_updated | date_to_xmlschema }}" datetime="{{ page.last_updated | date_to_xmlschema }}">{{ page.last_updated }})</time>
+                                (Last updated: <time class="date-updated updated" title="{{ page.last_updated | date_to_xmlschema }}" datetime="{{ page.last_updated | date_to_xmlschema }}">{{ page.last_updated }})</time>
                                 {% endif %}
                             </p>
                             <ul class="list-category list-linear">
