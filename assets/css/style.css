@@ -801,8 +801,14 @@ pre::-webkit-scrollbar-thumb:horizontal,
   margin-bottom: 0em;
   padding-left: 0;
 }
-.unit-article ul {
+.unit-article ul li {
+  list-style: disc;
+}
+.unit-article ul li li {
   list-style: circle;
+}
+.unit-article ul li li li {
+  list-style: square;
 }
 .unit-article ol {
   list-style: decimal;

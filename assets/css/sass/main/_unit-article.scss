@@ -121,8 +121,17 @@
 	}
 
 	ul {
-		list-style: circle
+		li {
+			list-style: disc
+		}
+		li li {
+			list-style: circle
+		}
+		li li li {
+			list-style: square
+		}
 	}
+
 	ol {
 		list-style: decimal
 	}
