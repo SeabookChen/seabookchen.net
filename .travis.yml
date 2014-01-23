@@ -14,6 +14,8 @@ before_install:
   - gem update --system
   - gem update
 
+  - gem install sass
+  - gem install compass
   - gem install jekyll
   - gem install rdiscount
   - gem install cucumber
@@ -21,8 +23,11 @@ before_install:
 
   - gem --version
   - phantomjs --version # output the phantomjs version
+  - sass --version
+  - compass --version
 
 before_script:
+  - compass compile  ./assets/css/
   - rake jekyll detach=true
   - sleep 3 # give Web server some time to bind to sockets, etc
 
