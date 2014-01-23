@@ -248,8 +248,8 @@
 		float: left;
 		width: 80.5%;
 		margin-right: -325px;
-		margin-top: 12px;
-		margin-bottom: 12px;
+		margin-top: 18px;
+		margin-bottom: 18px;
 
 		.unit-body {
 			@include box-shadow($color-box-border 0 0 12px 3px);
@@ -257,7 +257,7 @@
 			margin-right: 325px;
 			min-height: 1000px;
 			padding: 26px;
-			padding-top: 14px;
+			padding-top: 8px;
 		}
 	}
 
