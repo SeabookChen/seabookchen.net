@@ -13,6 +13,7 @@ task :jekyll do
 			system 'chcp 65001'
 		end
 
+		system "compass compile  ./assets/css/"
 		system "jekyll serve --watch --drafts --port=#{port} #{trace} #{detach}"
 	end
 end
