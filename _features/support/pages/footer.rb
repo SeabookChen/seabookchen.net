@@ -16,5 +16,9 @@ module Pages
 		def social_images
 			@footer.find_elements(:css => ".social-icons > a > img")
 		end
+
+		def find_social_link(title)
+			return @footer.find_element(:xpath => ".//img[@title='#{title}']/..")
+		end
 	end
 end
