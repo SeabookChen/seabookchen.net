@@ -1,5 +1,15 @@
 require 'selenium-webdriver'
 
+# navigation
+SITE_URL = 'http://localhost:4000'
+NAV_LINKS = %w[Articles Notes Categories Tags]
+
+# window
+WINDOW_HEIGHT = 1080
+
+# timeout
+TIMEOUT = 3 # seconds
+
 case ENV['browser']
 	when 'chrome', 'Chrome'
 		driver = Selenium::WebDriver.for :chrome
@@ -22,6 +32,7 @@ end
 
 Before do
 	@driver = driver
+	@driver.manage.timeouts.implicit_wait = TIMEOUT
 end
 
 at_exit do
@@ -30,9 +41,24 @@ at_exit do
 	end
 end
 
-# navigation
-SITE_URL = 'http://localhost:4000'
-NAV_LINKS = %w[Articles Notes Categories Tags]
+module Helper
+	def assert_link_clickable(link)
+		assert_equal(true, link.displayed?)
+		assert_equal(true, link.enabled?)
 
-# window
-WINDOW_HEIGHT = 1080
+		assert_equal(false, link.attribute('href').nil?)
+		assert_equal(false, link.attribute('href').empty?)
+	end
+
+	def is_window_present(partial_url)
+		@driver.window_handles.each do |handle|
+			@driver.switch_to.window(handle)
+			if @driver.current_url.include?(partial_url)
+				return true
+			end
+		end
+		return false
+	end
+end
+
+World(Helper)

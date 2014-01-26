@@ -22,16 +22,12 @@ Then(/^I should have clickable post links$/) do
 	@page.posts.each do |post|
 		link = post.find_element(:tag_name => 'a')
 
-		assert_equal(true, link.displayed?)
-		assert_equal(true, link.enabled?)
-
 		assert_equal(false, link.text.empty?)
-		assert_equal(false, link.attribute('href').nil?)
-		assert_equal(false, link.attribute('href').empty?)
+		assert_link_clickable(link)
 	end
 end
 
-Then(/^I should "(not see|see)" date displayed for each post$/) do |target|
+Then(/^I should (not see|see) date displayed for each post$/) do |target|
 	assert_equal(true, @page.posts.count > 0)
 
 	@page.posts.each do |post|
