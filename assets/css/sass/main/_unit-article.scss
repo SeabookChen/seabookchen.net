@@ -325,6 +325,14 @@
 		background-color: $color-hover;
 		color: #FFF;
 	}
+
+	.mce-btn > button {
+		border: transparent
+	}
+
+	.mce-btn > button:hover {
+		background-color: transparent
+	}
 }
 
 .unit-article .entry-content:first-child h4 {
