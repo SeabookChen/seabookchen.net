@@ -5,7 +5,7 @@ description: "How to disable JavaScript in browsers like Chrome, Firefox, IE and
 PhantomJS using Selenium WebDriver Ruby binding."
 category: articles
 tags: [ruby, selenium, webdriver]
-alias: [/2013/01/08/]
+alias: [/2014/01/08/]
 js_utils: toc
 ---
 Selenium WebDriver is a web automation framework relies heavily on [Automation Atoms][Automation Atoms],

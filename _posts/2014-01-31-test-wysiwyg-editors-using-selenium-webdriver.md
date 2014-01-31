@@ -6,7 +6,7 @@ like TinyMCE, CKEditor, CLEditor, CuteEditor and Primefaces editor
 using Selenium WebDriver Ruby binding."
 category: articles
 tags: [selenium, webdriver, ruby]
-alias: [/2013/01/31/]
+alias: [/2014/01/31/]
 js_utils: toc
 ---
 > What is a WYSIWYG HTML editor?
