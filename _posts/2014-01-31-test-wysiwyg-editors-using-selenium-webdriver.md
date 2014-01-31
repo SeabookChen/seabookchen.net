@@ -363,8 +363,6 @@ tinymce_btn_numbered_list.click
 # Linux Mint 15, Selenium 2.39.0, Chromium 31.0, ChromeDriver 2.8
 require 'selenium-webdriver'
 
-Selenium::WebDriver::Chrome.driver_path = '/home/yze14/Downloads/chromedriver_linux64_2.8/chromedriver'
-
 driver = Selenium::WebDriver.for :chrome
 driver.get('http://yizeng.me/2014/01/31/test-wysiwyg-editors-using-selenium-webdriver/')
 
