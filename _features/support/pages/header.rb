@@ -10,7 +10,7 @@ module Pages
 		end
 
 		def nav_links
-			@header.find_elements(:css => ':not(.logo) > a')
+			@header.find_elements(:css => ':not(.logo) > a:not(.btn-search)')
 		end
 	end
 end
