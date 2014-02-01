@@ -47,7 +47,7 @@ module Jekyll
   SITEMAP_FILE_NAME = "sitemap.xml"
 
   # Any files to exclude from being included in the sitemap.xml
-  EXCLUDED_FILES = ["atom.xml", "rss.xml", "404.xml"]
+  EXCLUDED_FILES = ["atom.xml", "rss.xml", "404.html"]
 
   # Any files that include posts, so that when a new post is added, the last
   # modified date of these pages should take that into account
@@ -106,7 +106,9 @@ module Jekyll
 
     # Valid values allowed by sitemap.xml spec for change frequencies
     VALID_CHANGE_FREQUENCY_VALUES = ["always", "hourly", "daily", "weekly",
-      "monthly", "yearly", "never"] 
+      "monthly", "yearly", "never"]
+    DEFAULT_FREQUENCY = "monthly"
+    DEFAULT_PRIORITY = "0.5"
 
     # Goes through pages and posts and generates sitemap.xml file
     #
@@ -200,7 +202,7 @@ module Jekyll
         end
       else
         change_frequency = REXML::Element.new "changefreq"
-        change_frequency.text = "weekly"
+        change_frequency.text = DEFAULT_FREQUENCY
         url.add_element(change_frequency)
       end
 
@@ -215,7 +217,7 @@ module Jekyll
         end
       else
         priority = REXML::Element.new "priority"
-        priority.text = "0.5"
+        priority.text = DEFAULT_PRIORITY
         url.add_element(priority)
       end
 
