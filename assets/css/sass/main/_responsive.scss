@@ -58,9 +58,9 @@
 	}
 }
 /*
-	Smartphone width: [0, 674]
+	Smartphone width: [0, 694]
 */
-@media only screen and (max-width:674px) {
+@media only screen and (max-width:694px) {
 	img {
 		max-width: 95%
 	}
@@ -117,12 +117,16 @@
 		.nav-global li a {
 			padding: 8px
 		}
+
+		.nav-global li .btn-search {
+			display: none
+		}
 	}
 }
 /*
-	Tablet width: [675, infinity)
+	Tablet width: [695, infinity)
 */
-@media only screen and (min-width: 675px) {
+@media only screen and (min-width: 695px) {
 	.the-header .unit-head {
 		padding: 0;
 
