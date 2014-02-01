@@ -123,6 +123,20 @@
 		}
 	}
 }
+@media only screen and (min-width: 520px) and (max-width:694px) {
+	.the-header .unit-head {
+		.nav-global .logo a {
+			margin-left: 6px !important
+		}
+		.nav-global .logo .btn-search {
+			display: none !important
+		}
+		.nav-global li .btn-search {
+			display: inline !important
+		}
+	}
+}
+
 /*
 	Tablet width: [695, infinity)
 */
