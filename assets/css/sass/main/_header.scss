@@ -50,5 +50,6 @@
 		@include transition(all .3s ease-in-out);
 		background-color: $color-hover;
 		color: $color-text;
+		cursor: pointer;
 	}
 }
