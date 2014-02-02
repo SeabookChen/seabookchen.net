@@ -37,17 +37,30 @@
     <noscript>
         <p class="site-notice">Some functionalities of this site requires JavaScript. Here are the <a href="http://www.enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</p>
     </noscript>
+
+    <div class="search-wrapper">
+        <div class="search-form">
+            <input type="text" class="search-field" placeholder="Search...">
+            <a class="btn-close">Close</a>
+            <ul class="search-results post-list"></ul>
+        </div>
+    </div>
+
     <div id="page" class="hentry">
         <header class="the-header">
             <div class="unit-head">
                 <div class="unit-inner unit-head-inner">
                     <nav class="nav-global">
                         <ul>
-                            <li class="logo"><a href="/">{{ site.title }}</a></li>
+                            <li class="logo">
+                                <a href="/">{{ site.title }}</a>
+                                <button class="btn-search"></button>
+                            </li>
                             <li class="link"><a href="/articles">Articles</a></li>
                             <li class="link"><a href="/notes">Notes</a></li>
                             <li class="link"><a href="/categories">Categories</a></li>
                             <li class="link"><a href="/tags">Tags</a></li>
+                            <li class="link"><a class="btn-search">Search</a></li>
                         </ul>
                     </nav>
                 </div><!-- unit-inner -->
@@ -101,100 +114,7 @@
             <a href="#" class="back-to-top">Back to Top</a>
         </footer>
     </div><!-- page -->
-
-    {% if page.js_utils != null %}
-        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="/assets/js/jquery-1.10.2.min.js"><\/script>')</script>
-
-        {% if page.js_utils contains "fancybox" %}
-            <script src="/assets/js/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
-            <script src="/assets/js/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-
-            <script type="text/javascript">
-                $("head").append('<link rel="stylesheet" href="/assets/js/fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" />');
-                $("head").append('<link rel="stylesheet" href="/assets/js/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" />');
-                $(".post-image").fancybox({
-                    prevEffect      : 'none',
-                    nextEffect      : 'none',
-                    closeBtn        : true,
-                    helpers     : {
-                        title   : { type : 'inside' },
-                        buttons : {}
-                    }
-                });
-            </script>
-        {% endif %}
-
-        {% if page.js_utils contains "unveil" %}
-            <script src="/assets/js/unveil/jquery.unveil.min.js"></script>
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    $(".post-image > img").unveil(150);
-                });
-            </script>
-        {% endif %}
-
-        {% if page.js_utils contains "toc" %}
-            <script type="text/javascript">
-                function createListItem(heading) {
-                    var link = "#" + heading.children("a").attr("id");
-                    return "<li>" + "<a href='" + link + "'>" + heading.text() + "</a>" + "</li>";
-                }
-
-                var ToC = "<nav role='navigation' class='toc'><ol>";
-                $("article h2").each(function () {
-                    var secondHeading, thirdHeadingInside;
-
-                    secondHeading = $(this);
-                    ToC += createListItem(secondHeading);
-
-                    thirdHeadingInside = secondHeading.nextUntil("article h2", "h3");
-                    if (thirdHeadingInside.length !== 0) {
-                        ToC += "<ul>";
-                        thirdHeadingInside.each(function () {
-                            ToC += createListItem($(this));
-                        });
-                        ToC += "</ul>";
-                    }
-                });
-                ToC += "</ol>" + "</nav>";
-
-                $("#toc").prepend(ToC);
-            </script>
-        {% endif %}
-
-        {% if page.js_utils contains "toc" or page.js_utils contains "back-to-top" %}
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    var offset = 220, duration = 500, width = 1080;
-                    $(window).scroll(function () {
-                        if ($(window).width() > width) {
-                            if ($(this).scrollTop() > offset) {
-                                $('.back-to-top').fadeIn(duration);
-                            } else {
-                                $('.back-to-top').fadeOut(duration);
-                            }
-                        }
-                    });
-                    $(window).resize(function () {
-                        if ($(window).width() < width) {
-                            $('.back-to-top').fadeOut(duration);
-                        }
-                        if ($(window).width() >= width && $(this).scrollTop() > offset) {
-                            $('.back-to-top').fadeIn(duration);
-                        }
-                    });
-
-                    $('.back-to-top').click(function (event) {
-                        event.preventDefault();
-                        $('html, body').animate({scrollTop: 0}, duration);
-                        return false;
-                    });
-                });
-            </script>
-        {% endif %}
-    {% endif %}
-
+    {% include themes/the-program/scripts.html %}
     {% include JB/analytics %}
 </body>
 </html>

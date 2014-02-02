@@ -19,18 +19,26 @@
 		font-weight: bold;
 		margin: 0;
 		width: auto;
-	}
 
-	.nav-global .logo a {
-		display: block;
-		font-size: 1.875em;
-		line-height: 52px;
-		padding-bottom: 26px;
-	}
+		a {
+			display: block;
+			font-size: 1.875em;
+			line-height: 52px;
+			padding-bottom: 26px;
+		}
 
-	.nav-global .logo a:hover {
-		background-color: transparent;
-		color: $color-hover;
+		a:hover {
+			background-color: transparent;
+			color: $color-hover;
+		}
+
+		.btn-search {
+			background: url('/assets/images/btn-search.png') no-repeat;
+			border: none;
+			display: none;
+			height: 24px;
+			width: 24px;
+		}
 	}
 
 	.nav-global li {
@@ -42,5 +50,6 @@
 		@include transition(all .3s ease-in-out);
 		background-color: $color-hover;
 		color: $color-text;
+		cursor: pointer;
 	}
 }

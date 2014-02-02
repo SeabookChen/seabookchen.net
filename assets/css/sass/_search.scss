@@ -1,0 +1,121 @@
+.search-form {
+	@include transition(all .2s .1s cubic-bezier(0,0.6,0.4,1));
+	left: -200px;
+	opacity: 0;
+	position: relative;
+	top: 0;
+	width: 100%;
+	z-index: 9002;
+
+	.search-field {
+		@include appearance(none);
+		@include background-clip(padding-box);
+		@include box-shadow(none);
+		@include border-radius(0px);
+		background-color:transparent;
+		border: none;
+		border-bottom: 1px solid #fff;
+		color: #fff;
+		font-size: 2em;
+		width: 100%;
+	}
+	.search-field:focus {
+		outline: 0;
+		box-shadow: none;
+	}
+	.search-field::-webkit-search-decoration,
+	.search-field::-webkit-search-cancel-button,
+	.search-field::-webkit-search-results-button,
+	.search-field::-webkit-search-results-decoration {
+		display: none
+	}
+
+	.btn-close {
+		border: none;
+		color: #fff;
+		cursor: pointer;
+		display: block;
+		height: auto;
+		width: auto;
+		position: absolute;
+		top: .6rem;
+		right: 1rem;
+		text-align: center;
+		z-index: 1;
+	}
+	.btn-close:hover {
+		font-weight: bold
+	}
+
+	.post-list {
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		width: 100%;
+
+		h4, li, p, a {
+			color: #fff
+		}
+	}
+
+	.post-list li {
+		font-size: 1em;
+		line-height: 1.825em;
+		margin-left: 12px;
+		padding: 3px;
+	}
+	.post-list li:hover {
+		border: 1px dashed #fff
+	}
+	.post-list .entry-date {
+		display: none;
+		float: right;
+	}
+}
+
+.search-form.active {
+	top: 0;
+	left: 0;
+	opacity: 1;
+}
+
+.search-form.hidden {
+	display: none
+}
+
+.search-form ::-webkit-input-placeholder {
+	font-size: 2rem
+}
+
+body.search-overlay {
+	overflow: hidden
+}
+
+body.search-overlay:after {
+	background-color: rgba(0,0,0,0.95);
+	content: '';
+	height: 100%;
+	min-height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 9001;
+}
+
+@media only screen and (min-width: 960px) {
+	.search-form .post-list .entry-date {
+		display: block;
+		float: right;
+	}
+}
+
+.search-wrapper {
+	display: none;
+	position: absolute;
+	top: 50px;
+	width: 90%;
+	padding-right: 5%;
+	padding-left: 5%;
+	zoom: 1;
+}
