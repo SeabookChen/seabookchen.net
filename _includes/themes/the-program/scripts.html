@@ -4,36 +4,29 @@
 <!-- Jekyll Simple Search option -->
 <script src="/assets/js/Simple-Jekyll-Search/jekyll-search.jquery.js"></script>
 <script>
-  $(document).ready(function() {
-      $('.search-field').simpleJekyllSearch({
-          jsonFile : '{{ site.url }}/search.json',
-          searchResults : '.search-results',
-          template : '<li><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></li>',
-          noResults: '<p>Nothing found.</p>'
+    $(document).ready(function() {
+        $('.search-field').simpleJekyllSearch({
+            jsonFile : '{{ site.url }}/search.json',
+            searchResults : '.search-results',
+            template : '<li><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></li>',
+            noResults: '<p>Nothing found.</p>'
         });
-  });
+    });
 
-  (function( $, window, undefined ) {
-     var bs = {
-          close: $(".btn-close"),
-          searchform: $(".search-form"),
-          canvas: $("body"),
-          dothis: $('.btn-search')
-      };
-    
-    bs.dothis.on('click', function() {
-      $('.search-wrapper').css({ display: "block" });
-      bs.searchform.toggleClass('active');
-      bs.searchform.find('input').focus();
-      bs.canvas.toggleClass('search-overlay');
-    });
-    
-      bs.close.on('click', function() {
-        $('.search-wrapper').removeAttr( 'style' );
-        bs.searchform.toggleClass('active');
-        bs.canvas.removeClass('search-overlay');
-    });
-  })( jQuery, window );
+    (function($, window, undefined) {
+        $('.btn-search').on('click', function() {
+            $('.search-wrapper').css({ display: "block" });
+            $(".search-form").toggleClass('active');
+            $(".search-form").find('input').focus();
+            $("body").toggleClass('search-overlay');
+        });
+
+        $(".btn-close").on('click', function() {
+            $('.search-wrapper').removeAttr( 'style' );
+            $(".search-form").toggleClass('active');
+            $("body").removeClass('search-overlay');
+        });
+    })(jQuery, window);
 </script>
 
 {% if page.js_utils != null %}

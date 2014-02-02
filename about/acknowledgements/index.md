@@ -66,6 +66,11 @@ js_utils: back-to-top
         <td>Generating aliases for posts</td>
     </tr>
     <tr>
+        <td><a href="https://github.com/christian-fei/Simple-Jekyll-Search">Jekyll Simple Search</a></td>
+        <td>Unspecified</td>
+        <td>Post searching ability</td>
+    </tr>
+    <tr>
         <td><del><a href="https://github.com/aucor/jekyll-plugins">strip.rb</a></del></td>
         <td><del><a href="https://github.com/aucor/jekyll-plugins/blob/master/LICENCE">MIT License</a></del></td>
         <td><del>Striping HTML whitespaces</del></td>
@@ -167,6 +172,11 @@ js_utils: back-to-top
         <td><a href="http://preloaders.net/">Preloaders.net</a></td>
         <td><a href="http://preloaders.net/en/terms_of_use">Free license</a></td>
         <td>Creating image loading icon</td>
+    </tr>
+    <tr>
+        <td><a href="http://www.wpzoom.com">WPZOOM Developer Icon Set</a></td>
+        <td><a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a></td>
+        <td>Search button image</td>
     </tr>
     <tr>
         <td><del><a href="http://www.patternify.com/">Patternify</a></del></td>
