@@ -67,7 +67,7 @@ js_utils: back-to-top
     </tr>
     <tr>
         <td><a href="https://github.com/christian-fei/Simple-Jekyll-Search">Jekyll Simple Search</a></td>
-        <td>Unspecified</td>
+        <td><a href="https://github.com/christian-fei/Simple-Jekyll-Search#license">MIT License</a></td>
         <td>Post searching ability</td>
     </tr>
     <tr>
