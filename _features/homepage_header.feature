@@ -56,3 +56,61 @@ Feature: Test homepage header
 			| Categories | /categories/ | Categories - Yi Zeng | Categories   |
 			| Tags       | /tags/       | Tags - Yi Zeng       | Tags         |
 			| About      | /about/      | About - Yi Zeng      | About        |
+
+	Scenario Outline: Header's search link should be shown when width is greater then 520px
+		When I set window width to <width>px
+		Then I should <see?> header's search link
+
+		Examples:
+			| width | see?    |
+			| 240   | not see |
+			| 320   | not see |
+			| 480   | not see |
+			| 640   | see     |
+			| 768   | see     |
+			| 1280  | see     |
+			| 1920  | see     |
+
+	Scenario Outline: Header's search button icon should be shown when width is smaller then 520px
+		When I set window width to <width>px
+		Then I should <see?> header's search button icon
+
+		Examples:
+			| width | see?    |
+			| 240   | see     |
+			| 320   | see     |
+			| 480   | see     |
+			| 640   | not see |
+			| 768   | not see |
+			| 1280  | not see |
+			| 1920  | not see |
+
+	Scenario Outline: Header's search button or link should clickable depending on width
+		When I set window width to <width>px
+		Then I should have clickable header's search <element?>
+
+		Examples:
+			| width | element? |
+			| 240   | button   |
+			| 320   | button   |
+			| 480   | button   |
+			| 640   | link     |
+			| 768   | link     |
+			| 1280  | link     |
+			| 1920  | link     |
+
+	Scenario Outline: Header's search overlay should be loaded after opening
+		When I set window width to <width>px
+		And I refresh the page
+		And I click header's search <element?>
+		Then I should have search overlay opened
+
+		Examples:
+			| width | element?    |
+			| 240   | button     |
+			| 320   | button     |
+			| 480   | button     |
+			| 640   | link |
+			| 768   | link |
+			| 1280  | link |
+			| 1920  | link |

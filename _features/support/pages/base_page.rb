@@ -23,5 +23,9 @@ module Pages
 		def footer
 			return Pages::Footer.new(@driver)
 		end
+
+		def search_overlay
+			return Pages::SearchOverlay.new(@driver)
+		end
 	end
 end

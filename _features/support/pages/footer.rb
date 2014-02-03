@@ -5,6 +5,10 @@ module Pages
 			@footer = driver.find_element(:css => '#page > footer')
 		end
 
+		def element
+			@footer
+		end
+
 		def about_link
 			@footer.find_element(:css => 'h4 > a')
 		end

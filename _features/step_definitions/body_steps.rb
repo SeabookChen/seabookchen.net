@@ -23,7 +23,7 @@ Then(/^I should have clickable post links$/) do
 		link = post.find_element(:tag_name => 'a')
 
 		assert_equal(false, link.text.empty?)
-		assert_link_clickable(link)
+		assert_equal(true, is_link_clickable(link))
 	end
 end
 

@@ -30,6 +30,10 @@ When(/^I click social icon with title "(.*?)"$/) do |title|
 	@page.footer.find_social_link(title).click
 end
 
+When(/^I refresh the page$/) do
+	@driver.navigate.refresh
+end
+
 Then(/^I should see page title "(.*?)"$/) do |title|
 	assert_equal(title, @driver.title)
 end
