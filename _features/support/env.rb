@@ -42,12 +42,13 @@ at_exit do
 end
 
 module Helper
-	def assert_link_clickable(link)
-		assert_equal(true, link.displayed?)
-		assert_equal(true, link.enabled?)
+	def is_element_clickable(element)
+		return element.displayed? && element.enabled?
+	end
 
-		assert_equal(false, link.attribute('href').nil?)
-		assert_equal(false, link.attribute('href').empty?)
+	def is_link_clickable(link)
+		has_href = link.attribute('href').nil? == false && link.attribute('href').empty? == false
+		return is_element_clickable(link) && has_href
 	end
 
 	def is_window_present(partial_url)

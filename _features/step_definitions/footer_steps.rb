@@ -22,6 +22,6 @@ Then(/^I should have clickable footer's social icon links$/) do
 	assert_equal(true, @page.footer.social_links.count > 0)
 
 	@page.footer.social_links.each do |link|
-		assert_link_clickable(link)
+		assert_equal(true, is_link_clickable(link))
 	end
 end
