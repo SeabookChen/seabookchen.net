@@ -160,13 +160,13 @@ js_utils: back-to-top
     </tr>
     <tr>
         <td><a href="http://www.noisetexturegenerator.com/">Noise Texture Generator</a></td>
-        <td></td>
+        <td>Unknown</td>
         <td>Creating background images</td>
     </tr>
     <tr>
-        <td><a href="http://www.PEPSized.com">FLAT but not Flat Social Media Icons</a></td>
-        <td>Free License</td>
-        <td>Social icon set</td>
+        <td><a href="http://simpleicons.org/">Simple Icons</a></td>
+        <td><a href="https://github.com/danleech/simple-icons#licence">Free Art License 1.3</a></td>
+        <td>Social icons set</td>
     </tr>
     <tr>
         <td><a href="http://preloaders.net/">Preloaders.net</a></td>
@@ -180,7 +180,7 @@ js_utils: back-to-top
     </tr>
     <tr>
         <td><del><a href="http://www.patternify.com/">Patternify</a></del></td>
-        <td></td>
+        <td><del>Unknown</del></td>
         <td><del>CSS Pattern Generator</del></td>
     </tr>
     <tr>
@@ -189,9 +189,14 @@ js_utils: back-to-top
         <td><del>Tileable textured patterns</del></td>
     </tr>
     <tr>
+        <td><del><a href="http://www.PEPSized.com">FLAT but not Flat Social Media Icons</a></del></td>
+        <td><del>Free License</del></td>
+        <td><del>Social icons set</del></td>
+    </tr>
+    <tr>
         <td><del><a href="http://icondock.com/free/vector-social-media-icons">Vector Social Media Icons</a></del></td>
         <td><del>Free License</del></td>
-        <td><del>Social icon set</del></td>
+        <td><del>Social icons set</del></td>
     </tr>
 </table>
 </div>
