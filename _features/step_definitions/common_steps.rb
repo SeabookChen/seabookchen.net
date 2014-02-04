@@ -22,14 +22,6 @@ Given(/^I set window width to (\d+)px$/) do |window_width|
 	@driver.manage.window.resize_to(window_width, WINDOW_HEIGHT)
 end
 
-When(/^I click navigation link text "(.*?)"$/) do |link_text|
-	@driver.find_element(:xpath, ".//a[text()='#{link_text}']").click
-end
-
-When(/^I click social icon with title "(.*?)"$/) do |title|
-	@page.footer.find_social_link(title).click
-end
-
 When(/^I refresh the page$/) do
 	@driver.navigate.refresh
 end
