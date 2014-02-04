@@ -78,11 +78,6 @@
 		margin-bottom: 0em
 	}
 
-	.social-icons a img:hover {
-		@include transition(all .3s ease-in-out);
-		@include transform(scale(0.8));
-	}
-
 	blockquote {
 		@include border-radius(5px);
 		background-color: #EEEEEE;

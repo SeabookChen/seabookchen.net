@@ -2,10 +2,9 @@
 	Super tiny screen width: [0, 275]
 */
 @media only screen and (max-width: 275px) {
-	.the-footer .social-icons a img {
-		height: 28px !important;
-		width: 28px !important;
-		border: 0;
+	.the-footer .social-icons a {
+		height: 32px !important;
+		width: 32px !important;
 	}
 }
 
@@ -13,6 +12,9 @@
 @media only screen and (max-width: 360px) {
 	.data-table {
 		font-size: .75em
+	}
+	.the-footer .social-icons a {
+		margin: 0
 	}
 }
 /*
@@ -48,7 +50,7 @@
 		}
 	}
 
-	.the-footer .social-icons a img {
+	.the-footer .social-icons a {
 		height: 36px;
 		width: 36px;
 	}
@@ -177,7 +179,7 @@
 	}
 
 	.the-footer h4 a {
-		font-size: 1.25em;
+		font-size: 1.25em
 	}
 }
 /*
