@@ -1,3 +1,16 @@
+When(/^I click header navigation link text "(.*?)"$/) do |link_text|
+	@driver.find_element(:xpath, ".//a[text()='#{link_text}']").click
+end
+
+When(/^I click header's search (button|link)$/) do |target|
+	if target == 'button'
+		@page.header.search_button_icon.click
+	end
+	if target == 'link'
+		@page.header.search_link.click
+	end
+end
+
 Then(/^I should see that header's logo link has text "(.*?)"$/) do |logo_text|
 	assert_equal(logo_text, @page.header.logo_link.text)
 end
@@ -65,14 +78,5 @@ Then(/^I should have clickable header's search (button|link)$/) do |target|
 	end
 	if target == 'link'
 		assert_equal(true, is_link_clickable(@page.header.search_link))
-	end
-end
-
-When(/^I click header's search (button|link)$/) do |target|
-	if target == 'button'
-		@page.header.search_button_icon.click
-	end
-	if target == 'link'
-		@page.header.search_link.click
 	end
 end
