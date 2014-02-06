@@ -43,7 +43,7 @@ Feature: Test homepage header
 			| 1920  |
 
 	Scenario Outline: Header's navigation links should be working as intended
-		When I click navigation link text "<link_text>"
+		When I click header navigation link text "<link_text>"
 		Then I should see page url "<page_url>" (with slashes)
 		And I should see page title "<page_title>"
 		And I should see title header "<title_header>"
@@ -106,11 +106,11 @@ Feature: Test homepage header
 		Then I should have search overlay opened
 
 		Examples:
-			| width | element?    |
-			| 240   | button     |
-			| 320   | button     |
-			| 480   | button     |
-			| 640   | link |
-			| 768   | link |
-			| 1280  | link |
-			| 1920  | link |
+			| width | element? |
+			| 240   | button   |
+			| 320   | button   |
+			| 480   | button   |
+			| 640   | link     |
+			| 768   | link     |
+			| 1280  | link     |
+			| 1920  | link     |

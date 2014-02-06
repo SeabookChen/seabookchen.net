@@ -1,3 +1,7 @@
+When(/^I click footer social icon with title "(.*?)"$/) do |title|
+	@page.footer.find_social_link(title).click
+end
+
 Then(/^I should have clickable footer's 'about' link$/) do
 	assert_equal(true, @page.footer.about_link.displayed?)
 	assert_equal(true, @page.footer.about_link.enabled?)
@@ -8,9 +12,9 @@ Then(/^I should have clickable footer's 'about' link$/) do
 end
 
 Then(/^I should see footer's social icons in (\d+)px square$/) do |size|
-	assert_equal(true, @page.footer.social_images.count > 0)
+	assert_equal(true, @page.footer.social_links.count > 0)
 
-	@page.footer.social_images.each do |img|
+	@page.footer.social_links.each do |img|
 		assert_equal(true, img.displayed?)
 
 		assert_equal(size.to_i, img.size.width)
