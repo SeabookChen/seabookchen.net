@@ -22,7 +22,11 @@ module Pages
 		end
 
 		def results
-			@overlay.find_elements(:class => 'results > li > a')
+			@overlay.find_elements(:css => '.results > li > a')
+		end
+
+		def result_dates
+			@overlay.find_elements(:css => '.results .entry-date > time')
 		end
 	end
 end
