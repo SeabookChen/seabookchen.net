@@ -43,7 +43,7 @@ add, edit or remove keys in AppSettings and custom configuration sections at run
 ### <a id="add-in-appsettings"></a>Add a new key
 
 {% highlight c# %}
-Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 config.AppSettings.Settings.Add("OS", "Linux");
 config.Save(ConfigurationSaveMode.Modified);
 
@@ -53,7 +53,7 @@ ConfigurationManager.RefreshSection("appSettings");
 ### <a id="edit-in-appsettings"></a>Edit an existing key's value
 
 {% highlight c# %}
-Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 config.AppSettings.Settings["Version"].Value = "2.0.0";
 config.Save(ConfigurationSaveMode.Modified);
 
@@ -63,7 +63,7 @@ ConfigurationManager.RefreshSection("appSettings");
 ### <a id="remove-in-appsettings"></a>Delete an existing key
 
 {% highlight c# %}
-Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 config.AppSettings.Settings.Remove("Version");
 config.Save(ConfigurationSaveMode.Modified);
 
@@ -75,35 +75,36 @@ ConfigurationManager.RefreshSection("appSettings");
 ### <a id="add-in-custom-section"></a>Add a new key
 
 {% highlight c# %}
-XmlDocument xmlDoc = new XmlDocument();
+var xmlDoc = new XmlDocument();
 xmlDoc.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 
 // create new node <add key="Region" value="Canterbury" />
-XmlElement nodeRegion = xmlDoc.CreateElement("add");
+var nodeRegion = xmlDoc.CreateElement("add");
 nodeRegion.SetAttribute("key", "Region");
 nodeRegion.SetAttribute("value", "Canterbury");
-xmlDoc.SelectSingleNode("//geoSettings/summary").AppendChild(nodeRegion);
 
+xmlDoc.SelectSingleNode("//geoSettings/summary").AppendChild(nodeRegion);
 xmlDoc.Save(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
+
 ConfigurationManager.RefreshSection("geoSettings/summary");
 {% endhighlight %}
 
 ### <a id="edit-in-custom-section"></a>Edit an existing key's value
 
 {% highlight c# %}
-XmlDocument xmlDoc = new XmlDocument();
+var xmlDoc = new XmlDocument();
 xmlDoc.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 
 xmlDoc.SelectSingleNode("//geoSettings/summary/add[@key='Country']").Attributes["value"].Value = "Old Zeeland";
-
 xmlDoc.Save(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
+
 ConfigurationManager.RefreshSection("geoSettings/summary");
 {% endhighlight %}
 
 ### <a id="remove-in-custom-section"></a>Delete an existing key
 
 {% highlight c# %}
-XmlDocument xmlDoc = new XmlDocument();
+var xmlDoc = new XmlDocument();
 xmlDoc.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 
 XmlNode nodeCity = xmlDoc.SelectSingleNode("//geoSettings/summary/add[@key='City']");
