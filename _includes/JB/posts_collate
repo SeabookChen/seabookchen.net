@@ -26,16 +26,20 @@
         {% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
         {% if forloop.first %}
+
             {% if show_category == true %}
-                <h3 class='category'>{{ post.category }}</h3>
-                {% if show_year == true %}
-                    <h4 class='year'>{{ this_year }}</h4>
-                {% endif %}
-            {% else %}
+                <h2 class='category'>{{ post.category }}</h2>
+
                 {% if show_year == true %}
                     <h3 class='year'>{{ this_year }}</h3>
                 {% endif %}
+
+            {% else %}
+                {% if show_year == true %}
+                    <h2 class='year'>{{ this_year }}</h2>
+                {% endif %}
             {% endif %}
+
             <ul class="post-list">
         {% endif %}
 
@@ -55,9 +59,9 @@
                 </ul>
                 {% if show_year == true %}
                     {% if show_category == true %}
-                        <h4 class='year'>{{ this_year }}</h4>
-                    {% else %}
                         <h3 class='year'>{{ next_year }}</h3>
+                    {% else %}
+                        <h2 class='year'>{{ next_year }}</h2>
                     {% endif %}
                 {% endif %}
                 <ul class="post-list">

@@ -6,17 +6,6 @@ group: navigation
 change_frequency: weekly
 priority: 1.0
 ---
-{% assign posts_collate = site.categories.articles %}
-{% assign show_category = true %}
-{% assign show_year = false %}
-{% include JB/posts_collate %}
-
-{% assign posts_collate = site.categories.notes %}
-{% assign show_category = true %}
-{% assign show_year = false %}
-{% include JB/posts_collate %}
-
-{% assign posts_collate = site.categories.random %}
-{% assign show_category = true %}
-{% assign show_year = false %}
+{% assign posts_collate = site.posts %}
+{% assign show_year = true %}
 {% include JB/posts_collate %}
