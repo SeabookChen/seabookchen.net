@@ -18,7 +18,7 @@ Feature: Test homepage body
 
 	Scenario Outline: Body should list all posts
 		When I set window width to <width>px
-		Then I should have posts grouped by "articles, notes, random"
+		Then I should have posts grouped by "2013, 2014"
 		And I should have clickable post links
 
 		Examples:

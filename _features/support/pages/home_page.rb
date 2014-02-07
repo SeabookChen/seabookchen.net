@@ -7,8 +7,8 @@ module Pages
 			super(driver)
 		end
 
-		def list_headers
-			return body_content.find_elements(:class => 'category')
+		def list_year_headers
+			return body_content.find_elements(:class => 'year')
 		end
 	end
 end

@@ -9,10 +9,10 @@ Then(/^I should have posts grouped by "(.*?)"$/) do |list_names|
 	list_names = list_names.split(', ')
 
 	assert_equal(true, list_names.count > 0)
-	assert_equal(list_names.count, @page.list_headers.count)
+	assert_equal(list_names.count, @page.list_year_headers.count)
 
-	@page.list_headers.each do |list_header|
-		assert_equal(true, list_names.include?(list_header.text))
+	@page.list_year_headers.each do |list_year_header|
+		assert_equal(true, list_names.include?(list_year_header.text))
 	end
 end
 
