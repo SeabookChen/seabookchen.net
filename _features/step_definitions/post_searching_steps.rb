@@ -2,7 +2,7 @@ When(/^I search for "(.*?)"$/) do |query|
 	@page.search_overlay.input.send_keys(query)
 end
 
-When(/^I close search overlay$/) do
+When(/^I close search overlay using 'Close' button$/) do
 	@page.search_overlay.btn_close.click
 end
 

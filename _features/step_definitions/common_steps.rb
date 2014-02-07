@@ -26,6 +26,10 @@ When(/^I refresh the page$/) do
 	@driver.navigate.refresh
 end
 
+When(/^I press Escape key$/) do
+	@driver.action.send_keys(:escape).perform
+end
+
 Then(/^I should see page title "(.*?)"$/) do |title|
 	assert_equal(title, @driver.title)
 end

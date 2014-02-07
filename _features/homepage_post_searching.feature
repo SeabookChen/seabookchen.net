@@ -5,8 +5,12 @@ Feature: Test homepage post searching
 		When I set window width to 240px
 		And I click header's search button
 
-	Scenario: Close search overlay
-		When I close search overlay
+	Scenario: Close search overlay by clicking close button
+		When I close search overlay using 'Close' button
+		Then I should have search overlay closed
+
+	Scenario: Close search overlay by pressing Escape
+		When I press Escape key
 		Then I should have search overlay closed
 
 	Scenario Outline: Search for non-existent content by title
@@ -40,7 +44,7 @@ Feature: Test homepage post searching
 	Scenario Outline: Search for existing posts by title, then close and re-open overlay
 		When I search for "Selenium"
 		And I set window width to <width>px
-		And I close search overlay
+		And I close search overlay using 'Close' button
 		And I click header's search <element?>
 		Then I should see posts are found
 
