@@ -11,7 +11,7 @@ alias: [/2014/02/08/]
 Apart from concrete browser's WebDriver implementations like
 FirefoxDriver, ChromeDriver, PhantomJSDriver, etc.,
 Selenium C# binding also provides one other type of driver called `EventFiringWebDriver`,
-which wraps around any WebDriver instance from above,
+which wraps around any WebDriver instance from above
 and supports registering for events,
 e.g for logging things that WebDriver has been doing.
 
@@ -36,7 +36,7 @@ private IWebDriver driver;
 public void FooMethod() {
 	// EventFiringWebDriver is inside namespace "OpenQA.Selenium.Support.Events"
 	var firingDriver = new EventFiringWebDriver(new FirefoxDriver());
-	firingDriver.ExceptionThrown += new EventHandler<WebDriverExceptionEventArgs>(firingDriver_TakeScreenshotOnException);
+	firingDriver.ExceptionThrown += firingDriver_TakeScreenshotOnException;
 
 	driver = firingDriver;
 	driver.Navigate().GoToUrl("http://stackoverflow.com");
