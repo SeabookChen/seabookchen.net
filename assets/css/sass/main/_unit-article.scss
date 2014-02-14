@@ -171,6 +171,7 @@
 	li code {
 		@include border-radius(5px);
 		background-color: $color-inline-code-background;
+		font-family: $fonts-body;
 		padding: 2px 3px;
 		white-space: nowrap;
 	}
