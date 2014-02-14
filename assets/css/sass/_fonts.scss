@@ -53,3 +53,9 @@
 							   "/assets/fonts/novasquare-webfont.ttf",
 							   "/assets/fonts/novasquare-webfont.svg#nova_squarebook"),
 							   "/assets/fonts/novasquare-webfont.eot", normal, normal);
+
+@include font-face("Exo 2",
+					font-files("/assets/fonts/Exo2.0-Regular-webfont.woff",
+							   "/assets/fonts/Exo2.0-Regular-webfont.ttf",
+							   "/assets/fonts/Exo2.0-Regular-webfont.svg#exo_2regular"),
+							   "/assets/fonts/Exo2.0-Regular-webfont.eot", normal, normal);
