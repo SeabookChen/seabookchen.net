@@ -220,8 +220,13 @@ js_utils: back-to-top
         <td></td>
     </tr>
     <tr>
-        <td><a href="http://www.google.com/fonts/specimen/Maven+Pro">Maven Pro</a></td>
+        <td><a href="http://www.google.com/fonts/specimen/Exo+2">Exo 2</a></td>
         <td><a href="http://scripts.sil.org/OFL">SIL Open Font License, 1.1</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><del><a href="http://www.google.com/fonts/specimen/Maven+Pro">Maven Pro</a></del></td>
+        <td><del><a href="http://scripts.sil.org/OFL">SIL Open Font License, 1.1</a></del></td>
         <td></td>
     </tr>
 </table>
