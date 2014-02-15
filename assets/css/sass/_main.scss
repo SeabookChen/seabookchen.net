@@ -22,13 +22,8 @@ body {
 	line-height: 1.525em;
 }
 h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-.the-header,
-.the-footer {
+.the-header .logo,
+.the-footer h4 {
 	font-family: $fonts-header
 }
 h1,

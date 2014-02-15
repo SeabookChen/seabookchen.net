@@ -167,8 +167,8 @@
 		margin-right: 0;
 	}
 
-	p code,
-	li code {
+	p > code,
+	li > code {
 		@include border-radius(5px);
 		background-color: $color-inline-code-background;
 		font-family: $fonts-body;
