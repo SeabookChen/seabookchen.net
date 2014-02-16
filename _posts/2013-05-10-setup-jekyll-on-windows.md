@@ -5,7 +5,7 @@ description: "How to install and setup Jekyll on a Windows machine."
 category: articles
 tags: [jekyll, ruby]
 alias: [/2013/05/10/]
-last_updated: September 10, 2013
+last_updated: February 16, 2014
 js_utils: fancybox, toc, unveil
 ---
 <div id="toc"></div>
@@ -15,7 +15,7 @@ js_utils: fancybox, toc, unveil
 1. Go to <http://rubyinstaller.org/downloads/>
 
 2. In "RubyInstallers" section, click a version to download.
-<br />For example, `Ruby 2.0.0-p247 (x64)` is the Windows installer
+<br />For example, `Ruby 2.0.0-p353 (x64)` is the Windows installer
 for Ruby 2.0.0 x64 on 64-bit machines.
 
 3. Install through the installer
@@ -33,9 +33,9 @@ automatically to avoid headaches.
 
 ## <a id="install-devkit"></a>Install DevKit
 
-1. [Full installation instructions][Full installation instructions] is on Github.
+1. [Full installation instructions][Full installation instructions] can be found on Github.
 
-2. Go to <http://rubyinstaller.org/downloads/>
+2. Go to <http://rubyinstaller.org/downloads/> again.
 
 3. Download "DEVELOPMENT KIT" installer that matches the Windows architecture
 and the Ruby version just installed.
@@ -78,7 +78,7 @@ in site’s configuration file `_config.yml`.
 
 ### <a id="install-python"></a>Install Python
 1. Go to <http://www.python.org/download/>
-2. Download appropriate version of Python windows installer, e.g. `Python 2.7.5 Windows Installer`.
+2. Download appropriate version of Python windows installer, e.g. `Python 2.7.6 Windows Installer`.
 Note that Python 2 is preferred since Python 3 might not be working as intended at the time of writing.
 3. Install
 4. Set the install directory (e.g. `C:\Python27`) to PATH. (How to? See [Troubleshooting #1](#troubleshooting))
@@ -98,7 +98,8 @@ Note that Python 2 is preferred since Python 3 might not be working as intended 
 
 ## <a id="start-jekyll"></a>Start Jekyll
 Following the commands on official [Jekyll Quick-start guide][Jekyll Quick-start guide],
-a new Jekyll blog should be able to be created and browsed at [localhost:4000](http://localhost:4000).
+a new Jekyll blog should be created and
+can be browsed at [localhost:4000](http://localhost:4000).
 > jekyll new myblog<br />
 > cd myblog<br />
 > jekyll serve<br />
@@ -116,7 +117,7 @@ a new Jekyll blog should be able to be created and browsed at [localhost:4000](h
     > 1. Hold Win and press Pause.
     > 2. Click Advanced System Settings.
     > 3. Click Environment Variables.
-    > 4. Append ;C:\python27 to the Path variable.
+    > 4. Append `;C:\python27` to the Path variable.
     > 5. Restart Command Prompt.
 
 2. Error message:
@@ -149,7 +150,7 @@ a new Jekyll blog should be able to be created and browsed at [localhost:4000](h
 
     **Possible Solution**: First make sure no spaces or trailing slash in the PATH. Then restart Command Prompt, if it's not working,
     try logout Windows and log back in again.
-    Or even try the final and most powerful solution, "have you tried turning it off and on again"?
+    Or even try the final and most powerful solution - "turning the computer off and on again".
 
 4. Error message:
 

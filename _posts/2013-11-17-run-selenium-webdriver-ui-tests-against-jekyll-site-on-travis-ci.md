@@ -8,7 +8,8 @@ tags: [cucumber, jekyll, travis-ci, selenium, webdriver]
 alias: [/2013/11/17/]
 js_utils: toc
 ---
-Imagine there is a Jekyll site repository which has some [Selenium WebDriver][Selenium WebDriver]
+Imagine there is a Jekyll site's repository
+which has some [Selenium WebDriver][Selenium WebDriver]
 UI tests written with BDD framework [Cucumber][Cucumber] inside.
 After each commit, one may find it beneficial to run those tests on [Travis CI][Travis CI]
 against the Jekyll site in that particular commit, as part of the continuous integration process.

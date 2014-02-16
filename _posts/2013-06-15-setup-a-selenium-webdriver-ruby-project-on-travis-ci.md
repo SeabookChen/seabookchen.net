@@ -6,7 +6,7 @@ using Selenium WebDriver Ruby binding with headless PhantomJS."
 category: articles
 tags: [github, phantomjs, ruby, selenium, travis-ci, webdriver]
 alias: [/2013/06/15/]
-last_updated: September 10, 2013
+last_updated: February 16, 2014
 js_utils: fancybox, toc, unveil
 ---
 <div id="toc"></div>
@@ -32,8 +32,8 @@ Here is how this sample Selenium Ruby project is structured:
 ### <a id="create-sample-test"></a>Create a sample UI test with headless PhantomJS
 - `Test::Unit` framework is used as the testing framework in this example.
 - Headless WebKit [PhantomJS][PhantomJS] will be the browser to run the UI tests.
-- PhantomJS binary should be installed by default in
-[Travis CI servers][Travis CI servers], which is `1.9.1` as of 10/09/2013.
+- PhantomJS binary should be installed by default on
+[Travis CI servers][Travis CI servers], which is `1.9.7` as of 16/02/2014.
 - Travis CI supports tests which require GUI, see documentation [here][Travis CI GUI].
 
 Here is a sample test file called `test_home_page.rb`:
@@ -101,9 +101,9 @@ the simplest way is just go to [Travis WebLint][Travis WebLint] and paste the co
 language: ruby
 
 rvm: # the Ruby versions to be used
+  - 2.1.0
   - 2.0.0
   - 1.9.3
-  - 1.9.2
 
 before_install:
   - gem update # optional, update all gems

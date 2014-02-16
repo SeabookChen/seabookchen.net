@@ -50,7 +50,9 @@ which uses binary blob database to maintain all setting entries with their value
 
 ## <a id="invert-mouse"></a>Invert mouse
 
-If the mouse needs to be inverted as well, it can be done from command line, "System Settings" or "dconf-editor".
+If the mouse needs to be inverted as well,
+it can be done either from command line,
+"System Settings" or "dconf-editor".
 However, note that the `left-handed` entry under `peripherals.mouse` is a Boolean,
 so it should be set to either "true" or "false".
 

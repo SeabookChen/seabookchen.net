@@ -10,7 +10,7 @@ js_utils: toc
 ---
 This article demonstrates how to create a custom Jekyll 404 page
 for Jekyll sites hosted on [GitHub Page][GitHub Page],
-things might be different if sites are hosted by other means.
+things might be different if sites are hosted by other providers.
 Also it's worth noting that custom 404 pages will only work
 for sites which are using custom domains.
 
