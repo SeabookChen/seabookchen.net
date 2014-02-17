@@ -40,8 +40,5 @@ Feature: Test homepage body
 			| 320   | not see |
 			| 640   | not see |
 			| 768   | not see |
-			| 945   | see     |
-			| 1200  | not see |
-			| 1380  | see     |
-			| 1440  | not see |
+			| 1280  | see     |
 			| 1920  | see     |
