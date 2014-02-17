@@ -123,8 +123,8 @@ If the repository does not appear on the list, make sure
 	- Travis CI has been synced with Github (click "Sync now" if necessary)
 3. Enable the hook for this repository.
 
-<a class="post-image" href="/assets/images/posts/2013-06-09-enable-hook-on-travis-ci.png" title="Enable hook on Travis CI">
-  <img itemprop="image" data-src="/assets/images/posts/2013-06-09-enable-hook-on-travis-ci.png" src="/assets/js/unveil/loader.gif" alt="Enable hook on Travis CI" />
+<a class="post-image" href="/assets/images/posts/2013-06-09-enable-hook-on-travis-ci.gif" title="Enable hook on Travis CI">
+  <img itemprop="image" data-src="/assets/images/posts/2013-06-09-enable-hook-on-travis-ci.gif" src="/assets/js/unveil/loader.gif" alt="Enable hook on Travis CI" />
 </a>
 
 ## <a id="run-project"></a>Run project on Travis CI
@@ -144,8 +144,8 @@ However, to kick off a test run manually:
 ### <a id="results-page"></a>Project page
 The project page on Travis CI is: `https://travis-ci.org/[GITHUB_USERNAME]/[REPO_NAME]`
 
-<a class="post-image" href="/assets/images/posts/2013-06-15-results-page-on-travis-ci.png" title="Results page on Travis CI">
-  <img itemprop="image" data-src="/assets/images/posts/2013-06-15-results-page-on-travis-ci.png" src="/assets/js/unveil/loader.gif" alt="Results page on Travis CI" />
+<a class="post-image" href="/assets/images/posts/2013-06-15-results-page-on-travis-ci.gif" title="Results page on Travis CI">
+  <img itemprop="image" data-src="/assets/images/posts/2013-06-15-results-page-on-travis-ci.gif" src="/assets/js/unveil/loader.gif" alt="Results page on Travis CI" />
 </a>
 
 ### <a id="build-log"></a>Build log
@@ -178,8 +178,8 @@ with branches can be specified by URL query string like `?branch=master,staging,
 Alternatively, in the repository page of Travis CI, click settings icon button, then select `Status Image`,
 a dialog with all the options will be displayed, as shown in the screenshot below:
 
-<a class="post-image" href="/assets/images/posts/2013-07-05-travis-ci-status-image-options.png" title="Travis CI status image options">
-  <img itemprop="image" data-src="/assets/images/posts/2013-07-05-travis-ci-status-image-options.png" src="/assets/js/unveil/loader.gif" alt="Travis CI status image options" />
+<a class="post-image" href="/assets/images/posts/2013-07-05-travis-ci-status-image-options.gif" title="Travis CI status image options">
+  <img itemprop="image" data-src="/assets/images/posts/2013-07-05-travis-ci-status-image-options.gif" src="/assets/js/unveil/loader.gif" alt="Travis CI status image options" />
 </a>
 
 The sample project's current status is: <a class="image-link" href="https://travis-ci.org/yizeng/setup-selenium-webdriver-ruby-project-on-travis-ci" title="Travis CI build status"><img src="https://travis-ci.org/yizeng/setup-selenium-webdriver-ruby-project-on-travis-ci.png" alt="Travis CI build status" /></a>
