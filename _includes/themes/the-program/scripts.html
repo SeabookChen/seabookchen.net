@@ -5,17 +5,20 @@
 <script>
 var sendGaEvent = function(category, action, label) {
     if (typeof label === 'undefined') {
-        ga('send', 'event', category.toLowerCase(), action.toLowerCase());
+        ga('send', 'event', category, action);
     } else {
-        ga('send', 'event', category.toLowerCase(), action.toLowerCase(), label.toLowerCase());
+        ga('send', 'event', category, action, label);
     }
 };
 
 $('.nav-global .nav-link').on('click', function() {
-    sendGaEvent('nav links', 'click', this.innerText);
+    sendGaEvent('Navigation Links', 'Click', this.innerText);
 });
-$('.the-footer .social-icons > a').on('click', function() {
-    sendGaEvent('social links', 'click', this.title);
+$('.the-footer h4 > a').on('click', function() {
+    sendGaEvent('Navigation Links', 'Click', 'About');
+});
+$('.the-footer .social-links > a').on('click', function() {
+    sendGaEvent('Social Links', 'Click', this.title);
 });
 </script>
 
@@ -41,7 +44,7 @@ $('.the-footer .social-icons > a').on('click', function() {
             $(".search-form").toggleClass('active');
             $(".search-form").find('input').focus();
             $("body").toggleClass('search-overlay');
-            sendGaEvent('search overlay', 'open');
+            sendGaEvent('Navigation Links', 'Click', 'Search');
         });
 
         $('.search-wrapper .btn-close').on('click', function() {
