@@ -2,7 +2,7 @@
 	Super tiny screen width: [0, 275]
 */
 @media only screen and (max-width: 275px) {
-	.the-footer .social-icons a {
+	.the-footer .social-links a {
 		height: 32px !important;
 		width: 32px !important;
 	}
@@ -13,7 +13,7 @@
 	.data-table {
 		font-size: .75em
 	}
-	.the-footer .social-icons a {
+	.the-footer .social-links a {
 		margin: 0
 	}
 }
@@ -50,7 +50,7 @@
 		}
 	}
 
-	.the-footer .social-icons a {
+	.the-footer .social-links a {
 		height: 36px;
 		width: 36px;
 	}
