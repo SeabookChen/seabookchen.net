@@ -3,7 +3,7 @@
 
 <!-- Google Analytics Event tracking -->
 <script>
-var sendEvent = function(category, action, label) {
+var sendGaEvent = function(category, action, label) {
     if (typeof label === 'undefined') {
         ga('send', 'event', category.toLowerCase(), action.toLowerCase());
     } else {
@@ -11,14 +11,11 @@ var sendEvent = function(category, action, label) {
     }
 };
 
-$('.nav-global .btn-search').on('click', function() {
-    sendEvent('search overlay', 'open');
-});
 $('.nav-global .nav-link').on('click', function() {
-    sendEvent('nav links', 'click', this.innerText);
+    sendGaEvent('nav links', 'click', this.innerText);
 });
 $('.the-footer .social-icons > a').on('click', function() {
-    sendEvent('social links', 'click', this.title);
+    sendGaEvent('social links', 'click', this.title);
 });
 </script>
 
@@ -39,14 +36,15 @@ $('.the-footer .social-icons > a').on('click', function() {
             $("body").removeClass('search-overlay');
         };
 
-        $('.btn-search').on('click', function() {
+        $('.nav-global .btn-search').on('click', function() {
             $('.search-wrapper').css({ display: "block" });
             $(".search-form").toggleClass('active');
             $(".search-form").find('input').focus();
             $("body").toggleClass('search-overlay');
+            sendGaEvent('search overlay', 'open');
         });
 
-        $('.btn-close').on('click', function() {
+        $('.search-wrapper .btn-close').on('click', function() {
             closeOverlay();
         });
 
