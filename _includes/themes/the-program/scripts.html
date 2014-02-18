@@ -1,6 +1,27 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/jquery-1.10.2.min.js"><\/script>')</script>
 
+<!-- Google Analytics Event tracking -->
+<script>
+var sendEvent = function(category, action, label) {
+    if (typeof label === 'undefined') {
+        ga('send', 'event', category.toLowerCase(), action.toLowerCase());
+    } else {
+        ga('send', 'event', category.toLowerCase(), action.toLowerCase(), label.toLowerCase());
+    }
+};
+
+$('.nav-global .btn-search').on('click', function() {
+    sendEvent('search overlay', 'open');
+});
+$('.nav-global .nav-link').on('click', function() {
+    sendEvent('nav links', 'click', this.innerText);
+});
+$('.the-footer .social-icons > a').on('click', function() {
+    sendEvent('social links', 'click', this.title);
+});
+</script>
+
 <!-- Jekyll Simple Search option -->
 <script src="/assets/js/Simple-Jekyll-Search/jekyll-search.jquery.js"></script>
 <script>
@@ -25,7 +46,7 @@
             $("body").toggleClass('search-overlay');
         });
 
-        $(".btn-close").on('click', function() {
+        $('.btn-close').on('click', function() {
             closeOverlay();
         });
 
