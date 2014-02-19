@@ -1,7 +1,7 @@
 .pace .pace-progress {
 	@include transition(width 1s);
 
-	background: #ff9900;
+	background: $color-hover;
 	position: fixed;
 	z-index: 2000;
 	top: 0;
