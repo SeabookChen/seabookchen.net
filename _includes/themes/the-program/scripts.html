@@ -64,7 +64,7 @@ $('.the-footer .social-links > a').on('click', function() {
         <script src="/assets/js/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
         <script src="/assets/js/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
 
-        <script type="text/javascript">
+        <script>
             $("head").append('<link rel="stylesheet" href="/assets/js/fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" />');
             $("head").append('<link rel="stylesheet" href="/assets/js/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" />');
             $(".post-image").fancybox({
@@ -81,7 +81,7 @@ $('.the-footer .social-links > a').on('click', function() {
 
     {% if page.js_utils contains "unveil" %}
         <script src="/assets/js/unveil/jquery.unveil.min.js"></script>
-        <script type="text/javascript">
+        <script>
             $(document).ready(function () {
                 $(".post-image > img").unveil(450);
             });
@@ -89,7 +89,7 @@ $('.the-footer .social-links > a').on('click', function() {
     {% endif %}
 
     {% if page.js_utils contains "toc" %}
-        <script type="text/javascript">
+        <script>
             function createListItem(heading) {
                 var link = "#" + heading.children("a").attr("id");
                 return "<li>" + "<a href='" + link + "'>" + heading.text() + "</a>" + "</li>";
@@ -118,7 +118,7 @@ $('.the-footer .social-links > a').on('click', function() {
     {% endif %}
 
     {% if page.js_utils contains "toc" or page.js_utils contains "back-to-top" %}
-        <script type="text/javascript">
+        <script>
             $(document).ready(function () {
                 var offset = 220, duration = 500, width = 1080;
                 $(window).scroll(function () {

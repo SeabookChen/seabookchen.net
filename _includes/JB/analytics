@@ -1,6 +1,6 @@
 {% if site.JB.analytics.provider and page.JB.analytics != false %}
 
-    <script type="text/javascript">
+    <script>
         if (!navigator.userAgent.match(/.*(Pingdom|PhantomJS|bot|StatusCake).*/gi)) {
             {% case site.JB.analytics.provider %}
                 {% when "google" %}
