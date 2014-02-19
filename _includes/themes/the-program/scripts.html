@@ -1,6 +1,27 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/jquery-1.10.2.min.js"><\/script>')</script>
 
+<!-- Google Analytics Event tracking -->
+<script>
+var sendGaEvent = function(category, action, label) {
+    if (typeof label === 'undefined') {
+        ga('send', 'event', category, action);
+    } else {
+        ga('send', 'event', category, action, label);
+    }
+};
+
+$('.nav-global .nav-link').on('click', function() {
+    sendGaEvent('Navigation Links', 'Click', this.innerText);
+});
+$('.the-footer h4 > a').on('click', function() {
+    sendGaEvent('Navigation Links', 'Click', 'About');
+});
+$('.the-footer .social-links > a').on('click', function() {
+    sendGaEvent('Social Links', 'Click', this.title);
+});
+</script>
+
 <!-- Jekyll Simple Search option -->
 <script src="/assets/js/Simple-Jekyll-Search/jekyll-search.jquery.js"></script>
 <script>
@@ -18,14 +39,15 @@
             $("body").removeClass('search-overlay');
         };
 
-        $('.btn-search').on('click', function() {
+        $('.nav-global .btn-search').on('click', function() {
             $('.search-wrapper').css({ display: "block" });
             $(".search-form").toggleClass('active');
             $(".search-form").find('input').focus();
             $("body").toggleClass('search-overlay');
+            sendGaEvent('Navigation Links', 'Click', 'Search');
         });
 
-        $(".btn-close").on('click', function() {
+        $('.search-wrapper .btn-close').on('click', function() {
             closeOverlay();
         });
 

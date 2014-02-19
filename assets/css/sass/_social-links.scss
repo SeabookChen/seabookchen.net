@@ -1,6 +1,6 @@
 $base-url: "/assets/images/social/simple-icons-master/" !default;
 
-.the-footer .social-icons {
+.the-footer .social-links {
 	margin-top: 12px;
 
 	a {
@@ -23,7 +23,7 @@ $base-url: "/assets/images/social/simple-icons-master/" !default;
 	}
 }
 
-.unit-article .social-icons {
+.unit-article .social-links {
 	a {
 		background-size: 48px 48px;
 		background-position: center center;
@@ -43,35 +43,35 @@ $base-url: "/assets/images/social/simple-icons-master/" !default;
 	}
 }
 
-.social-icons .ico-gmail {
+.social-links .ico-gmail {
 	background-color: #dd4b39;
 	background-image: url("#{$base-url}gmail-48.png");
 }
-.social-icons .ico-linkedin {
+.social-links .ico-linkedin {
 	background-color: #007fb1;
 	background-image: url("#{$base-url}linkedin-48.png");
 }
-.social-icons .ico-rss {
+.social-links .ico-rss {
 	background-color: #ff8300;
 	background-image: url("#{$base-url}rss-48.png");
 }
-.social-icons .ico-github {
+.social-links .ico-github {
 	background-color: #4183c4;
 	background-image: url("#{$base-url}github-48.png");
 }
-.social-icons .ico-stackoverflow {
+.social-links .ico-stackoverflow {
 	background-color: #f47920;
 	background-image: url("#{$base-url}stackoverflow-48.png");
 }
-.social-icons .ico-facebook {
+.social-links .ico-facebook {
 	background-color: #3b5998;
 	background-image: url("#{$base-url}facebook-48.png");
 }
-.social-icons .ico-lastfm {
+.social-links .ico-lastfm {
 	background-color: #d51007;
 	background-image: url("#{$base-url}lastfm-48.png");
 }
-.social-icons .ico-steam {
+.social-links .ico-steam {
 	background-color: #262523;
 	background-image: url("#{$base-url}steam-48.png");
 }

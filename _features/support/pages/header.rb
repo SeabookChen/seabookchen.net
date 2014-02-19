@@ -13,16 +13,16 @@ module Pages
 			@header.find_element(:css => '.logo > a')
 		end
 
-		def search_button_icon
-			@header.find_element(:css => '.logo > .btn-search')
+		def search_button
+			@header.find_element(:css => 'button.btn-search')
 		end
 
 		def nav_links
-			@header.find_elements(:css => '.link > :not(.btn-search)')
+			@header.find_elements(:css => '.nav-link > a')
 		end
 
 		def search_link
-			@header.find_element(:css => '.link > .btn-search')
+			@header.find_element(:css => 'a.btn-search')
 		end
 	end
 end

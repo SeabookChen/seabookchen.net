@@ -4,7 +4,7 @@ end
 
 When(/^I click header's search (button|link)$/) do |target|
 	if target == 'button'
-		@page.header.search_button_icon.click
+		@page.header.search_button.click
 	end
 	if target == 'link'
 		@page.header.search_link.click
@@ -65,16 +65,16 @@ end
 
 Then(/^I should (not see|see) header's search button icon$/) do |target|
 	if target == 'see'
-		assert_equal(true, @page.header.search_button_icon.displayed?)
+		assert_equal(true, @page.header.search_button.displayed?)
 	end
 	if target == 'not see'
-		assert_equal(false, @page.header.search_button_icon.displayed?)
+		assert_equal(false, @page.header.search_button.displayed?)
 	end
 end
 
 Then(/^I should have clickable header's search (button|link)$/) do |target|
 	if target == 'button'
-		assert_equal(true, is_element_clickable(@page.header.search_button_icon))
+		assert_equal(true, is_element_clickable(@page.header.search_button))
 	end
 	if target == 'link'
 		assert_equal(true, is_link_clickable(@page.header.search_link))

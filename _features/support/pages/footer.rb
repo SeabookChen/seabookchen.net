@@ -14,7 +14,7 @@ module Pages
 		end
 
 		def social_links
-			@footer.find_elements(:css => ".social-icons > a")
+			@footer.find_elements(:css => ".social-links > a")
 		end
 
 		def find_social_link(title)
