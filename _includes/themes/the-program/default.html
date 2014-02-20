@@ -13,8 +13,13 @@
     {% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url=/">{% endif %}
     <title>{% if page.url != "/index.html" %} {{ page.title }} - {% endif %}{{ site.title }}</title>
 
+    <!-- Loading progess bar plugin -->
+    <script src="/assets/js/pace.min.js"></script>
+    <link href='/assets/js/pace.css' rel="stylesheet" type="text/css">
+
     <link href='/assets/css/style.css' rel="stylesheet" type="text/css">
     <link href="/rss.xml" rel="alternate" title="{{ site.title }}" type="application/rss+xml">
+
 
     <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
@@ -37,7 +42,7 @@
     <noscript>
         <p class="site-notice">Some functionalities of this site requires JavaScript. Here are the <a href="http://www.enable-javascript.com/" target="_blank">instructions how to enable JavaScript in your web browser</a>.</p>
     </noscript>
-
+<!-- <img src="http://www.hdwallpapers.in/walls/os_x_mavericks_scenery-wide.jpg"></img> -->
     <div class="search-wrapper">
         <div class="search-form">
             <input type="text" class="search-field" placeholder="Search...">
