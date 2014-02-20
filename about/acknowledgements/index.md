@@ -111,6 +111,11 @@ js_utils: back-to-top
         <td><a href="http://opensource.org/licenses/MIT">MIT license</a></td>
         <td>jQuery plugin to delay loading of images</td>
     </tr>
+    <tr>
+        <td><a href="http://github.hubspot.com/pace/">PACE</a></td>
+        <td><a href="https://github.com/HubSpot/pace/blob/master/LICENSE">PACE license</a></td>
+        <td>Page loading progress bar</td>
+    </tr>
 </table>
 </div>
 
