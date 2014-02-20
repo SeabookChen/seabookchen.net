@@ -13,13 +13,10 @@
     {% if page.url == "/404.html" %}<meta http-equiv="refresh" content="5; url=/">{% endif %}
     <title>{% if page.url != "/index.html" %} {{ page.title }} - {% endif %}{{ site.title }}</title>
 
-    <!-- Loading progess bar plugin -->
-    <script src="/assets/js/pace/pace.min.js"></script>
-    <link href='/assets/js/pace/pace.css' rel="stylesheet" type="text/css">
+    {% include themes/the-program/pace-js.html %}
 
     <link href='/assets/css/style.css' rel="stylesheet" type="text/css">
     <link href="/rss.xml" rel="alternate" title="{{ site.title }}" type="application/rss+xml">
-
 
     <!--[if lt IE 9]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
