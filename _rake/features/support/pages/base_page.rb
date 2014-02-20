@@ -1,5 +1,5 @@
-require './_features/support/pages/footer.rb'
-require './_features/support/pages/header.rb'
+require './_rake/features/support/pages/footer.rb'
+require './_rake/features/support/pages/header.rb'
 
 module Pages
 	class BasePage

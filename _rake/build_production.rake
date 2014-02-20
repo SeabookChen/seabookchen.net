@@ -27,7 +27,7 @@ task :build do
 	# compress html in _site
 	Dir.glob("#{DIR}/**/*.html") do |html_file|
 		puts "Compressing: #{html_file}"
-		system "java -jar ./tools/htmlcompressor-1.5.3.jar --recursive --compress-js -o #{html_file} #{html_file}"
+		system "java -jar ./_rake/tools/htmlcompressor-1.5.3.jar --recursive --compress-js -o #{html_file} #{html_file}"
 	end
 
 	# re-compile Compass project without compressing for development

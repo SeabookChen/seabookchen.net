@@ -1,4 +1,4 @@
-require './_features/support/pages/list_view.rb'
+require './_rake/features/support/pages/list_view.rb'
 
 module Pages
 	class HomePage < ListView

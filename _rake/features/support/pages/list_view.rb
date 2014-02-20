@@ -1,4 +1,4 @@
-require './_features/support/pages/base_page.rb'
+require './_rake/features/support/pages/base_page.rb'
 
 module Pages
 	class ListView < BasePage

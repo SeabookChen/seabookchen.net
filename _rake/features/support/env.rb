@@ -11,20 +11,11 @@ WINDOW_HEIGHT = 1080
 TIMEOUT = 3 # seconds
 
 case ENV['browser']
-	when 'chrome', 'Chrome'
+	when 'chrome', 'Chrome', 'debug'
 		driver = Selenium::WebDriver.for :chrome
 
-	when 'ff', 'Firefox'
+	when 'ff', 'firefox', 'Firefox'
 		driver = Selenium::WebDriver.for :firefox
-
-	when 'debug'
-		profile = Selenium::WebDriver::Firefox::Profile.new
-		Dir.glob('_features/support/bin/*.xpi') do |extension_file|
-				puts "Loading Firefox extension '#{extension_file}'"
-				profile.add_extension(extension_file)
-		end
-
-		driver = Selenium::WebDriver.for :firefox, :profile => profile
 
 	else
 		driver = Selenium::WebDriver.for :phantomjs
