@@ -14,6 +14,7 @@
     <title>{% if page.url != "/index.html" %} {{ page.title }} - {% endif %}{{ site.title }}</title>
 
     <!-- Loading progess bar plugin -->
+    <!--[if !IE]> -->
     <script src="/assets/js/pace.min.js"></script>
     <style>
         .pace .pace-progress {
@@ -33,17 +34,14 @@
             display: none;
         }
     </style>
+    <!-- <![endif]-->
 
     <link href='/assets/css/style.css' rel="stylesheet" type="text/css">
     <link href="/rss.xml" rel="alternate" title="{{ site.title }}" type="application/rss+xml">
 
-    <!--[if lt IE 9]>
+    <!--[if IE]>
         <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
         <script>window.Modernizr || document.write('<script src="/assets/js/modernizr-2.0.6.min.js"><\/script>')</script>
-    <![endif]-->
-    <!--[if gte IE 9]>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-        <script>window.Modernizr || document.write('<script src="/assets/js/modernizr-2.6.2.min.js"><\/script>')</script>
     <![endif]-->
     <!--[if !IE]> -->
         <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
@@ -52,7 +50,7 @@
 </head>
 
 <body>
-    <!--[if lt IE 9]>
+    <!--[if IE]>
         <p class="site-notice">You are using an outdated browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" target="_blank">activate Google Chrome Frame</a> to improve your experience.</p>
     <![endif]-->
     <noscript>
