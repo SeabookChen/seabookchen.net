@@ -68,7 +68,7 @@ js_utils: back-to-top
     <tr>
         <td><a href="https://github.com/christian-fei/Simple-Jekyll-Search">Jekyll Simple Search</a></td>
         <td><a href="https://github.com/christian-fei/Simple-Jekyll-Search#license">MIT License</a></td>
-        <td>Post searching ability</td>
+        <td>Post searching plugin</td>
     </tr>
     <tr>
         <td><del><a href="https://github.com/aucor/jekyll-plugins">strip.rb</a></del></td>
@@ -114,7 +114,7 @@ js_utils: back-to-top
     <tr>
         <td><a href="http://github.hubspot.com/pace/">PACE</a></td>
         <td><a href="https://github.com/HubSpot/pace/blob/master/LICENSE">PACE license</a></td>
-        <td>Page loading progress bar</td>
+        <td>JavaScript plugin to show a progress bar while page loading</td>
     </tr>
 </table>
 </div>

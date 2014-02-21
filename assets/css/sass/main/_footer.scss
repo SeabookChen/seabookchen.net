@@ -19,12 +19,25 @@
 		color: $color-hover;
 	}
 
+	p {
+		a {
+			@include border-radius(2px);
+			@include link-colors(#0077CC, $visited:#4A6B82, $hover:$color-text);
+			font-size: .95em;
+			padding: 2px 3px;
+			border-bottom: 1px dotted #FFD18D;
+		}
+
+		a:hover {
+			background-color: $color-hover-transparent
+		}
+	}
+
 	h4 {
 		margin-top: 0
 	}
 	h4 a:hover {
-		color: $color-hover;
-		font-weight: bold;
+		font-weight: bold
 	}
 
 	.back-to-top {
