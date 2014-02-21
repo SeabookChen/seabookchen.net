@@ -329,6 +329,19 @@
 	.mce-btn > button:hover {
 		background-color: transparent
 	}
+
+	sup > a {
+		border-bottom: none;
+		padding: 0px, 1px;
+	}
+
+	.footnotes {
+		margin-top: 26px;
+
+		p {
+			font-size: .8em;
+		}
+	}
 }
 
 .unit-article .entry-content:first-child h4 {
