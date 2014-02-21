@@ -79,7 +79,9 @@ script:
 <div class="footnotes">
 	<hr />
 	<p id="footnote-1">
-		[1]: Only commits in master/gh-pages branches will affect the production site.
+		[1]: Since only the commits in master/gh-pages branches will affect the production site,
+		running tests against production for branches that don't change production
+		is somewhat redundant.
 	</p>
 </div>
 
