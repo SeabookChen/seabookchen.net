@@ -218,7 +218,7 @@ it seems it can actually clear the input iframe without any exceptions.
 
 Apart from `clear()`,
 an alternative is to use Selenium's [ActionBuilder](http://selenium.googlecode.com/svn/trunk/docs/api/rb/Selenium/WebDriver/ActionBuilder.html)
-to construct an action chain to mimic keyboard shortcut pressing,
+to construct an action chain to mimic keyboard shortcut pressing.
 `Ctrl + A` will select all, then push `Backspace` to clear.
 
 {% highlight ruby %}
@@ -272,7 +272,7 @@ driver.execute_script("tinyMCE.activeEditor.setContent('<h1>Yi Zeng</h1> TinyMCE
 
 ### <a id="clear-content"></a>Clear content
 With the same logic, clearing content can be done by injecting
-JavaScript to set entire content to empty string.
+JavaScript to set the entire content to empty string.
 
 {% highlight ruby %}
 driver.execute_script("CKEDITOR.instances.ckeditor.setData( '' )")

@@ -20,7 +20,7 @@ for Ruby 2.0.0 x64 on 64-bit machines.
 
 3. Install through the installer
 
-    - Try keep the default directory `C:\Ruby200-x64`, as advised by installer "Please avoid any folder name that contains spaces (e.g. Program Files)."
+    - Try to keep the default directory `C:\Ruby200-x64`, as advised by installer "Please avoid any folder name that contains spaces (e.g. Program Files)."
     - Tick "Add Ruby executables to your PATH" checkbox, so PATH will be updated
 automatically to avoid headaches.
 
@@ -39,7 +39,7 @@ automatically to avoid headaches.
 
 3. Download "DEVELOPMENT KIT" installer that matches the Windows architecture
 and the Ruby version just installed.
-For example, `DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe` is for 64-bit Windows with Ruby 2.0.0 x64.
+For instance, `DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe` is for 64-bit Windows with Ruby 2.0.0 x64.
 <br />Here is a list about how to choose the correct DevKit version:
 
     > **Ruby 1.8.6 to 1.9.3**: DevKit tdm-32-4.5.2<br />
@@ -79,9 +79,9 @@ in site’s configuration file `_config.yml`.
 ### <a id="install-python"></a>Install Python
 1. Go to <http://www.python.org/download/>
 2. Download appropriate version of Python windows installer, e.g. `Python 2.7.6 Windows Installer`.
-Note that Python 2 is preferred since Python 3 might not be working as intended at the time of writing.
+Note that Python 2 is preferred since Python 3 might not be functioning as intended at the time of writing.
 3. Install
-4. Set the install directory (e.g. `C:\Python27`) to PATH. (How to? See [Troubleshooting #1](#troubleshooting))
+4. Set the installation directory (e.g. `C:\Python27`) to PATH. (How to? See [Troubleshooting #1](#troubleshooting))
 5. Verify Python installation
 > python --version
 
@@ -148,9 +148,9 @@ can be browsed at [localhost:4000](http://localhost:4000).
 
     **Possible Reason**: The PATH just set is yet to be effective.
 
-    **Possible Solution**: First make sure no spaces or trailing slash in the PATH. Then restart Command Prompt, if it's not working,
+    **Possible Solution**: First make sure no spaces or trailing slash in the PATH. Then restart Command Prompt. If it's not working,
     try logout Windows and log back in again.
-    Or even try the final and most powerful solution - "turning the computer off and on again".
+    Or even try the ultimate and most powerful solution - "turning the computer off and on again".
 
 4. Error message:
 

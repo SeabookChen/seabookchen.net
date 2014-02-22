@@ -22,7 +22,7 @@ The source code is [here][EventFiringWebDriver.cs]
 and the related tests exist [here][EventFiringWebDriverTest.cs].
 
 Below gives an example of
-how to take a screenshot when exception is thrown while executing WebDriver tests
+how to take a screenshot when an exception is thrown while executing WebDriver tests
 using Selenium C# binding's EventFiringWebDriver class.
 Since the driver instance is a type of `EventFiringWebDriver`,
 whenever an exception is thrown,
@@ -52,8 +52,8 @@ private void firingDriver_TakeScreenshotOnException(object sender, WebDriverExce
 }
 {% endhighlight %}
 
-A completed example solution has been created on GitHub,
-the repository can be found [here][Example Repository].
+A completed example solution has been created on GitHub
+and can be found in [this repository][Example Repository].
 
 [EventFiringWebDriver.cs]: https://code.google.com/p/selenium/source/browse/dotnet/src/support/Events/EventFiringWebDriver.cs
 [EventFiringWebDriverTest.cs]: https://code.google.com/p/selenium/source/browse/dotnet/test/support/Events/EventFiringWebDriverTest.cs

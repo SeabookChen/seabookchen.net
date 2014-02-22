@@ -12,7 +12,7 @@ js_utils: toc
 
 ## <a id="app-config"></a>App.config file
 
-Here is the sample App.config file used to illustrate how to
+Here is the sample `App.config` file used to illustrate how to
 add, edit or remove keys in AppSettings and custom configuration sections at runtime.
 
 {% highlight xml %}

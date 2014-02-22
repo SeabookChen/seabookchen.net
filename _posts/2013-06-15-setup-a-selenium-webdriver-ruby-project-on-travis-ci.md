@@ -94,7 +94,7 @@ Travis CI uses `.travis.yml` file in the root of the repository to learn about t
 The sample testing project here is written in Ruby, so Ruby configurations will be used in `.travis.yml`.
 Detailed official documentation can be found [here](http://about.travis-ci.org/docs/user/languages/ruby/).
 In order to validate it, [Travis Lint][Travis Lint] would be a handy tool, while
-the simplest way is just go to [Travis WebLint][Travis WebLint] and paste the content in.
+the simplest way is just to go to [Travis WebLint][Travis WebLint] and paste the content in.
 
 {% highlight yaml %}
 # Sample .travis.yml file:

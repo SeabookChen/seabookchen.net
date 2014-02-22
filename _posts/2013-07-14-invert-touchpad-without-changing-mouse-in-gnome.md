@@ -12,7 +12,7 @@ Being a left-handed touchpad, right-handed mouse user,
 it bugged me that after installing Linux Mint 15 Cinnamon,
 the touchpad and mouse can't be set separately through "System Settings -> Mouse and Touchpad".
 
-However after a bit researching, a simple solution is found
+However, after a bit of researching, a simple solution is found
 using GNOME's [GSettings][GSettings], inspired by this [AskUbuntu question][AskUbuntu question].
 
 <div id="toc"></div>

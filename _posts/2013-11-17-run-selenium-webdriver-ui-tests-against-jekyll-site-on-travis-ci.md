@@ -14,7 +14,7 @@ UI tests written with BDD framework [Cucumber][Cucumber] inside.
 After each commit, one may find it beneficial to run those tests on [Travis CI][Travis CI]
 against the Jekyll site in that particular commit, as part of the continuous integration process.
 
-Instead of running those tests against live production site each time<sup><a href="#footnote-1">[1]</a></sup>,
+Instead of running those tests against a live production site each time<sup><a href="#footnote-1">[1]</a></sup>,
 a better way is to build the site on Travis CI itself,
 and run the tests against localhost directly.
 Here is a brief note on how to achieve it.
@@ -30,7 +30,7 @@ To setup a simple Selenium WebDriver Ruby project on Travis CI,
 a [previous blog article][previous blog article] would be useful.
 
 Since the site will be built on Travis CI locally, so the URL will be
-`localhost:4000` instead of the real live site URL.
+`localhost:4000` instead of the actual live site URL.
 Bear in mind that port number 4000 can be made configurable if desired.
 
 ## <a id="install-gems"></a>Install gems

@@ -16,7 +16,7 @@ which might break drivers' functionality and cause unexpected behaviours.
 Nevertheless, for whatever the reason is,
 there are still some developers have been asking
 how to start browsers using Selenium WebDriver with JavaScript disabled.
-This article shows few examples on how to disable JavaScript
+This article shows a few examples on how to disable JavaScript
 in Chrome, Firefox, IE and PhantomJS using Selenium WebDriver Ruby binding.
 
 <div id="toc"></div>
