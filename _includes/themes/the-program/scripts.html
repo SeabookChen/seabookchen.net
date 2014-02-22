@@ -20,6 +20,12 @@ $('.the-footer h4 > a').on('click', function() {
 $('.the-footer .social-links > a').on('click', function() {
     sendGaEvent('Social Links', 'Click', this.title);
 });
+$('.tag_box.categories a').on('click', function() {
+    sendGaEvent('Categories', 'Click', this.title);
+});
+$('.tag_box.tags a').on('click', function() {
+    sendGaEvent('Tags', 'Click', this.title);
+});
 </script>
 
 <!-- Jekyll Simple Search option -->
