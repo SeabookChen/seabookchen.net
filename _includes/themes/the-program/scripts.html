@@ -30,7 +30,7 @@ $('.the-footer .social-links > a').on('click', function() {
             jsonFile : '{{ site.url }}/search.json',
             template : '<li><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></li>',
             searchResultsTitle : '<h4>{{ site.translations.search_results }}</h4>',
-            noResults : '<p>{{ site.translations.search_no_found }}</p>'
+            noResults : '<p>{{ site.translations.search_not_found }}</p>'
         });
     });
 
