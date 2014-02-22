@@ -28,7 +28,9 @@ $('.the-footer .social-links > a').on('click', function() {
     $(document).ready(function() {
         $('.search-field').simpleJekyllSearch({
             jsonFile : '{{ site.url }}/search.json',
-            template : '<li><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></li>'
+            template : '<li><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></li>',
+            searchResultsTitle : '<h4>{{ site.translations.search_results }}</h4>',
+            noResults : '<p>{{ site.translations.search_no_found }}</p>'
         });
     });
 

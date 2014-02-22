@@ -138,6 +138,8 @@ translations:
 
   # search
   search_placeholder: 'Search...'
+  search_results: 'Search results'
+  search_no_found: 'Oh shucks<br/><small>Nothing found :(</small>'
   close: 'Close'
 
   # navigation
