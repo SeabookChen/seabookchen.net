@@ -11,7 +11,7 @@ js_utils: toc
 Selenium WebDriver supports getting the browser window size,
 resizing and maximizing window natively from its API,
 no JavaScript injections like `window.resizeTo(X, Y);` are necessary any more.
-Few examples are shown below on
+Examples are shown below on
 how to achieve this in Selenium WebDriver C#, Ruby and Python bindings.
 
 <div id="toc"></div>
@@ -40,7 +40,7 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :firefox
 puts driver.manage.window.size
 
-# set window size using Dimension class
+# set window size using Dimension struct
 target_size = Selenium::WebDriver::Dimension.new(1024, 768)
 driver.manage.window.size = target_size
 puts driver.manage.window.size
@@ -69,7 +69,7 @@ Similarly in C# binding, a browser window's size can be found out
 using `driver.Manage().Window.Size` property.
 The same [IWindow interface][IWindow interface] also defines method `Maximize()`
 for maximizing the window.
-Although this interface doesn't provide function
+Although this interface doesn't provide a function
 to resize window directly like Ruby binding,
 it can be done by setting the
 `Size` property using `System.Drawing.Size` object<sup><a href="#footnote-1">[1]</a></sup>.
