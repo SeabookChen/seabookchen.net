@@ -21,7 +21,7 @@
 		@include border-radius(2px);
 		@include link-colors(#0077CC, $visited:#4A6B82, $hover:$color-text);
 		font-size: .95em;
-		padding: 2px 3px;
+		padding: 1px 2px;
 		border-bottom: 1px dotted #FFD18D;
 	}
 	a:hover {
@@ -85,8 +85,8 @@
 		margin: 1em 16px;
 		padding-left: 1em;
 		p {
-				margin-left: 0;
-				margin-right: 0;
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
 
@@ -253,6 +253,14 @@
 	.comment a {
 		border-bottom: 0
 	}
+
+	.footnotes {
+		line-height: .95em;
+
+		a {
+			padding: 1px
+		}
+	}
 }
 
 .unit-article .unit-foot {
@@ -339,7 +347,7 @@
 		margin-top: 26px;
 
 		p {
-			font-size: .8em;
+			font-size: .9em;
 		}
 	}
 }
