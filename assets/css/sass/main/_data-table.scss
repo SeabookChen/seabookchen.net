@@ -1,13 +1,13 @@
 .data-table {
 	overflow: auto;
 
-	table{
+	table {
 		background-color: #EEEEEE;
 		border-collapse: separate;
 		border: 5px solid $color-box-border;
 
 		td, th {
-			border-color: rgba(255, 255, 255, 0.5);
+			border: 1px solid rgba(45, 45, 45, 0.2);
 			padding: 3px;
 		}
 

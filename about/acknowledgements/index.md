@@ -8,7 +8,7 @@ js_utils: back-to-top
 ---
 ## <a id="jekyll"></a>Jekyll
 <div class="data-table">
-<table border="1">
+<table>
     <tr>
         <th>Name</th>
         <th>License</th>

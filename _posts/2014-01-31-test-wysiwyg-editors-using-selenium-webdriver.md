@@ -38,7 +38,7 @@ the same logic also applies and should work in theory.
 
 ## <a id="wysiwyg-editors-comparison"></a>WYSIWYG HTML editors' comparison
 <div class="data-table">
-<table border="1">
+<table>
     <tr>
         <th></th>
         <th>CKEditor (Standard)</th>
