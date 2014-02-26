@@ -71,9 +71,11 @@
 		ga('send', 'pageview');
 	}
 
-	$('btn').on('click', function() {
-		sendGaEvent('Home Links', 'Click', this.innerText);
-	});
+	$(document).ready(function() {
+		$('btn').on('click', function() {
+			sendGaEvent('Homepage Links', 'Click', this.innerText);
+		});
+	}
 </script>
 
 </body>
