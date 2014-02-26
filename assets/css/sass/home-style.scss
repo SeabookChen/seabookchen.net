@@ -60,7 +60,7 @@ a.btn {
 	text-transform: uppercase;
 }
 
-a.btn.continue {
+.continue {
 	background: $color-btn-dark;
 	bottom: 0;
 	left: 50%;
@@ -71,12 +71,12 @@ a.btn.continue {
 	width: 120px;
 	z-index: 2;
 }
-a.btn.continue:hover, a.btn.continue:focus {
+.continue:hover, .continue:focus {
 	background: $color-btn-light;
 }
-a.btn.enter-blog {
+#enter {
 	background: $color-btn-light;
 }
-a.btn.enter-blog:hover, a.btn.enter-blog:focus {
+#enter:hover, #enter:focus {
 	background: $color-btn-dark;
 }

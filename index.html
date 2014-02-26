@@ -36,11 +36,11 @@
 	<h1><span>Yi Zeng</span></h1>
 	<h2><span>Software engineer &amp; test automator </span></h2>
 	<h3><span>Christchurch, New Zealand</span></h3>
-	<a class="btn continue" href="#social">More</a>
+	<a id="show-social" class="btn continue" href="#social">More</a>
 </div>
 
 <div id="section1" class="section" data-name="social">
-	<h1><a class="btn enter-blog" href="/blog">Enter blog</a></h1>
+	<h1><a id ="enter" class="btn" href="/blog">Enter blog</a></h1>
 </div>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -57,6 +57,21 @@
 			navigation: true,
 			navigationPosition: 'right'
 		});
+	});
+</script>
+<script>
+	if (!navigator.userAgent.match(/.*(Pingdom|PhantomJS|bot|StatusCake).*/gi)) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-42466615-1', 'auto');
+		ga('send', 'pageview');
+	}
+
+	$('btn').on('click', function() {
+		sendGaEvent('Home Links', 'Click', this.innerText);
 	});
 </script>
 
