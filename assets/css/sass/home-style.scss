@@ -8,8 +8,12 @@
 
 @import "./home/fullPage";
 
+$color-text: #fff;
+$color-btn-dark: rgba(0, 0, 0, 0.5);
+$color-btn-light: rgba(255, 255, 255, 0.1);
+
 body {
-	color: #fff;
+	color: $color-text;
 	font-family: 'Nova Square', Verdana, Tahoma, monospace;
 	font-size: 1em;
 }
@@ -45,4 +49,34 @@ h3 {
 #section1 {
 	background: url('/assets/images/skin/background-section1.jpg') no-repeat center center;
 	@include background-size(cover);
+}
+
+a.btn {
+	@include transition(all .3s ease-in-out);
+	color: $color-text;
+	border: 1px solid $color-text;
+	outline: none;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+a.btn.continue {
+	background: $color-btn-dark;
+	bottom: 0;
+	left: 50%;
+	height: 20px;
+	margin-left: -70px;
+	padding: 10px;
+	position: absolute;
+	width: 120px;
+	z-index: 2;
+}
+a.btn.continue:hover, a.btn.continue:focus {
+	background: $color-btn-light;
+}
+a.btn.enter-blog {
+	background: $color-btn-light;
+}
+a.btn.enter-blog:hover, a.btn.enter-blog:focus {
+	background: $color-btn-dark;
 }
