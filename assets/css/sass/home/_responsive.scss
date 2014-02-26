@@ -1,0 +1,22 @@
+/*
+	Width: [0, 640px]
+*/
+@media only screen and (max-width: 640px) {
+	#fullPage-nav {
+		display: none
+	}
+}
+/*
+	Width: [0, 720px]
+*/
+@media only screen and (max-width: 720px) {
+	h1{
+		font-size: 3em !important
+	}
+	h2 {
+		font-size: 1.675em !important
+	}
+	h3 {
+		font-size: 1.175em !important
+	}
+}
