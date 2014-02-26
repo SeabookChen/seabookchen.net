@@ -1,7 +1,7 @@
-Feature: Test homepage footer
+Feature: Test blog page footer
 
 	Background:
-		Given I visit "home" page
+		Given I visit "blog" page
 
 	Scenario Outline: Footer's 'about' link should be clickable
 		When I set window width to <width>px

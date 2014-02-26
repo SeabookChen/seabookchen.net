@@ -1,7 +1,7 @@
-Feature: Test homepage post searching
+Feature: Test blog page post searching
 
 	Background:
-		Given I visit "home" page
+		Given I visit "blog" page
 		When I set window width to 240px
 		And I click header's search button
 

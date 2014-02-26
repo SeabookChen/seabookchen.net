@@ -1,4 +1,4 @@
-Then(/^I should see title header "(All Posts|Articles|Notes|Categories|Tags|About|Acknowledgments)"$/) do |title|
+Then(/^I should see title header "(.*?)"$/) do |title|
 	assert_equal(true, @page.title_header.displayed?)
 	assert_equal(false, @page.title_header.text.empty?)
 

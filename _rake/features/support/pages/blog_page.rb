@@ -1,7 +1,7 @@
 require './_rake/features/support/pages/list_view.rb'
 
 module Pages
-	class HomePage < ListView
+	class BlogPage < ListView
 
 		def initialize(driver)
 			super(driver)

@@ -1,7 +1,7 @@
-Feature: Test homepage header
+Feature: Test blog page header
 
 	Background:
-		Given I visit "home" page
+		Given I visit "blog" page
 
 	Scenario Outline: Header's logo link should be loaded
 		When I set window width to <width>px
@@ -49,13 +49,12 @@ Feature: Test homepage header
 		And I should see title header "<title_header>"
 
 		Examples:
-			| link_text  | page_url     | page_title           | title_header |
-			| Yi Zeng    | /            | Yi Zeng              | All Posts    |
-			| Articles   | /articles/   | Articles - Yi Zeng   | Articles     |
-			| Notes      | /notes/      | Notes - Yi Zeng      | Notes        |
-			| Categories | /categories/ | Categories - Yi Zeng | Categories   |
-			| Tags       | /tags/       | Tags - Yi Zeng       | Tags         |
-			| About      | /about/      | About - Yi Zeng      | About        |
+			| link_text  | page_url     | page_title           | title_header         |
+			| Articles   | /articles/   | Articles - Yi Zeng   | Articles             |
+			| Notes      | /notes/      | Notes - Yi Zeng      | Notes                |
+			| Categories | /categories/ | Categories - Yi Zeng | Posts By Category    |
+			| Tags       | /tags/       | Tags - Yi Zeng       | Posts By Tag         |
+			| About      | /about/      | About - Yi Zeng      | About                |
 
 	Scenario Outline: Header's search link should be shown when width is greater then 520px
 		When I set window width to <width>px

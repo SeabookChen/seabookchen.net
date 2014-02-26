@@ -1,6 +1,7 @@
 ---
 layout: page
-title: "Acknowledgements"
+title: Acknowledgements
+header: Acknowledgements
 description: "Acknowledgements page for things used when building up
 Yi Zeng's personal website."
 priority: 0.5
