@@ -8,7 +8,7 @@ markdown: rdiscount
 # so be sure to set them if your theme uses them.
 #
 title: Yi Zeng
-description: "Personal website for Yi Zeng, a software engineer and test automator based in Christchurch, New Zealand."
+description: "Personal blog for Yi Zeng, a software engineer and test automator based in Christchurch, New Zealand."
 # tagline: Site Tagline
 author:
   name: Yi Zeng
