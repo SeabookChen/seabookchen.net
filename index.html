@@ -1,11 +1,59 @@
----
-layout: page
-title : All Posts
-header : All Posts
-group: navigation
-change_frequency: weekly
-priority: 1.0
----
-{% assign posts_collate = site.posts %}
-{% assign show_year = true %}
-{% include JB/posts_collate %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<!--[if IE]><meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'><![endif]-->
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="author" content="Yi Zeng">
+	<meta name="description" content="Personal website for Yi Zeng, a software engineer and test automator based in Christchurch, New Zealand." />
+	<meta name="keywords" content="software,engineer,testing,christchurch,newzealand" />
+
+	<title>Yi Zeng</title>
+
+	<link href='/assets/css/home-style.css' rel="stylesheet" type="text/css">
+
+	<!--[if IE]>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.0.6/modernizr.min.js"></script>
+		<script>window.Modernizr || document.write('<script src="/assets/js/modernizr-2.0.6.min.js"><\/script>')</script>
+	<![endif]-->
+	<!--[if !IE]> -->
+		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+		<script>window.Modernizr || document.write('<script src="/assets/js/modernizr-2.6.2.min.js"><\/script>')</script>
+	<!-- <![endif]-->
+</head>
+
+<body>
+
+<ul id="menu">
+	<li data-menuanchor="bio"><a href="#bio">Biography</a></li>
+	<li data-menuanchor="social"><a href="#social">Social Links</a></li>
+</ul>
+
+<div id="section0" class="section" data-name="bio">
+</div>
+
+<div id="section1" class="section" data-name="social">
+</div>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/jquery-1.10.2.min.js"><\/script>')</script>
+
+<script src="/assets/js/jquery.fullPage.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$.fn.fullpage({
+			anchors: ['bio', 'social'],
+			css3: true,
+			easing: false,
+			menu: '#menu',
+			navigation: true,
+			navigationPosition: 'right'
+		});
+	});
+</script>
+
+</body>
+</html>

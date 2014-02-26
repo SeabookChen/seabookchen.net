@@ -1,0 +1,48 @@
+@import "compass/css3";
+@import "compass/css3/user-interface";
+@import "compass/typography";
+
+@import "./support/normalize";
+@import "./support/helper";
+@import "./support/fonts";
+
+@import "./home/fullPage";
+
+body {
+	color: #fff;
+	font-family: 'Nova Square', Verdana, Tahoma, monospace;
+	font-size: 1em;
+}
+
+h1 {
+	font-size: 6em
+}
+h2 {
+	font-size: 2.5em;
+	margin-bottom: 0;
+}
+h3 {
+	font-size: 2em;
+	margin-top: 0;
+}
+
+#menu {
+	display: none
+}
+
+.section {
+	text-align:center;
+
+	span {
+		padding: 0 10px 0 10px;
+	}
+}
+
+#section0 {
+	background: url('/assets/images/skin/background-section0.jpg') no-repeat center center;
+	@include background-size(cover);
+}
+#section1 {
+	background: url('/assets/images/skin/background-section1.jpg') no-repeat center center;
+	@include background-size(cover);
+}
