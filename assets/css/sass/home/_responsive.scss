@@ -20,3 +20,31 @@
 		font-size: 1.175em !important
 	}
 }
+/*
+	Height: [0, 320px]
+*/
+@media only screen and (max-height: 320px) {
+	h1{
+		font-size: 1.725em !important
+	}
+	h2 {
+		font-size: 1.325em !important
+	}
+	h3 {
+		font-size: 1.125em !important
+	}
+}
+/*
+	Height: [0, 480px]
+*/
+@media only screen and (max-height: 480px) {
+	h1{
+		font-size: 2em !important
+	}
+	h2 {
+		font-size: 1.525em !important
+	}
+	h3 {
+		font-size: 1.175em !important
+	}
+}
