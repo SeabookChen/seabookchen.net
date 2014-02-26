@@ -1,7 +1,3 @@
-@import "compass/css3";
-@import "compass/css3/user-interface";
-@import "compass/typography";
-
 ::-webkit-scrollbar {
 	width: 12px;
 }
@@ -179,7 +175,7 @@ pre::-webkit-scrollbar-thumb:horizontal,
 	background-color:#6D705F;
 }
 
-@import "./main/header";
-@import "./main/unit-article";
-@import "./main/data-table";
-@import "./main/footer";
+@import "header";
+@import "unit-article";
+@import "data-table";
+@import "footer";
