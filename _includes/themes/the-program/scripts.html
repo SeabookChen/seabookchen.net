@@ -12,7 +12,7 @@ var sendGaEvent = function(category, action, label) {
 };
 
 $('.nav-global .nav-link').on('click', function() {
-    sendGaEvent('Navigation Links', 'Click', this.innerText);
+    sendGaEvent('Navigation Links', 'Click', this.textContent);
 });
 $('.the-footer h4 > a').on('click', function() {
     sendGaEvent('Navigation Links', 'Click', 'About');
