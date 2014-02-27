@@ -1,17 +1,23 @@
 $base-url: "/assets/images/social/simple-icons-master/" !default;
+$icon-size: 42px;
+
+.social-links {
+	a {
+		background-position: center center;
+		background-repeat: no-repeat;
+		display: inline-block;
+		text-indent: -9999em;
+	}
+}
 
 .the-footer .social-links {
 	margin-top: 12px;
 
 	a {
-		background-size: 42px 42px;
-		background-position: center center;
-		background-repeat: no-repeat;
-		display: inline-block;
+		background-size: $icon-size $icon-size;
 		margin: 1.5px;
-		height: 42px;
-		width: 42px;
-		text-indent: -9999em;
+		height: $icon-size;
+		width: $icon-size;
 		opacity: .3;
 		filter: alpha(opacity=30); /* IE6-9 */
 	}
@@ -23,55 +29,38 @@ $base-url: "/assets/images/social/simple-icons-master/" !default;
 	}
 }
 
-.unit-article .social-links {
-	a {
-		background-size: 48px 48px;
-		background-position: center center;
-		background-repeat: no-repeat;
-		border: none;
-		display: inline-block;
-		margin: 5px;
-		height: 48px;
-		width: 48px;
-		text-indent: -9999em;
-	}
-
-	a:hover {
-		@include transition(all .3s ease-in-out);
-		@include border-radius(12px);
-		background-color: #000;
-	}
+@mixin get-ico-image($name, $size) {
+	background-image: url("#{$base-url}#{$name}-#{$size}.png");
 }
-
 .social-links .ico-gmail {
+	@include get-ico-image(gmail, 48);
 	background-color: #dd4b39;
-	background-image: url("#{$base-url}gmail-48.png");
 }
 .social-links .ico-linkedin {
+	@include get-ico-image(linkedin, 48);
 	background-color: #007fb1;
-	background-image: url("#{$base-url}linkedin-48.png");
 }
 .social-links .ico-rss {
+	@include get-ico-image(rss, 48);
 	background-color: #ff8300;
-	background-image: url("#{$base-url}rss-48.png");
 }
 .social-links .ico-github {
+	@include get-ico-image(github, 48);
 	background-color: #4183c4;
-	background-image: url("#{$base-url}github-48.png");
 }
 .social-links .ico-stackoverflow {
+	@include get-ico-image(stackoverflow, 48);
 	background-color: #f47920;
-	background-image: url("#{$base-url}stackoverflow-48.png");
 }
 .social-links .ico-facebook {
+	@include get-ico-image(facebook, 48);
 	background-color: #3b5998;
-	background-image: url("#{$base-url}facebook-48.png");
 }
 .social-links .ico-lastfm {
+	@include get-ico-image(lastfm, 48);
 	background-color: #d51007;
-	background-image: url("#{$base-url}lastfm-48.png");
 }
 .social-links .ico-steam {
+	@include get-ico-image(steam, 48);
 	background-color: #262523;
-	background-image: url("#{$base-url}steam-48.png");
 }

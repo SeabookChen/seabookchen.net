@@ -4,16 +4,17 @@
 
 @import "./support/normalize";
 @import "./support/helper";
+@import "./support/social-links";
 @import "./support/fonts";
 
 @import "./home/fullPage";
-@import "./home/responsive";
 
 $color-text-light: #fff;
 $color-link: rgba(255, 153, 0, 0.8);
 $color-link-hover: #FF9900;
 $color-background-dark: rgba(0, 0, 0, 0.5);
 $color-background-light: rgba(255, 255, 255, 0.1);
+$icon-size: 64px;
 
 body {
 	color: $color-text-light;
@@ -67,7 +68,7 @@ h3 {
 	@include background-size(cover);
 }
 
-a.btn {
+a[class^='btn'] {
 	@include transition(all .3s ease-in-out);
 	color: $color-text-light;
 	border: 1px solid $color-text-light;
@@ -76,8 +77,21 @@ a.btn {
 	text-transform: uppercase;
 }
 
+.btn-dark {
+	background-color: $color-background-dark !important
+}
+.btn-dark:hover, .btn-dark:focus {
+	background-color: $color-background-light !important
+}
+
+.btn-light {
+	background-color: $color-background-light !important
+}
+.btn-light:hover, .btn-light:focus {
+	background-color: $color-background-dark !important
+}
+
 .continue {
-	background: $color-background-dark;
 	bottom: 0;
 	left: 50%;
 	height: 20px;
@@ -87,12 +101,13 @@ a.btn {
 	width: 120px;
 	z-index: 2;
 }
-.continue:hover, .continue:focus {
-	background: $color-background-light;
+
+.social-links {
+	a {
+		background-size: $icon-size $icon-size;
+		margin: 10px;
+		height: $icon-size;
+		width: $icon-size;
+	}
 }
-#enter {
-	background: $color-background-light;
-}
-#enter:hover, #enter:focus {
-	background: $color-background-dark;
-}
+@import "./home/responsive";
