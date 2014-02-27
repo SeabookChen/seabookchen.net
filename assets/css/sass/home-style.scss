@@ -9,12 +9,14 @@
 @import "./home/fullPage";
 @import "./home/responsive";
 
-$color-text: #fff;
-$color-btn-dark: rgba(0, 0, 0, 0.5);
-$color-btn-light: rgba(255, 255, 255, 0.1);
+$color-text-light: #fff;
+$color-link: rgba(255, 153, 0, 0.8);
+$color-link-hover: #FF9900;
+$color-background-dark: rgba(0, 0, 0, 0.5);
+$color-background-light: rgba(255, 255, 255, 0.1);
 
 body {
-	color: $color-text;
+	color: $color-text-light;
 	font-family: 'Nova Square', Verdana, Tahoma, monospace;
 	font-size: 1em;
 }
@@ -29,6 +31,19 @@ h2 {
 h3 {
 	font-size: 2em;
 	margin-top: 12px;
+}
+
+.site-notice {
+	background: $color-background-dark;
+	position: fixed;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+
+	a {
+		@include link-colors($color-link, $hover:$color-link-hover)
+	}
 }
 
 #menu {
@@ -54,15 +69,15 @@ h3 {
 
 a.btn {
 	@include transition(all .3s ease-in-out);
-	color: $color-text;
-	border: 1px solid $color-text;
+	color: $color-text-light;
+	border: 1px solid $color-text-light;
 	outline: none;
 	text-decoration: none;
 	text-transform: uppercase;
 }
 
 .continue {
-	background: $color-btn-dark;
+	background: $color-background-dark;
 	bottom: 0;
 	left: 50%;
 	height: 20px;
@@ -73,11 +88,11 @@ a.btn {
 	z-index: 2;
 }
 .continue:hover, .continue:focus {
-	background: $color-btn-light;
+	background: $color-background-light;
 }
 #enter {
-	background: $color-btn-light;
+	background: $color-background-light;
 }
 #enter:hover, #enter:focus {
-	background: $color-btn-dark;
+	background: $color-background-dark;
 }
