@@ -13,10 +13,11 @@
 	a {
 		color: $color-text;
 		border: 0;
-	}
-	a:hover {
-		@include transition(all .3s ease-in-out);
-		color: $color-hover;
+
+		&:hover {
+			@include transition(all .3s ease-in-out);
+			color: $color-hover;
+		}
 	}
 
 	p {
@@ -26,18 +27,19 @@
 			font-size: .95em;
 			padding: 2px 3px;
 			border-bottom: 1px dotted #FFD18D;
-		}
 
-		a:hover {
-			background-color: $color-hover-transparent
+			&:hover {
+				background-color: $color-hover-transparent
+			}
 		}
 	}
 
 	h4 {
-		margin-top: 0
-	}
-	h4 a:hover {
-		font-weight: bold
+		margin-top: 0;
+
+		a:hover {
+			font-weight: bold
+		}
 	}
 
 	.back-to-top {

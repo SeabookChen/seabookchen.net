@@ -20,12 +20,12 @@ $icon-size: 42px;
 		width: $icon-size;
 		opacity: .3;
 		filter: alpha(opacity=30); /* IE6-9 */
-	}
 
-	a:hover {
-		@include transition(all .3s ease-in-out);
-		opacity: 1.0;
-		filter: alpha(opacity=100); /* IE6-9 */
+		&:hover {
+			@include transition(all .3s ease-in-out);
+			opacity: 1.0;
+			filter: alpha(opacity=100); /* IE6-9 */
+		}
 	}
 }
 

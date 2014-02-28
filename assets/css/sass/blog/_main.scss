@@ -102,18 +102,12 @@ html {
 .body .unit-body {
 	@include box-shadow($color-box-border 0 0 9px);
 	border-top: 1px solid rgba(255, 255, 255, 0.6);
-	padding: 26px;
-	padding-top: 13px;
-	padding-left: 36px;
+	padding: 13px 26px 26px 36px;
 	background: #FFF;
 }
 /* LINK */
-a:link {
-	text-decoration: none
-}
-a:visited {
-	text-decoration: none
-}
+a:link,
+a:visited,
 a:hover {
 	text-decoration: none
 }
