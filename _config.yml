@@ -166,4 +166,4 @@ translations:
 
   # 404.html
   404_heading: 'Sorry, the page is not found.'
-  404_content: 'You will be redirected to <a href="http://yizeng.me">yizeng.me</a> in few seconds.'
+  404_content: 'You will be redirected to <a href="/blog">yizeng.me/blog/</a> in few seconds.'
