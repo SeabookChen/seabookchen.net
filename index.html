@@ -39,15 +39,17 @@
 		<p class="site-notice">This site requires JavaScript. Here are the instructions <a href="http://www.enable-javascript.com/" target="_blank">how to enable JavaScript in your web browser</a>.</p>
 	</noscript>
 
-	<h1><span>Yi Zeng</span></h1>
-	<h2><span>Software engineer &amp; test automator </span></h2>
-	<h3><span>Christchurch, New Zealand</span></h3>
-	<a class="btn-dark continue" data-ga="More" href="#social">More</a>
+	<div class="headings animated bounceInDown">
+		<h1><span>Yi Zeng</span></h1>
+		<h2><span>Software engineer &amp; test automator </span></h2>
+		<h3><span>Christchurch, New Zealand</span></h3>
+	</div>
+	<a class="btn-dark continue animated bounceInLeft" data-ga="More" href="#social">More</a>
 </div>
 
 <div id="section1" class="section" data-name="social">
-	<h1><a class="btn-light" data-ga="Enter Blog" href="/blog">Enter blog</a></h1>
-	<div class="social-links">
+	<h1 class="animated"><a class="btn-light" data-ga="Enter Blog" href="/blog">Enter blog</a></h1>
+	<div class="social-links animated">
 		<a class="btn-light ico-linkedin" href="http://linkedin.com/in/yizengnz/" rel="me" target="_blank" title="LinkedIn Profile"></a>
 		<a class="btn-light ico-github" href="http://github.com/yizeng/" rel="me" target="_blank" title="GitHub Page"></a>
 		<a class="btn-light ico-gmail" href="http://scr.im/yizengdev/" rel="me" target="_blank" title="Email Address"></a>
@@ -70,7 +72,29 @@
 			menu: '#menu',
 			navigation: true,
 			navigationPosition: 'right',
-			resize: false
+			resize: false,
+
+			afterLoad: function(anchorLink, index){
+				if(index == 1){
+					$('#section0 .headings').addClass('bounce');
+					$('#section0 .continue').addClass('flipInX');
+				}
+				if(index == 2){
+					$('#section1 h1').addClass('bounce');
+					$('#section1 .social-links').addClass('flipInX');
+				}
+			},
+
+			onLeave: function(index, direction){
+				if(index == 1 && direction =='down'){
+					$('#section0 .headings').removeClass('bounceInDown bounce');
+					$('#section0 .continue').removeClass('bounceInLeft flipInX');
+				}
+				if(index == 2 && direction == 'up'){
+					$('#section1 h1').removeClass('bounce');
+					$('#section1 .social-links').removeClass('flipInX');
+				}
+			}
 		});
 	});
 </script>
