@@ -36,11 +36,9 @@ h3 {
 
 .site-notice {
 	background: $color-background-dark;
-	position: fixed;
 	text-align: center;
 	top: 0;
 	width: 100%;
-	z-index: 2;
 
 	a {
 		@include link-colors($color-link, $hover:$color-link-hover)
