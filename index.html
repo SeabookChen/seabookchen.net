@@ -75,24 +75,9 @@
 			resize: false,
 
 			afterLoad: function(anchorLink, index){
-				if(index == 1){
-					$('#section0 .headings').addClass('bounce');
-					$('#section0 .continue').addClass('flipInX');
-				}
 				if(index == 2){
 					$('#section1 h1').addClass('bounce');
 					$('#section1 .social-links').addClass('flipInX');
-				}
-			},
-
-			onLeave: function(index, direction){
-				if(index == 1 && direction =='down'){
-					$('#section0 .headings').removeClass('bounceInDown bounce');
-					$('#section0 .continue').removeClass('bounceInLeft flipInX');
-				}
-				if(index == 2 && direction == 'up'){
-					$('#section1 h1').removeClass('bounce');
-					$('#section1 .social-links').removeClass('flipInX');
 				}
 			}
 		});
