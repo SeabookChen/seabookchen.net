@@ -75,7 +75,7 @@
 			resize: false,
 
 			afterLoad: function(anchorLink, index){
-				if(index == 2){
+				if(index === 2){
 					$('#section1 h1').removeClass('hidden').addClass('bounceInRight');
 					$('#section1 .social-links').removeClass('hidden').addClass('bounceInLeft');
 				}
@@ -96,7 +96,7 @@
 
 	$(document).ready(function() {
 		$("[class^='btn']").on('click', function() {
-			label = this.textContent;
+			var label = this.textContent;
 			if (this.title !== '') {
 				label = this.title;
 			}
