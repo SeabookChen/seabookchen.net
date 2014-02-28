@@ -22,7 +22,7 @@ Feature: Test blog page footer
 
 		Examples:
 			| width | size |
-			| 240   | 32   |
+			| 240   | 36   |
 			| 320   | 36   |
 			| 640   | 42   |
 			| 768   | 42   |
