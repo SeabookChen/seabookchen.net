@@ -1,158 +1,167 @@
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="/assets/js/jquery-1.10.2.min.js"><\/script>')</script>
 
+<!-- Loading progess bar plugin -->
+<!--[if !IE]> -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/pace/0.4.17/pace.min.js"></script>
+	<script>window.Pace || document.write('<script src="/assets/js/pace.min.js"><\/script>')</script>
+<!-- <![endif]-->
+
 <!-- Google Analytics Event tracking -->
 <script>
 var sendGaEvent = function(category, action, label) {
-    if (typeof label === 'undefined') {
-        ga('send', 'event', category, action);
-    } else {
-        ga('send', 'event', category, action, label);
-    }
+	if (typeof label === 'undefined') {
+		ga('send', 'event', category, action);
+	} else {
+		ga('send', 'event', category, action, label);
+	}
 };
 
 $('.nav-global .nav-link').on('click', function() {
-    sendGaEvent('Navigation Links', 'Click', this.textContent);
+	sendGaEvent('Navigation Links', 'Click', this.textContent);
 });
 $('.the-footer h4 > a').on('click', function() {
-    sendGaEvent('Navigation Links', 'Click', 'About');
+	sendGaEvent('Navigation Links', 'Click', 'About');
 });
 $('.the-footer .social-links > a').on('click', function() {
-    sendGaEvent('Social Links', 'Click', this.title);
+	sendGaEvent('Social Links', 'Click', this.title);
 });
 $('.tag_box.categories a').on('click', function() {
-    sendGaEvent('Categories', 'Click', this.title);
+	sendGaEvent('Categories', 'Click', this.title);
 });
 $('.tag_box.tags a').on('click', function() {
-    sendGaEvent('Tags', 'Click', this.title);
+	sendGaEvent('Tags', 'Click', this.title);
 });
 </script>
 
 <!-- Jekyll Simple Search option -->
 <script src="/assets/js/jekyll-search.jquery.js"></script>
 <script>
-    $(document).ready(function() {
-        $('.search-field').simpleJekyllSearch({
-            jsonFile : '{{ site.url }}/search.json',
-            template : '<li><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></li>',
-            searchResultsTitle : '<h4>{{ site.translations.search_results }}</h4>',
-            noResults : '<p>{{ site.translations.search_not_found }}</p>'
-        });
-    });
+	$(document).ready(function() {
+		$('.search-field').simpleJekyllSearch({
+			jsonFile : '{{ site.url }}/search.json',
+			template : '<li><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></li>',
+			searchResultsTitle : '<h4>{{ site.translations.search_results }}</h4>',
+			noResults : '<p>{{ site.translations.search_not_found }}</p>'
+		});
+	});
 
-    (function($, window, undefined) {
-        var closeOverlay = function() {
-            $('.search-wrapper').removeAttr('style');
-            $(".search-form").toggleClass('active');
-            $("body").removeClass('search-overlay');
-        };
+	(function($, window, undefined) {
+		var closeOverlay = function() {
+			$('.search-wrapper').removeAttr('style');
+			$(".search-form").toggleClass('active');
+			$("body").removeClass('search-overlay');
+		};
 
-        $('.nav-global .btn-search').on('click', function() {
-            $('.search-wrapper').css({ display: "block" });
-            $(".search-form").toggleClass('active');
-            $(".search-form").find('input').focus();
-            $("body").toggleClass('search-overlay');
-            sendGaEvent('Navigation Links', 'Click', 'Search');
-        });
+		$('.nav-global .btn-search').on('click', function() {
+			$('.search-wrapper').css({ display: "block" });
+			$(".search-form").toggleClass('active');
+			$(".search-form").find('input').focus();
+			$("body").toggleClass('search-overlay');
+			sendGaEvent('Navigation Links', 'Click', 'Search');
+		});
 
-        $('.search-wrapper .btn-close').on('click', function() {
-            closeOverlay();
-        });
+		$('.search-wrapper .btn-close').on('click', function() {
+			closeOverlay();
+		});
 
-        $(document).on('keyup', function(e) {
-            if(e.keyCode === 27) {
-                closeOverlay();
-            }
-        });
-    })(jQuery, window);
+		$(document).on('keyup', function(e) {
+			if(e.keyCode === 27) {
+				closeOverlay();
+			}
+		});
+	})(jQuery, window);
 </script>
 
 {% if page.js_utils != null %}
-    {% if page.js_utils contains "fancybox" %}
-        <script src="/assets/js/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
-        <script src="/assets/js/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+	{% if page.js_utils contains "fancybox" %}
+		<script src='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.js'></script>
+		<script src='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-buttons.min.js'></script>
 
-        <script>
-            $("head").append('<link rel="stylesheet" href="/assets/js/fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" />');
-            $("head").append('<link rel="stylesheet" href="/assets/js/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" />');
-            $(".post-image").fancybox({
-                prevEffect      : 'none',
-                nextEffect      : 'none',
-                closeBtn        : true,
-                helpers     : {
-                    title   : { type : 'inside' },
-                    buttons : {}
-                }
-            });
-        </script>
-    {% endif %}
+		<script>window.jQuery.fancybox || document.write('<script src="/assets/js/fancybox/jquery.fancybox.pack.js?v=2.1.4"><\/script>')</script>
+		<script>window.jQuery.fancybox.helpers.buttons || document.write('<script src="/assets/js/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"><\/script>')</script>
 
-    {% if page.js_utils contains "unveil" %}
-        <script src="/assets/js/unveil/jquery.unveil.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $(".post-image > img").unveil(450);
-            });
-        </script>
-    {% endif %}
+		<script>
+			$("head").append('<link rel="stylesheet" href="/assets/js/fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" />');
+			$("head").append('<link rel="stylesheet" href="/assets/js/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" />');
+			$(".post-image").fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+				closeBtn : true,
+				helpers : {
+					title : { type : 'inside' },
+					buttons : {}
+				}
+			});
+		</script>
+	{% endif %}
 
-    {% if page.js_utils contains "toc" %}
-        <script>
-            function createListItem(heading) {
-                var link = "#" + heading.children("a").attr("id");
-                return "<li>" + "<a href='" + link + "'>" + heading.text() + "</a>" + "</li>";
-            }
+	{% if page.js_utils contains "unveil" %}
+		<script src="/assets/js/unveil/jquery.unveil.min.js"></script>
+		<script>
+			$(document).ready(function () {
+				$(".post-image > img").unveil(450);
+			});
+		</script>
+	{% endif %}
 
-            var ToC = "<nav role='navigation' class='toc'><ol>";
-            $("article h2").each(function () {
-                var secondHeading, thirdHeadingInside;
+	{% if page.js_utils contains "toc" %}
+		<script>
+			function createListItem(heading) {
+				var link = "#" + heading.children("a").attr("id");
+				return "<li>" + "<a href='" + link + "'>" + heading.text() + "</a>" + "</li>";
+			}
 
-                secondHeading = $(this);
-                ToC += createListItem(secondHeading);
+			var ToC = "<nav role='navigation' class='toc'><ol>";
+			$("article h2").each(function () {
+				var secondHeading, thirdHeadingInside;
 
-                thirdHeadingInside = secondHeading.nextUntil("article h2", "h3");
-                if (thirdHeadingInside.length !== 0) {
-                    ToC += "<ul>";
-                    thirdHeadingInside.each(function () {
-                        ToC += createListItem($(this));
-                    });
-                    ToC += "</ul>";
-                }
-            });
-            ToC += "</ol>" + "</nav>";
+				secondHeading = $(this);
+				ToC += createListItem(secondHeading);
 
-            $("#toc").prepend(ToC);
-        </script>
-    {% endif %}
+				thirdHeadingInside = secondHeading.nextUntil("article h2", "h3");
+				if (thirdHeadingInside.length !== 0) {
+					ToC += "<ul>";
+					thirdHeadingInside.each(function () {
+						ToC += createListItem($(this));
+					});
+					ToC += "</ul>";
+				}
+			});
+			ToC += "</ol>" + "</nav>";
 
-    {% if page.js_utils contains "toc" or page.js_utils contains "back-to-top" %}
-        <script>
-            $(document).ready(function () {
-                var offset = 220, duration = 500, width = 1280;
-                $(window).scroll(function () {
-                    if ($(window).width() > width) {
-                        if ($(this).scrollTop() > offset) {
-                            $('.back-to-top').fadeIn(duration);
-                        } else {
-                            $('.back-to-top').fadeOut(duration);
-                        }
-                    }
-                });
-                $(window).resize(function () {
-                    if ($(window).width() < width) {
-                        $('.back-to-top').fadeOut(duration);
-                    }
-                    if ($(window).width() >= width && $(this).scrollTop() > offset) {
-                        $('.back-to-top').fadeIn(duration);
-                    }
-                });
+			$("#toc").prepend(ToC);
+		</script>
+	{% endif %}
 
-                $('.back-to-top').click(function (event) {
-                    event.preventDefault();
-                    $('html, body').animate({scrollTop: 0}, duration);
-                    return false;
-                });
-            });
-        </script>
-    {% endif %}
+	{% if page.js_utils contains "toc" or page.js_utils contains "back-to-top" %}
+		<script>
+			$(document).ready(function () {
+				var offset = 220, duration = 500, width = 1280;
+				$(window).scroll(function () {
+					if ($(window).width() > width) {
+						if ($(this).scrollTop() > offset) {
+							$('.back-to-top').fadeIn(duration);
+						} else {
+							$('.back-to-top').fadeOut(duration);
+						}
+					}
+				});
+				$(window).resize(function () {
+					if ($(window).width() < width) {
+						$('.back-to-top').fadeOut(duration);
+					}
+					if ($(window).width() >= width && $(this).scrollTop() > offset) {
+						$('.back-to-top').fadeIn(duration);
+					}
+				});
+
+				$('.back-to-top').click(function (event) {
+					event.preventDefault();
+					$('html, body').animate({scrollTop: 0}, duration);
+					return false;
+				});
+			});
+		</script>
+	{% endif %}
 {% endif %}
