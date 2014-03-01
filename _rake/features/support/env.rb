@@ -5,7 +5,8 @@ SITE_URL = 'http://localhost:4000'
 NAV_LINKS = %w[Articles Notes Categories Tags]
 
 # window
-WINDOW_HEIGHT = 1080
+WINDOW_WIDTH = 1200
+WINDOW_HEIGHT = 800
 
 # timeout
 TIMEOUT = 5 # seconds

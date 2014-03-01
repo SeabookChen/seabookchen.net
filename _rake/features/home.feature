@@ -51,3 +51,25 @@ Feature: Test home page
 			| 768   |
 			| 1280  |
 			| 1920  |
+
+	Scenario Outline: Social icons should be in different sizes depending on window width
+		When I set window width to <width>px and window height to <height>px
+		And I wait for bio page to be loaded
+		And I click continue button
+		And I wait for social page to be loaded
+		Then I should see social page's social links in <size>px square
+
+		Examples:
+			| width | height | size |
+			| 240   | 240    | 42   |
+			| 240   | 768    | 42   |
+			| 320   | 240    | 42   |
+			| 320   | 768    | 42   |
+			| 640   | 240    | 48   |
+			| 640   | 768    | 48   |
+			| 768   | 240    | 48   |
+			| 768   | 768    | 64   |
+			| 1280  | 240    | 48   |
+			| 1280  | 768    | 64   |
+			| 1920  | 240    | 48   |
+			| 1920  | 768    | 64   |

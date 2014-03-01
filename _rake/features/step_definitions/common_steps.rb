@@ -25,6 +25,10 @@ Given(/^I set window width to (\d+)px$/) do |window_width|
 	@driver.manage.window.resize_to(window_width, WINDOW_HEIGHT)
 end
 
+Given(/^I set window width to (\d+)px and window height to (\d+)px$/) do |window_width, window_height|
+	@driver.manage.window.resize_to(window_width, window_height)
+end
+
 When(/^I refresh the page$/) do
 	@driver.navigate.refresh
 end
