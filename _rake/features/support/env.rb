@@ -8,7 +8,7 @@ NAV_LINKS = %w[Articles Notes Categories Tags]
 WINDOW_HEIGHT = 1080
 
 # timeout
-TIMEOUT = 3 # seconds
+TIMEOUT = 5 # seconds
 
 case ENV['browser']
 	when 'chrome', 'Chrome', 'debug'
@@ -50,6 +50,15 @@ module Helper
 			end
 		end
 		return false
+	end
+
+	def wait_til_clickable(element)
+		@driver.manage.timeouts.implicit_wait = 0
+
+		wait = Selenium::WebDriver::Wait.new(:timeout => TIMEOUT)
+		wait.until { is_element_clickable(element) }
+
+		@driver.manage.timeouts.implicit_wait = TIMEOUT
 	end
 end
 

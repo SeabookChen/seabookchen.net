@@ -3,6 +3,7 @@ Given(/^I visit "(home|blog|articles|notes|categories|tags|about)" page$/) do |p
 	case page_name
 		when 'home'
 			url += '/'
+			@page = Pages::HomePage.new(@driver)
 		when 'blog'
 			url += '/blog'
 			@page = Pages::BlogPage.new(@driver)
@@ -34,10 +35,6 @@ end
 
 Then(/^I should see page title "(.*?)"$/) do |title|
 	assert_equal(title, @driver.title)
-end
-
-Then(/^I should see blog page url$/) do
-	assert_equal(SITE_URL + '/blog/', @driver.current_url)
 end
 
 Then(/^I should see page url "(.*?)" \(with slashes\)$/) do |url|
