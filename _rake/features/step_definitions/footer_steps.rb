@@ -10,7 +10,7 @@ Then(/^I should see footer's social icons in (\d+)px square$/) do |size|
 	assert_equal(true, @page.footer.social_links.count > 0)
 
 	@page.footer.social_links.each do |img|
-		assert_equal(true, img.displayed?)
+		assert_equal(true, is_link_clickable(img))
 
 		assert_equal(size.to_i, img.size.width)
 		assert_equal(size.to_i, img.size.height)

@@ -40,8 +40,6 @@ Then(/^I should see social page's social links in (\d+)px square$/) do |size|
 	assert_equal(true, @page.social_links.count > 0)
 
 	@page.social_links.each do |img|
-		assert_equal(true, img.displayed?)
-
 		# use clientWidth instead of img.size.width due to border
 		assert_equal(size.to_i, img.attribute('clientWidth').to_i)
 		assert_equal(size.to_i, img.attribute('clientHeight').to_i)
