@@ -19,8 +19,7 @@ Feature: Test home page
 
 	Scenario Outline: Navigation circles should be visible depending on width
 		When I set window width to <width>px
-		Then I wait for bio page to be loaded
-		And I should <have?> clickable navigation circles
+		Then I should <have?> clickable navigation circles
 		And I click continue button
 		And I should <have?> clickable navigation circles
 

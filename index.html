@@ -23,32 +23,6 @@
 		<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
 		<script>window.Modernizr || document.write('<script src="/assets/js/modernizr-2.6.2.min.js"><\/script>')</script>
 	<!-- <![endif]-->
-
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="/assets/js/jquery-1.10.2.min.js"><\/script>')</script>
-	<script src="/assets/js/jquery.fullPage.min.js"></script>
-	<script>
-		$(document).ready(function() {
-			$.fn.fullpage({
-				anchors: ['bio', 'social'],
-				css3: true,
-				easing: false,
-				fixedElements: '.site-notice',
-				menu: '#menu',
-				navigation: true,
-				navigationPosition: 'right',
-				resize: false,
-				scrollingSpeed: 200,
-
-				afterLoad: function(anchorLink, index){
-					if(index === 2){
-						$('#section1 h1').removeClass('hidden').addClass('bounceInRight');
-						$('#section1 .social-links').removeClass('hidden').addClass('bounceInLeft');
-					}
-				}
-			});
-		});
-	</script>
 </head>
 
 <body>
@@ -65,12 +39,12 @@
 		<p class="site-notice">This site requires JavaScript. Here are the instructions <a href="http://www.enable-javascript.com/" target="_blank">how to enable JavaScript in your web browser</a>.</p>
 	</noscript>
 
-	<div class="headings animated bounceInDown">
+	<div class="headings">
 		<h1><span>Yi Zeng</span></h1>
 		<h2><span>Software engineer &amp; test automator </span></h2>
 		<h3><span>Christchurch, New Zealand</span></h3>
 	</div>
-	<a class="btn-dark continue animated bounceInLeft" data-ga="More" href="#social">More</a>
+	<a class="btn-dark continue" data-ga="More" href="#social">More</a>
 </div>
 
 <div id="section1" class="section" data-name="social">
@@ -84,6 +58,42 @@
 	</div>
 </div>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/assets/js/jquery-1.10.2.min.js"><\/script>')</script>
+<script src="/assets/js/jquery.fullPage.min.js"></script>
+<script>
+	$(document).ready(function() {
+		$.fn.fullpage({
+			anchors: ['bio', 'social'],
+			css3: true,
+			easing: false,
+			fixedElements: '.site-notice',
+			menu: '#menu',
+			navigation: true,
+			navigationPosition: 'right',
+			resize: false,
+			scrollingSpeed: 200,
+
+			afterLoad: function(anchorLink, index){
+				if(index == 1){
+					$('#section0 .headings').addClass('bounceInDown');
+					$('#section0 .continue').addClass('bounceInLeft');
+				}
+				if(index === 2){
+					$('#section1 h1').removeClass('hidden').addClass('bounceInRight');
+					$('#section1 .social-links').removeClass('hidden').addClass('bounceInLeft');
+				}
+			},
+
+			onLeave: function(index, direction){
+				if(index === 1 && direction ==='down'){
+					$('#section0 .headings').addClass('animated');
+					$('#section0 .continue').addClass('animated');
+				}
+			}
+		});
+	});
+</script>
 <script>
 	if (!navigator.userAgent.match(/.*(Pingdom|PhantomJS|bot|StatusCake).*/gi)) {
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
