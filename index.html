@@ -74,21 +74,10 @@
 			resize: false,
 			scrollingSpeed: 200,
 
-			afterLoad: function(anchorLink, index){
-				if(index == 1){
-					$('#section0 .headings').addClass('bounceInDown');
-					$('#section0 .continue').addClass('bounceInLeft');
-				}
+			afterLoad: function(anchorLink, index) {
 				if(index === 2){
 					$('#section1 h1').removeClass('hidden').addClass('bounceInRight');
 					$('#section1 .social-links').removeClass('hidden').addClass('bounceInLeft');
-				}
-			},
-
-			onLeave: function(index, direction){
-				if(index === 1 && direction ==='down'){
-					$('#section0 .headings').addClass('animated');
-					$('#section0 .continue').addClass('animated');
 				}
 			}
 		});
