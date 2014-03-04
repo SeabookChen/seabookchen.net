@@ -31,10 +31,11 @@
 		right: 1rem;
 		text-align: center;
 		z-index: 1;
-	}
-	.btn-close:hover {
-		@include transition(all .3s ease-in-out);
-		font-weight: bold;
+
+		&:hover {
+			@include transition(all .3s ease-in-out);
+			font-weight: bold;
+		}
 	}
 
 	.post-list {
@@ -46,21 +47,23 @@
 		h4, li, p, a {
 			color: #fff
 		}
-	}
 
-	.post-list li {
-		font-size: 1em;
-		line-height: 1.825em;
-		margin-left: 12px;
-		padding: 3px;
-	}
-	.post-list li:hover {
-		@include transition(all .3s ease-in-out);
-		border: 1px dashed #fff;
-	}
-	.post-list .entry-date {
-		display: none;
-		float: right;
+		li {
+			font-size: 1em;
+			line-height: 1.825em;
+			margin-left: 12px;
+			padding: 3px;
+
+			&:hover {
+				@include transition(all .3s ease-in-out);
+				border: 1px dashed #fff;
+			}
+		}
+
+		.entry-date {
+			display: none;
+			float: right;
+		}
 	}
 }
 
@@ -71,19 +74,19 @@
 }
 
 body.search-overlay {
-	overflow: hidden
-}
+	overflow: hidden;
 
-body.search-overlay:after {
-	background-color: rgba(25, 25, 25, 0.95);
-	content: '';
-	height: 100%;
-	min-height: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 9001;
+	&:after {
+		background-color: rgba(25, 25, 25, 0.95);
+		content: '';
+		height: 100%;
+		min-height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		z-index: 9001;
+	}
 }
 
 @media only screen and (min-width: 960px) {
@@ -95,10 +98,10 @@ body.search-overlay:after {
 
 .search-wrapper {
 	display: none;
-	position: absolute;
 	top: 50px;
 	width: 90%;
-	padding-right: 5%;
+	position: absolute;
 	padding-left: 5%;
+	padding-right: 5%;
 	zoom: 1;
 }

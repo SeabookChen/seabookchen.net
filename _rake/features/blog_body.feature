@@ -1,7 +1,7 @@
-Feature: Test homepage body
+Feature: Test blog page body
 
 	Background:
-		Given I visit "home" page
+		Given I visit "blog" page
 
 	Scenario Outline: Body's title header should be displayed
 		When I set window width to <width>px

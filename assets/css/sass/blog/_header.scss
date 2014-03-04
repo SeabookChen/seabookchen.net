@@ -7,11 +7,11 @@
 	}
 
 	li {
-		display: inline
-	}
-
-	li a {
-		color: $color-text
+		display: inline;
+		
+		a {
+			color: $color-text
+		}
 	}
 
 	.nav-global .logo {
@@ -25,11 +25,11 @@
 			font-size: 1.875em;
 			line-height: 52px;
 			padding-bottom: 26px;
-		}
 
-		a:hover {
-			background-color: transparent;
-			color: $color-hover;
+			&:hover {
+				background-color: transparent;
+				color: $color-hover;
+			}
 		}
 
 		.btn-search {
@@ -42,14 +42,14 @@
 	}
 
 	.nav-global li {
-		font-size: 1em
-	}
+		font-size: 1em;
 
-	.nav-global li a:hover,
-	.nav-global li a:active {
-		@include transition(all .3s ease-in-out);
-		background-color: $color-hover;
-		color: $color-text;
-		cursor: pointer;
+		a:hover,
+		a:active {
+			@include transition(all .3s ease-in-out);
+			background-color: $color-hover;
+			color: $color-text;
+			cursor: pointer;
+		}
 	}
 }

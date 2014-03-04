@@ -1,0 +1,113 @@
+@import "compass/css3";
+@import "compass/css3/user-interface";
+@import "compass/typography";
+
+@import "./support/normalize";
+@import "./support/helper";
+@import "./support/social-links";
+@import "./support/fonts";
+@import "./support/animate";
+
+@import "./home/fullPage";
+
+$color-text-light: #fff;
+$color-link: rgba(255, 153, 0, 0.8);
+$color-link-hover: #FF9900;
+$color-background-dark: rgba(0, 0, 0, 0.5);
+$color-background-light: rgba(255, 255, 255, 0.1);
+$icon-size: 64px;
+
+body {
+	color: $color-text-light;
+	font-family: 'Nova Square', Verdana, Tahoma, monospace;
+	font-size: 1em;
+}
+
+h1 {
+	font-size: 6em
+}
+h2 {
+	font-size: 2.5em;
+	margin-bottom: 12px;
+}
+h3 {
+	font-size: 2em;
+	margin-top: 12px;
+}
+
+.site-notice {
+	background: $color-background-dark;
+	text-align: center;
+	top: 0;
+	width: 100%;
+
+	a {
+		@include link-colors($color-link, $hover:$color-link-hover)
+	}
+}
+
+#menu {
+	display: none
+}
+
+.section {
+	text-align:center;
+
+	span {
+		padding: 0 10px 0 10px;
+	}
+}
+
+#section0 {
+	background: url('/assets/images/skin/background-section0.jpg') no-repeat center center;
+	@include background-size(cover);
+}
+#section1 {
+	background: url('/assets/images/skin/background-section1.jpg') no-repeat center center;
+	@include background-size(cover);
+}
+
+a[class^='btn'] {
+	@include transition(all .3s ease-in-out);
+	color: $color-text-light;
+	border: 1px solid $color-text-light;
+	outline: none;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.btn-dark {
+	background-color: $color-background-dark !important
+}
+.btn-dark:hover, .btn-dark:focus {
+	background-color: $color-background-light !important
+}
+
+.btn-light {
+	background-color: $color-background-light !important
+}
+.btn-light:hover, .btn-light:focus {
+	background-color: $color-background-dark !important
+}
+
+.continue {
+	bottom: 0;
+	left: 50%;
+	height: 20px;
+	margin-left: -70px;
+	padding: 10px;
+	position: absolute;
+	width: 120px;
+	z-index: 2;
+}
+
+.social-links {
+	a {
+		background-size: $icon-size $icon-size;
+		margin: 10px;
+		height: $icon-size;
+		width: $icon-size;
+	}
+}
+
+@import "./home/responsive";

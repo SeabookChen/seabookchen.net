@@ -6,8 +6,13 @@
 		border-collapse: separate;
 		border: 5px solid $color-box-border;
 
+		&:hover {
+			@include transition(all .3s ease-in-out);
+			border-color: $color-hover;
+		}
+
 		td, th {
-			border: 1px solid rgba(45, 45, 45, 0.2);
+			border: 1px solid rgba(175, 175, 175, 0.5);
 			padding: 3px;
 		}
 
@@ -24,11 +29,6 @@
 		.center {
 			text-align: center;
 		}
-	}
-
-	table:hover {
-		@include transition(all .3s ease-in-out);
-		border-color: $color-hover;
 	}
 }
 

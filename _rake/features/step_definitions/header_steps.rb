@@ -16,8 +16,7 @@ Then(/^I should see that header's logo link has text "(.*?)"$/) do |logo_text|
 end
 
 Then(/^I should have clickable header's logo link$/) do
-	assert_equal(true, @page.header.logo_link.displayed?)
-	assert_equal(true, @page.header.logo_link.enabled?)
+	assert_equal(true, is_link_clickable(@page.header.logo_link))
 end
 
 Then(/^I should have header's navigation links presented$/) do
