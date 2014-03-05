@@ -3,19 +3,23 @@ module Jekyll
     class PrettifyBlock < Liquid::Block
       include Liquid::StandardFilters
 
-      SYNTAX = %r{^([a-zA-Z0-9.+#-])*$}
+      SYNTAX = /^([a-zA-Z0-9.+#-]*)((\s+\w+(=\d+)?)*)$/
 
       def initialize(tag_name, markup, tokens)
         super
         if markup.strip =~ SYNTAX
-            @lang = " lang-#{markup.strip.downcase}"
+            @lang = defined?($1) && $1 != ''  ? " lang-#{$1.downcase}" : ""
+            if defined?($2) && $2 != ''
+              key, value = $2.split('=')
+              @linenums = " linenums=#{value.nil? ? true : value}"
+            end
         else
             raise SyntaxError.new <<-eos
   Syntax Error in tag 'prettify' while parsing the following markup:
 
     #{markup}
 
-  Valid syntax: prettify [lang]
+  Valid syntax: prettify [lang] [linenos]
   eos
         end
       end
@@ -24,7 +28,7 @@ module Jekyll
         code = h(super).strip
 
         <<-HTML
-<div><pre class="prettyprint#{@lang}"><code>#{code}</code></pre></div>
+<div><?prettify#{@lang}#{@linenums}?><pre><code>#{code}</code></pre></div>
         HTML
       end
     end
