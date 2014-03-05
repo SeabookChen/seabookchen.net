@@ -6,7 +6,7 @@ for Linux Mint 15 Cinnamon, which should also work for all GNOME Ubuntu system i
 category: articles
 tags: [linux mint]
 alias: [/2013/07/14/]
-js_utils: fancybox, toc, unveil
+utilities: fancybox, toc, unveil
 ---
 Being a left-handed touchpad, right-handed mouse user,
 it bugged me that after installing Linux Mint 15 Cinnamon,

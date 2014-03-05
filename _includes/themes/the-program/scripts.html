@@ -73,8 +73,16 @@ $('.tag_box.tags a').on('click', function() {
 	})(jQuery, window);
 </script>
 
-{% if page.js_utils != null %}
-	{% if page.js_utils contains "fancybox" %}
+{% if page.utilities != null %}
+	{% if page.utilities contains "highlight" %}
+		<script src="/assets/js/google-code-prettify/run_prettify.js?lang=yaml"></script>
+		<script>
+			$("head").append('<link rel="stylesheet" href="/assets/css/highlight.css" type="text/css" />');
+			$("head").append('<link rel="stylesheet" href="/assets/js/google-code-prettify/prettify.css" type="text/css" />');
+		</script>
+	{% endif %}
+
+	{% if page.utilities contains "fancybox" %}
 		<script src='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.js'></script>
 		<script src='//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-buttons.min.js'></script>
 
@@ -96,7 +104,7 @@ $('.tag_box.tags a').on('click', function() {
 		</script>
 	{% endif %}
 
-	{% if page.js_utils contains "unveil" %}
+	{% if page.utilities contains "unveil" %}
 		<script src="/assets/js/unveil/jquery.unveil.min.js"></script>
 		<script>
 			$(document).ready(function () {
@@ -105,7 +113,7 @@ $('.tag_box.tags a').on('click', function() {
 		</script>
 	{% endif %}
 
-	{% if page.js_utils contains "toc" %}
+	{% if page.utilities contains "toc" %}
 		<script>
 			function createListItem(heading) {
 				var link = "#" + heading.children("a").attr("id");
@@ -134,7 +142,7 @@ $('.tag_box.tags a').on('click', function() {
 		</script>
 	{% endif %}
 
-	{% if page.js_utils contains "toc" or page.js_utils contains "back-to-top" %}
+	{% if page.utilities contains "toc" or page.utilities contains "back-to-top" %}
 		<script>
 			$(document).ready(function () {
 				var offset = 220, duration = 500, width = 1280;

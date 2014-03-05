@@ -6,7 +6,7 @@ category: articles
 tags: [jekyll, ruby]
 alias: [/2013/05/10/]
 last_updated: February 16, 2014
-js_utils: fancybox, toc, unveil
+utilities: fancybox, toc, unveil
 ---
 <div id="toc"></div>
 

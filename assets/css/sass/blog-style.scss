@@ -149,7 +149,7 @@ pre {
 	background-color: $color-code-background;
 	margin-left: 0;
 	margin-right: 0;
-	padding: 1.625em;
+	padding: 1.625em !important;
 	overflow: auto;
 
 	code {
@@ -159,8 +159,8 @@ pre {
 
 .linenos pre {
 	background-color: $color-linenos-background;
-	padding-left: 0.625em;
-	padding-right: 0.625em;
+	padding-left: 0.625em !important;
+	padding-right: 0.625em !important;
 	overflow: visible;
 }
 .line-numbers,
@@ -199,6 +199,5 @@ pre::-webkit-scrollbar-thumb:horizontal,
 
 @import "./support/fonts";
 @import "./support/social-links";
-@import "./support/highlight";
 @import "./support/gist";
 @import "./support/pace";

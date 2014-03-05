@@ -7,7 +7,7 @@ category: articles
 tags: [github, phantomjs, ruby, selenium, travis-ci, webdriver]
 alias: [/2013/06/15/]
 last_updated: February 16, 2014
-js_utils: fancybox, toc, unveil
+utilities: fancybox, highlight, toc, unveil
 ---
 <div id="toc"></div>
 
@@ -96,7 +96,7 @@ Detailed official documentation can be found [here](http://about.travis-ci.org/d
 In order to validate it, [Travis Lint][Travis Lint] would be a handy tool, while
 the simplest way is just to go to [Travis WebLint][Travis WebLint] and paste the content in.
 
-{% highlight yaml %}
+{% prettify yaml %}
 # Sample .travis.yml file:
 language: ruby
 
@@ -109,7 +109,7 @@ before_install:
   - gem update # optional, update all gems
   - gem install selenium-webdriver
   - phantomjs --version # optional, output the phantomjs version
-{% endhighlight %}
+{% endprettify %}
 
 ## <a id="push-to-github"></a>Push to Github
 Once the repository is properly created, push it to Github.

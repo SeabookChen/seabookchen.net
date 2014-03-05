@@ -6,7 +6,7 @@ and custom sections in App.config at runtime."
 category: articles
 tags: [c#, .net]
 alias: [/2013/08/31/]
-js_utils: toc
+utilities: highlight, toc
 ---
 <div id="toc"></div>
 
@@ -42,39 +42,39 @@ add, edit or remove keys in AppSettings and custom configuration sections at run
 
 ### <a id="add-in-appsettings"></a>Add a new key
 
-{% highlight c# %}
+{% prettify c# %}
 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 config.AppSettings.Settings.Add("OS", "Linux");
 config.Save(ConfigurationSaveMode.Modified);
 
 ConfigurationManager.RefreshSection("appSettings");
-{% endhighlight %}
+{% endprettify %}
 
 ### <a id="edit-in-appsettings"></a>Edit an existing key's value
 
-{% highlight c# %}
+{% prettify c# %}
 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 config.AppSettings.Settings["Version"].Value = "2.0.0";
 config.Save(ConfigurationSaveMode.Modified);
 
 ConfigurationManager.RefreshSection("appSettings");
-{% endhighlight %}
+{% endprettify %}
 
 ### <a id="remove-in-appsettings"></a>Delete an existing key
 
-{% highlight c# %}
+{% prettify c# %}
 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
 config.AppSettings.Settings.Remove("Version");
 config.Save(ConfigurationSaveMode.Modified);
 
 ConfigurationManager.RefreshSection("appSettings");
-{% endhighlight %}
+{% endprettify %}
 
 ## <a id="update-custom-section"></a>Update custom configuration sections
 
 ### <a id="add-in-custom-section"></a>Add a new key
 
-{% highlight c# %}
+{% prettify c# %}
 var xmlDoc = new XmlDocument();
 xmlDoc.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 
@@ -87,11 +87,11 @@ xmlDoc.SelectSingleNode("//geoSettings/summary").AppendChild(nodeRegion);
 xmlDoc.Save(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 
 ConfigurationManager.RefreshSection("geoSettings/summary");
-{% endhighlight %}
+{% endprettify %}
 
 ### <a id="edit-in-custom-section"></a>Edit an existing key's value
 
-{% highlight c# %}
+{% prettify c# %}
 var xmlDoc = new XmlDocument();
 xmlDoc.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 
@@ -99,11 +99,11 @@ xmlDoc.SelectSingleNode("//geoSettings/summary/add[@key='Country']").Attributes[
 xmlDoc.Save(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 
 ConfigurationManager.RefreshSection("geoSettings/summary");
-{% endhighlight %}
+{% endprettify %}
 
 ### <a id="remove-in-custom-section"></a>Delete an existing key
 
-{% highlight c# %}
+{% prettify c# %}
 var xmlDoc = new XmlDocument();
 xmlDoc.Load(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 
@@ -112,11 +112,11 @@ nodeCity.ParentNode.RemoveChild(nodeCity);
 
 xmlDoc.Save(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 ConfigurationManager.RefreshSection("geoSettings/summary");
-{% endhighlight %}
+{% endprettify %}
 
 ## <a id="print-out-keys"></a>Print out all keys
 
-{% highlight c# %}
+{% prettify c# %}
 NameValueCollection settings = ConfigurationManager.AppSettings;
 // var settings = ConfigurationManager.GetSection("geoSettings/summary") as NameValueCollection;
 
@@ -124,7 +124,7 @@ foreach (string key in appSettings.AllKeys) {
 	Console.WriteLine("{0}: {1}", key, section[key]);
 }
 Console.WriteLine();
-{% endhighlight %}
+{% endprettify %}
 
 ## <a id="references"></a>References
 

@@ -6,6 +6,7 @@ description: "The first 'Hello world' post for Yi Zeng's personal website
 category: random
 tags: [jekyll]
 alias: [/2013/04/22/]
+utilities: highlight
 ---
 <p>This is just a paragraph.</p>
 
@@ -17,13 +18,13 @@ def foo
 end
 {% endhighlight %}
 
-{% highlight csharp linenos=table %}
+{% prettify c# %}
 public class Hello {
 	public static void Main() {
 		Console.WriteLine("Hello, World! This is a super long line to test the functionality of pygments code highlighting.");
 	}
 }
-{% endhighlight %}
+{% endprettify %}
 
 {% highlight javascript linenos=table %}
 function myFunction() {
