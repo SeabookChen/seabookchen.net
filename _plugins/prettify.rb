@@ -11,7 +11,7 @@ module Jekyll
             @lang = defined?($1) && $1 != ''  ? " lang-#{$1.downcase}" : ""
             if defined?($2) && $2 != ''
               key, value = $2.split('=')
-              @linenums = " linenums=#{value.nil? ? true : value}"
+              @linenums = " linenums" + (value.nil? ? '' : ":#{value}")
             end
         else
             raise SyntaxError.new <<-eos
@@ -28,7 +28,7 @@ module Jekyll
         code = h(super).strip
 
         <<-HTML
-<div><?prettify#{@lang}#{@linenums}?><pre><code>#{code}</code></pre></div>
+<div><pre class="prettyprint#{@lang}#{@linenums}"><code>#{code}</code></pre></div>
         HTML
       end
     end
