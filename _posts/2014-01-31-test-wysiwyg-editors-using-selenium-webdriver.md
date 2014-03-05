@@ -7,7 +7,7 @@ using Selenium WebDriver Ruby binding."
 category: articles
 tags: [selenium, webdriver, ruby]
 alias: [/2014/01/31/]
-js_utils: toc
+utilities: highlight, toc
 ---
 > What is a WYSIWYG HTML editor?
 <br />A WYSIWYG HTML editor provides an editing interface which resembles

@@ -6,7 +6,7 @@ site built locally on Travis CI."
 category: articles
 tags: [cucumber, jekyll, travis-ci, selenium, webdriver]
 alias: [/2013/11/17/]
-js_utils: toc
+utilities: highlight, toc
 ---
 Imagine there is a Jekyll site's repository
 which has some [Selenium WebDriver][Selenium WebDriver]
@@ -40,7 +40,7 @@ To do so, within the `before_install` section of `.travis.yml` file,
 type in the following commands to install gems, in this case
 `jekyll`, `cucumber` and `selenium-webdriver`.
 
-{% highlight yaml %}
+{% prettify yaml %}
 before_install:
   # other before_install steps
 
@@ -48,7 +48,7 @@ before_install:
   - gem install jekyll
   - gem install cucumber
   - gem install selenium-webdriver
-{% endhighlight %}
+{% endprettify %}
 
 ## <a id="serve-jekyll"></a>Start Jekyll web server
 In order to build the Jekyll site locally on Travis CI,
@@ -59,11 +59,11 @@ With this detach option, WEBrick server will be running in background,
 so that any subsequent commands can be continued and
 whole Travis CI build won't be hanging.
 
-{% highlight yaml %}
+{% prettify yaml %}
 before_script:
   - rake jekyll detach=true
   - sleep 3 # give Web server some time to bind to sockets, etc
-{% endhighlight %}
+{% endprettify %}
 
 
 ## <a id="run-tests"></a>Run UI tests
@@ -71,10 +71,10 @@ Create a rakefile to run Cucumber Selenium WebDriver UI tests and
 let Travis CI rake it by putting the command below
 in `.travis.yml`'s `script` section.
 
-{% highlight yaml %}
+{% prettify yaml %}
 script:
   - rake cucumber --rakefile=<path_to_rakefile>
-{% endhighlight %}
+{% endprettify %}
 
 <div class="footnotes">
 	<hr />

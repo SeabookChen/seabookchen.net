@@ -2,11 +2,11 @@
 layout: post
 title: "Take a screenshot on exception with Selenium C#'s EventFiringWebDriver"
 description: "How to take a screenshot when exception is thrown
-while executing WebDriver tests
-using Selenium C# binding's EventFiringWebDriver class."
+while executing WebDriver tests using Selenium .NET (C#) binding's EventFiringWebDriver class."
 category: articles
-tags: [c#, selenium, webdriver]
+tags: [c#, .net, selenium, webdriver]
 alias: [/2014/02/08/]
+utilities: highlight
 ---
 Apart from concrete browser's WebDriver implementations like
 FirefoxDriver, ChromeDriver, PhantomJSDriver, etc.,
@@ -28,7 +28,7 @@ Since the driver instance is a type of `EventFiringWebDriver`,
 whenever an exception is thrown,
 `ExceptionThrown` event will be triggered and a screenshot should be taken.
 
-{% highlight c# %}
+{% prettify c# %}
 // Tested using Windows 7, Firefox 26, Selenium 2.39.0
 
 private IWebDriver driver;
@@ -50,7 +50,7 @@ private void firingDriver_TakeScreenshotOnException(object sender, WebDriverExce
 	string timestamp = DateTime.Now.ToString("yyyy-MM-dd-hhmm-ss");
 	driver.TakeScreenshot().SaveAsFile("Exception-" + timestamp + ".png", ImageFormat.Png);
 }
-{% endhighlight %}
+{% endprettify %}
 
 A completed example solution has been created on GitHub
 and can be found in [this repository][Example Repository].

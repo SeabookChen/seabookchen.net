@@ -6,7 +6,7 @@ PhantomJS using Selenium WebDriver Ruby binding."
 category: articles
 tags: [ruby, selenium, webdriver]
 alias: [/2014/01/08/]
-js_utils: toc
+utilities: highlight, toc
 ---
 Selenium WebDriver is a web automation framework relies heavily on [Automation Atoms][Automation Atoms],
 which are implemented as JavaScript functions for execution within the browser.

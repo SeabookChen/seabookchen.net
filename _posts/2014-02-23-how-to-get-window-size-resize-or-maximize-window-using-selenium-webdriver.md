@@ -6,7 +6,7 @@ using Selenium WebDriver C#, Ruby and Python bindings."
 category: articles
 tags: [c#, selenium, webdriver, ruby, python]
 alias: [/2014/02/23/]
-js_utils: toc
+utilities: highlight, toc
 ---
 Selenium WebDriver supports getting the browser window size,
 resizing and maximizing window natively from its API,
@@ -79,7 +79,7 @@ it can be done by setting the
 
 ### <a id="csharp-example"></a>Example
 
-{% highlight c# %}
+{% prettify c# %}
 using System;
 using System.Drawing;
 using OpenQA.Selenium;
@@ -107,7 +107,7 @@ namespace BrowserWindowSizeApp {
 		}
 	}
 }
-{% endhighlight %}
+{% endprettify %}
 
 ### <a id="csharp-output"></a>Output
 
