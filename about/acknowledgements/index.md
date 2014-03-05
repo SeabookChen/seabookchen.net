@@ -120,7 +120,12 @@ js_utils: back-to-top
 	<tr>
 		<td><a href="https://github.com/alvarotrigo/fullPage.js/">fullPage.js</a></td>
 		<td><a href="https://github.com/alvarotrigo/fullPage.js/#license">MIT license</a></td>
-		<td>JavaScript single page plugin for homepage</td>
+		<td>JavaScript plugin for making single page scrolling style homepage</td>
+	</tr>
+	<tr>
+		<td><a href="http://code.google.com/p/google-code-prettify/">google-code-prettify</a></td>
+		<td><a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License 2.0</a></td>
+		<td>JavaScript plugin to highlight code</td>
 	</tr>
 </table>
 </div>
