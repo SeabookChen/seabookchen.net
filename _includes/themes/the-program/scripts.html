@@ -13,15 +13,15 @@ var sendGaEvent = function(category, action, label) {
 	if (label === 'undefined') {
 		ga('send', 'event', category, action);
 	} else {
-		ga('send', 'event', category, action, label);
+		ga('send', 'event', category, action, label.trim());
 	}
 };
 
-$('.nav-global .nav-link').on('click', function() {
+$('.nav-link').on('click', function() {
 	sendGaEvent('Navigation Links', 'Click', this.textContent);
 });
-$('.the-footer h4 > a').on('click', function() {
-	sendGaEvent('Navigation Links', 'Click', 'About');
+$('.the-footer .about a').on('click', function() {
+	sendGaEvent('Footer Links', 'Click', this.textContent);
 });
 $('.the-footer .social-links > a').on('click', function() {
 	sendGaEvent('Social Links', 'Click', this.title);

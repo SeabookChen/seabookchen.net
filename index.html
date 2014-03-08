@@ -41,7 +41,7 @@
 
 	<div class="headings">
 		<h1><span>Yi Zeng</span></h1>
-		<h2><span>Software engineer &amp; test automator </span></h2>
+		<h2><span>Software engineer &amp; test automator</span></h2>
 		<h3><span>Christchurch, New Zealand</span></h3>
 	</div>
 	<a class="btn-dark continue" data-ga="More" href="#social">More</a>
@@ -52,7 +52,7 @@
 	<div class="social-links animated hidden">
 		<a class="btn-light ico-linkedin" href="http://linkedin.com/in/yizengnz/" rel="me" target="_blank" title="LinkedIn Profile"></a>
 		<a class="btn-light ico-github" href="http://github.com/yizeng/" rel="me" target="_blank" title="GitHub Page"></a>
-		<a class="btn-light ico-gmail" href="http://scr.im/yizengdev/" rel="me" target="_blank" title="Email Address"></a>
+		<a class="btn-light ico-gmail" href="http://scr.im/yizengme/" rel="me" target="_blank" title="Email Address"></a>
 		<a class="btn-light ico-stackoverflow" href="http://stackoverflow.com/users/1177636/user1177636" rel="me" target="_blank" title="StackOverflow Profile"></a>
 		<a class="btn-light ico-rss" href="/rss.xml" rel="me" target="_blank" title="RSS Feeds"></a>
 	</div>
@@ -94,19 +94,16 @@
 		ga('send', 'pageview');
 	}
 
-	$(document).ready(function() {
-		$("[class^='btn']").on('click', function() {
-			var label = this.textContent;
-			if (this.title !== '') {
-				label = this.title;
-			}
-			if (this.getAttribute('data-ga') !== null) {
-				label = this.getAttribute('data-ga');
-			}
-			ga('send', 'event', 'Homepage Links', 'Click', label);
-		});
+	$("[class^='btn']").on('click', function() {
+		var label = this.textContent;
+		if (this.title !== '') {
+			label = this.title;
+		}
+		if (this.getAttribute('data-ga') !== null) {
+			label = this.getAttribute('data-ga');
+		}
+		ga('send', 'event', 'Homepage Links', 'Click', label.trim());
 	});
 </script>
-
 </body>
 </html>

@@ -151,6 +151,8 @@ translations:
 
   # the-footer
   about: 'About'
+  license: 'License'
+  acknowledgements: 'Acknowledgements'
   show_details: true
   job_title: 'software developer and test automator'
   based_in: ' based in '

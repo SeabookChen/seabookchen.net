@@ -18,7 +18,7 @@ module Pages
 		end
 
 		def nav_links
-			@header.find_elements(:css => '.nav-link > a')
+			@header.find_elements(:css => ".nav-link:not(.logo) > a[href^='/']")
 		end
 
 		def search_link

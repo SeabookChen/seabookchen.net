@@ -48,7 +48,7 @@ Feature: Test blog page footer
 
 		Examples:
 			| icon_title     | social_site_url                 |
-			| Email          | scr.im/yizengdev                |
+			| Email          | scr.im/yizengme                |
 			| LinkedIn       | nz.linkedin.com/in/yizengnz     |
 			| RSS            | rss.xml                         |
 			| GitHub         | github.com/yizeng               |
