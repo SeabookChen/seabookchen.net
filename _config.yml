@@ -152,7 +152,9 @@ translations:
   # the-footer
   about: 'About'
   license: 'License'
+  license_link: 'https://github.com/yizeng/yizeng.me#license'
   acknowledgements: 'Acknowledgements'
+  acknowledgements_link: 'https://github.com/yizeng/yizeng.me/wiki/Acknowledgements'
   show_details: true
   job_title: 'software developer and test automator'
   based_in: ' based in '
