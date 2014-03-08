@@ -9,3 +9,8 @@ priority: 1.0
 {% assign posts_collate = site.posts %}
 {% assign show_year = true %}
 {% include JB/posts_collate %}
+<div class="diagnostics">
+    <p>Last built at:
+        <time class="date-built" datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date_to_rfc822 }}</time>
+    </p>
+</div>
