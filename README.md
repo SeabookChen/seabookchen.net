@@ -3,9 +3,9 @@
 This repository hosts the source of Yi Zeng's personal website - [yizeng.me](http://yizeng.me).
 
 ## License
-- [Creative Commons BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB)
+- [Creative Commons BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB)<br />
 	All blog posts
-- [MIT License](https://raw.github.com/yizeng/yizeng.me/develop/LICENSE)
+- [MIT License](https://raw.github.com/yizeng/yizeng.me/develop/LICENSE)<br />
 	Code written by me
 
 ## Acknowledgements
