@@ -74,6 +74,15 @@ $('.tag_box.tags a').on('click', function() {
 </script>
 
 {% if page.utilities != null %}
+	{% if page.utilities contains "show-hidden" %}
+		<script>
+			$('.show-hidden').on('click', function() {
+				$(this).parent().next().toggleClass("hidden");
+				$(this).toggleClass("hidden");
+			});
+		</script>
+	{% endif %}
+
 	{% if page.utilities contains "highlight" %}
 		<script src="/assets/js/google-code-prettify/run_prettify.js?lang=yaml"></script>
 		<script>

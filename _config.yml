@@ -167,6 +167,7 @@ translations:
   published: 'Published'
   cc_license: 'http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB'
   view: 'View'
+  show: 'Show'
 
   # 404.html
   404_heading: 'Sorry, the page is not found.'

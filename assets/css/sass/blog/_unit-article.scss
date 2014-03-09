@@ -322,14 +322,16 @@
 		border-bottom: none;
 	}
 
+	.button,
 	button {
 		@include background-clip(padding-box);
 		@include transition(all .3s ease-in-out);
 		background: transparent;
-		border: 2px solid $color-hover;
-		color: $color-hover;
+		border: 2px solid $color-text;
+		color: $color-text;
+		cursor: pointer;
 		display: inline-block;
-		padding: 2px 6px;
+		padding: 2px 20px;
 		outline: 0;
 		text-align: center;
 		text-decoration: none;
@@ -338,8 +340,9 @@
 		white-space: nowrap;
 
 		&:hover {
-			background-color: $color-hover;
-			color: #FFF;
+			background-color: #FFF;
+			border-color: $color-hover;
+			color: $color-hover;
 		}
 	}
 

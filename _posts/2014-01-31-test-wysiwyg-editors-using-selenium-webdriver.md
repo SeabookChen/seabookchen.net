@@ -7,7 +7,7 @@ using Selenium WebDriver Ruby binding."
 category: articles
 tags: [selenium, webdriver, ruby]
 alias: [/2014/01/31/]
-utilities: highlight, toc
+utilities: highlight, toc, show-hidden
 ---
 > What is a WYSIWYG HTML editor?
 <br />A WYSIWYG HTML editor provides an editing interface which resembles
@@ -114,15 +114,18 @@ without any frame switching required.
 >1. Find the elements by appropriate locators according to the HTML markup.
 >2. Manipulate those elements see if they work or not.
 
-CKEditor's toolbar "Numbered List" button:
+Markup for CKEditor's toolbar "Numbered List" button: <button class="show-hidden">{{ site.translations.show }}</button>
+<div class="hidden">
 {% highlight html %}
 <a id="cke_39" class="cke_button cke_button__numberedlist" href="javascript:void('Insert/Remove Numbered List')" title="Insert/Remove Numbered List" role="button">
     <span class="cke_button_icon cke_button__numberedlist_icon" >&nbsp;</span>
     <span id="cke_39_label" class="cke_button_label cke_button__numberedlist_label">Insert/Remove Numbered List</span>
 </a>
 {% endhighlight %}
+</div>
 
-TinyMCE's toolbar "Numbered List" button:
+Markup for TinyMCE's toolbar "Numbered List" button: <button class="show-hidden">{{ site.translations.show }}</button>
+<div class="hidden">
 {% highlight html %}
 <div id="mce_11" class="mce-widget mce-btn" role="button" aria-label="Numbered list" aria-pressed="false">
     <button type="button">
@@ -130,6 +133,7 @@ TinyMCE's toolbar "Numbered List" button:
     </button>
 </div>
 {% endhighlight %}
+</div>
 
 Selenium WebDriver Ruby code to click the buttons:
 {% highlight ruby %}
@@ -142,7 +146,7 @@ tinymce_btn_numbered_list = driver.find_element(:css => ".mce-btn[aria-label='Nu
 tinymce_btn_numbered_list.click
 {% endhighlight %}
 
-### <a id="locate-input-iframe"></a>Locate input iframe
+### <a id="switch-into-input-iframe"></a>Switch into input iframe
 Although CKEditor and TinyMCE are initialized with `<textarea>` tag,
 the editor body is actually constructed within an `<iframe>`,
 which is still technically a web element,
@@ -153,7 +157,8 @@ CKEditor's iframe can be identified using `class`,
 while TinyMCE's can be located by `id` directly.
 Equivalent CSS Selectors and XPaths also exist if needed.
 
-CKEditor's body:
+Markup for CKEditor's body: <button class="show-hidden">{{ site.translations.show }}</button>
+<div class="hidden">
 {% highlight html %}
 <iframe src="" frameborder="0" class="cke_wysiwyg_frame cke_reset" title="Rich Text Editor, ckeditor">
     <html dir="ltr" lang="en-gb">
@@ -162,8 +167,10 @@ CKEditor's body:
     </html>
 </iframe>
 {% endhighlight %}
+</div>
 
-TinyMCE's body:
+Markup for TinyMCE's body: <button class="show-hidden">{{ site.translations.show }}</button>
+<div class="hidden">
 {% highlight html %}
 <iframe id="tinymce-editor_ifr" src='javascript:""' frameborder="0" title="Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help">
     <html>
@@ -172,19 +179,38 @@ TinyMCE's body:
     </html>
 </iframe>
 {% endhighlight %}
+</div>
 
-Locate the iframes:
+#### Locate the iframes
 {% highlight ruby %}
 ckeditor_frame = driver.find_element(:class => 'cke_wysiwyg_frame')
 tinymce_frame = driver.find_element(:id => 'tinymce-editor_ifr')
 {% endhighlight %}
 
-### <a id="switch-into-iframe"></a>Switch into
+#### Switch into
 {% highlight ruby %}
 driver.switch_to.frame(ckeditor_frame) # ckeditor_frame or tinymce_frame, one at a time
 {% endhighlight %}
 
-### <a id="send-keys"></a>Send keys
+#### Switch out (if necessary)
+If the WebDriver instance is already inside any kind of frames,
+switch out the current frame to default content is required.
+For example, after switching into CKEditor's iframe and sending some keys,
+the only way to get into TinyMCE's input area is to
+switch back to default content first,
+then locate TinyMCE's iframe and switch into frame again.
+
+{% highlight ruby %}
+# if driver is already inside ckeditor_frame, switch out first
+driver.switch_to.default_content
+
+# then switch to another iframe, e.g. tinymce_frame
+driver.switch_to.frame(tinymce_frame)
+{% endhighlight %}
+
+### <a id="automate-content"></a>Automate content
+
+#### Send keys
 After switching into the editor's `<iframe>`,
 the text can be sent to the `<body>` directly,
 which is possible using Selenium's native `send_keys` method.
@@ -198,7 +224,7 @@ editor_body = driver.find_element(:tag_name => 'body')
 editor_body.send_keys("<h1>Heading</h1>Yi Zeng")
 {% endhighlight %}
 
-### <a id="set-innerhtml"></a>Set innerHTML
+#### Set innerHTML
 In order to set editor content with raw HTML like WYSIWYG mode,
 one approach is to change the innerHTML of editor body by injecting JavaScript.
 In this case, sending `<h1>Heading</h1>` will actually show up as heading one.
@@ -208,7 +234,7 @@ editor_body = driver.find_element(:css => 'body')
 driver.execute_script("arguments[0].innerHTML = '<h1>Heading</h1>Yi Zeng'", editor_body)
 {% endhighlight %}
 
-### <a id="clear-all-input"></a>Clear all input
+#### Clear all input
 A quote from Selenium Ruby's API documentation on
 [clear() method](http://selenium.googlecode.com/git/docs/api/rb/Selenium/WebDriver/Element.html#clear-instance_method):
 > If this element is a text entry element, this will clear the value. Has no effect on other elements.
@@ -232,24 +258,6 @@ driver.action.click(editor_body)
              .key_up(:control)
              .perform
 driver.action.send_keys(:backspace).perform
-{% endhighlight %}
-
-### <a id="switch-out-input-iframe"></a>Switch out (if necessary)
-If the WebDriver instance is already inside any kind of frames,
-switch out the current frame to default content is required.
-For example, after switching into CKEditor's iframe and sending some keys,
-the only way to get into TinyMCE's input area is to
-switch back to default content first,
-then locate TinyMCE's iframe and switch into frame again.
-
-{% highlight ruby %}
-# if driver is inside ckeditor_frame
-
-# switch out
-driver.switch_to.default_content
-
-# then switch to another iframe, e.g. tinymce_frame
-# driver.switch_to.frame(tinymce_frame)
 {% endhighlight %}
 
 ## <a id="automate-using-editors-api"></a>Automate using editors' built-in JavaScript API
@@ -294,6 +302,9 @@ driver.execute_script("tinyMCE.activeEditor.insertContent('<p>Christchurch</p>')
 ## <a id="examples"></a>Examples
 
 ### <a id="set-content-selenium-api"></a>Set content using Selenium WebDriver API
+
+<button class="show-hidden">{{ site.translations.show }}</button>
+<div class="hidden">
 {% highlight ruby %}
 # Environment tested
 # Linux Mint 15, Selenium 2.39.0, Chromium 31.0, ChromeDriver 2.8
@@ -317,8 +328,12 @@ driver.switch_to.frame(tinymce_frame)
 tinymce_body = driver.find_element(:css => 'body')
 tinymce_body.send_keys('<h1>TInyMCE</h1>Yi Zeng')
 {% endhighlight %}
+</div>
 
 ### <a id="select-all-content"></a>Select all content
+
+<button class="show-hidden">{{ site.translations.show }}</button>
+<div class="hidden">
 {% highlight ruby %}
 # Environment tested
 # Linux Mint 15, Selenium 2.39.0, Chromium 31.0, ChromeDriver 2.8
@@ -338,8 +353,12 @@ driver.action.click(ck_editor_body)
              .key_up(:control)
              .perform
 {% endhighlight %}
+</div>
 
 ### <a id="click-numbered-list"></a>Click "Numbered list" from toolbar
+
+<button class="show-hidden">{{ site.translations.show }}</button>
+<div class="hidden">
 {% highlight ruby %}
 # Environment tested
 # Linux Mint 15, Selenium 2.39.0, Chromium 31.0, ChromeDriver 2.8
@@ -356,8 +375,12 @@ ckeditor_btn_numbered_list.click
 tinymce_btn_numbered_list = driver.find_element(:css => ".mce-btn[aria-label='Numbered list'] button")
 tinymce_btn_numbered_list.click
 {% endhighlight %}
+</div>
 
 ### <a id="set-content-editors-api"></a>Set content using editors' API
+
+<button class="show-hidden">{{ site.translations.show }}</button>
+<div class="hidden">
 {% highlight ruby %}
 # Environment tested
 # Linux Mint 15, Selenium 2.39.0, Chromium 31.0, ChromeDriver 2.8
@@ -372,6 +395,7 @@ driver.execute_script("tinyMCE.activeEditor.setContent('<h1>Yi Zeng</h1> TinyMCE
 driver.execute_script("CKEDITOR.instances.ckeditor.insertHtml('<p>Christchurch</p>')")
 driver.execute_script("tinyMCE.activeEditor.insertContent('<p>Christchurch</p>')")
 {% endhighlight %}
+</div>
 
 ## <a id="references"></a>References
 - [Selenium Ruby binding API](http://selenium.googlecode.com/git/docs/api/rb/index.html)
