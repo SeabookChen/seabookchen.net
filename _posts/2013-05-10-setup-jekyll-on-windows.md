@@ -5,7 +5,7 @@ description: "How to install and setup Jekyll on a Windows machine."
 category: articles
 tags: [jekyll, ruby]
 alias: [/2013/05/10/]
-last_updated: February 16, 2014
+last_updated: March 09, 2014
 utilities: fancybox, toc, unveil
 ---
 <div id="toc"></div>
@@ -14,50 +14,49 @@ utilities: fancybox, toc, unveil
 
 1. Go to <http://rubyinstaller.org/downloads/>
 
-2. In "RubyInstallers" section, click a version to download.
-<br />For example, `Ruby 2.0.0-p353 (x64)` is the Windows installer
-for Ruby 2.0.0 x64 on 64-bit machines.
+2. In "RubyInstallers" section, click a version to download.<br />
+For example, `Ruby 2.0.0-p451 (x64)` is the Windows installer for Ruby 2.0.0 x64 on 64-bit machines.
 
 3. Install through the installer
 
-    - Try to keep the default directory `C:\Ruby200-x64`, as advised by installer "Please avoid any folder name that contains spaces (e.g. Program Files)."
-    - Tick "Add Ruby executables to your PATH" checkbox, so PATH will be updated
-automatically to avoid headaches.
+    - Try to keep the default directory `C:\Ruby200-x64`,
+    as advised by installer "Please avoid any folder name that contains spaces (e.g. Program Files)."
+    - Tick "Add Ruby executables to your PATH" checkbox, so PATH will be updated automatically to avoid headaches.
 
     <a class="post-image" href="/assets/images/posts/2013-05-11-ruby-installer.png" title="Windows Ruby installer">
         <img itemprop="image" data-src="/assets/images/posts/2013-05-11-ruby-installer.png" src="/assets/js/unveil/loader.gif" alt="Windows Ruby installer" />
     </a>
 
-4. Test if the installation is successful or not
+4. Open up a command prompt window, and test if the installation has succeeded or not
 > ruby --version
 
 ## <a id="install-devkit"></a>Install DevKit
 
-1. [Full installation instructions][Full installation instructions] can be found on Github.
+The DevKit is a toolkit that makes it easy to build
+and use native C/C++ extensions such as RDiscount and RedCloth for Ruby on Windows.
+Detailed installation instructions can be found on its [wiki page][Full installation instructions].
 
-2. Go to <http://rubyinstaller.org/downloads/> again.
+1. Go to <http://rubyinstaller.org/downloads/> again.
 
-3. Download "DEVELOPMENT KIT" installer that matches the Windows architecture
-and the Ruby version just installed.
-For instance, `DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe` is for 64-bit Windows with Ruby 2.0.0 x64.
-<br />Here is a list about how to choose the correct DevKit version:
+2. Download "DEVELOPMENT KIT" installer that matches the Windows architecture and the Ruby version just installed.
+For instance, `DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe` is for 64-bit Windows with Ruby 2.0.0 x64.<br />
+Here is a list about how to choose the correct DevKit version:
 
     > **Ruby 1.8.6 to 1.9.3**: DevKit tdm-32-4.5.2<br />
     > **Ruby 2.0.0**: DevKit mingw64-32-4.7.2<br />
     > **Ruby 2.0.0 x64**: DevKit mingw64-64-4.7.2<br />
 
-4. Run the installer and extract it to a folder, e.g. `C:\DevKit`
+3. Run the installer and extract it to a folder, e.g. `C:\DevKit`
 
-5. Initialize and create config.yml file. In the Command Prompt window,
-type in the following lines:
+4. Initialize and create config.yml file. In the Command Prompt window, type in the following lines:
 
     > cd "C:\DevKit"<br />
     > ruby dk.rb init<br />
     > notepad config.yml<br />
 
-6. In opened notepad window, add a new line `- C:\Ruby200-x64` at the end, save and close.
+5. In opened notepad window, add a new line `- C:\Ruby200-x64` at the end, save and close.
 
-7. Back to the Command Prompt, review (optional) and install
+6. Back to the Command Prompt, review (optional) and install
 
     > ruby dk.rb review<br />
     > ruby dk.rb install
@@ -71,10 +70,13 @@ type in the following lines:
 
 ## <a id="install-pygements"></a>Install Pygments
 
-Pygments is the syntax highlighting tool used in Jekyll.
-In order to use Pygments for highlighting code snippets,
-Python needs to be installed and `pygments` field needs to be set to `true`
-in site’s configuration file `_config.yml`.
+[Pygments](http://pygments.org/) is the default syntax highlighting engine used in Jekyll.
+In order to use Pygments to highlight code snippets, Python needs to be installed
+and `highlighter` field needs to be set to `pygments` in site’s configuration file `_config.yml`.
+
+Recently, Jekyll has added another highlighting engine [Rouge](https://github.com/jayferd/rouge),
+which doesn't support as many languages as Pygments at the moment, but it's Ruby native and Python-free.
+More details can be read [here](http://jekyllrb.com/docs/templates/#code_snippet_highlighting).
 
 ### <a id="install-python"></a>Install Python
 1. Go to <http://www.python.org/download/>
@@ -98,8 +100,7 @@ Note that Python 2 is preferred since Python 3 might not be functioning as inten
 
 ## <a id="start-jekyll"></a>Start Jekyll
 Following the commands on official [Jekyll Quick-start guide][Jekyll Quick-start guide],
-a new Jekyll blog should be created and
-can be browsed at [localhost:4000](http://localhost:4000).
+a new Jekyll blog should be created and can be browsed at [localhost:4000](http://localhost:4000).
 > jekyll new myblog<br />
 > cd myblog<br />
 > jekyll serve<br />
@@ -113,7 +114,8 @@ can be browsed at [localhost:4000](http://localhost:4000).
 
     **Possible Reason**: The PATH for that particular program has not been set correctly.
 
-    **Possible Solution**: Add the program to the PATH manually, see the steps below ([source](http://stackoverflow.com/a/6318188/1177636)).
+    **Possible Solution**: Add the program to the PATH manually,
+    see the steps below ([source](http://stackoverflow.com/a/6318188/1177636)).
     > 1. Hold Win and press Pause.
     > 2. Click Advanced System Settings.
     > 3. Click Environment Variables.
@@ -148,8 +150,7 @@ can be browsed at [localhost:4000](http://localhost:4000).
 
     **Possible Reason**: The PATH just set is yet to be effective.
 
-    **Possible Solution**: First make sure no spaces or trailing slash in the PATH. Then restart Command Prompt. If it's not working,
-    try logout Windows and log back in again.
+    **Possible Solution**: First make sure no spaces or trailing slash in the PATH. Then restart Command Prompt. If it's not working, try logout Windows and log back in again.
     Or even try the ultimate and most powerful solution - "turning the computer off and on again".
 
 4. Error message:
@@ -162,10 +163,8 @@ can be browsed at [localhost:4000](http://localhost:4000).
         from c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/core_ext/kernel_gem.rb:48:in`gem'
         from c:/Ruby200-x64/bin/jekyll:22:in `<main>'`
 
-    **Possible Reason**: As suggested in the message, pygments.rb 0.4.2 is needed,
-    while version 0.5.0 is found.
-    (This issue happened a while back with an old version of Jekyll,
-    which should have been fixed by now.)
+    **Possible Reason**: As suggested in the message, pygments.rb 0.4.2 is needed, while version 0.5.0 is found.
+    (This issue happened a while back with an old version of Jekyll, which should have been fixed by now.)
 
     **Possible Solution**: Downgrade pygments.rb gem to version 0.4.2
     > gem uninstall pygments.rb --version “=0.5.0”<br />

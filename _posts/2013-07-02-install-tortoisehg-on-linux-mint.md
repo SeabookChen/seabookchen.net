@@ -11,13 +11,10 @@ on Linux Mint 15 via [TortoiseHg Release PPA][TortoiseHg Release PPA].
 
 <br />**Note**:
 
-- It is suggested that do NOT also include a
-[Mercurial PPA][Mercurial PPA] in the system,
-as TortoiseHg has strict version requirements for which versions of Mercurial
-it can interoperate with.
+- It is suggested that do NOT also include a [Mercurial PPA][Mercurial PPA] in the system,
+as TortoiseHg has strict version requirements for which versions of Mercurial it can interoperate with.
 
-- [TortoiseHg PPA Stable Snapshots][TortoiseHg PPA Stable Snapshots]
-provides packages of the latest TortoiseHg release.
+- [TortoiseHg PPA Stable Snapshots][TortoiseHg PPA Stable Snapshots] provides packages of the latest TortoiseHg release.
 
 <br />**Steps**:
 
