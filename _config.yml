@@ -1,7 +1,7 @@
 permalink: /:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "LICENSE", "README.md", "Rakefile", "changelog.md"]
-pygments: true
+highlighter: pygements
 markdown: rdiscount
 
 # Themes are encouraged to use these universal variables 

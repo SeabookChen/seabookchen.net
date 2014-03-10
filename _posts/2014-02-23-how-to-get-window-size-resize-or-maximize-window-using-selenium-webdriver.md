@@ -153,68 +153,66 @@ driver.quit()
 
 ## <a id="comparison"></a>Comparison
 
-<div class="data-table">
-<table>
-	<tr><th colspan="2">Get window size</th></tr>
-	<tr>
-		<td>Ruby</td>
-		<td>driver.manage.window.size</td>
-	</tr>
-	<tr>
-		<td>C#</td>
-		<td>driver.Manage().Window.Size;</td>
-	</tr>
-	<tr>
-		<td>Python</td>
-		<td>driver.get_window_size()</td>
-	</tr>
-	<tr><th colspan="2">Set window size</th></tr>
-	<tr>
-		<td>Ruby</td>
-		<td>
-			size = Selenium::WebDriver::Dimension.new(width, height)<br />
-			driver.manage.window.size = size
-		</td>
-	</tr>
-	<tr>
-		<td>C#</td>
-		<td>
-			System.Drawing.Size windowSize = new System.Drawing.Size(width, height);<br />
-			driver.Manage().Window.Size = windowSize;
-		</td>
-	</tr>
-	<tr>
-		<td>Python</td>
-		<td>-</td>
-	</tr>
-	<tr><th colspan="2">Resize window</th></tr>
-	<tr>
-		<td>Ruby</td>
-		<td>driver.manage.window.resize_to(width, height)</td>
-	</tr>
-	<tr>
-		<td>C#</td>
-		<td>-</td>
-	</tr>
-	<tr>
-		<td>Python</td>
-		<td>driver.set_window_size(width, height)</td>
-	</tr>
-	<tr><th colspan="2">Maximize window</th></tr>
-	<tr>
-		<td>Ruby</td>
-		<td>driver.manage.window.maximize</td>
-	</tr>
-	<tr>
-		<td>C#</td>
-		<td>driver.Manage().Window.Maximize();</td>
-	</tr>
-	<tr>
-		<td>Python</td>
-		<td>driver.maximize_window()</td>
-	</tr>
-</table>
-</div>
+{% datatable %}
+<tr><th colspan="2">Get window size</th></tr>
+<tr>
+	<td>Ruby</td>
+	<td>driver.manage.window.size</td>
+</tr>
+<tr>
+	<td>C#</td>
+	<td>driver.Manage().Window.Size;</td>
+</tr>
+<tr>
+	<td>Python</td>
+	<td>driver.get_window_size()</td>
+</tr>
+<tr><th colspan="2">Set window size</th></tr>
+<tr>
+	<td>Ruby</td>
+	<td>
+		size = Selenium::WebDriver::Dimension.new(width, height)<br />
+		driver.manage.window.size = size
+	</td>
+</tr>
+<tr>
+	<td>C#</td>
+	<td>
+		System.Drawing.Size windowSize = new System.Drawing.Size(width, height);<br />
+		driver.Manage().Window.Size = windowSize;
+	</td>
+</tr>
+<tr>
+	<td>Python</td>
+	<td>-</td>
+</tr>
+<tr><th colspan="2">Resize window</th></tr>
+<tr>
+	<td>Ruby</td>
+	<td>driver.manage.window.resize_to(width, height)</td>
+</tr>
+<tr>
+	<td>C#</td>
+	<td>-</td>
+</tr>
+<tr>
+	<td>Python</td>
+	<td>driver.set_window_size(width, height)</td>
+</tr>
+<tr><th colspan="2">Maximize window</th></tr>
+<tr>
+	<td>Ruby</td>
+	<td>driver.manage.window.maximize</td>
+</tr>
+<tr>
+	<td>C#</td>
+	<td>driver.Manage().Window.Maximize();</td>
+</tr>
+<tr>
+	<td>Python</td>
+	<td>driver.maximize_window()</td>
+</tr>
+{% enddatatable %}
 
 ## <a id="related-source-code"></a>Related source code
 - [Ruby - window.rb](https://code.google.com/p/selenium/source/browse/rb/lib/selenium/webdriver/common/window.rb)

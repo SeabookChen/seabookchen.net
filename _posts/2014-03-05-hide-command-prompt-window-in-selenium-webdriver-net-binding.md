@@ -8,11 +8,11 @@ tags: [c#, .net, selenium, webdriver]
 alias: [/2014/03/05/]
 utilities: highlight
 ---
-As of Selenium 2.40.0<sup><a href="#footnote-1">[1]</a></sup>,
+As of Selenium 2.40.0{% footnote 1 %},
 Selenium WebDriver's .NET binding supports hiding the command prompt window created by ChromeDriver, IEDriver or PhantomJSDriver.
 The following code snippets demonstrate how to achieve it in C#.
 
-However, according to the developer<sup><a href="#footnote-2">[2]</a></sup>, it is highly discouraged to use this option,
+However, according to the developer{% footnote 2 %}, it is highly discouraged to use this option,
 because this will make it hard to debug zombie driver processes when WebDriver code exits unexpectedly.
 Also note that currently `PhantomJSDriver` has a constructor which takes in `PhantomJSDriverService` parameter alone,
 while `ChromeDriver` and `InternetExplorerDriver` don't have this constructor overload.

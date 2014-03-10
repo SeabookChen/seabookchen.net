@@ -5,7 +5,7 @@ description: "How to install and setup Jekyll on a Windows machine."
 category: articles
 tags: [jekyll, ruby]
 alias: [/2013/05/10/]
-last_updated: March 09, 2014
+last_updated: March 10, 2014
 utilities: fancybox, toc, unveil
 ---
 <div id="toc"></div>
@@ -88,13 +88,15 @@ Note that Python 2 is preferred since Python 3 might not be functioning as inten
 > python --version
 
 ### <a id="install-easy-install"></a>Install 'Easy Install'
-1. Go to <https://pypi.python.org/pypi/setuptools#windows>
-2. Download 'setuptools' `setuptools-0.6c11.win32-py2.7.exe`
+1. Visit <https://pypi.python.org/pypi/setuptools#installation-instructions> for detailed installation instructions.
+2. For Windows 7 machines, download [ez_setup.py](https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py) and run it.
+For instance, save the file to `C:\`, then open up a command prompt window and type in the following:
+> python "C:\ez_setup.py"
 3. Set the 'Python Scripts' directory (e.g. `C:\Python27\Scripts`) to PATH.
 
 ### <a id="install-pygements-2"></a>Install Pygments
 1. Verify easy_install is installed properly
-> easy_install --help
+> easy_install --version
 2. Install Pygments using "easy_install"
 > easy_install Pygments
 

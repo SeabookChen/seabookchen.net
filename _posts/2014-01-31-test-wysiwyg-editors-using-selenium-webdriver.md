@@ -37,46 +37,44 @@ the same logic also applies and should work in theory.
 <div id="toc"></div>
 
 ## <a id="wysiwyg-editors-comparison"></a>WYSIWYG HTML editors' comparison
-<div class="data-table">
-<table>
-    <tr>
-        <th></th>
-        <th>CKEditor (Standard)</th>
-        <th>TinyMCE</th>
-        <th>CLEditor</th>
-    </tr>
-    <tr>
-        <td>Homepage</td>
-        <td class="center"><a href="http://ckeditor.com/">ckeditor.com</a></td>
-        <td class="center"><a href="http://www.tinymce.com/">tinymce.com</a></td>
-        <td class="center"><a href="http://premiumsoftware.net/CLEditor">premiumsoftware.net</a></td>
-    </tr>
-    <tr>
-        <td>Current version</td>
-        <td class="center">4.3.2</td>
-        <td class="center">4.0.15</td>
-        <td class="center">1.4.4</td>
-    </tr>
-    <tr>
-        <td>License</td>
-        <td class="center"><a href="http://ckeditor.com/about/license">GPL, LGPL and MPL</a></td>
-        <td class="center"><a href="http://www.tinymce.com/js/tinymce4/js/tinymce/license.txt">LGPL</a></td>
-        <td class="center"><a href="http://premiumsoftware.net/CLEditor">MIT or GPL v2</a></td>
-    </tr>
-    <tr>
-        <td>Size (Distribution package)</td>
-        <td class="center">1022 kB</td>
-        <td class="center">291.3 kB</td>
-        <td class="center">20.4 kB</td>
-    </tr>
-    <tr>
-        <td>Size (Core .js file)</td>
-        <td class="center">461.2 kB</td>
-        <td class="center">282.7 kB</td>
-        <td class="center">12.5 kB</td>
-    </tr>
-</table>
-</div>
+{% datatable %}
+<tr>
+    <th></th>
+    <th>CKEditor (Standard)</th>
+    <th>TinyMCE</th>
+    <th>CLEditor</th>
+</tr>
+<tr>
+    <td>Homepage</td>
+    <td class="center"><a href="http://ckeditor.com/">ckeditor.com</a></td>
+    <td class="center"><a href="http://www.tinymce.com/">tinymce.com</a></td>
+    <td class="center"><a href="http://premiumsoftware.net/CLEditor">premiumsoftware.net</a></td>
+</tr>
+<tr>
+    <td>Current version</td>
+    <td class="center">4.3.2</td>
+    <td class="center">4.0.15</td>
+    <td class="center">1.4.4</td>
+</tr>
+<tr>
+    <td>License</td>
+    <td class="center"><a href="http://ckeditor.com/about/license">GPL, LGPL and MPL</a></td>
+    <td class="center"><a href="http://www.tinymce.com/js/tinymce4/js/tinymce/license.txt">LGPL</a></td>
+    <td class="center"><a href="http://premiumsoftware.net/CLEditor">MIT or GPL v2</a></td>
+</tr>
+<tr>
+    <td>Size (Distribution package)</td>
+    <td class="center">1022 kB</td>
+    <td class="center">291.3 kB</td>
+    <td class="center">20.4 kB</td>
+</tr>
+<tr>
+    <td>Size (Core .js file)</td>
+    <td class="center">461.2 kB</td>
+    <td class="center">282.7 kB</td>
+    <td class="center">12.5 kB</td>
+</tr>
+{% enddatatable %}
 
 ## <a id="demos"></a>Demos
 
@@ -115,17 +113,17 @@ without any frame switching required.
 >2. Manipulate those elements see if they work or not.
 
 Markup for CKEditor's toolbar "Numbered List" button: <button class="show-hidden">{{ site.translations.show }}</button>
-<div class="hidden">
+{% hide %}
 {% highlight html %}
 <a id="cke_39" class="cke_button cke_button__numberedlist" href="javascript:void('Insert/Remove Numbered List')" title="Insert/Remove Numbered List" role="button">
     <span class="cke_button_icon cke_button__numberedlist_icon" >&nbsp;</span>
     <span id="cke_39_label" class="cke_button_label cke_button__numberedlist_label">Insert/Remove Numbered List</span>
 </a>
 {% endhighlight %}
-</div>
+{% endhide %}
 
 Markup for TinyMCE's toolbar "Numbered List" button: <button class="show-hidden">{{ site.translations.show }}</button>
-<div class="hidden">
+{% hide %}
 {% highlight html %}
 <div id="mce_11" class="mce-widget mce-btn" role="button" aria-label="Numbered list" aria-pressed="false">
     <button type="button">
@@ -133,7 +131,7 @@ Markup for TinyMCE's toolbar "Numbered List" button: <button class="show-hidden"
     </button>
 </div>
 {% endhighlight %}
-</div>
+{% endhide %}
 
 Selenium WebDriver Ruby code to click the buttons:
 {% highlight ruby %}
@@ -158,7 +156,7 @@ while TinyMCE's can be located by `id` directly.
 Equivalent CSS Selectors and XPaths also exist if needed.
 
 Markup for CKEditor's body: <button class="show-hidden">{{ site.translations.show }}</button>
-<div class="hidden">
+{% hide %}
 {% highlight html %}
 <iframe src="" frameborder="0" class="cke_wysiwyg_frame cke_reset" title="Rich Text Editor, ckeditor">
     <html dir="ltr" lang="en-gb">
@@ -167,10 +165,10 @@ Markup for CKEditor's body: <button class="show-hidden">{{ site.translations.sho
     </html>
 </iframe>
 {% endhighlight %}
-</div>
+{% endhide %}
 
 Markup for TinyMCE's body: <button class="show-hidden">{{ site.translations.show }}</button>
-<div class="hidden">
+{% hide %}
 {% highlight html %}
 <iframe id="tinymce-editor_ifr" src='javascript:""' frameborder="0" title="Rich Text Area. Press ALT-F9 for menu. Press ALT-F10 for toolbar. Press ALT-0 for help">
     <html>
@@ -179,7 +177,7 @@ Markup for TinyMCE's body: <button class="show-hidden">{{ site.translations.show
     </html>
 </iframe>
 {% endhighlight %}
-</div>
+{% endhide %}
 
 #### Locate the iframes
 {% highlight ruby %}
@@ -304,7 +302,7 @@ driver.execute_script("tinyMCE.activeEditor.insertContent('<p>Christchurch</p>')
 ### <a id="set-content-selenium-api"></a>Set content using Selenium WebDriver API
 
 <button class="show-hidden">{{ site.translations.show }}</button>
-<div class="hidden">
+{% hide %}
 {% highlight ruby %}
 # Environment tested
 # Linux Mint 15, Selenium 2.39.0, Chromium 31.0, ChromeDriver 2.8
@@ -328,12 +326,12 @@ driver.switch_to.frame(tinymce_frame)
 tinymce_body = driver.find_element(:css => 'body')
 tinymce_body.send_keys('<h1>TInyMCE</h1>Yi Zeng')
 {% endhighlight %}
-</div>
+{% endhide %}
 
 ### <a id="select-all-content"></a>Select all content
 
 <button class="show-hidden">{{ site.translations.show }}</button>
-<div class="hidden">
+{% hide %}
 {% highlight ruby %}
 # Environment tested
 # Linux Mint 15, Selenium 2.39.0, Chromium 31.0, ChromeDriver 2.8
@@ -353,12 +351,12 @@ driver.action.click(ck_editor_body)
              .key_up(:control)
              .perform
 {% endhighlight %}
-</div>
+{% endhide %}
 
 ### <a id="click-numbered-list"></a>Click "Numbered list" from toolbar
 
 <button class="show-hidden">{{ site.translations.show }}</button>
-<div class="hidden">
+{% hide %}
 {% highlight ruby %}
 # Environment tested
 # Linux Mint 15, Selenium 2.39.0, Chromium 31.0, ChromeDriver 2.8
@@ -375,12 +373,12 @@ ckeditor_btn_numbered_list.click
 tinymce_btn_numbered_list = driver.find_element(:css => ".mce-btn[aria-label='Numbered list'] button")
 tinymce_btn_numbered_list.click
 {% endhighlight %}
-</div>
+{% endhide %}
 
 ### <a id="set-content-editors-api"></a>Set content using editors' API
 
 <button class="show-hidden">{{ site.translations.show }}</button>
-<div class="hidden">
+{% hide %}
 {% highlight ruby %}
 # Environment tested
 # Linux Mint 15, Selenium 2.39.0, Chromium 31.0, ChromeDriver 2.8
@@ -395,7 +393,7 @@ driver.execute_script("tinyMCE.activeEditor.setContent('<h1>Yi Zeng</h1> TinyMCE
 driver.execute_script("CKEDITOR.instances.ckeditor.insertHtml('<p>Christchurch</p>')")
 driver.execute_script("tinyMCE.activeEditor.insertContent('<p>Christchurch</p>')")
 {% endhighlight %}
-</div>
+{% endhide %}
 
 ## <a id="references"></a>References
 - [Selenium Ruby binding API](http://selenium.googlecode.com/git/docs/api/rb/index.html)
