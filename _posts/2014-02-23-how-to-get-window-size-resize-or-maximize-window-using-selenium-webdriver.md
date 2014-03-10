@@ -220,12 +220,11 @@ driver.quit()
 - [C# - IWindow interface][IWindow interface]
 - [Python - webdriver.py](https://code.google.com/p/selenium/source/browse/py/selenium/webdriver/remote/webdriver.py)
 
-<div class="footnotes">
-	<hr />
-	<p id="footnote-1">
-		[1]: Adding "System.Drawing" assembly reference to project is required first.
-	</p>
-</div>
+{% footnotes %}
+<p id="footnote-1">
+	[1]: Adding "System.Drawing" assembly reference to project is required first.
+</p>
+{% endfootnotes %}
 
 [Ruby Dimension Class]: http://selenium.googlecode.com/git/docs/api/rb/Selenium/WebDriver/Dimension.html
 [Ruby resize_to()]: http://selenium.googlecode.com/git/docs/api/rb/Selenium/WebDriver/Window.html#resize_to-instance_method

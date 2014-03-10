@@ -47,12 +47,11 @@ driverService.HideCommandPromptWindow = true;
 var driver = new PhantomJSDriver(driverService);
 {% endprettify %}
 
-<div class="footnotes">
-	<hr />
-	<p id="footnote-1">
-		[1]: <a href="https://code.google.com/p/selenium/source/browse/dotnet/CHANGELOG?name=selenium-2.40.0#56">CHANGELOG for Selenium 2.40.0</a>
-	</p>
-	<p id="footnote-2">
-		[2]: <a href="https://groups.google.com/d/msg/selenium-users/3CwDvwiBmlM/X3BcnJzrGToJ">Comment to "Hide the IEDriver command window" by Jim Evans</a>
-	</p>
-</div>
+{% footnotes %}
+<p id="footnote-1">
+	[1]: <a href="https://code.google.com/p/selenium/source/browse/dotnet/CHANGELOG?name=selenium-2.40.0#56">CHANGELOG</a> for Selenium 2.40.0.
+</p>
+<p id="footnote-2">
+	[2]: <a href="https://groups.google.com/d/msg/selenium-users/3CwDvwiBmlM/X3BcnJzrGToJ">Comment</a> to "Hide the IEDriver command window" by Jim Evans.
+</p>
+{% endfootnotes %}

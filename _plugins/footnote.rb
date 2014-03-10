@@ -1,6 +1,7 @@
 module Jekyll
   module Tags
-    class FootnoteBlock < Liquid::Tag
+    class FootnoteTag < Liquid::Tag
+      include Liquid::StandardFilters
 
       def initialize(tag_name, text, tokens)
         super
@@ -18,4 +19,4 @@ module Jekyll
   end
 end
 
-Liquid::Template.register_tag('footnote', Jekyll::Tags::FootnoteBlock)
+Liquid::Template.register_tag('footnote', Jekyll::Tags::FootnoteTag)

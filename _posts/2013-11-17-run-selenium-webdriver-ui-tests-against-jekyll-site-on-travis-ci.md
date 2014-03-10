@@ -76,14 +76,13 @@ script:
   - rake cucumber --rakefile=<path_to_rakefile>
 {% endprettify %}
 
-<div class="footnotes">
-	<hr />
-	<p id="footnote-1">
-		[1]: Since only the commits in master/gh-pages branches will affect the production site,
-		running tests against production for branches that don't change production
-		is somewhat redundant.
-	</p>
-</div>
+{% footnotes %}
+<p id="footnote-1">
+	[1]: Since only the commits in master/gh-pages branches will affect the production site,
+	running tests against production for branches that don't change production
+	is somewhat redundant.
+</p>
+{% endfootnotes %}
 
 [Travis CI]: https://travis-ci.org/
 [Selenium WebDriver]: http://docs.seleniumhq.org/

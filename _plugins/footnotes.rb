@@ -2,7 +2,7 @@ require 'cgi'
 
 module Jekyll
   module Tags
-    class HideTag < Liquid::Block
+    class FootnotesBlock < Liquid::Block
       include Liquid::StandardFilters
 
       def initialize(tag_name, markup, tokens)
@@ -11,10 +11,10 @@ module Jekyll
 
       def render(context)
         code = CGI.unescapeHTML(h(super).strip)
-        "<div class=\"hidden\">#{code}</div>"
+        "<div class=\"footnotes\"><hr />#{code}</div>"
       end
     end
   end
 end
 
-Liquid::Template.register_tag('hide', Jekyll::Tags::HideTag)
+Liquid::Template.register_tag('footnotes', Jekyll::Tags::FootnotesBlock)
