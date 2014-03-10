@@ -14,7 +14,7 @@ UI tests written with BDD framework [Cucumber][Cucumber] inside.
 After each commit, one may find it beneficial to run those tests on [Travis CI][Travis CI]
 against the Jekyll site in that particular commit, as part of the continuous integration process.
 
-Instead of running those tests against a live production site each time<sup><a href="#footnote-1">[1]</a></sup>,
+Instead of running those tests against a live production site each time{% footnote 1 %},
 a better way is to build the site on Travis CI itself,
 and run the tests against localhost directly.
 Here is a brief note on how to achieve it.

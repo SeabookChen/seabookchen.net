@@ -72,7 +72,7 @@ for maximizing the window.
 Although this interface doesn't provide a function
 to resize window directly like Ruby binding,
 it can be done by setting the
-`Size` property using `System.Drawing.Size` object<sup><a href="#footnote-1">[1]</a></sup>.
+`Size` property using `System.Drawing.Size` object{% footnote 1 %}.
 
 > Environment Tested:<br />
 > Windows 7, Selenium 2.39.0, Firefox 26.0
