@@ -5,7 +5,7 @@ module Jekyll
       def initialize(tag_name, text, tokens)
         super
         if text.strip =~ /^\d+$/
-          @num = text
+          @num = text.strip
         else
           raise SyntaxError.new("Unexpected arguments. #{text}")
         end
