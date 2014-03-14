@@ -27,7 +27,7 @@ Feature: Test home page
 			| width | have?    |
 			| 240   | not have |
 			| 320   | not have |
-			| 640   | not have |
+			| 640   | have     |
 			| 768   | have     |
 			| 1280  | have     |
 			| 1920  | have     |
