@@ -17,7 +17,7 @@ var sendGaEvent = function(category, action, label) {
 	}
 };
 
-$('.nav-link').on('click', function() {
+$('.the-header .nav-link').on('click', function() {
 	sendGaEvent('Navigation Links', 'Click', this.textContent);
 });
 $('.the-footer .about a').on('click', function() {
@@ -35,6 +35,17 @@ $('.tag_box.tags a').on('click', function() {
 $('a.internal').on('click', function() {
 	label = (this.getAttribute('data-ga') !== null) ? this.getAttribute('data-ga') : this.textContent;
 	sendGaEvent('Internal Links', 'Click', label);
+});
+$('.unit-article .meta .author').on('click', function() {
+	sendGaEvent('Post meta Links', 'Click', 'Author');
+});
+$('.unit-article .meta .license').on('click', function() {
+	sendGaEvent('Post meta Links', 'Click', 'License');
+});
+$('.unit-article .meta .list-linear a').on('click', function() {
+	if (this.getAttribute('data-ga') !== null){
+		sendGaEvent('Post meta Links', 'Click', this.getAttribute('data-ga'));
+	}
 });
 </script>
 
