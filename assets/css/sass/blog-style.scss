@@ -6,9 +6,9 @@
 @import "./support/helper";
 @import "./support/animate";
 
-$fonts-header: 'Nova Square', Verdana, Tahoma, monospace;
-$fonts-body: 'Exo 2', consolas, Monaco, monospace;
-$fonts-code: 'Lucida Console', Consolas, monospace, 'DejaVu Sans Mono', serif;
+$fonts-titling: 'Ubuntu Titling', 'Ubuntu Regular', 'DejaVu Sans', Tahoma, sans-serif;
+$fonts-body: 'Ubuntu Regular', 'DejaVu Sans', Tahoma, sans-serif;
+$fonts-code: Consolas, monospace, 'DejaVu Sans Mono', serif;
 
 $color-text: #2D2D2D;
 $color-hover: #FF9900;
@@ -17,7 +17,7 @@ $color-meta-link-hover: #797979;
 
 $color-box-border: #DDDDDD;
 $color-code-background: #272822;
-$color-inline-code-background: #DDDDDD;
+$color-inline-code-background: #EEEEEE;
 $color-linenos-background: #4B4B4B;
 
 ::-webkit-scrollbar {
@@ -36,14 +36,10 @@ $color-linenos-background: #4B4B4B;
 
 body {
 	font-family: $fonts-body;
-	font-size: 1em;
+	font-size: .95em;
 	line-height: 1.625em;
 }
-h1,
-.the-header .logo,
-.the-footer h4 {
-	font-family: $fonts-header
-}
+
 h1,
 .h1 {
 	font-size: 1.875em;

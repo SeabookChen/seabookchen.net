@@ -32,6 +32,10 @@ $('.tag_box.categories a').on('click', function() {
 $('.tag_box.tags a').on('click', function() {
 	sendGaEvent('Tags', 'Click', this.title);
 });
+$('a.internal').on('click', function() {
+	label = (this.getAttribute('data-ga') !== null) ? this.getAttribute('data-ga') : this.textContent;
+	sendGaEvent('Internal Links', 'Click', label);
+});
 </script>
 
 <!-- Jekyll Simple Search option -->
@@ -158,22 +162,22 @@ $('.tag_box.tags a').on('click', function() {
 				$(window).scroll(function () {
 					if ($(window).width() > width) {
 						if ($(this).scrollTop() > offset) {
-							$('.back-to-top').fadeIn(duration);
+							$('footer .back-to-top').fadeIn(duration);
 						} else {
-							$('.back-to-top').fadeOut(duration);
+							$('footer .back-to-top').fadeOut(duration);
 						}
 					}
 				});
 				$(window).resize(function () {
 					if ($(window).width() < width) {
-						$('.back-to-top').fadeOut(duration);
+						$('footer .back-to-top').fadeOut(duration);
 					}
 					if ($(window).width() >= width && $(this).scrollTop() > offset) {
-						$('.back-to-top').fadeIn(duration);
+						$('footer .back-to-top').fadeIn(duration);
 					}
 				});
 
-				$('.back-to-top').click(function (event) {
+				$('footer .back-to-top').click(function (event) {
 					event.preventDefault();
 					$('html, body').animate({scrollTop: 0}, duration);
 					return false;

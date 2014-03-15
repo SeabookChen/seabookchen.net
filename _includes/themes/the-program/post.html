@@ -42,17 +42,17 @@
                     <nav class="pagination">
                         <ul>
                             {% if page.previous %}
-                                <li class="prev"><a class="internal" rel="prev"  href="{{ page.previous.url }}" title="{{ site.translations.view }} '{{ page.previous.title }}'"> &#62;&#62; {{ page.previous.title }}</a></li>
+                                <li class="prev"><a class="internal" data-ga="Previous Post" rel="prev" href="{{ page.previous.url }}" title="{{ site.translations.view }} '{{ page.previous.title }}'"> &#62;&#62; {{ page.previous.title }}</a></li>
                             {% endif %}
                             {% if page.previous and page.next %}
                                 <li class="pipe"> | </li>
                             {% endif %}
                             {% if page.next %}
-                                <li class="next"><a class="internal" rel="next"  href="{{ page.next.url }}" title="{{ site.translations.view }} '{{ page.next.title }}'">{{ page.next.title }} &#62;&#62; </a></li>
+                                <li class="next"><a class="internal" data-ga="Next Post" rel="next" href="{{ page.next.url }}" title="{{ site.translations.view }} '{{ page.next.title }}'">{{ page.next.title }} &#62;&#62; </a></li>
                             {% endif %}
                         </ul>
                     </nav>
-                    <p class="gotop"><a href="#page">{{ site.translations.back_to_top }}</a></p>
+                    <p class="gotop"><a class="internal" href="#page">{{ site.translations.back_to_top }}</a></p>
                 </div>
             </footer>
             <div class="misc-content">
