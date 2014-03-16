@@ -53,3 +53,9 @@
 							   "/assets/fonts/UbuntuTitling-Bold-webfont.ttf",
 							   "/assets/fonts/UbuntuTitling-Bold-webfont.svg#ubuntu_titlingbold"),
 							   "/assets/fonts/UbuntuTitling-Bold-webfont.eot", normal, normal);
+
+@include font-face("Ubuntu Condensed",
+					font-files("/assets/fonts/ubuntu-c-webfont.woff",
+							   "/assets/fonts/ubuntu-c-webfont.ttf",
+							   "/assets/fonts/ubuntu-c-webfont.svg#ubuntu_condensedregular"),
+							   "/assets/fonts/ubuntu-c-webfont.eot", normal, normal);

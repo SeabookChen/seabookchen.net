@@ -6,7 +6,7 @@
 @import "./support/helper";
 @import "./support/animate";
 
-$fonts-titling: 'Ubuntu Titling', 'Ubuntu Regular', 'DejaVu Sans', Tahoma, sans-serif;
+$fonts-heading: 'Ubuntu Condensed', 'Ubuntu Regular', 'DejaVu Sans', Tahoma, sans-serif;
 $fonts-body: 'Ubuntu Regular', 'DejaVu Sans', Tahoma, sans-serif;
 $fonts-code: Consolas, monospace, 'DejaVu Sans Mono', serif;
 
@@ -42,7 +42,7 @@ body {
 
 h1,
 .h1 {
-	font-family: $fonts-titling;
+	font-family: $fonts-heading;
 	font-size: 1.875em;
 	line-height: 52px;
 	margin-top: 52px;
