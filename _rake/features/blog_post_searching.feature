@@ -52,7 +52,7 @@ Feature: Test blog page post searching
 			| width | element? |
 			| 240   | button   |
 			| 320   | button   |
-			| 480   | button   |
+			| 480   | link     |
 			| 640   | link     |
 			| 768   | link     |
 			| 1280  | link     |
