@@ -6,28 +6,27 @@ which can redirect to homepage automatically after a timeout using HTML meta tag
 category: articles
 tags: [jekyll, github]
 alias: [/2013/05/26/]
+last_updated: March 18, 2014
 utilities: highlight, toc
 ---
 This article demonstrates how to create a custom Jekyll 404 page
 for Jekyll sites hosted on [GitHub Page][GitHub Page].
-Things might be different if sites are hosted by other providers.
-Also it's worth noting that custom 404 pages will not function
-for sites which are using custom domains.
 
-For more detailed official GitHub Pages documentation,
+Things might be different if sites are hosted by other providers.
+Also it's worth noting that custom 404 pages will only function on custom domain sites.
+For more detailed GitHub Pages official documentation,
 please see [Custom 404 Pages - GitHub Help][Custom 404 Pages - GitHub Help].
 
 <div id="toc"></div>
 
 ## <a id="create-404-file"></a>Create 404.html file
 Create `404.html` in the root directory of Jekyll site,
-which has to be an HTML file.
+<del>which has to be an HTML file</del>{% footnote 1 %}.
 
 ## <a id="add-front-matter"></a>Add YAML Front Matter
-The goal is to create a custom 404 page like all other pages
-using the same Jekyll theme, without creating a separate designed 404.html.
-Therefore, add [YAML Front Matter][YAML Front Matter] section to
-the top of the 404.html and set the layout to be "page".
+The goal here is to create a custom 404 page like all other pages
+using the same Jekyll theme, without creating a separately designed 404.html.
+Therefore, add [YAML Front Matter][YAML Front Matter] section to the top of the 404.html and set the layout to be "page".
 
 	---
 	layout: page
@@ -47,8 +46,8 @@ Add the actual 404 content after the [YAML Front Matter][YAML Front Matter] sect
 In order to redirect 404 page automatically, the easiest way I found so far
 is to use HTML meta tag, `meta http-equiv="refresh"`.
 
-1. In Jekyll's default.html (e.g. mine resides in /_includes/themes/THEME_NAME/default.html),
-add a `<meta>` tag in the `<head>`. ([W3schools example][W3schools example])
+1. In Jekyll's `default.html` (e.g. mine resides in /_includes/themes/THEME_NAME/default.html),
+add a `<meta>` tag in the `<head>`{% footnote 2 %}.
 
 2. Set the meta tag's `http-equiv` attribute to be "refresh", i.e `<meta http-equiv="refresh">`.
 
@@ -79,5 +78,13 @@ see how the page looks and check if it's gonna be redirected automatically or no
 [GitHub Page]: http://pages.github.com/
 [Custom 404 Pages - GitHub Help]: https://help.github.com/articles/custom-404-pages
 [YAML Front Matter]: http://jekyllrb.com/docs/frontmatter/
-[W3schools example]: http://www.w3schools.com/tags/att_meta_http_equiv.asp
 [Liquid's if-else]: http://wiki.shopify.com/Liquid#If_.2F_Else_.2F_Unless
+
+{% footnotes %}
+<p id="footnote-1">
+    [1]: This statement no longer exists in official documentation.
+</p>
+<p id="footnote-2">
+    [2]: <a href="http://www.w3schools.com/tags/att_meta_http_equiv.asp">W3schools "HTML <meta> http-equiv Attribute" example</a>
+</p>
+{% endfootnotes %}
