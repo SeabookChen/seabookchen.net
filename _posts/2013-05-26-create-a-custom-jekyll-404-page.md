@@ -13,7 +13,7 @@ This article demonstrates how to create a custom Jekyll 404 page
 for Jekyll sites hosted on [GitHub Page][GitHub Page].
 
 Things might be different if sites are hosted by other providers.
-Also it's worth noting that custom 404 pages will only function on custom domain sites.
+Also it's worth noting that custom 404 pages will only be functioning on custom domain sites.
 For more detailed GitHub Pages official documentation,
 please see [Custom 404 Pages - GitHub Help][Custom 404 Pages - GitHub Help].
 
@@ -43,15 +43,14 @@ Add the actual 404 content after the [YAML Front Matter][YAML Front Matter] sect
 	<p>Sorry this page does not exist =(</p>
 
 ## <a id="redirect-page"></a>Redirect 404 page automatically
-In order to redirect 404 page automatically, the easiest way I found so far
-is to use HTML meta tag, `meta http-equiv="refresh"`.
+In order to redirect 404 page automatically, the easiest way might be using HTML meta tag, `meta http-equiv="refresh"`.
 
-1. In Jekyll's `default.html` (e.g. mine resides in /_includes/themes/THEME_NAME/default.html),
-add a `<meta>` tag in the `<head>`{% footnote 2 %}.
+1. Add a `<meta>` tag in the `<head>` into Jekyll's `default.html`
+(e.g. mine resides in /_includes/themes/THEME_NAME/default.html){% footnote 2 %}.
 
-2. Set the meta tag's `http-equiv` attribute to be "refresh", i.e `<meta http-equiv="refresh">`.
+2. Set the meta tag's `http-equiv` attribute to "refresh", i.e `<meta http-equiv="refresh">`.
 
-3. Set meta tag's content attribute to something like `content="5; url=/"`.
+3. Set meta tag's content attribute to something similar to `content="5; url=/"`.
 	- `5` is the number of seconds to wait before automatically redirecting. Setting to `0` means immediate redirecting.
 	- `url=/` sets the URL to be redirected to, which can also be set to any URLs like `url=http://yizeng.me` etc.
 
@@ -59,8 +58,7 @@ add a `<meta>` tag in the `<head>`{% footnote 2 %}.
 the auto-redirecting happens to `404.html` only.
 <script src="https://gist.github.com/yizeng/a4f26459bc8795476ed4.js"></script>
 
-<br />
-**Here is a completed example of `default.html`:**
+Here is a completed example of `default.html`:
 <script src="https://gist.github.com/yizeng/5428d29c3d5af224475b.js"></script>
 
 ## <a id="test-404-page"></a>Test 404 page
@@ -73,7 +71,7 @@ see if the custom 404 page works or not.
 
 3. Go to the live site using the custom domain with a nonexistence URL,
 e.g. http://yizeng.me/go_404,
-see how the page looks and check if it's gonna be redirected automatically or not.
+see how the page looks and check if it can be redirected automatically or not.
 
 [GitHub Page]: http://pages.github.com/
 [Custom 404 Pages - GitHub Help]: https://help.github.com/articles/custom-404-pages
@@ -82,9 +80,9 @@ see how the page looks and check if it's gonna be redirected automatically or no
 
 {% footnotes %}
 <p id="footnote-1">
-    [1]: This statement no longer exists in official documentation.
+    [1]: This statement no longer exists in official documentation, but I haven't had a chance to verify it.
 </p>
 <p id="footnote-2">
-    [2]: <a href="http://www.w3schools.com/tags/att_meta_http_equiv.asp">W3schools "HTML <meta> http-equiv Attribute" example</a>
+    [2]: <a href="http://www.w3schools.com/tags/att_meta_http_equiv.asp">"HTML &lt;meta&gt; http-equiv Attribute" example</a> by W3schools.
 </p>
 {% endfootnotes %}

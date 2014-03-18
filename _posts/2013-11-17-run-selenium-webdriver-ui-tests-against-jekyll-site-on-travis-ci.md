@@ -8,15 +8,13 @@ tags: [cucumber, jekyll, travis-ci, selenium, webdriver]
 alias: [/2013/11/17/]
 utilities: highlight, toc
 ---
-Imagine there is a Jekyll site's repository
-which has some [Selenium WebDriver][Selenium WebDriver]
-UI tests written with BDD framework [Cucumber][Cucumber] inside.
+Imagine there is a Jekyll site project
+which has some [Selenium WebDriver][Selenium WebDriver] UI tests written with BDD framework [Cucumber][Cucumber] inside.
 After each commit, one may find it beneficial to run those tests on [Travis CI][Travis CI]
-against the Jekyll site in that particular commit, as part of the continuous integration process.
+against this Jekyll site in that particular commit, as part of the continuous integration process.
 
-Instead of running those tests against a live production site each time{% footnote 1 %},
-a better way is to build the site on Travis CI itself,
-and run the tests against localhost directly.
+Instead of running those tests against the live production site each time{% footnote 1 %},
+a better way would be to build the site on Travis CI itself, and run the tests against localhost directly.
 Here is a brief note on how to achieve it.
 
 <div id="toc"></div>
@@ -37,7 +35,7 @@ Bear in mind that port number 4000 can be made configurable if desired.
 Before building Jekyll and running Selenium UI tests on Travis CI,
 some necessary gems need to be installed.
 To do so, within the `before_install` section of `.travis.yml` file,
-type in the following commands to install gems, in this case
+add in the following commands to install gems, in this case
 `jekyll`, `cucumber` and `selenium-webdriver`.
 
 {% prettify yaml %}
@@ -51,11 +49,11 @@ before_install:
 {% endprettify %}
 
 ## <a id="serve-jekyll"></a>Start Jekyll web server
-In order to build the Jekyll site locally on Travis CI,
+To build the Jekyll site locally on Travis CI,
 in `.travis.yml` file's `before_script` section,
 serve Jekyll site with `detach=true` option,
 which is available since [Jekyll 1.2.0][Jekyll 1.2.0] or later.
-With this detach option, WEBrick server will be running in background,
+With this `detach` option, WEBrick server will be running in background,
 so that any subsequent commands can be continued and
 whole Travis CI build won't be hanging.
 

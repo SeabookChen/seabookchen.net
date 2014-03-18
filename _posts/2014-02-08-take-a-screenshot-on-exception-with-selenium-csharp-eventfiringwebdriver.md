@@ -11,13 +11,12 @@ utilities: highlight
 Apart from concrete browser's WebDriver implementations like
 FirefoxDriver, ChromeDriver, PhantomJSDriver, etc.,
 Selenium C# binding also provides one other type of driver called `EventFiringWebDriver`,
-which wraps around any WebDriver instance from above
-and supports registering for events,
-e.g for logging things that WebDriver has been doing.
+which wraps around any WebDriver instance and supports registering for events,
+e.g. for logging things that WebDriver has been doing.
 
 This class inherits from `IWebDriver` interface
 but additionally provides events like `Navigating`, `ElementClicking`, `ExceptionThrown` etc.
-It can be found within Selenium's support library (WebDriver.Support.dll).
+It can be found within Selenium's support library WebDriver.Support.dll (under namespace "OpenQA.Selenium.Support.Events").
 The source code is [here][EventFiringWebDriver.cs]
 and the related tests exist [here][EventFiringWebDriverTest.cs].
 
@@ -28,21 +27,20 @@ Since the driver instance is a type of `EventFiringWebDriver`,
 whenever an exception is thrown,
 `ExceptionThrown` event will be triggered and a screenshot should be taken.
 
-{% prettify c# %}
-// Tested using Windows 7, Firefox 26, Selenium 2.39.0
+A completed example solution has been created on GitHub in [this][Example Repository] repository.
+Code has been tested under environment Windows 7, Firefox 26 with Selenium 2.39.0.
 
+{% prettify c# %}
 private IWebDriver driver;
 
 public void FooMethod() {
-	// EventFiringWebDriver is inside namespace "OpenQA.Selenium.Support.Events"
 	var firingDriver = new EventFiringWebDriver(new FirefoxDriver());
 	firingDriver.ExceptionThrown += firingDriver_TakeScreenshotOnException;
 
 	driver = firingDriver;
 	driver.Navigate().GoToUrl("http://stackoverflow.com");
 
-	// try find a non-existent element
-	// expect NoSuchElementException to be thrown
+	// try find a non-existent element where NoSuchElementException should be thrown
 	driver.FindElement(By.CssSelector("#some_id .foo")); // a screenshot should be taken automatically
 }
 
@@ -51,9 +49,6 @@ private void firingDriver_TakeScreenshotOnException(object sender, WebDriverExce
 	driver.TakeScreenshot().SaveAsFile("Exception-" + timestamp + ".png", ImageFormat.Png);
 }
 {% endprettify %}
-
-A completed example solution has been created on GitHub
-and can be found in [this repository][Example Repository].
 
 [EventFiringWebDriver.cs]: https://code.google.com/p/selenium/source/browse/dotnet/src/support/Events/EventFiringWebDriver.cs
 [EventFiringWebDriverTest.cs]: https://code.google.com/p/selenium/source/browse/dotnet/test/support/Events/EventFiringWebDriverTest.cs

@@ -50,7 +50,7 @@ For instance, `DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe` is for 64-bit Wind
     > **Ruby 2.0.0**: DevKit mingw64-32-4.7.2<br />
     > **Ruby 2.0.0 x64**: DevKit mingw64-64-4.7.2<br />
 
-3. Run the installer and extract it to a folder, e.g. `C:\DevKit`
+3. Run the installer and extract it to a folder, e.g. `C:\DevKit`.
 
 4. Initialize and create `config.yml` file. Type in the following commands in command Prompt window:
 
@@ -102,7 +102,7 @@ Note that Python 2 is preferred since Python 3 might not be functioning as inten
 2. For Windows 7 machines, download [ez_setup.py](https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py)
 and save it, for example, to `C:\`. Then run it using Python in a command prompt window:
 > python "C:\ez_setup.py"
-3. Set the 'Python Scripts' directory (e.g. `C:\Python27\Scripts`) to PATH.
+3. Add 'Python Scripts' directory (e.g. `C:\Python27\Scripts`) to PATH.
 
 ### <a id="install-pygements-2"></a>Install Pygments
 1. Verify easy_install is installed properly
@@ -128,7 +128,7 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
     **Alternatives**: "python" here can also be "ruby", "gem" or "easy_install", etc.
 
-    **Possible Reason**: The PATH for that particular program has not been set correctly.
+    **Possible Reason**: PATH for that particular program has not been set correctly.
 
     **Possible Solution**: Add the program to the PATH manually, see the steps below{% footnote 1 %}.
     > 1. Hold Win and press Pause.
@@ -191,9 +191,9 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
         Generating... c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:162: warning: cannot close fd before spawn
         Liquid Exception: No such file or directory - /bin/sh in _posts/2013-04-22-hello-world.md
 
-    **Possible Reason**: Incompatible issue with pygments.rb versions 0.5.1/0.5.2
+    **Possible Reason**: Incompatible issue with pygments.rb versions 0.5.1/0.5.2.
 
-    **Possible Solution**: Downgrade pygments.rb gem from 0.5.1/0.5.2 to version 0.5.0
+    **Possible Solution**: Downgrade pygments.rb gem from 0.5.1/0.5.2 to version 0.5.0.
     > gem uninstall pygments.rb --version '=0.5.2'<br />
     > gem install pygments.rb --version 0.5.0
 

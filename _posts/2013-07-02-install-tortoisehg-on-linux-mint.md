@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Install TortoiseHg on Linux Mint"
-description: "How to install TortoiseHg on Linux Mint 15 via official PPA"
+description: "How to install TortoiseHg on Linux Mint 15 via official PPA."
 category: notes
 tags: [linux mint, tortoisehg]
 alias: [/2013/07/02/]
+last_updated: March 18, 2014
 ---
 This is a note for how to install [TortoiseHg][TortoiseHg]
 on Linux Mint 15 via [TortoiseHg Release PPA][TortoiseHg Release PPA].
@@ -20,19 +21,22 @@ as TortoiseHg has strict version requirements for which versions of Mercurial it
 
 1. Add [TortoiseHg Release PPA][TortoiseHg Release PPA] to the system
 > sudo add-apt-repository ppa:tortoisehg-ppa/releases
+
 2. Get information on the newest versions of packages and their dependencies
 > sudo apt-get update
+
 3. Install `tortoisehg` package
 > sudo apt-get install tortoisehg
+
 4. Check if installation succeeded
 > hg --version
 
 Terminal output for example:
 
-	Mercurial Distributed SCM (version 2.6.1)
+	Mercurial Distributed SCM (version 2.8.2)
 	(see http://mercurial.selenic.com for more information)
 
-	Copyright (C) 2005-2012 Matt Mackall and others
+	Copyright (C) 2005-2013 Matt Mackall and others
 	This is free software; see the source for copying conditions. There is NO
 	warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
