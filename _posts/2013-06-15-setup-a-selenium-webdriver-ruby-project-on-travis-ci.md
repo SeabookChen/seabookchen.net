@@ -6,35 +6,42 @@ using Selenium WebDriver Ruby binding with headless PhantomJS."
 category: articles
 tags: [github, phantomjs, ruby, selenium, travis-ci, webdriver]
 alias: [/2013/06/15/]
-last_updated: February 16, 2014
+last_updated: March 18, 2014
 utilities: fancybox, highlight, toc, unveil
 ---
+[Travis CI][Travis CI] is a hosted, distributed [continous intergration][CI] service for building GitHub projects.
+It is free of charge for open source GitHub projects in various languages,
+including C, C++, Java, JavaScript, Python, Ruby and few more{% footnote 1 %}.
+
+This article will demonstrate how to setup an automated UI testing project
+using Selenium WebDriver Ruby binding with headless PhantomJS browser.
+
 <div id="toc"></div>
 
-## <a id="create-repo"></a>Create a Github repository
+## <a id="create-repo"></a>Create a GitHub repository
 
-In order to build a project on Travis CI, a Github repository is needed.
-If haven't done so, create a new public repository at
-Github's ['Create a New Repository']['Create a New Repository'] page.
+A public GitHub repository is needed in order to be built on Travis CI for free.
+New open-source projects can be created at GitHub's '[Create a New Repository][Create a New Repository]' page.
 
 ## <a id="create-project"></a>Create a Selenium WebDriver Ruby project
 
 ### <a id="project-structure"></a>Project Structure
-Here is how this sample Selenium Ruby project is structured:
+There are no requirements for how Selenium WebDriver Ruby project should be set up.
+Hence here is how this sample Selenium Ruby project is structured:
 
 	/root						-- root of the repository
 		/test					-- folder contains the sample test
 			test_home_page.rb	-- sample test file
 		.travis.yml				-- configuration file for Travis CI
-		README.md
+		README.md				-- description of the project
 		Rakefile				-- Rakefile
 
 ### <a id="create-sample-test"></a>Create a sample UI test with headless PhantomJS
 - `Test::Unit` framework is used as the testing framework in this example.
 - Headless WebKit [PhantomJS][PhantomJS] will be the browser to run the UI tests.
 - PhantomJS binary should be installed by default on
-[Travis CI servers][Travis CI servers], which is `1.9.7` as of 16/02/2014.
-- Travis CI supports tests which require GUI, see documentation [here][Travis CI GUI].
+[Travis CI servers][Travis CI servers], which is `1.9.7` as of 18/03/2014.
+- Travis CI supports tests which require GUI, where some setup for `xvfb` are needed{% footnote 2 %}.
 
 Here is a sample test file called `test_home_page.rb`:
 {% highlight ruby %}
@@ -61,7 +68,7 @@ end
 {% endhighlight %}
 
 ### <a id="add-rakefile"></a>Add Rakefile
-Travis CI uses `Rakefile` to build project and execute the tests, if the file is not present, build will fail like this:
+Travis CI uses `Rakefile` to build project and execute the tests, if it is not present, build will fail like this:
 
 	$ rake
 	rake aborted!
@@ -92,7 +99,7 @@ Travis CI uses `.travis.yml` file in the root of the repository to learn about t
 - Commands to execute the build
 
 The sample testing project here is written in Ruby, so Ruby configurations will be used in `.travis.yml`.
-Detailed official documentation can be found [here](http://about.travis-ci.org/docs/user/languages/ruby/).
+Detailed official documentation for building Ruby projects can be found [here](http://about.travis-ci.org/docs/user/languages/ruby/).
 In order to validate it, [Travis Lint][Travis Lint] would be a handy tool, while
 the simplest way is just to go to [Travis WebLint][Travis WebLint] and paste the content in.
 
@@ -106,9 +113,7 @@ rvm: # the Ruby versions to be used
   - 1.9.3
 
 before_install:
-  - gem update # optional, update all gems
   - gem install selenium-webdriver
-  - phantomjs --version # optional, output the phantomjs version
 {% endprettify %}
 
 ## <a id="push-to-github"></a>Push to Github
@@ -116,11 +121,11 @@ Once the repository is properly created, push it to Github.
 
 ## <a id="enable-hook"></a>Login to Travis CI and enable hook
 
-1. Login to Travis CI with the Github account of this repository.
+1. Login to Travis CI with the GitHub account of this repository.
 2. Visit [Travis CI profile][Travis CI profile] and find the repository.
 If the repository does not appear on the list, make sure
 	- It is not a private repository
-	- Travis CI has been synced with Github (click "Sync now" if necessary)
+	- Travis CI has been synced with GitHub (click "Sync now" if necessary)
 3. Enable the hook for this repository.
 
 <a class="post-image" href="/assets/images/posts/2013-06-09-enable-hook-on-travis-ci.gif" title="Enable hook on Travis CI">
@@ -129,15 +134,21 @@ If the repository does not appear on the list, make sure
 
 ## <a id="run-project"></a>Run project on Travis CI
 
-Travis CI should be able to build to the project automatically
-whenever new changesets are pushed to Github.
-
+Travis CI should be able to build to the project automatically whenever new changesets are pushed to GitHub.
 However, to kick off a test run manually:
 
-1. Go to the repository settings page on Github
-2. Select tab `Service Hooks` (url: https://github.com/[GITHUB_USERNAME]/[REPO_NAME]/settings/hooks)
-3. Find `Travis` down to bottom
-4. Click `Test Hook` button
+- From Travis CI project page
+
+> 1. Find this project's page on Travis CI
+> 2. Click the refresh icon
+
+- From GitHub project settings
+
+> 1. Go to project's settings page on GitHub
+> 2. Select tab `Webhooks & Services` (url: https://github.com/[GITHUB_USERNAME]/[REPO_NAME]/settings/hooks)
+> 3. Click 'Configure services' button
+> 4. Find `Travis` down to bottom
+> 5. Click `Test Hook` button
 
 ## <a id="analyze-results"></a>Analyze results on Travis CI
 
@@ -149,11 +160,11 @@ The project page on Travis CI is: `https://travis-ci.org/[GITHUB_USERNAME]/[REPO
 </a>
 
 ### <a id="build-log"></a>Build log
-Clicking each job number will open up the build log for that particular jobs,
-which basically contains all console output during the build.
+Clicking each job number will open up the build log for that particular job,
+which contains all console output produced during the build.
 
 ### <a id="test-results"></a>Test Results
-The results are shown in the `rake` section in the build log.
+Test results are shown in the `rake` section of the build log.
 For example, here are the test results inside [this particular job's build log](https://travis-ci.org/yizeng/setup-selenium-webdriver-ruby-project-on-travis-ci/jobs/8109067):
 
 	$ rake
@@ -184,11 +195,21 @@ a dialog with all the options will be displayed, as shown in the screenshot belo
 
 The sample project's current status is: <a class="image-link" href="https://travis-ci.org/yizeng/setup-selenium-webdriver-ruby-project-on-travis-ci" title="Travis CI build status"><img src="https://travis-ci.org/yizeng/setup-selenium-webdriver-ruby-project-on-travis-ci.png" alt="Travis CI build status" /></a>
 
-['Create a New Repository']: https://github.com/repositories/new
+[Travis CI]: https://travis-ci.org/
+[CI]: http://en.wikipedia.org/wiki/Continuous_integration
+[Create a New Repository]: https://github.com/repositories/new
 [PhantomJS]: http://phantomjs.org/
 [Travis CI servers]: http://about.travis-ci.org/docs/user/ci-environment/
-[Travis CI GUI]: http://about.travis-ci.org/docs/user/gui-and-headless-browsers
 [Travis Lint]: http://about.travis-ci.org/docs/user/travis-lint/
 [Travis WebLint]: http://lint.travis-ci.org/
 [Travis CI profile]: https://travis-ci.org/profile
 [build status images]: http://about.travis-ci.org/docs/user/status-images/
+
+{% footnotes %}
+<p id="footnote-1">
+    [1]: A list of supported languages can be found <a href="http://docs.travis-ci.com/user/languages/">here</a>.
+</p>
+<p id="footnote-2">
+    [2]: <a href="http://docs.travis-ci.com/user/gui-and-headless-browsers/#Using-xvfb-to-Run-Tests-That-Require-GUI-(e.g.-a-Web-browser)">Using xvfb to Run Tests That Require GUI (e.g. a Web browser) </a>
+</p>
+{% endfootnotes %}

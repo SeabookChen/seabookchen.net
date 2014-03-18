@@ -5,13 +5,13 @@ description: "Some quick common RubyGems command references that I use for maint
 category: notes
 tags: [jekyll, ruby]
 alias: [/2013/05/17/]
+last_updated: March 18, 2014
 ---
 Apprently `gem --help` would be helpful but just too long to read, the following commands are just for quick references purpose.
 
 ##Install/Uninstall Gems
 
-> gem install jekyll
-
+> gem install jekyll<br />
 > gem uninstall jekyll
 
 ##Install specific version of Gems
@@ -20,11 +20,12 @@ Apprently `gem --help` would be helpful but just too long to read, the following
 
 ##Uninstall specific versions of Gems
 
-> gem uninstall jekyll # prompt 'Select gem to uninstall' and let the user choose
-
-> gem uninstall jekyll --version 1.0.1
-
-> gem cleanup jekyll # remove all old versions of jekyll
+> \# prompt 'Select gem to uninstall' and let the user choose<br />
+> gem uninstall jekyll<br /><br />
+> gem uninstall jekyll --version 1.0.1<br />
+> gem uninstall jekyll --version '<1.0.1'<br /><br />
+> \# remove all old versions of jekyll
+> gem cleanup jekyll<br />
 
 ##List all local Gems
 

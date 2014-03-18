@@ -5,7 +5,7 @@ description: "How to install and setup Jekyll on a Windows machine."
 category: articles
 tags: [jekyll, ruby]
 alias: [/2013/05/10/]
-last_updated: March 10, 2014
+last_updated: March 18, 2014
 utilities: fancybox, toc, unveil
 ---
 <div id="toc"></div>
@@ -19,16 +19,19 @@ For example, `Ruby 2.0.0-p451 (x64)` is the Windows installer for Ruby 2.0.0 x64
 
 3. Install through the installer
 
-    - Try to keep the default directory `C:\Ruby200-x64`,
-    as advised by installer "Please avoid any folder name that contains spaces (e.g. Program Files)."
+    - Keep the default directory `C:\Ruby200-x64` if possible,
+    please note installer advises that "Please avoid any folder name that contains spaces (e.g. Program Files)."
     - Tick "Add Ruby executables to your PATH" checkbox, so PATH will be updated automatically to avoid headaches.
 
     <a class="post-image" href="/assets/images/posts/2013-05-11-ruby-installer.png" title="Windows Ruby installer">
         <img itemprop="image" data-src="/assets/images/posts/2013-05-11-ruby-installer.png" src="/assets/js/unveil/loader.gif" alt="Windows Ruby installer" />
     </a>
 
-4. Open up a command prompt window, and test if the installation has succeeded or not
-> ruby --version
+4. Open up a command prompt window and type in the following command, to see if Ruby has been install correctly or not.
+    > ruby -v
+
+    Example output:
+    > ruby 2.0.0p451 (2014-02-24) [x64-mingw32]
 
 ## <a id="install-devkit"></a>Install DevKit
 
@@ -39,16 +42,17 @@ Detailed installation instructions can be found on its [wiki page][Full installa
 1. Go to <http://rubyinstaller.org/downloads/> again.
 
 2. Download "DEVELOPMENT KIT" installer that matches the Windows architecture and the Ruby version just installed.
-For instance, `DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe` is for 64-bit Windows with Ruby 2.0.0 x64.<br />
-Here is a list about how to choose the correct DevKit version:
+For instance, `DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe` is for 64-bit Windows with Ruby 2.0.0 x64.
+
+    Here is a list about how to choose the correct DevKit version:
 
     > **Ruby 1.8.6 to 1.9.3**: DevKit tdm-32-4.5.2<br />
     > **Ruby 2.0.0**: DevKit mingw64-32-4.7.2<br />
     > **Ruby 2.0.0 x64**: DevKit mingw64-64-4.7.2<br />
 
-3. Run the installer and extract it to a folder, e.g. `C:\DevKit`
+3. Run the installer and extract it to a folder, e.g. `C:\DevKit`.
 
-4. Initialize and create config.yml file. In the Command Prompt window, type in the following lines:
+4. Initialize and create `config.yml` file. Type in the following commands in command Prompt window:
 
     > cd "C:\DevKit"<br />
     > ruby dk.rb init<br />
@@ -56,27 +60,29 @@ Here is a list about how to choose the correct DevKit version:
 
 5. In opened notepad window, add a new line `- C:\Ruby200-x64` at the end, save and close.
 
-6. Back to the Command Prompt, review (optional) and install
+6. Back to the Command Prompt, review (optional) and install.
 
     > ruby dk.rb review<br />
     > ruby dk.rb install
 
 ## <a id="install-jekyll"></a>Install Jekyll
 1. Verify that gem has been installed properly
-    > gem --version
+    > gem -v
+
+    Example output:
+    > 2.0.14
 
 2. Install Jekyll gem
     > gem install jekyll
 
 ## <a id="install-pygements"></a>Install Pygments
 
-[Pygments](http://pygments.org/) is the default syntax highlighting engine used in Jekyll.
-In order to use Pygments to highlight code snippets, Python needs to be installed
-and `highlighter` field needs to be set to `pygments` in site’s configuration file `_config.yml`.
+The default syntax highlighting engine in Jekyll is [Pygments](http://pygments.org/).
+It requires Python to be installed and `highlighter` field to be set to `pygments` in site’s configuration file `_config.yml`.
 
-Recently, Jekyll has added another highlighting engine [Rouge](https://github.com/jayferd/rouge),
+Recently, Jekyll has added another highlighting engine called [Rouge](https://github.com/jayferd/rouge),
 which doesn't support as many languages as Pygments at the moment, but it's Ruby native and Python-free.
-More details can be read [here](http://jekyllrb.com/docs/templates/#code_snippet_highlighting).
+More details can be followed [here](http://jekyllrb.com/docs/templates/#code_snippet_highlighting).
 
 ### <a id="install-python"></a>Install Python
 1. Go to <http://www.python.org/download/>
@@ -85,20 +91,28 @@ Note that Python 2 is preferred since Python 3 might not be functioning as inten
 3. Install
 4. Set the installation directory (e.g. `C:\Python27`) to PATH. (How to? See [Troubleshooting #1](#troubleshooting))
 5. Verify Python installation
-> python --version
+
+    > python --version
+
+    Example output:
+    > Python 2.7.6
 
 ### <a id="install-easy-install"></a>Install 'Easy Install'
 1. Visit <https://pypi.python.org/pypi/setuptools#installation-instructions> for detailed installation instructions.
-2. For Windows 7 machines, download [ez_setup.py](https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py) and run it.
-For instance, save the file to `C:\`, then open up a command prompt window and type in the following:
+2. For Windows 7 machines, download [ez_setup.py](https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py)
+and save it, for example, to `C:\`. Then run it using Python in a command prompt window:
 > python "C:\ez_setup.py"
-3. Set the 'Python Scripts' directory (e.g. `C:\Python27\Scripts`) to PATH.
+3. Add 'Python Scripts' directory (e.g. `C:\Python27\Scripts`) to PATH.
 
 ### <a id="install-pygements-2"></a>Install Pygments
 1. Verify easy_install is installed properly
-> easy_install --version
+    > easy_install --version
+
+    Example output:
+    > setuptools 3.1
+
 2. Install Pygments using "easy_install"
-> easy_install Pygments
+    > easy_install Pygments
 
 ## <a id="start-jekyll"></a>Start Jekyll
 Following the commands on official [Jekyll Quick-start guide][Jekyll Quick-start guide],
@@ -114,10 +128,9 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
     **Alternatives**: "python" here can also be "ruby", "gem" or "easy_install", etc.
 
-    **Possible Reason**: The PATH for that particular program has not been set correctly.
+    **Possible Reason**: PATH for that particular program has not been set correctly.
 
-    **Possible Solution**: Add the program to the PATH manually,
-    see the steps below ([source](http://stackoverflow.com/a/6318188/1177636)).
+    **Possible Solution**: Add the program to the PATH manually, see the steps below{% footnote 1 %}.
     > 1. Hold Win and press Pause.
     > 2. Click Advanced System Settings.
     > 3. Click Environment Variables.
@@ -178,11 +191,17 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
         Generating... c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:162: warning: cannot close fd before spawn
         Liquid Exception: No such file or directory - /bin/sh in _posts/2013-04-22-hello-world.md
 
-    **Possible Reason**: Incompatible issue with pygments.rb versions above 0.5.0
+    **Possible Reason**: Incompatible issue with pygments.rb versions 0.5.1/0.5.2.
 
-    **Possible Solution**: Downgrade pygments.rb gem from 0.5.2/0.5.1 to version 0.5.0
-    > gem uninstall pygments.rb --version "=0.5.2"<br />
-    > gem install pygments.rb --version "=0.5.0"
+    **Possible Solution**: Downgrade pygments.rb gem from 0.5.1/0.5.2 to version 0.5.0.
+    > gem uninstall pygments.rb --version '=0.5.2'<br />
+    > gem install pygments.rb --version 0.5.0
 
 [Full installation instructions]: https://github.com/oneclick/rubyinstaller/wiki/Development-Kit#installation-instructions
 [Jekyll Quick-start guide]: http://jekyllrb.com/docs/quickstart/
+
+{% footnotes %}
+<p id="footnote-1">
+    [1]: <a href="http://stackoverflow.com/a/6318188/1177636">Adding Python Path on Windows 7</a> by melhosseiny.
+</p>
+{% endfootnotes %}

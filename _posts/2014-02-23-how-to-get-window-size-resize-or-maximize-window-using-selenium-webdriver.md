@@ -11,8 +11,7 @@ utilities: highlight, toc
 Selenium WebDriver supports getting the browser window size,
 resizing and maximizing window natively from its API,
 no JavaScript injections like `window.resizeTo(X, Y);` are necessary any more.
-Examples are shown below on
-how to achieve this in Selenium WebDriver C#, Ruby and Python bindings.
+Below shows the examples on how to achieve this in Selenium WebDriver C#, Ruby and Python bindings.
 
 <div id="toc"></div>
 

@@ -83,7 +83,7 @@
 
 	blockquote {
 		@include border-radius(5px);
-		background-color: #EEEEEE;
+		background-color: $color-inline-code-background;
 		border-left: .7em solid $color-box-border;
 		margin: 1em 16px;
 		padding-left: 1em;
@@ -331,7 +331,7 @@
 		color: $color-text;
 		cursor: pointer;
 		display: inline-block;
-		padding: 2px 20px;
+		padding: 2px 24px;
 		outline: 0;
 		text-align: center;
 		text-decoration: none;

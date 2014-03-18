@@ -2,18 +2,20 @@
 layout: post
 title: "Update AppSettings and custom configuration sections in App.config at runtime"
 description: "How to update (add, edit or remove) AppSettings
-and custom sections in App.config at runtime."
+and custom config sections in App.config at runtime."
 category: articles
 tags: [c#, .net]
 alias: [/2013/08/31/]
 utilities: highlight, toc
 ---
+This post shows how to update (add, edit or remove) `AppSettings`
+and custom config sections in `App.config` at runtime.
+
 <div id="toc"></div>
 
 ## <a id="app-config"></a>App.config file
 
-Here is the sample `App.config` file used to illustrate
-how to add, edit or remove keys in AppSettings and custom configuration sections at runtime.
+Sample `App.config` file:
 
 {% highlight xml %}
 ﻿﻿<?xml version="1.0" encoding="utf-8" ?>
@@ -117,13 +119,12 @@ ConfigurationManager.RefreshSection("geoSettings/summary");
 ## <a id="print-out-keys"></a>Print out all keys
 
 {% prettify c# %}
-NameValueCollection settings = ConfigurationManager.AppSettings;
-// var settings = ConfigurationManager.GetSection("geoSettings/summary") as NameValueCollection;
+NameValueCollection appSettings = ConfigurationManager.AppSettings;
+// var customSettings = ConfigurationManager.GetSection("geoSettings/summary") as NameValueCollection;
 
 foreach (string key in appSettings.AllKeys) {
 	Console.WriteLine("{0}: {1}", key, section[key]);
 }
-Console.WriteLine();
 {% endprettify %}
 
 ## <a id="references"></a>References
