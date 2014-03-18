@@ -27,7 +27,7 @@ end
 
 Then(/^I should see (posts|no posts) are found$/) do |target|
 	if target == 'posts'
-		assert_not_equal(0, @page.search_overlay.results.count)
+		assert_equal(true, @page.search_overlay.results.count > 0)
 
 		@page.search_overlay.results.each do |result|
 			assert_equal(true, is_element_clickable(result))
