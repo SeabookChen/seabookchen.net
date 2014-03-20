@@ -1,3 +1,4 @@
+.nav-form,
 .search-form {
 	left: -200px;
 	opacity: 0;
@@ -38,15 +39,15 @@
 		}
 	}
 
-	.post-list {
+	h4, li, p, a {
+		color: #fff
+	}
+
+	.results {
 		padding: 0;
 		margin: 0;
 		position: absolute;
 		width: 100%;
-
-		h4, li, p, a {
-			color: #fff
-		}
 
 		li {
 			font-size: 1em;
@@ -59,20 +60,33 @@
 				border: 1px dashed #fff;
 			}
 		}
-
-		.entry-date {
-			display: none;
-			float: right;
-		}
 	}
 }
 
+.nav-form .results {
+	margin-top: 26px
+}
+
+.search-form .results .entry-date {
+	display: none;
+	float: right;
+}
+
+@media only screen and (min-width: 960px) {
+	.search-form .results .entry-date {
+		display: block;
+		float: right;
+	}
+}
+
+.nav-form.active,
 .search-form.active {
 	top: 0;
 	left: 0;
 	opacity: 1;
 }
 
+body.nav-overlay,
 body.search-overlay {
 	overflow: hidden;
 
@@ -89,13 +103,7 @@ body.search-overlay {
 	}
 }
 
-@media only screen and (min-width: 960px) {
-	.search-form .post-list .entry-date {
-		display: block;
-		float: right;
-	}
-}
-
+.nav-wrapper,
 .search-wrapper {
 	display: none;
 	top: 50px;
