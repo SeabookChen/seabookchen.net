@@ -1,5 +1,5 @@
 When(/^I click header navigation link text "(.*?)"$/) do |link_text|
-	@driver.find_element(:xpath, ".//a[text()='#{link_text}']").click
+	@driver.find_element(:xpath, ".//*[@class='nav-global']//a[text()='#{link_text}']").click
 end
 
 When(/^I click header's search (button|link)$/) do |target|
@@ -62,11 +62,13 @@ Then(/^I should (not see|see) header's search link$/) do |target|
 	end
 end
 
-Then(/^I should (not see|see) header's search button icon$/) do |target|
+Then(/^I should (not see|see) header's menu and search button$/) do |target|
 	if target == 'see'
+		assert_equal(true, @page.header.search_menu.displayed?)
 		assert_equal(true, @page.header.search_button.displayed?)
 	end
 	if target == 'not see'
+		assert_equal(false, @page.header.search_menu.displayed?)
 		assert_equal(false, @page.header.search_button.displayed?)
 	end
 end

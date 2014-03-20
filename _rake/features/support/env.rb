@@ -60,6 +60,8 @@ module Helper
 		wait.until { is_element_clickable(element) }
 
 		@driver.manage.timeouts.implicit_wait = TIMEOUT
+
+		return element
 	end
 end
 

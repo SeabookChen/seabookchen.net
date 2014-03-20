@@ -70,9 +70,9 @@ Feature: Test blog page header
 			| 1280  | see     |
 			| 1920  | see     |
 
-	Scenario Outline: Header's search button icon should be shown when width is smaller then 420px
+	Scenario Outline: Header's menu and search button should be shown when width is smaller then 420px
 		When I set window width to <width>px
-		Then I should <see?> header's search button icon
+		Then I should <see?> header's menu and search button
 
 		Examples:
 			| width | see?    |
