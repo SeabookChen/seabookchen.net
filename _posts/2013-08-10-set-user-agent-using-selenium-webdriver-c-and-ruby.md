@@ -4,7 +4,7 @@ title: "Set user agent using Selenium WebDriver C# and Ruby"
 description: "How to set browsers' (Chrome, Firefox, IE, PhantomJS) user agent
 using Selenium WebDriver C# and Ruby bindings."
 category: articles
-tags: [c#, phantomjs, ruby, webdriver, selenium]
+tags: [c#, ruby, selenium-webdriver]
 alias: [/2013/08/10/]
 last_updated: January 08, 2014
 utilities: highlight, toc

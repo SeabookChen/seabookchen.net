@@ -4,7 +4,7 @@ title: "Setup a Selenium WebDriver Ruby project on Travis CI"
 description: "How to setup an automated UI testing project on Travis CI
 using Selenium WebDriver Ruby binding with headless PhantomJS."
 category: articles
-tags: [github, phantomjs, ruby, selenium, travis-ci, webdriver]
+tags: [github, phantomjs, ruby, selenium-webdriver, travis-ci]
 alias: [/2013/06/15/]
 last_updated: March 18, 2014
 utilities: fancybox, highlight, toc, unveil

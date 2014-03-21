@@ -4,7 +4,7 @@ title: "Disable JavaScript using Selenium WebDriver"
 description: "How to disable JavaScript in browsers like Chrome, Firefox, IE and
 PhantomJS using Selenium WebDriver Ruby binding."
 category: articles
-tags: [ruby, selenium, webdriver]
+tags: [ruby, phantomjs, selenium-webdriver]
 alias: [/2014/01/08/]
 utilities: highlight, toc
 ---

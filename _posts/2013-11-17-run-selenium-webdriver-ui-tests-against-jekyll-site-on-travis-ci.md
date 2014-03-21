@@ -4,7 +4,7 @@ title: "Run Selenium WebDriver UI tests against Jekyll site on Travis CI"
 description: "How to run Selenium WebDrvier Cucumber UI tests against a Jekyll
 site built locally on Travis CI."
 category: articles
-tags: [cucumber, jekyll, travis-ci, selenium, webdriver]
+tags: [cucumber, jekyll, travis-ci, selenium-webdriver]
 alias: [/2013/11/17/]
 utilities: highlight, toc
 ---
