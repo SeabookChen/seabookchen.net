@@ -4,7 +4,7 @@ title: "How to get window size, resize or maximize window using Selenium WebDriv
 description: "How to get browser window size, resize or maximize window
 using Selenium WebDriver C#, Ruby and Python bindings."
 category: articles
-tags: [c#, selenium, webdriver, ruby, python]
+tags: [c#, python, ruby, selenium-webdriver]
 alias: [/2014/02/23/]
 utilities: highlight, toc
 ---

@@ -4,7 +4,7 @@ title: "Hide command prompt window in Selenium WebDriver .NET binding"
 description: "How to hide ChromeDriver, IEDriver, or PhantomJSDriver's command prompt window in Selenium
 WebDriver .NET binding using C#."
 category: articles
-tags: [c#, .net, selenium, webdriver]
+tags: [c#, phantomjs, selenium-webdriver]
 alias: [/2014/03/05/]
 utilities: highlight
 ---

@@ -3,7 +3,7 @@ layout: post
 title: "Use _netrc to avoid TortoiseGit asking for username and password"
 description: "How to use _netrc in order to avoid TortoiseGit asking for username and password."
 category: notes
-tags: [git, tortoisegit]
+tags: [git, tortoisegit, windows]
 alias: [/2013/05/19/]
 ---
 1. Open `%USERPROFILE%` from Windows Explorer

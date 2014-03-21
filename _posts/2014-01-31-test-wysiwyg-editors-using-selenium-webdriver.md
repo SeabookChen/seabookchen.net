@@ -5,7 +5,7 @@ description: "How to write automated UI functional tests for WYSIWYG HTML editor
 like TinyMCE, CKEditor, CLEditor, CuteEditor and Primefaces editor
 using Selenium WebDriver Ruby binding."
 category: articles
-tags: [selenium, webdriver, ruby]
+tags: [ruby, selenium-webdriver]
 alias: [/2014/01/31/]
 utilities: highlight, toc, show-hidden
 ---
