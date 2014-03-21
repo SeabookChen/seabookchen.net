@@ -17,46 +17,48 @@ var sendGaEvent = function(category, action, label) {
 	}
 };
 
-$('.the-header .nav-link a').on('click', function() {
-	sendGaEvent('Navigation Links', 'Click', this.textContent);
-});
-$('.the-header .nav-link button').on('click', function() {
-	sendGaEvent('Navigation Buttons', 'Click', this.getAttribute('data-ga'));
-});
+$(document).ready(function () {
+	$('.the-header .nav-link a').on('click', function() {
+		sendGaEvent('Navigation Links', 'Click', this.textContent);
+	});
+	$('.the-header .nav-link button').on('click', function() {
+		sendGaEvent('Navigation Buttons', 'Click', this.getAttribute('data-ga'));
+	});
 
-$('[class$=wrapper] .results a').on('click', function() {
-	sendGaEvent('Overlay Links', 'Click', this.textContent);
-});
+	$('[class$=wrapper] .results a').on('click', function() {
+		sendGaEvent('Overlay Links', 'Click', this.textContent);
+	});
 
-$('.the-footer .about a').on('click', function() {
-	sendGaEvent('Footer Links', 'Click', this.textContent);
-});
-$('.the-footer .social-links > a').on('click', function() {
-	sendGaEvent('Social Links', 'Click', this.title);
-});
+	$('.the-footer .about a').on('click', function() {
+		sendGaEvent('Footer Links', 'Click', this.textContent);
+	});
+	$('.the-footer .social-links > a').on('click', function() {
+		sendGaEvent('Social Links', 'Click', this.title);
+	});
 
-$('.tag_box.categories a').on('click', function() {
-	sendGaEvent('Categories', 'Click', this.title);
-});
-$('.tag_box.tags a').on('click', function() {
-	sendGaEvent('Tags', 'Click', this.title);
-});
+	$('.tag_box.categories a').on('click', function() {
+		sendGaEvent('Categories', 'Click', this.title);
+	});
+	$('.tag_box.tags a').on('click', function() {
+		sendGaEvent('Tags', 'Click', this.title);
+	});
 
-$('a.internal').on('click', function() {
-	label = (this.getAttribute('data-ga') !== null) ? this.getAttribute('data-ga') : this.textContent;
-	sendGaEvent('Internal Links', 'Click', label);
-});
+	$('a.internal').on('click', function() {
+		label = (this.getAttribute('data-ga') !== null) ? this.getAttribute('data-ga') : this.textContent;
+		sendGaEvent('Internal Links', 'Click', label);
+	});
 
-$('.unit-article .meta .author').on('click', function() {
-	sendGaEvent('Post meta Links', 'Click', 'Author');
-});
-$('.unit-article .meta .license').on('click', function() {
-	sendGaEvent('Post meta Links', 'Click', 'License');
-});
-$('.unit-article .meta .list-linear a').on('click', function() {
-	if (this.getAttribute('data-ga') !== null){
-		sendGaEvent('Post meta Links', 'Click', this.getAttribute('data-ga'));
-	}
+	$('.unit-article .meta .author').on('click', function() {
+		sendGaEvent('Post meta Links', 'Click', 'Author');
+	});
+	$('.unit-article .meta .license').on('click', function() {
+		sendGaEvent('Post meta Links', 'Click', 'License');
+	});
+	$('.unit-article .meta .list-linear a').on('click', function() {
+		if (this.getAttribute('data-ga') !== null){
+			sendGaEvent('Post meta Links', 'Click', this.getAttribute('data-ga'));
+		}
+	});
 });
 </script>
 
