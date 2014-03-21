@@ -20,7 +20,7 @@ priority: 0.8
 </ul>
 
 {% for category in sorted_categories %}
-    <h3 id="{{ category | replace:' ','-' }}-ref">{{ category }}</h3>
+    <h3 id="category-{{ category | replace:' ','-' }}">{{ category }}</h3>
     <ul class="posts">
         {% assign pages_list = site.categories[category] %}
         {% include JB/pages_list %}
