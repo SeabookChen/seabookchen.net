@@ -23,8 +23,8 @@ This can be done by two approaches:
 2. `Elements` panel should be opened by default.
 3. Press `Ctrl` + `F` to enable DOM searching in the panel.
 4. Type in XPath or CSS selectors to evaluate.
-5. If some elements are matched, they will be highlighted in DOM.<br />
-   However, if there are strings inside DOM that are also matched, they will be considered as valid results as well.
+5. If there are matched elements, they will be highlighted in DOM.<br />
+   However, if there are matching strings inside DOM, they will be considered as valid results as well.
    For example, CSS selector `header` should match everything (inline CSS, scripts etc.) that contains the word `header`, instead of match only elements.
 
 <a class="post-image" href="/assets/images/posts/2014-03-23-evaluate-using-elements-panel.gif">
@@ -37,8 +37,8 @@ This can be done by two approaches:
 2. Switch to `Console` panel.
 3. Type in XPath like `$x(".//header")` to evaluate and validate.
 4. Type in CSS selectors like `$$("header")` to evaluate and validate.
-5. Check the results returned from console execution.
-	- If there are matched elements, they will be return in a list. Otherwise an empty list `[ ]` is shown.
+5. Check results returned from console execution.
+	- If elements are matched, they will be returned in a list. Otherwise an empty list `[ ]` is shown.
 
 	> $x(".//article")<br />
 	> [&lt;article class="unit-article layout-post"&gt;...&lt;/article&gt;]
@@ -46,7 +46,7 @@ This can be done by two approaches:
 	> $x(".//not-a-tag")<br />
 	> [ ]
 
-	- If the XPath or CSS selector is not valid, an exception will be shown in red text. For example:
+	- If the XPath or CSS selector is invalid, an exception will be shown in red text. For example:
 
 	> $x(".//header/")<br />
 	> SyntaxError: Failed to execute 'evaluate' on 'Document': The string './/header/' is not a valid XPath expression.
