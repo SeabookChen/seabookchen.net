@@ -23,7 +23,7 @@ For example, `Ruby 2.0.0-p451 (x64)` is the Windows installer for Ruby 2.0.0 x64
     please note installer advises that "Please avoid any folder name that contains spaces (e.g. Program Files)."
     - Tick "Add Ruby executables to your PATH" checkbox, so PATH will be updated automatically to avoid headaches.
 
-    <a class="post-image" href="/assets/images/posts/2013-05-11-ruby-installer.png" title="Windows Ruby installer">
+    <a class="post-image" href="/assets/images/posts/2013-05-11-ruby-installer.png">
         <img itemprop="image" data-src="/assets/images/posts/2013-05-11-ruby-installer.png" src="/assets/js/unveil/loader.gif" alt="Windows Ruby installer" />
     </a>
 
