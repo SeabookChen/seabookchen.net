@@ -39,13 +39,13 @@
         <div class="nav-form">
             <input type="text" class="search-field" placeholder="{{ site.translations.nav_placeholder }}">
             <a class="btn-close">{{ site.translations.close }}</a>
-            <ul class="results">
-                <li><a href="/articles">{{ site.translations.articles }}</a></li>
-                <li><a href="/notes">{{ site.translations.notes }}</a></li>
-                <li><a href="/categories">{{ site.translations.categories }}</a></li>
-                <li><a href="/tags">{{ site.translations.tags }}</a></li>
-                <li><a href="/">{{ site.translations.about }}</a></li>
-            </ul>
+            <div class="results">
+                <a href="/articles">{{ site.translations.articles }}</a>
+                <a href="/notes">{{ site.translations.notes }}</a>
+                <a href="/categories">{{ site.translations.categories }}</a>
+                <a href="/tags">{{ site.translations.tags }}</a>
+                <a href="/">{{ site.translations.about }}</a>
+            </div>
         </div>
     </div>
 
