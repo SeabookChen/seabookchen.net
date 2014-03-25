@@ -1,14 +1,14 @@
 ---
 layout: post
 title: "Setup Stringer on Heroku"
-description: "How to setup stringer, a self-hosted anti-social RSS reader on Heroku."
+description: "Brief note on how to setup stringer, a self-hosted anti-social RSS reader on Heroku."
 category: notes
 tags: [stringer, heroku]
 alias: []
 utilities: fancybox, toc, unveil
 ---
-This is a brief note on how to setup [Stringer][stringer], a self-hosted anti-social RSS reader on Heroku.
-Project's [README file](https://github.com/swanson/stringer/blob/master/README.md) has covered some of the following steps.
+This is a brief note on how to setup [Stringer][Stringer], a self-hosted anti-social RSS reader on Heroku.
+Some of the following steps have already been covered by Project's [README file][README].
 
 <div id="toc"></div>
 
@@ -17,7 +17,7 @@ Stringer doesn't have any external dependencies,
 but to download and setup it up on Heroku, two things are needed.
 
 - [Git][Git Downloads]
-- [Heroku][Heroku] account with valid credit card details (which won't be charged for free add-ons though).
+- [Heroku][Heroku] account with valid credit card details (which won't be charged for free add-ons).
 
 ## <a id="clone-stringer-repository"></a>Clone repository
 If it is been forked, clone your own Stringer repository.
@@ -84,8 +84,8 @@ Otherwise clone the original repository like this:
 
 ## <a id="add-custom-domain"></a>Add custom domain
 
-1. Detailed official documentation is [here](https://devcenter.heroku.com/articles/custom-domains)
-on how to add custom domain to this Heroku Stringer app.
+1. Detailed official documentation on how to add custom domain to this Heroku Stringer app
+   is [here](https://devcenter.heroku.com/articles/custom-domains).
   > heroku domains:add reader.yizeng.me
 
 2. Visit domain registrar's "DNS Records" page and create a CNAME record pointing to Heroku app.<br />
@@ -113,7 +113,8 @@ Solution from [StackOverflow](http://stackoverflow.com/q/4269922/1177636):
 - If no keys exist, create a new one:
 > heroku keys:add
 
+[Stringer]: https://github.com/swanson/stringer
+[README]: https://github.com/swanson/stringer/blob/master/README.md
 [Git Downloads]: http://git-scm.com/downloads
 [Heroku]: https://www.heroku.com/
-[stringer]: https://github.com/swanson/stringer
 [Heroku Toolbelt]: https://toolbelt.heroku.com/
