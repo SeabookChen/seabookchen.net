@@ -87,10 +87,26 @@
 		border-left: .7em solid $color-box-border;
 		margin: 1em 16px;
 		padding-left: 1em;
+		overflow: auto;
 
 		p {
-			margin-left: 0;
-			margin-right: 0;
+			margin: 12px 0
+		}
+
+		&::-webkit-scrollbar {
+			@include border-radius(5px);
+			height:8px;
+			background-color: $color-inline-code-background;
+		}
+
+		&::-webkit-scrollbar-track {
+			@include border-radius(5px);
+			background-color: $color-box-border;
+		}
+
+		&::-webkit-scrollbar-thumb:horizontal {
+			@include border-radius(5px);
+			background-color: #B1B699;
 		}
 	}
 
