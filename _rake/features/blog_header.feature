@@ -56,7 +56,7 @@ Feature: Test blog page header
 			| Categories | /categories/ | Categories - Yi Zeng | Posts By Category    |
 			| Tags       | /tags/       | Tags - Yi Zeng       | Posts By Tag         |
 
-	Scenario Outline: Header's search link should be shown when width is greater then 520px
+	Scenario Outline: Header's search link should be shown when width is greater then 420px
 		When I set window width to <width>px
 		Then I should <see?> header's search link
 
@@ -64,21 +64,21 @@ Feature: Test blog page header
 			| width | see?    |
 			| 240   | not see |
 			| 320   | not see |
-			| 480   | not see |
+			| 480   | see     |
 			| 640   | see     |
 			| 768   | see     |
 			| 1280  | see     |
 			| 1920  | see     |
 
-	Scenario Outline: Header's search button icon should be shown when width is smaller then 520px
+	Scenario Outline: Header's menu and search button should be shown when width is smaller then 420px
 		When I set window width to <width>px
-		Then I should <see?> header's search button icon
+		Then I should <see?> header's menu and search button
 
 		Examples:
 			| width | see?    |
 			| 240   | see     |
 			| 320   | see     |
-			| 480   | see     |
+			| 480   | not see |
 			| 640   | not see |
 			| 768   | not see |
 			| 1280  | not see |
@@ -92,7 +92,7 @@ Feature: Test blog page header
 			| width | element? |
 			| 240   | button   |
 			| 320   | button   |
-			| 480   | button   |
+			| 480   | link     |
 			| 640   | link     |
 			| 768   | link     |
 			| 1280  | link     |
@@ -108,7 +108,7 @@ Feature: Test blog page header
 			| width | element? |
 			| 240   | button   |
 			| 320   | button   |
-			| 480   | button   |
+			| 480   | link     |
 			| 640   | link     |
 			| 768   | link     |
 			| 1280  | link     |

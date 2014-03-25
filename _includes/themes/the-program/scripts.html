@@ -17,45 +17,59 @@ var sendGaEvent = function(category, action, label) {
 	}
 };
 
-$('.the-header .nav-link').on('click', function() {
-	sendGaEvent('Navigation Links', 'Click', this.textContent);
-});
-$('.the-footer .about a').on('click', function() {
-	sendGaEvent('Footer Links', 'Click', this.textContent);
-});
-$('.the-footer .social-links > a').on('click', function() {
-	sendGaEvent('Social Links', 'Click', this.title);
-});
-$('.tag_box.categories a').on('click', function() {
-	sendGaEvent('Categories', 'Click', this.title);
-});
-$('.tag_box.tags a').on('click', function() {
-	sendGaEvent('Tags', 'Click', this.title);
-});
-$('a.internal').on('click', function() {
-	label = (this.getAttribute('data-ga') !== null) ? this.getAttribute('data-ga') : this.textContent;
-	sendGaEvent('Internal Links', 'Click', label);
-});
-$('.unit-article .meta .author').on('click', function() {
-	sendGaEvent('Post meta Links', 'Click', 'Author');
-});
-$('.unit-article .meta .license').on('click', function() {
-	sendGaEvent('Post meta Links', 'Click', 'License');
-});
-$('.unit-article .meta .list-linear a').on('click', function() {
-	if (this.getAttribute('data-ga') !== null){
-		sendGaEvent('Post meta Links', 'Click', this.getAttribute('data-ga'));
-	}
+$(document).ready(function () {
+	$('.the-header .nav-link a').on('click', function() {
+		sendGaEvent('Navigation Links', 'Click', this.textContent);
+	});
+	$('.the-header .nav-link button').on('click', function() {
+		sendGaEvent('Navigation Buttons', 'Click', this.getAttribute('data-ga'));
+	});
+
+	$('[class$=wrapper] .results a').on('click', function() {
+		sendGaEvent('Overlay Links', 'Click', this.textContent);
+	});
+
+	$('.the-footer .about a').on('click', function() {
+		sendGaEvent('Footer Links', 'Click', this.textContent);
+	});
+	$('.the-footer .social-links > a').on('click', function() {
+		sendGaEvent('Social Links', 'Click', this.title);
+	});
+
+	$('.tag_box.categories a').on('click', function() {
+		sendGaEvent('Categories', 'Click', this.title);
+	});
+	$('.tag_box.tags a').on('click', function() {
+		sendGaEvent('Tags', 'Click', this.title);
+	});
+
+	$('a.internal').on('click', function() {
+		label = (this.getAttribute('data-ga') !== null) ? this.getAttribute('data-ga') : this.textContent;
+		sendGaEvent('Internal Links', 'Click', label);
+	});
+
+	$('.unit-article .meta .author').on('click', function() {
+		sendGaEvent('Post meta Links', 'Click', 'Author');
+	});
+	$('.unit-article .meta .license').on('click', function() {
+		sendGaEvent('Post meta Links', 'Click', 'License');
+	});
+	$('.unit-article .meta .list-linear a').on('click', function() {
+		if (this.getAttribute('data-ga') !== null){
+			sendGaEvent('Post meta Links', 'Click', this.getAttribute('data-ga'));
+		}
+	});
 });
 </script>
 
-<!-- Jekyll Simple Search option -->
+<!-- Show menu overlay + Jekyll Simple Search option -->
 <script src="/assets/js/jekyll-search.jquery.js"></script>
 <script>
 	$(document).ready(function() {
 		$('.search-field').simpleJekyllSearch({
 			jsonFile : '{{ site.url }}/search.json',
 			template : '<li><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></li>',
+			searchResults: '.search-wrapper .results',
 			searchResultsTitle : '<h4>{{ site.translations.search_results }}</h4>',
 			noResults : '<p>{{ site.translations.search_not_found }}</p>'
 		});
@@ -63,20 +77,26 @@ $('.unit-article .meta .list-linear a').on('click', function() {
 
 	(function($, window, undefined) {
 		var closeOverlay = function() {
-			$('.search-wrapper').removeAttr('style');
-			$(".search-form").toggleClass('active');
-			$("body").removeClass('search-overlay');
+			$('.nav-wrapper, .search-wrapper').removeAttr('style');
+			$(".nav-form, .search-form").removeClass('active');
+			$("body").removeClass('nav-overlay search-overlay');
 		};
 
 		$('.nav-global .btn-search').on('click', function() {
 			$('.search-wrapper').css({ display: "block" });
-			$(".search-form").toggleClass('active');
+			$(".search-form").addClass('active');
 			$(".search-form").find('input').focus();
-			$("body").toggleClass('search-overlay');
-			sendGaEvent('Navigation Links', 'Click', 'Search');
+			$("body").addClass('search-overlay');
 		});
 
-		$('.search-wrapper .btn-close').on('click', function() {
+		$('.nav-global .btn-menu').on('click', function() {
+			$('.nav-wrapper').css({ display: "block" });
+			$(".nav-form").addClass('active');
+			$(".nav-form .search-field").prop('disabled', true);
+			$("body").addClass('nav-overlay');
+		});
+
+		$('.nav-wrapper .btn-close, .search-wrapper .btn-close').on('click', function() {
 			closeOverlay();
 		});
 

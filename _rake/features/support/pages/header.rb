@@ -13,6 +13,10 @@ module Pages
 			@header.find_element(:css => '.logo > a')
 		end
 
+		def search_menu
+			@header.find_element(:css => 'button.btn-menu')
+		end
+
 		def search_button
 			@header.find_element(:css => 'button.btn-search')
 		end
