@@ -44,7 +44,7 @@ which uses binary blob database to maintain all setting entries with their value
 
 4. Select the `left-handed` under `touchpad` and set its value to `left`.
 
-<a class="post-image" href="/assets/images/posts/2013-07-14-dconf-editor-periperals-touchpad.png" title="Invert touchpad from dconf-editor">
+<a class="post-image" href="/assets/images/posts/2013-07-14-dconf-editor-periperals-touchpad.png">
 	<img itemprop="image" data-src="/assets/images/posts/2013-07-14-dconf-editor-periperals-touchpad.png" src="/assets/js/unveil/loader.gif" alt="Invert touchpad from dconf-editor" />
 </a>
 
