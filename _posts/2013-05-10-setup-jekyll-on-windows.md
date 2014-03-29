@@ -161,14 +161,24 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
 3. Error message:
 
-        Generating...   Liquid Exception: No such file or directory - python c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/pygments.rb-0.4.2/lib/pygments/mentos.py in 2013-04-22-hello-world.md
+        Generating... Liquid Exception: No such file or directory - python c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/pygments.rb-0.4.2/lib/pygments/mentos.py in 2013-04-22-hello-world.md
 
     **Possible Reason**: The PATH just set is yet to be effective.
 
-    **Possible Solution**: First make sure no spaces or trailing slash in the PATH. Then restart Command Prompt. If it's not working, try logout Windows and log back in again.
+    **Possible Solution**: First make sure PATH for Python is correct without no spaces or trailing slash. Then restart Command Prompt. If it's not working, try logout Windows and log back in again.
     Or even try the ultimate and most powerful solution - "turning the computer off and on again".
 
 4. Error message:
+
+        Generating... Liquid Exception: No such file or directory - /bin/sh in _posts/2013-04-22-hello-world.md
+
+    **Possible Reason**: Incompatible issue with pygments.rb versions 0.5.1/0.5.2.
+
+    **Possible Solution**: Downgrade pygments.rb gem from 0.5.1/0.5.2 to version 0.5.0.
+    > gem uninstall pygments.rb --version '=0.5.2'<br />
+    > gem install pygments.rb --version 0.5.0
+
+5. Error message:
 
         c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/dependency.rb:296:in `to_specs': Could not find 'pygments.rb' (~> 0.4.2) - did find: [pygments.rb-0.5.0] (Gem::LoadError)
         from c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/specification.rb:1196:in `block in activate_dependencies'
@@ -184,18 +194,6 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
     **Possible Solution**: Downgrade pygments.rb gem to version 0.4.2
     > gem uninstall pygments.rb --version “=0.5.0”<br />
     > gem install pygments.rb --version “=0.4.2”
-
-5. Error message:
-
-        Destination: d:/yizeng.me/_site
-        Generating... c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/posix-spawn-0.3.6/lib/posix/spawn.rb:162: warning: cannot close fd before spawn
-        Liquid Exception: No such file or directory - /bin/sh in _posts/2013-04-22-hello-world.md
-
-    **Possible Reason**: Incompatible issue with pygments.rb versions 0.5.1/0.5.2.
-
-    **Possible Solution**: Downgrade pygments.rb gem from 0.5.1/0.5.2 to version 0.5.0.
-    > gem uninstall pygments.rb --version '=0.5.2'<br />
-    > gem install pygments.rb --version 0.5.0
 
 [Full installation instructions]: https://github.com/oneclick/rubyinstaller/wiki/Development-Kit#installation-instructions
 [Jekyll Quick-start guide]: http://jekyllrb.com/docs/quickstart/
