@@ -215,7 +215,8 @@ which is possible using Selenium's native `send_keys` method.
 Unlike injecting JavaScript using editors' built-in methods or changing innerHTML,
 the keys sent into the editor will always be inside `<p>` tag.
 As a result, sending `<h1>Heading</h1>` won't show up as real WYSIWYG heading,
-but in plain text.
+but in plain text. Furthermore, this approach has been reported behaving incorrectly on Firefox,
+which might be better to avoid if possible.
 
 {% highlight ruby %}
 editor_body = driver.find_element(:tag_name => 'body')
