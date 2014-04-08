@@ -119,8 +119,8 @@ driver.quit
 {% endhighlight %}
 
 ## <a id="output"></a>Output
->Demo div &lt;p>with a hidden paragraph inside.&lt;/p>&lt;hr>&lt;br><br />
->Demo div &lt;p>with a hidden paragraph inside.&lt;/p>&lt;hr>&lt;br><br />
+>Demo div &lt;p style="display:none">with a hidden paragraph inside.&lt;/p>&lt;hr>&lt;br><br />
+>Demo div &lt;p style="display:none">with a hidden paragraph inside.&lt;/p>&lt;hr>&lt;br><br />
 
 >Demo div with a hidden paragraph inside.<br />
 >Demo div with a hidden paragraph inside.
