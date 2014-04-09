@@ -27,10 +27,14 @@ before_install:
   - sass --version
   - compass --version
 
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+
 before_script:
   - compass compile  ./assets/css/
   - rake jekyll detach=true
   - sleep 3 # give Web server some time to bind to sockets, etc
 
 script:
-  - rake cucumber --rakefile=_rake/run_ui_tests.rake
+  - rake unittests
+  - rake cucumber
