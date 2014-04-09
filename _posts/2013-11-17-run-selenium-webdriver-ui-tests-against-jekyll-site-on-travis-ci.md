@@ -65,13 +65,11 @@ before_script:
 
 
 ## <a id="run-tests"></a>Run UI tests
-Create a rakefile to run Cucumber Selenium WebDriver UI tests and
-let Travis CI rake it by putting the command below
-in `.travis.yml`'s `script` section.
+In `.travis.yml`'s `script` section, specify the commands to run those cucumber tests.
 
 {% prettify yaml %}
 script:
-  - rake cucumber --rakefile=<path_to_rakefile>
+  -  cucumber ./_rake/features/
 {% endprettify %}
 
 {% footnotes %}
