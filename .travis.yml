@@ -15,17 +15,13 @@ before_install:
   - gem update --system
   - gem update
 
-  - gem install sass
-  - gem install compass
-  - gem install jekyll
-  - gem install rdiscount
-  - gem install cucumber
-  - gem install selenium-webdriver
+  - gem install sass compass jekyll rdiscount cucumber selenium-webdriver
 
   - gem --version
-  - phantomjs --version # output the phantomjs version
   - sass --version
   - compass --version
+  - firefox --version
+  - phantomjs --version
 
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
