@@ -2,34 +2,38 @@ require 'selenium-webdriver'
 require 'test/unit'
 
 module Test
-	class DisableJavaScriptTests < Test::Unit::TestCase
 
-		def is_javascript_enabled?
-			@driver.get('https://www.whatismybrowser.com/is-javascript-enabled')
+	module DisableJavaScript
 
-			wait = Selenium::WebDriver::Wait.new(:timeout => 10) # seconds
-			detection = wait.until { @driver.find_element(:css, '#javascript-detection') }
-			return detection.text.strip
-		end
+		class DisableJavaScriptTests < Test::Unit::TestCase
 
-		def test_disabling_javascript_in_firefox
-			profile = Selenium::WebDriver::Firefox::Profile.new
-			profile["javascript.enabled"] = false
-			@driver = Selenium::WebDriver.for(:firefox, :profile => profile)
+			def is_javascript_enabled?
+				@driver.get('https://www.whatismybrowser.com/is-javascript-enabled')
 
-			assert_equal('No', is_javascript_enabled?)
+				wait = Selenium::WebDriver::Wait.new(:timeout => 10) # seconds
+				detection = wait.until { @driver.find_element(:css, '#javascript-detection') }
+				return detection.text.strip
+			end
 
-			@driver.quit
-		end
+			def test_disabling_javascript_in_firefox
+				profile = Selenium::WebDriver::Firefox::Profile.new
+				profile["javascript.enabled"] = false
+				@driver = Selenium::WebDriver.for(:firefox, :profile => profile)
 
-		def test_disabling_javascript_in_phantomjs
-			omit('Disabling JavaScript in PhantomJS will stop browser from functioning. Omitting...')
+				assert_equal('No', is_javascript_enabled?)
 
-			capabilities = Selenium::WebDriver::Remote::Capabilities.phantomjs("phantomjs.page.settings.javascriptEnabled" => "false")
-			@driver = Selenium::WebDriver.for :phantomjs, :desired_capabilities => capabilities
-			assert_equal('No', is_javascript_enabled?)
+				@driver.quit
+			end
 
-			@driver.quit
+			def test_disabling_javascript_in_phantomjs
+				omit("Disabling JavaScript in PhantomJS will stop browser from functioning.\nOmitting ")
+
+				capabilities = Selenium::WebDriver::Remote::Capabilities.phantomjs("phantomjs.page.settings.javascriptEnabled" => "false")
+				@driver = Selenium::WebDriver.for :phantomjs, :desired_capabilities => capabilities
+				assert_equal('No', is_javascript_enabled?)
+
+				@driver.quit
+			end
 		end
 	end
 end
