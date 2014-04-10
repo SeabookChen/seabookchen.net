@@ -17,7 +17,7 @@ module GetTextFromHiddenElements
 			@driver.quit
 		end
 
-		def test_get_text_using_innerhtml
+		def test_getting_text_by_innerhtml
 			@driver.navigate.to(DEMO_PAGE)
 
 			demo_div = @driver.find_element(:id, 'demo-div')
@@ -26,7 +26,7 @@ module GetTextFromHiddenElements
 			assert_equal(EXPECTED_INNERHTML, @driver.execute_script("return arguments[0].innerHTML", demo_div))
 		end
 
-		def test_get_text_using_textcontent
+		def test_getting_text_by_textcontent
 			@driver.navigate.to(DEMO_PAGE)
 
 			demo_div = @driver.find_element(:id, 'demo-div')
