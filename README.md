@@ -3,7 +3,7 @@
 This repository hosts the source of Yi Zeng's personal website - [yizeng.me](http://yizeng.me).
 
 ## License
-- [Creative Commons BY-SA 3.0](http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB) - All blog posts
+- [Creative Commons BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/) - All blog posts
 - [MIT License](https://raw.github.com/yizeng/yizeng.me/develop/LICENSE) - Code written by me
 
 ## Acknowledgements

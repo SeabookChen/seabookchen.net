@@ -165,7 +165,7 @@ translations:
 
   # post.html
   published: 'Published'
-  cc_license: 'http://creativecommons.org/licenses/by-sa/3.0/deed.en_GB'
+  cc_license: 'http://creativecommons.org/licenses/by-sa/4.0/'
   view: 'View'
   show: 'Show'
 
