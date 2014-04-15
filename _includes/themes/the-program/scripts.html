@@ -218,7 +218,7 @@ $(document).ready(function () {
 	{% endif %}
 {% endif %}
 
-{% if page.categories != '' %}
+{% if page.categories != nil %}
 <!-- Click to load Disqus (http://christian-fei.com/how-to-lazy-load-disqus-comments) -->
 <script>
 $(document).ready(function () {
@@ -231,7 +231,6 @@ $(document).ready(function () {
 	}
 
 	$('.comment .show-hidden').on('click', function() {
-		$(this).html('{{ site.translations.loading }}');
 		loadDisqus();
 		$(this).remove();
 	});
