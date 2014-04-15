@@ -235,6 +235,10 @@ $(document).ready(function () {
 		loadDisqus();
 		$(this).remove();
 	});
+
+	if(/\#comment/.test(location.hash)){
+		$('.comment .show-hidden').trigger('click');
+	}
 });
 </script>
 {% endif %}
