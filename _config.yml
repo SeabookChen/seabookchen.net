@@ -168,6 +168,8 @@ translations:
   cc_license: 'http://creativecommons.org/licenses/by-sa/4.0/'
   view: 'View'
   show: 'Show'
+  show_comments: 'Show Comments'
+  loading: 'Loading...'
 
   # 404.html
   404_heading: 'Sorry, the page is not found.'

@@ -217,3 +217,24 @@ $(document).ready(function () {
 		</script>
 	{% endif %}
 {% endif %}
+
+{% if page.categories != '' %}
+<!-- Click to load Disqus (http://christian-fei.com/how-to-lazy-load-disqus-comments) -->
+<script>
+$(document).ready(function () {
+	function loadDisqus() {
+		var dsq = document.createElement('script');
+		dsq.type = 'text/javascript';
+		dsq.async = true;
+		dsq.src = 'http://{{ site.JB.comments.disqus.short_name }}.disqus.com/embed.js';
+		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	}
+
+	$('.comment .show-hidden').on('click', function() {
+		$(this).html('{{ site.translations.loading }}');
+		loadDisqus();
+		$(this).remove();
+	});
+});
+</script>
+{% endif %}
