@@ -41,6 +41,31 @@
 		}
 	}
 
+	.button,
+	button {
+		@include background-clip(padding-box);
+		@include transition(all .3s ease-in-out);
+		background: transparent;
+		border: 2px solid $color-text;
+		color: $color-text;
+		cursor: pointer;
+		display: inline-block;
+		margin-left: 8px;
+		padding: 2px 24px;
+		outline: 0;
+		text-align: center;
+		text-decoration: none;
+		text-shadow: none;
+		vertical-align: inherit;
+		white-space: nowrap;
+
+		&:hover {
+			background-color: #FFF;
+			border-color: $color-hover;
+			color: $color-hover;
+		}
+	}
+
 	.meta {
 		border-bottom: 1px dotted rgba(21, 25, 25, 0.8);
 		margin-bottom: 26px;
@@ -273,8 +298,16 @@
 		margin-bottom: 0
 	}
 
-	.comment a {
-		border-bottom: 0
+	.comment {
+		a {
+			border-bottom: 0
+		}
+
+		.show-hidden {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 
 	.footnotes {
@@ -333,31 +366,6 @@
 	a.license {
 		float: right;
 		border-bottom: none;
-	}
-
-	.button,
-	button {
-		@include background-clip(padding-box);
-		@include transition(all .3s ease-in-out);
-		background: transparent;
-		border: 2px solid $color-text;
-		color: $color-text;
-		cursor: pointer;
-		display: inline-block;
-		margin-left: 8px;
-		padding: 2px 24px;
-		outline: 0;
-		text-align: center;
-		text-decoration: none;
-		text-shadow: none;
-		vertical-align: inherit;
-		white-space: nowrap;
-
-		&:hover {
-			background-color: #FFF;
-			border-color: $color-hover;
-			color: $color-hover;
-		}
 	}
 
 	.mce-btn > button {
