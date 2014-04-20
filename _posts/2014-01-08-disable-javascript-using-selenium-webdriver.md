@@ -7,7 +7,7 @@ categories: [articles, popular]
 tags: [ruby, phantomjs, selenium-webdriver]
 alias: [/2014/01/08/]
 last_updated: April 20, 2014
-utilities: highlight, toc
+utilities: highlight
 ---
 Selenium WebDriver is a web automation framework relies heavily on [Automation Atoms][Automation Atoms],
 which are implemented as JavaScript functions for execution within the browser.
@@ -20,14 +20,14 @@ how to start browsers using Selenium WebDriver with JavaScript disabled.
 This article shows a few examples on how to disable JavaScript
 in Chrome, Firefox, IE and PhantomJS using Selenium WebDriver Ruby binding.
 
-<div id="toc"></div>
+* Kramdown table of contents
+{:toc .toc}
 
-## <a id="chrome"></a>Chrome
+## Chrome
 
-### <a id="chromedriver"></a>ChromeDriver (with Chrome 28 or under)
+### ChromeDriver (with Chrome 28 or under)
 
-Disabling JavaScript in Chrome is possible 
-with old ChromeDriver prior to ChromeDriver2,
+Disabling JavaScript in Chrome is possible with old ChromeDriver prior to ChromeDriver2,
 which only supports Chrome 28 or under.
 
 {% highlight ruby %}
@@ -39,21 +39,20 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome, :switches => %w[--disable-javascript]
 {% endhighlight %}
 
-### <a id="chromedriver-2"></a>ChromeDriver2 (with Chrome 29 or above)
+### ChromeDriver2 (with Chrome 29 or above)
 
-The above method no longer works for ChromeDriver2,
-and it will not be fixed as ChromeDriver should have
+The above method no longer works for ChromeDriver2, and it will not be fixed as ChromeDriver should have
 JavaScript enabled to work properly in the first place.
 
 Here are quotes from [Issue 3175][Issue 3175] and [Issue 6672][Issue 6672]:
-> WARNING: Running without JavaScript is unsupported and will likely break a large portion of the ChromeDriver's functionality. I suspect you will be able to do little more than navigate to a page.  This is NOT a supported use case, and we will not be supporting it.
 
+> WARNING: Running without JavaScript is unsupported and will likely break a large portion of the ChromeDriver's functionality. I suspect you will be able to do little more than navigate to a page.  This is NOT a supported use case, and we will not be supporting it.
+>
 > Closing this as WontFix - the ChromeDriver (and every other WebDriver implementation I'm aware of) require JavaScript to function.
 
-## <a id="firefox"></a>Firefox
+## Firefox
 
-JavaScript can be disabled from `javascript.enabled` preference
-in Firefox's [about:config][about:config] page.
+JavaScript can be disabled from `javascript.enabled` preference in Firefox's [about:config][about:config] page.
 Here is how to achieve it using Selenium WebDriver Ruby binding.
 
 {% highlight ruby %}
@@ -68,7 +67,7 @@ profile["javascript.enabled"] = false
 driver = Selenium::WebDriver.for(:firefox, :profile => profile)
 {% endhighlight %}
 
-## <a id="ie"></a>IE
+## IE
 
 Unfortunately, this is also not possible in IEDriver.
 
@@ -79,14 +78,15 @@ Selenium is designed to ignore capabilities that are not supported by the reques
 works on headless HTMLUnitDriver.
 
 A quote from IEDriver's developer in [this StackOverflow answer][Disable JS in IEDriver]:
-> You can't disable JavaScript in the IE driver.
 
+> You can't disable JavaScript in the IE driver.
+>
 > Furthermore, much of the functionality of the IE driver
 (and indeed all drivers at present) is implemented in JavaScript.
 That means disabling JavaScript would render large parts of the IE driver
 (and indeed all drivers at present) useless.
 
-## <a id="phantomjs"></a>PhantomJS
+## PhantomJS
 
 It is possible to disable JavaScript completely in PhantomJS
 using `javascriptEnabled` setting in its [API][PhantomJS Settings API] reference.

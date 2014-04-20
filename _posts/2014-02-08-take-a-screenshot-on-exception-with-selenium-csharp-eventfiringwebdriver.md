@@ -34,19 +34,19 @@ Code has been tested under environment Windows 7, Firefox 26 with Selenium 2.39.
 private IWebDriver driver;
 
 public void FooMethod() {
-	var firingDriver = new EventFiringWebDriver(new FirefoxDriver());
-	firingDriver.ExceptionThrown += firingDriver_TakeScreenshotOnException;
+    var firingDriver = new EventFiringWebDriver(new FirefoxDriver());
+    firingDriver.ExceptionThrown += firingDriver_TakeScreenshotOnException;
 
-	driver = firingDriver;
-	driver.Navigate().GoToUrl("http://stackoverflow.com");
+    driver = firingDriver;
+    driver.Navigate().GoToUrl("http://yizeng.me");
 
-	// try find a non-existent element where NoSuchElementException should be thrown
-	driver.FindElement(By.CssSelector("#some_id .foo")); // a screenshot should be taken automatically
+    // try find a non-existent element where NoSuchElementException should be thrown
+    driver.FindElement(By.CssSelector("#some_id .foo")); // a screenshot should be taken automatically
 }
 
 private void firingDriver_TakeScreenshotOnException(object sender, WebDriverExceptionEventArgs e) {
-	string timestamp = DateTime.Now.ToString("yyyy-MM-dd-hhmm-ss");
-	driver.TakeScreenshot().SaveAsFile("Exception-" + timestamp + ".png", ImageFormat.Png);
+    string timestamp = DateTime.Now.ToString("yyyy-MM-dd-hhmm-ss");
+    driver.TakeScreenshot().SaveAsFile("Exception-" + timestamp + ".png", ImageFormat.Png);
 }
 {% endprettify %}
 

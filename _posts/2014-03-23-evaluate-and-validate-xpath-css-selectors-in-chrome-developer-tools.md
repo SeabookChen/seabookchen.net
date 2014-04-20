@@ -5,7 +5,7 @@ description: "Demonstrate two approaches to evaluate and validate XPath/CSS sele
 categories: [articles, popular]
 tags: [css-selectors, selenium-webdriver, xpath]
 alias: [/2014/03/23/]
-utilities: fancybox, toc, unveil
+utilities: fancybox, unveil
 ---
 Google Chrome provides a built-in debugging tool called "[Chrome DevTools][Chrome DevTools]" out of the box,
 which includes a handy feature that can evaluate or validate XPath/CSS selectors without any third party extensions.
@@ -13,11 +13,9 @@ which includes a handy feature that can evaluate or validate XPath/CSS selectors
 This can be done by two approaches:
 
 - Use the search function inside `Elements` panel to evaluate XPath/CSS selectors and highlight matching nodes in the DOM.
-- Execute tokens `$x("some_xpath")` or `$$("css-selectors")` in`Console` panel, which will both evaluate and validate.
+- Execute tokens `$x("some_xpath")` or `$$("css-selectors")` in `Console` panel, which will both evaluate and validate.
 
-<div id="toc"></div>
-
-## <a id="from-elements-panel"></a>From Elements panel
+## From Elements panel
 
 1. Press `F12` to open up Chrome DevTools.
 2. `Elements` panel should be opened by default.
@@ -28,10 +26,10 @@ This can be done by two approaches:
    For example, CSS selector `header` should match everything (inline CSS, scripts etc.) that contains the word `header`, instead of match only elements.
 
 <a class="post-image" href="/assets/images/posts/2014-03-23-evaluate-using-elements-panel.gif">
-  <img itemprop="image" data-src="/assets/images/posts/2014-03-23-evaluate-using-elements-panel.gif" src="/assets/js/unveil/loader.gif" alt="Evaluate XPath/CSS selectors using 'Elements' panel's seach function" />
+<img itemprop="image" data-src="/assets/images/posts/2014-03-23-evaluate-using-elements-panel.gif" src="/assets/js/unveil/loader.gif" alt="Evaluate XPath/CSS selectors using 'Elements' panel's seach function" />
 </a>
 
-## <a id="from-console-panel"></a>From Console panel
+## From Console panel
 
 1. Press `F12` to open up Chrome DevTools.
 2. Switch to `Console` panel.
@@ -42,7 +40,7 @@ This can be done by two approaches:
 
 	> $x(".//article")<br />
 	> [&lt;article class="unit-article layout-post"&gt;...&lt;/article&gt;]
-
+	>
 	> $x(".//not-a-tag")<br />
 	> [ ]
 
@@ -50,54 +48,54 @@ This can be done by two approaches:
 
 	> $x(".//header/")<br />
 	> SyntaxError: Failed to execute 'evaluate' on 'Document': The string './/header/' is not a valid XPath expression.
-
+	>
 	> $$("header[id=]")<br />
 	> SyntaxError: Failed to execute 'querySelectorAll' on 'Document': 'header[id=]' is not a valid selector.
 
 <a class="post-image" href="/assets/images/posts/2014-03-23-evaluate-using-console-panel.gif">
-  <img itemprop="image" data-src="/assets/images/posts/2014-03-23-evaluate-using-console-panel.gif" src="/assets/js/unveil/loader.gif" alt="Evaluate XPath/CSS selectors using 'Console' panel" />
+<img itemprop="image" data-src="/assets/images/posts/2014-03-23-evaluate-using-console-panel.gif" src="/assets/js/unveil/loader.gif" alt="Evaluate XPath/CSS selectors using 'Console' panel" />
 </a>
 
-## <a id="pros-and-cons"></a>Pros and cons
+## Pros and cons
 
 Advantages of one approach are pretty much considered as the cons of another method, and vice versa.
 
 {% datatable %}
 <tr>
-    <th>From 'Elements' panel</th>
-    <th>From 'Console' panel</th>
+	<th>From 'Elements' panel</th>
+	<th>From 'Console' panel</th>
 </tr>
 <tr class="center bold">
-    <td>Pros</td>
-    <td>Cons</td>
+	<td>Pros</td>
+	<td>Cons</td>
 </tr>
 <tr>
-    <td>Quick and easy accessibility</td>
-    <td>Need to switch panel and extra typing</td>
+	<td>Quick and easy accessibility</td>
+	<td>Need to switch panel and extra typing</td>
 </tr>
 <tr>
-    <td>Results are directly highlighted in DOM</td>
-    <td>Results are shown in a list<br />Need to right click and go back to 'Element' panel</td>
+	<td>Results are directly highlighted in DOM</td>
+	<td>Results are shown in a list<br />Need to right click and go back to 'Element' panel</td>
 </tr>
 <tr>
-    <td>Result count is displayed</td>
-    <td>Only a list of matching nodes are displayed</td>
+	<td>Result count is displayed</td>
+	<td>Only a list of matching nodes are displayed</td>
 </tr>
 <tr class="center bold">
-    <td>Cons</td>
-    <td>Pros</td>
+	<td>Cons</td>
+	<td>Pros</td>
 </tr>
 <tr>
-    <td>All matched strings are also counted in</td>
-    <td>Will only match elements</td>
+	<td>All matched strings are also counted in</td>
+	<td>Will only match elements</td>
 </tr>
 <tr>
-    <td>Only evaluates, doesn't validate<br />Invalid locators will just return nothing</td>
-    <td>Throw exceptions if locator is invalid</td>
+	<td>Only evaluates, doesn't validate<br />Invalid locators will just return nothing</td>
+	<td>Throw exceptions if locator is invalid</td>
 </tr>
 <tr>
-    <td class="center">-</td>
-    <td>Can be used in console immediately for other purposes</td>
+	<td class="center">-</td>
+	<td>Can be used in console immediately for other purposes</td>
 </tr>
 {% enddatatable %}
 

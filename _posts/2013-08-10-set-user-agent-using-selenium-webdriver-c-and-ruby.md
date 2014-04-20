@@ -7,7 +7,7 @@ categories: [articles, popular]
 tags: [c#, ruby, selenium-webdriver]
 alias: [/2013/08/10/]
 last_updated: April 20, 2014
-utilities: highlight, toc
+utilities: highlight
 ---
 This post demonstrates how to set Chrome, Firefox and PhantomJS's User Agent
 using Selenium WebDriver C# and Ruby bindings.
@@ -15,15 +15,16 @@ using Selenium WebDriver C# and Ruby bindings.
 > Environment:<br />
 > Linux Mint 16, Ruby 2.1.1p76, Selenium 2.41.0, ChromDriver 2.9<br/>
 > Firefox 28.0, Chrome 33, PhantomJS 1.9.7
-
+>
 > Example User Agent (ipad):<br />
 > Mozilla/5.0(iPad; U; CPU iPhone OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B314 Safari/531.21.10
 
-<div id="toc"></div>
+* Kramdown table of contents
+{:toc .toc}
 
-## <a id="chrome"></a>Chrome
+## Chrome
 
-### <a id="chrome-c-sharp"></a>C&#35;
+### C&#35;
 
 {% prettify c# %}
 var options = new ChromeOptions();
@@ -32,7 +33,7 @@ options.AddArgument("--user-agent=Mozilla/5.0 (iPad; CPU OS 6_0 like Mac OS X) A
 IWebDriver driver = new ChromeDriver(options);
 {% endprettify %}
 
-### <a id="chrome-ruby"></a>Ruby
+### Ruby
 
 {% highlight ruby %}
 require 'selenium-webdriver'
@@ -40,9 +41,9 @@ require 'selenium-webdriver'
 driver = Selenium::WebDriver.for :chrome, :switches => %w[--user-agent=Mozilla/5.0(iPad;\ U;\ CPU\ iPhone\ OS\ 3_2\ like\ Mac\ OS\ X;\ en-us)\ AppleWebKit/531.21.10\ (KHTML,\ like\ Gecko)\ Version/4.0.4\ Mobile/7B314\ Safari/531.21.10]
 {% endhighlight %}
 
-## <a id="firefox"></a>Firefox
+## Firefox
 
-### <a id="firefox-c-sharp"></a>C&#35;
+### C&#35;
 
 {% prettify c# %}
 var profile = new FirefoxProfile();
@@ -51,7 +52,7 @@ profile.SetPreference("general.useragent.override", "Mozilla/5.0(iPad; U; CPU iP
 IWebDriver driver = new FirefoxDriver(profile);
 {% endprettify %}
 
-### <a id="firefox-ruby"></a>Ruby
+### Ruby
 
 {% highlight ruby %}
 require 'selenium-webdriver'
@@ -62,9 +63,9 @@ profile['general.useragent.override'] = 'Mozilla/5.0(iPad; U; CPU iPhone OS 3_2 
 driver = Selenium::WebDriver.for :firefox, :profile => profile
 {% endhighlight %}
 
-## <a id="phantomjs"></a>PhantomJS
+## PhantomJS
 
-### <a id="phantomjs-c-sharp"></a>C&#35;
+### C&#35;
 
 {% prettify c# %}
 var options = new PhantomJSOptions();
@@ -73,7 +74,7 @@ options.AddAdditionalCapability("phantomjs.page.settings.userAgent", "Mozilla/5.
 IWebDriver driver = new PhantomJSDriver(options);
 {% endprettify %}
 
-### <a id="phantomjs-ruby"></a>Ruby
+### Ruby
 
 {% highlight ruby %}
 require 'selenium-webdriver'
@@ -83,9 +84,10 @@ capabilities = Selenium::WebDriver::Remote::Capabilities.phantomjs('phantomjs.pa
 driver = Selenium::WebDriver.for :phantomjs, :desired_capabilities => capabilities
 {% endhighlight %}
 
-## <a id="ie"></a>IE
+## IE
 Sadly but as expected, IE doesn't allow Selenium WebDriver to override the User Agent natively.
 [Quote][Set IEDriver UA] from IE driver's developer Jim Evans:
+
 > The IE driver does not support changing the user agent, using capabilities or otherwise. Full stop.
 
 [Set IEDriver UA]: https://groups.google.com/d/msg/selenium-users/q1f-nIn1BJY/pjnmCc3jSz4J

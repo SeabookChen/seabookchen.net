@@ -7,7 +7,7 @@ categories: [articles, popular]
 tags: [jekyll, github]
 alias: [/2013/05/26/]
 last_updated: March 18, 2014
-utilities: highlight, toc
+utilities: highlight
 ---
 This article demonstrates how to create a custom Jekyll 404 page
 for Jekyll sites hosted on [GitHub Page][GitHub Page].
@@ -17,15 +17,17 @@ Also it's worth noting that custom 404 pages will only be functioning on custom 
 For more detailed GitHub Pages official documentation,
 please see [Custom 404 Pages - GitHub Help][Custom 404 Pages - GitHub Help].
 
-<div id="toc"></div>
+* Kramdown table of contents
+{:toc .toc}
 
-## <a id="create-404-file"></a>Create 404.html file
-Create `404.html` in the root directory of Jekyll site,
-<del>which has to be an HTML file</del>{% footnote 1 %}.
+## Create 404.html file
 
-## <a id="add-front-matter"></a>Add YAML Front Matter
-The goal here is to create a custom 404 page like all other pages
-using the same Jekyll theme, without creating a separately designed 404.html.
+Create `404.html` in the root directory of Jekyll site, <del>which has to be an HTML file</del>{% footnote 1 %}.
+
+## Add YAML Front Matter
+
+The goal here is to create a custom 404 page like all other pages using the same Jekyll theme,
+without creating a separately designed 404.html.
 Therefore, add [YAML Front Matter][YAML Front Matter] section to the top of the 404.html and set the layout to be "page".
 
 	---
@@ -33,7 +35,7 @@ Therefore, add [YAML Front Matter][YAML Front Matter] section to the top of the 
 	title: 404
 	---
 
-## <a id="add-404-content"></a>Add 404 content
+## Add 404 content
 Add the actual 404 content after the [YAML Front Matter][YAML Front Matter] section.
 
 	---
@@ -42,7 +44,7 @@ Add the actual 404 content after the [YAML Front Matter][YAML Front Matter] sect
 	---
 	<p>Sorry this page does not exist =(</p>
 
-## <a id="redirect-page"></a>Redirect 404 page automatically
+## Redirect 404 page automatically
 In order to redirect 404 page automatically, the easiest way might be using HTML meta tag, `meta http-equiv="refresh"`.
 
 1. Add a `<meta>` tag in the `<head>` into Jekyll's `default.html`
@@ -54,23 +56,20 @@ In order to redirect 404 page automatically, the easiest way might be using HTML
 	- `5` is the number of seconds to wait before automatically redirecting. Setting to `0` means immediate redirecting.
 	- `url=/` sets the URL to be redirected to, which can also be set to any URLs like `url=http://yizeng.me` etc.
 
-4. Use [Liquid's if-else][Liquid's if-else] statement to ensure
-the auto-redirecting happens to `404.html` only.
+4. Use [Liquid's if-else][Liquid's if-else] statement to ensure the auto-redirecting happens to `404.html` only.
 <script src="https://gist.github.com/yizeng/a4f26459bc8795476ed4.js"></script>
 
 Here is a completed example of `default.html`:
 <script src="https://gist.github.com/yizeng/5428d29c3d5af224475b.js"></script>
 
-## <a id="test-404-page"></a>Test 404 page
+## Test 404 page
 
 1. Build Jekyll server locally using `jekyll serve`,
-then go to URL `localhost:4000/404.html`,
-see if the custom 404 page works or not.
+then go to URL `localhost:4000/404.html`, see if the custom 404 page works or not.
 
 2. Push to GitHub if everything looks fine.
 
-3. Go to the live site using the custom domain with a nonexistence URL,
-e.g. http://yizeng.me/go_404,
+3. Go to the live site using the custom domain with a nonexistence URL, e.g. http://yizeng.me/go_404,
 see how the page looks and check if it can be redirected automatically or not.
 
 [GitHub Page]: http://pages.github.com/
@@ -80,9 +79,9 @@ see how the page looks and check if it can be redirected automatically or not.
 
 {% footnotes %}
 <p id="footnote-1">
-    [1]: This statement no longer exists in official documentation, but I haven't had a chance to verify it.
+[1]: This statement no longer exists in official documentation, but I haven't had a chance to verify it.
 </p>
 <p id="footnote-2">
-    [2]: <a href="http://www.w3schools.com/tags/att_meta_http_equiv.asp">"HTML &lt;meta&gt; http-equiv Attribute" example</a> by W3schools.
+[2]: <a href="http://www.w3schools.com/tags/att_meta_http_equiv.asp">"HTML &lt;meta&gt; http-equiv Attribute" example</a> by W3schools.
 </p>
 {% endfootnotes %}
