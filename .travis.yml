@@ -16,9 +16,9 @@ before_install:
   - sudo wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
   - sudo unzip chromedriver_linux64.zip
   - sudo chmod +x chromedriver
-  - mkdir -p ./chromedriver
-  - mv chromedriver ./chromedriver
-  - echo "export PATH=$PATH:./chromedriver" >> $HOME/.bash_profile
+  - mkdir -p ./chromedriver_bin
+  - mv chromedriver ./chromedriver_bin
+  - echo "export PATH=$PATH:./chromedriver_bin" >> $HOME/.bash_profile
   - which chromedriver
 
   - gem update --system
