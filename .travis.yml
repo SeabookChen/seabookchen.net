@@ -14,11 +14,12 @@ before_install:
   - wget http://ipecho.net/plain -O - -q ; echo # print out external ip
 
   - sudo apt-get install chromium-browser unzip
-  - sudo wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
-  - sudo unzip chromedriver_linux64.zip
-  - sudo chmod +x chromedriver
-  - sudo ln -s /home/travis/build/yizeng/yizeng.me/chromedriver /usr/local/bin/chromedriver
-  - sudo ln -s /home/travis/build/yizeng/yizeng.me/chromedriver /usr/bin/chromedriver
+
+  - wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip -P ~
+  - unzip ~/chromedriver_linux64.zip -d ~
+  - chmod +x ~/chromedriver
+  - sudo ln -s ~/chromedriver /usr/local/bin/chromedriver
+  - sudo ln -s ~/chromedriver /usr/bin/chromedriver
   - which chromedriver
 
   - gem update --system
