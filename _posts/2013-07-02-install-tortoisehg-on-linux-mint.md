@@ -36,12 +36,12 @@ as TortoiseHg has strict version requirements for which versions of Mercurial it
 
 	Terminal output for example:
 
-		Mercurial Distributed SCM (version 2.8.2)
-		(see http://mercurial.selenic.com for more information)
+	   Mercurial Distributed SCM (version 2.8.2)
+	   (see http://mercurial.selenic.com for more information)
 
-		Copyright (C) 2005-2013 Matt Mackall and others
-		This is free software; see the source for copying conditions. There is NO
-		warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+	   Copyright (C) 2005-2013 Matt Mackall and others
+	   This is free software; see the source for copying conditions. There is NO
+	   warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
 
 [TortoiseHg]: http://tortoisehg.bitbucket.org/
 [TortoiseHg Release PPA]: https://launchpad.net/~tortoisehg-ppa/+archive/releases

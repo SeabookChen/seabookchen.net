@@ -38,7 +38,7 @@ which uses binary blob database to maintain all setting entries with their value
 
 1. To install `dconf-editor`, from the terminal type in:
 
-		sudo apt-get install dconf-tools
+	   sudo apt-get install dconf-tools
 
 2. To open it, press `Alt` + `F2`, then type in `dconf-editor` and hit `Enter`.
 

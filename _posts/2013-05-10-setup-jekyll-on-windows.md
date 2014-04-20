@@ -143,7 +143,7 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
 1. Error message:
 
-		“python” is not recognized as an internal or external command, operable program or batch file.
+	   “python” is not recognized as an internal or external command, operable program or batch file.
 
 	**Alternatives**: "python" here can also be "ruby", "gem" or "easy_install", etc.
 
@@ -160,19 +160,19 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
 2. Error message:
 
-		ERROR:  Error installing jekyll:
-		ERROR: Failed to build gem native extension.
+	   ERROR:  Error installing jekyll:
+	   ERROR: Failed to build gem native extension.
 
-		"C:/Program Files/Ruby/Ruby200-x64/bin/ruby.exe" extconf.rb
+	   "C:/Program Files/Ruby/Ruby200-x64/bin/ruby.exe" extconf.rb
 
-		creating Makefile
-		make generating stemmer-x64-mingw32.def
-		compiling porter.c
-		...
-		make install
-		/usr/bin/install -c -m 0755 stemmer.so C:/Program Files/Ruby/Ruby200-x64/lib/ruby/gems/2.0.0/gems/fast-stemmer-1.0.2/li
-		/usr/bin/install: target `Files/Ruby/Ruby200-x64/lib/ruby/gems/2.0.0/gems/fast-stemmer-1.0.2/lib' is not a directory
-		make: *** [install-so] Error 1
+	   creating Makefile
+	   make generating stemmer-x64-mingw32.def
+	   compiling porter.c
+	   ...
+	   make install
+	   /usr/bin/install -c -m 0755 stemmer.so C:/Program Files/Ruby/Ruby200-x64/lib/ruby/gems/2.0.0/gems/fast-stemmer-1.0.2/li
+	   /usr/bin/install: target `Files/Ruby/Ruby200-x64/lib/ruby/gems/2.0.0/gems/fast-stemmer-1.0.2/lib' is not a directory
+	   make: *** [install-so] Error 1
 
 	**Reason**: Ruby has been installed to a folder with spaces.
 
@@ -181,7 +181,7 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
 3. Error message:
 
-		Generating... Liquid Exception: No such file or directory - python c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/pygments.rb-0.4.2/lib/pygments/mentos.py in 2013-04-22-yizeng-hello-world.md
+	   Generating... Liquid Exception: No such file or directory - python c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/pygments.rb-0.4.2/lib/pygments/mentos.py in 2013-04-22-yizeng-hello-world.md
 
 	**Reason**: Pygments is not properly installed or the PATH is yet to be effective.
 
@@ -191,7 +191,7 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
 4. Error message:
 
-		Generating... Liquid Exception: No such file or directory - /bin/sh in _posts/2013-04-22-yizeng-hello-world.md
+	   Generating... Liquid Exception: No such file or directory - /bin/sh in _posts/2013-04-22-yizeng-hello-world.md
 
 	**Reason**: Incompatibility issue with pygments.rb versions 0.5.1/0.5.2.
 
@@ -202,13 +202,13 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
 5. Error message:
 
-		c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/dependency.rb:296:in `to_specs': Could not find 'pygments.rb' (~> 0.4.2) - did find: [pygments.rb-0.5.0] (Gem::LoadError)
-		from c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/specification.rb:1196:in `block in activate_dependencies'
-		from c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/specification.rb:1185:in `each'
-		from c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/specification.rb:1185:in `activate_dependencies'
-		from c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/specification.rb:1167:in `activate'
-		from c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/core_ext/kernel_gem.rb:48:in`gem'
-		from c:/Ruby200-x64/bin/jekyll:22:in `<main>'`
+	   c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/dependency.rb:296:in `to_specs': Could not find 'pygments.rb' (~> 0.4.2) - did find: [pygments.rb-0.5.0] (Gem::LoadError)
+	   from c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/specification.rb:1196:in `block in activate_dependencies'
+	   from c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/specification.rb:1185:in `each'
+	   from c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/specification.rb:1185:in `activate_dependencies'
+	   from c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/specification.rb:1167:in `activate'
+	   from c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/core_ext/kernel_gem.rb:48:in`gem'
+	   from c:/Ruby200-x64/bin/jekyll:22:in `<main>'`
 
 	**Reason**: As suggested in the message, pygments.rb 0.4.2 is needed, while version 0.5.0 is found.
 	(This issue happened a while back with an old version of Jekyll, which should have been fixed by now.)
@@ -220,13 +220,13 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
 6. Error message:
 
-		Generating... You are missing a library required for Markdown. Please run:
-		$ [sudo] gem install rdiscount
-		Conversion error: There was an error converting '_posts/2013-04-22-yizeng-hello-world.md/#excerpt'.
+	   Generating... You are missing a library required for Markdown. Please run:
+	   $ [sudo] gem install rdiscount
+	   Conversion error: There was an error converting '_posts/2013-04-22-yizeng-hello-world.md/#excerpt'.
 
-		ERROR: YOUR SITE COULD NOT BE BUILT:
-			------------------------------------
-			Missing dependency: rdiscount
+	   ERROR: YOUR SITE COULD NOT BE BUILT:
+	      ------------------------------------
+	      Missing dependency: rdiscount
 
 	**Reason**: Dependency `rdiscount` is missing.
 	This is most likely because the site selects [rdiscount](https://github.com/davidfstr/RDiscount) as Markdown engine,
@@ -238,12 +238,12 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
 7. Error message:
 
-		c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- wdm (LoadError)
-		from c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
-		from c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/listen-1.3.1/lib/listen/adapter.rb:207:in `load_dependent_adapter'
-		from c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/listen-1.3.1/lib/listen/adapters/windows.rb:33:in `load_dependent_a
-		dapter'
-		...
+	   c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- wdm (LoadError)
+	   from c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+	   from c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/listen-1.3.1/lib/listen/adapter.rb:207:in `load_dependent_adapter'
+	   from c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/listen-1.3.1/lib/listen/adapters/windows.rb:33:in `load_dependent_a
+	   dapter'
+	   ...
 
 	**Reason**: `wdm` gem could not be found. Since Jekyll only supports *nix systems officially,
 		[Windows Directory Monitor][WDM] is therefore not included among Jekyll dependencies.
