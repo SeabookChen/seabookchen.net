@@ -157,35 +157,6 @@ $(document).ready(function () {
 		</script>
 	{% endif %}
 
-	{% if page.utilities contains "toc" %}
-		<script>
-			function createListItem(heading) {
-				var link = "#" + heading.children("a").attr("id");
-				return "<li>" + "<a href='" + link + "'>" + heading.text() + "</a>" + "</li>";
-			}
-
-			var ToC = "<nav role='navigation' class='toc'><ol>";
-			$("article h2").each(function () {
-				var secondHeading, thirdHeadingInside;
-
-				secondHeading = $(this);
-				ToC += createListItem(secondHeading);
-
-				thirdHeadingInside = secondHeading.nextUntil("article h2", "h3");
-				if (thirdHeadingInside.length !== 0) {
-					ToC += "<ul>";
-					thirdHeadingInside.each(function () {
-						ToC += createListItem($(this));
-					});
-					ToC += "</ul>";
-				}
-			});
-			ToC += "</ol>" + "</nav>";
-
-			$("#toc").prepend(ToC);
-		</script>
-	{% endif %}
-
 	{% if page.utilities contains "toc" or page.utilities contains "back-to-top" %}
 		<script>
 			$(document).ready(function () {
