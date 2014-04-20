@@ -19,7 +19,7 @@ before_install:
   - mkdir -p ./chromedriver_bin
   - mv chromedriver ./chromedriver_bin
   - echo "export PATH=$PATH:./chromedriver_bin" >> $HOME/.bash_profile
-  - which chromedriver
+  - chromedriver -h
 
   - gem update --system
   - gem update
