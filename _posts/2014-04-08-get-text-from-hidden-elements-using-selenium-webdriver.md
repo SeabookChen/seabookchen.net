@@ -3,7 +3,7 @@ layout: post
 title: "Get text from hidden elements using Selenium WebDriver"
 description: "How to get text from hidden elements using Selenium WebDriver .NET, Ruby and Python bindings, using attribute
 innerHTML, innerText or textContent."
-category: articles
+categories: [articles, popular]
 tags: [c#, python, ruby, selenium-webdriver]
 alias: [/2014/04/08/]
 utilities: highlight, toc

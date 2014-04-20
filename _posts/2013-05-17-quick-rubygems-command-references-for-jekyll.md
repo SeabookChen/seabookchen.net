@@ -2,7 +2,7 @@
 layout: post
 title: "Quick RubyGems Command References for Jekyll"
 description: "Some quick common RubyGems command references that I use for maintaining my Jekyll site 'yizeng.me'."
-category: notes
+categories: notes
 tags: [jekyll, ruby]
 alias: [/2013/05/17/]
 last_updated: March 18, 2014

@@ -4,7 +4,7 @@ title: "Test WYSIWYG editors using Selenium WebDriver"
 description: "How to write automated UI functional tests for WYSIWYG HTML editors
 like TinyMCE, CKEditor, CLEditor, CuteEditor and Primefaces editor
 using Selenium WebDriver Ruby binding."
-category: articles
+categories: [articles, popular]
 tags: [ruby, selenium-webdriver]
 alias: [/2014/01/31/]
 utilities: highlight, toc, show-hidden
