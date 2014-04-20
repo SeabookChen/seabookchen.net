@@ -3,7 +3,7 @@ layout: post
 title: "Take a screenshot on exception with Selenium C#'s EventFiringWebDriver"
 description: "How to take a screenshot when exception is thrown
 while executing WebDriver tests using Selenium .NET (C#) binding's EventFiringWebDriver class."
-category: articles
+categories: [articles, popular]
 tags: [c#, selenium-webdriver]
 alias: [/2014/02/08/]
 utilities: highlight
