@@ -2,7 +2,15 @@ permalink: /:year/:month/:day/:title
 
 exclude: [".rvmrc", ".rbenv-version", "LICENSE", "README.md", "Rakefile", "changelog.md"]
 highlighter: pygements
-markdown: rdiscount
+markdown: kramdown
+
+kramdown:
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..4
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  use_coderay: false
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
