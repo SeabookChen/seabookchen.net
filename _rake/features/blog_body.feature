@@ -5,7 +5,7 @@ Feature: Test blog page body
 
 	Scenario Outline: Body's title header should be displayed
 		When I set window width to <width>px
-		Then I should see title header "All Posts"
+		Then I should see title header "Top Posts"
 
 		Examples:
 			| width |
@@ -16,7 +16,7 @@ Feature: Test blog page body
 			| 1280  |
 			| 1920  |
 
-	Scenario Outline: Body should list all posts
+	Scenario Outline: Body should list posts
 		When I set window width to <width>px
 		Then I should have posts grouped by "2013, 2014"
 		And I should have clickable post links

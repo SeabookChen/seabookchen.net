@@ -50,7 +50,7 @@ Feature: Test blog page header
 
 		Examples:
 			| link_text  | page_url     | page_title           | title_header         |
-			| Yi Zeng    | /blog/       | Blog - Yi Zeng       | All Posts            |
+			| Yi Zeng    | /blog/       | Blog - Yi Zeng       | Top Posts            |
 			| Articles   | /articles/   | Articles - Yi Zeng   | Articles             |
 			| Notes      | /notes/      | Notes - Yi Zeng      | Notes                |
 			| Categories | /categories/ | Categories - Yi Zeng | Posts By Category    |
