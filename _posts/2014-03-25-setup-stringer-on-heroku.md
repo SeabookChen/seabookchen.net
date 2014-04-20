@@ -2,7 +2,7 @@
 layout: post
 title: "Setup Stringer on Heroku"
 description: "Brief note on how to setup stringer, a self-hosted anti-social RSS reader on Heroku."
-categories: notes
+categories: [notes]
 tags: [stringer, heroku]
 alias: [/2014/03/25/]
 utilities: fancybox, unveil

@@ -2,7 +2,7 @@
 layout: post
 title: "Install TortoiseHg on Linux Mint"
 description: "How to install TortoiseHg on Linux Mint 15 via official PPA."
-categories: notes
+categories: [notes]
 tags: [linux mint, tortoisehg]
 alias: [/2013/07/02/]
 last_updated: March 18, 2014
