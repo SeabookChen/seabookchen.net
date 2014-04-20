@@ -7,6 +7,7 @@ using Selenium WebDriver Ruby binding."
 categories: [articles, popular]
 tags: [ruby, selenium-webdriver]
 alias: [/2014/01/31/]
+last_updated: April 20, 2014
 utilities: highlight, toc, show-hidden
 ---
 > What is a WYSIWYG HTML editor?
@@ -306,7 +307,7 @@ driver.execute_script("tinyMCE.activeEditor.insertContent('<p>Christchurch</p>')
 {% hide %}
 {% highlight ruby %}
 # Environment tested
-# Linux Mint 15, Selenium 2.39.0, Chromium 31.0, ChromeDriver 2.8
+# Linux Mint 16, Selenium 2.41.0, Chromium 33.0, ChromeDriver 2.9
 require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :chrome
@@ -335,7 +336,7 @@ tinymce_body.send_keys('<h1>TInyMCE</h1>Yi Zeng')
 {% hide %}
 {% highlight ruby %}
 # Environment tested
-# Linux Mint 15, Selenium 2.39.0, Chromium 31.0, ChromeDriver 2.8
+# Linux Mint 16, Selenium 2.41.0, Chromium 33.0, ChromeDriver 2.9
 require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :chrome
@@ -360,7 +361,7 @@ driver.action.click(ck_editor_body)
 {% hide %}
 {% highlight ruby %}
 # Environment tested
-# Linux Mint 15, Selenium 2.39.0, Chromium 31.0, ChromeDriver 2.8
+# Linux Mint 16, Selenium 2.41.0, Chromium 33.0, ChromeDriver 2.9
 require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :chrome
@@ -382,7 +383,7 @@ tinymce_btn_numbered_list.click
 {% hide %}
 {% highlight ruby %}
 # Environment tested
-# Linux Mint 15, Selenium 2.39.0, Chromium 31.0, ChromeDriver 2.8
+# Linux Mint 16, Selenium 2.41.0, Chromium 33.0, ChromeDriver 2.9
 require 'selenium-webdriver'
 
 driver = Selenium::WebDriver.for :chrome
