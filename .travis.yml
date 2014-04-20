@@ -17,8 +17,8 @@ before_install:
   - sudo wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
   - sudo unzip chromedriver_linux64.zip
   - sudo chmod +x chromedriver
-  - sudo ln -s ../chromedriver /usr/local/bin/chromedriver
-  - sudo ln -s ../chromedriver /usr/bin/chromedriver
+  - sudo ln -s /home/travis/build/yizeng/yizeng.me/chromedriver /usr/local/bin/chromedriver
+  - sudo ln -s /home/travis/build/yizeng/yizeng.me/chromedriver /usr/bin/chromedriver
   - which chromedriver
 
   - gem update --system
