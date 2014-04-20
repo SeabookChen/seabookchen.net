@@ -18,15 +18,15 @@ to run against Chrome/PhantomJS directly without specifying paths in code.
 
 2. Download latest version from [official website](http://chromedriver.storage.googleapis.com/index.html) and upzip it
 
-	   wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip -P /tmp
-	   unzip /tmp/chromedriver_linux64.zip -d /tmp
+	   wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip -P ~/.chromedriver
+	   unzip ~/.chromedriver/chromedriver_linux64.zip -d ~/.chromedriver
 
 3. Make it executable and create symbolic links
 
-	   chmod +x /tmp/chromedriver
-	   sudo ln -s /tmp/chromedriver /usr/local/share/chromedriver
-	   sudo ln -s /tmp/chromedriver /usr/local/bin/chromedriver
-	   sudo ln -s /tmp/chromedriver /usr/bin/chromedriver
+	   chmod +x ~/.chromedriver/chromedriver
+	   sudo ln -s ~/.chromedriver/chromedriver /usr/local/share/chromedriver
+	   sudo ln -s ~/.chromedriver/chromedriver /usr/local/bin/chromedriver
+	   sudo ln -s ~/.chromedriver/chromedriver /usr/bin/chromedriver
 
 ## Install PhantomJS
 

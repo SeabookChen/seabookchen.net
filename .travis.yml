@@ -15,12 +15,12 @@ before_install:
 
   - sudo apt-get install chromium-browser unzip
 
-  - wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip -P /tmp
-  - unzip /tmp/chromedriver_linux64.zip -d /tmp
-  - chmod +x /tmp/chromedriver
-  - sudo ln -s /tmp/chromedriver /usr/local/share/chromedriver
-  - sudo ln -s /tmp/chromedriver /usr/local/bin/chromedriver
-  - sudo ln -s /tmp/chromedriver /usr/bin/chromedriver
+  - wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip -P ~/.chromedriver
+  - unzip ~/.chromedriver/chromedriver_linux64.zip -d ~/.chromedriver
+  - chmod +x ~/.chromedriver/chromedriver
+  - sudo ln -s ~/.chromedriver/chromedriver /usr/local/share/chromedriver
+  - sudo ln -s ~/.chromedriver/chromedriver /usr/local/bin/chromedriver
+  - sudo ln -s ~/.chromedriver/chromedriver /usr/bin/chromedriver
   - which chromedriver
 
   - gem update --system
