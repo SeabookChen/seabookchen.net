@@ -6,7 +6,7 @@ using Selenium WebDriver C# and Ruby bindings."
 categories: [articles, popular]
 tags: [c#, ruby, selenium-webdriver]
 alias: [/2013/08/10/]
-last_updated: April 20, 2014
+last_updated: April 21, 2014
 utilities: highlight
 ---
 This post demonstrates how to set Chrome, Firefox and PhantomJS's User Agent
@@ -38,7 +38,8 @@ IWebDriver driver = new ChromeDriver(options);
 {% highlight ruby %}
 require 'selenium-webdriver'
 
-driver = Selenium::WebDriver.for :chrome, :switches => %w[--user-agent=Mozilla/5.0(iPad;\ U;\ CPU\ iPhone\ OS\ 3_2\ like\ Mac\ OS\ X;\ en-us)\ AppleWebKit/531.21.10\ (KHTML,\ like\ Gecko)\ Version/4.0.4\ Mobile/7B314\ Safari/531.21.10]
+USER_AGENT = 'Mozilla/5.0(iPad; U; CPU iPhone OS 3_2 like Mac OS X; en-us) AppleWebKit/531.21.10 (KHTML, like Gecko) Version/4.0.4 Mobile/7B314 Safari/531.21.10;'
+driver = Selenium::WebDriver.for :chrome, :switches => %W[--user-agent=#{USER_AGENT}]
 {% endhighlight %}
 
 ## Firefox
