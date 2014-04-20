@@ -26,7 +26,7 @@ module SetUserAgent
 		end
 
 		def test_setting_chrome_user_agent
-			@driver = Selenium::WebDriver.for :chrome, :switches => %W[--user-agent=#{USER_AGENT}]
+			@driver = Selenium::WebDriver.for :chrome, :switches => %W[--no-sandbox=true --user-agent=#{USER_AGENT}]
 
 			assert_equal(USER_AGENT, get_actual_user_agent())
 

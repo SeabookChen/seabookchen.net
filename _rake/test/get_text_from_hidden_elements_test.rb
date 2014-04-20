@@ -48,7 +48,7 @@ module GetTextFromHiddenElements
 		include CommonComponents
 
 		def setup
-			@driver = Selenium::WebDriver.for :chrome
+			@driver = Selenium::WebDriver.for :chrome, :switches => %W[--no-sandbox=true]
 		end
 	end
 
