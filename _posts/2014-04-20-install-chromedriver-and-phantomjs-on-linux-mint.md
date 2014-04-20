@@ -16,29 +16,36 @@ to run against Chrome/PhantomJS directly without specifying paths in code.
 
 	   sudo apt-get install unzip
 
-2. Download latest version from [official website](http://chromedriver.storage.googleapis.com/index.html) and upzip it
+2. Download latest version from [official website](http://chromedriver.storage.googleapis.com/index.html)
+   and upzip it (here for instance, to `~/Downloads`)
 
-	   wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip -P ~/.chromedriver
-	   unzip ~/.chromedriver/chromedriver_linux64.zip -d ~/.chromedriver
+	   wget -N http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip -P ~/Downloads
+	   unzip ~/Downloads/chromedriver_linux64.zip -d ~/Downloads
 
-3. Make it executable and create symbolic links
+3. Make it executable and move to `/usr/local/share`
 
-	   chmod +x ~/.chromedriver/chromedriver
-	   sudo ln -s ~/.chromedriver/chromedriver /usr/local/share/chromedriver
-	   sudo ln -s ~/.chromedriver/chromedriver /usr/local/bin/chromedriver
-	   sudo ln -s ~/.chromedriver/chromedriver /usr/bin/chromedriver
+	   chmod +x ~/Downloads/chromedriver
+	   sudo mv -f ~/Downloads/chromedriver /usr/local/share/chromedriver
+
+4. Create symbolic links
+
+	   sudo ln -s /usr/local/share/chromedriver /usr/local/bin/chromedriver
+	   sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 
 ## Install PhantomJS
 
-1. Download latest version from [official website](http://phantomjs.org/download.html) and extract it
+1. Download latest version from [official website](http://phantomjs.org/download.html)
+   and extract it (here for instance, to `~/Downloads`)
 
-	   cd /usr/local/share
-	   sudo wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
-	   sudo tar xjf phantomjs-1.9.7-linux-x86_64.tar.bz2
+	   wget -N https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2 -P ~/Downloads
+	   tar xjf ~/Downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2 -C ~/Downloads
 
-2. Create symbolic links
+2. Move the folder to `/usr/local/share`
 
-	   sudo ln -s /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/share/phantomjs
+	   sudo mv -f ~/Downloads/phantomjs-1.9.7-linux-x86_64 /usr/local/share/phantomjs-1.9.7-linux-x86_64
+
+3. Create symbolic links
+
 	   sudo ln -s /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/local/bin/phantomjs
 	   sudo ln -s /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
 
