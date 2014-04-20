@@ -44,6 +44,14 @@ module GetTextFromHiddenElements
 		end
 	end
 
+	class GetTextFromHiddenElementsInChromeJsTests < Test::Unit::TestCase
+		include CommonComponents
+
+		def setup
+			@driver = Selenium::WebDriver.for :chrome, :switches => %W[--no-sandbox=true]
+		end
+	end
+
 	class GetTextFromHiddenElementsInPhantomJsTests < Test::Unit::TestCase
 		include CommonComponents
 
