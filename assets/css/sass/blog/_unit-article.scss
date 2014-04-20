@@ -41,6 +41,7 @@
 		}
 	}
 
+	.show-hidden,
 	.button,
 	button {
 		@include background-clip(padding-box);
@@ -50,8 +51,9 @@
 		color: $color-text;
 		cursor: pointer;
 		display: inline-block;
+		line-height: 1.45em;
 		margin-left: 8px;
-		padding: 2px 24px;
+		padding: 3px 24px;
 		outline: 0;
 		text-align: center;
 		text-decoration: none;
@@ -133,6 +135,11 @@
 			@include border-radius(5px);
 			background-color: #B1B699;
 		}
+
+		ol,
+		ul {
+			margin-bottom: 0
+		}
 	}
 
 	:not(.meta) > ul,
@@ -213,6 +220,10 @@
 	dd .hasGrid {
 		margin-left: 0;
 		margin-right: 0;
+	}
+
+	.highlight pre {
+		padding-left: 1.5em !important
 	}
 
 	p > code,
