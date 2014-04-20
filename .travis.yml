@@ -12,6 +12,15 @@ rvm:
 before_install:
   - wget http://ipecho.net/plain -O - -q ; echo # print out external ip
 
+  - sudo apt-get install chromium-browser unzip
+  - sudo wget http://chromedriver.storage.googleapis.com/2.9/chromedriver_linux64.zip
+  - sudo unzip chromedriver_linux64.zip
+  - sudo chmod +x chromedriver
+  - mkdir -p ./chromedriver
+  - mv chromedriver ./chromedriver
+  - echo "export PATH=$PATH:./chromedriver" >> $HOME/.bash_profile
+  - which chromedriver
+
   - gem update --system
   - gem update
 
