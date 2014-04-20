@@ -6,7 +6,7 @@ site built locally on Travis CI."
 categories: [articles, popular]
 tags: [cucumber, jekyll, travis-ci, selenium-webdriver]
 alias: [/2013/11/17/]
-utilities: highlight, toc
+utilities: highlight
 ---
 Imagine there is a Jekyll site project
 which has some [Selenium WebDriver][Selenium WebDriver] UI tests written with BDD framework [Cucumber][Cucumber] inside.
@@ -15,11 +15,12 @@ against this Jekyll site in that particular commit, as part of the continuous in
 
 Instead of running those tests against the live production site each time{% footnote 1 %},
 a better way would be to build the site on Travis CI itself, and run the tests against localhost directly.
-Here is a brief note on how to achieve it.
 
-<div id="toc"></div>
+* Kramdown table of contents
+{:toc .toc}
 
-## <a id="implement-tests"></a>Implement tests
+## Implement tests
+
 First of all, there should be some UI tests inside the repository,
 which can be [Selenium WebDriver][Selenium WebDriver], [Watir][Watir] tests,
 or any other suitable automation frameworks,
@@ -31,7 +32,8 @@ Since the site will be built on Travis CI locally, so the URL will be
 `localhost:4000` instead of the actual live site URL.
 Bear in mind that port number 4000 can be made configurable if desired.
 
-## <a id="install-gems"></a>Install gems
+## Install gems
+
 Before building Jekyll and running Selenium UI tests on Travis CI,
 some necessary gems need to be installed.
 To do so, within the `before_install` section of `.travis.yml` file,
@@ -48,14 +50,12 @@ before_install:
   - gem install selenium-webdriver
 {% endprettify %}
 
-## <a id="serve-jekyll"></a>Start Jekyll web server
-To build the Jekyll site locally on Travis CI,
-in `.travis.yml` file's `before_script` section,
-serve Jekyll site with `detach=true` option,
-which is available since [Jekyll 1.2.0][Jekyll 1.2.0] or later.
+## Start Jekyll web server
+
+To build the Jekyll site locally on Travis CI, in `.travis.yml` file's `before_script` section,
+serve Jekyll site with `detach=true` option, which is available since [Jekyll 1.2.0][Jekyll 1.2.0] or later.
 With this `detach` option, WEBrick server will be running in background,
-so that any subsequent commands can be continued and
-whole Travis CI build won't be hanging.
+so that any subsequent commands can be continued and whole Travis CI build won't be hanging.
 
 {% prettify yaml %}
 before_script:
@@ -64,7 +64,7 @@ before_script:
 {% endprettify %}
 
 
-## <a id="run-tests"></a>Run UI tests
+## Run UI tests
 In `.travis.yml`'s `script` section, specify the commands to run those cucumber tests.
 
 {% prettify yaml %}
@@ -74,9 +74,8 @@ script:
 
 {% footnotes %}
 <p id="footnote-1">
-	[1]: Since only the commits in master/gh-pages branches will affect the production site,
-	running tests against production for branches that don't change production
-	is somewhat redundant.
+[1]: Since only the commits in master/gh-pages branches will affect the production site,
+running tests against production for branches that don't change production is somewhat redundant.
 </p>
 {% endfootnotes %}
 

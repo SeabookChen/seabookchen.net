@@ -6,43 +6,44 @@ and custom config sections in App.config at runtime."
 categories: [articles, popular]
 tags: [c#, .net]
 alias: [/2013/08/31/]
-utilities: highlight, toc
+utilities: highlight
 ---
 This post shows how to update (add, edit or remove) `AppSettings`
 and custom config sections in `App.config` at runtime.
 
-<div id="toc"></div>
+* Kramdown table of contents
+{:toc .toc}
 
-## <a id="app-config"></a>App.config file
+## App.config file
 
 Sample `App.config` file:
 
 {% highlight xml %}
 ﻿﻿<?xml version="1.0" encoding="utf-8" ?>
 <configuration>
-	<configSections>
-		<sectionGroup name="geoSettings">
-			<section name="summary" type="System.Configuration.NameValueSectionHandler" />
-		</sectionGroup>
-	</configSections>
+    <configSections>
+        <sectionGroup name="geoSettings">
+            <section name="summary" type="System.Configuration.NameValueSectionHandler" />
+        </sectionGroup>
+    </configSections>
 
-	<appSettings>
-		<add key="Language" value="Ruby" />
-		<add key="Version" value="1.9.3" />
-	</appSettings>
+    <appSettings>
+        <add key="Language" value="Ruby" />
+        <add key="Version" value="1.9.3" />
+    </appSettings>
 
-	<geoSettings>
-		<summary>
-			<add key="Country" value="New Zealand" />
-			<add key="City" value="Christchurch" />
-		</summary>
-	</geoSettings>
+    <geoSettings>
+        <summary>
+            <add key="Country" value="New Zealand" />
+            <add key="City" value="Christchurch" />
+        </summary>
+    </geoSettings>
 </configuration>
 {% endhighlight %}
 
-## <a id="update-appsettings"></a>Update AppSettings
+## Update AppSettings
 
-### <a id="add-in-appsettings"></a>Add a new key
+### Add a new key
 
 {% prettify c# %}
 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
@@ -52,7 +53,7 @@ config.Save(ConfigurationSaveMode.Modified);
 ConfigurationManager.RefreshSection("appSettings");
 {% endprettify %}
 
-### <a id="edit-in-appsettings"></a>Edit an existing key's value
+### Edit an existing key's value
 
 {% prettify c# %}
 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
@@ -62,7 +63,7 @@ config.Save(ConfigurationSaveMode.Modified);
 ConfigurationManager.RefreshSection("appSettings");
 {% endprettify %}
 
-### <a id="remove-in-appsettings"></a>Delete an existing key
+### Delete an existing key
 
 {% prettify c# %}
 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
@@ -72,9 +73,9 @@ config.Save(ConfigurationSaveMode.Modified);
 ConfigurationManager.RefreshSection("appSettings");
 {% endprettify %}
 
-## <a id="update-custom-section"></a>Update custom configuration sections
+## Update custom configuration sections
 
-### <a id="add-in-custom-section"></a>Add a new key
+### Add a new key
 
 {% prettify c# %}
 var xmlDoc = new XmlDocument();
@@ -91,7 +92,7 @@ xmlDoc.Save(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 ConfigurationManager.RefreshSection("geoSettings/summary");
 {% endprettify %}
 
-### <a id="edit-in-custom-section"></a>Edit an existing key's value
+### Edit an existing key's value
 
 {% prettify c# %}
 var xmlDoc = new XmlDocument();
@@ -103,7 +104,7 @@ xmlDoc.Save(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 ConfigurationManager.RefreshSection("geoSettings/summary");
 {% endprettify %}
 
-### <a id="remove-in-custom-section"></a>Delete an existing key
+### Delete an existing key
 
 {% prettify c# %}
 var xmlDoc = new XmlDocument();
@@ -116,18 +117,18 @@ xmlDoc.Save(AppDomain.CurrentDomain.SetupInformation.ConfigurationFile);
 ConfigurationManager.RefreshSection("geoSettings/summary");
 {% endprettify %}
 
-## <a id="print-out-keys"></a>Print out all keys
+## Print out all keys
 
 {% prettify c# %}
 NameValueCollection appSettings = ConfigurationManager.AppSettings;
 // var customSettings = ConfigurationManager.GetSection("geoSettings/summary") as NameValueCollection;
 
 foreach (string key in appSettings.AllKeys) {
-	Console.WriteLine("{0}: {1}", key, section[key]);
+    Console.WriteLine("{0}: {1}", key, section[key]);
 }
 {% endprettify %}
 
-## <a id="references"></a>References
+## References
 
 1. [Modifying app.config at runtime throws exception](http://stackoverflow.com/q/8807218/1177636)
 2. [update app.config file programatically with ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);](http://stackoverflow.com/q/8522912/1177636)

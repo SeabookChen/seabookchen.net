@@ -6,31 +6,29 @@ using Selenium WebDriver C#, Ruby and Python bindings."
 categories: [articles, popular]
 tags: [c#, python, ruby, selenium-webdriver]
 alias: [/2014/02/23/]
-utilities: highlight, toc
+utilities: highlight
 ---
 Selenium WebDriver supports getting the browser window size,
 resizing and maximizing window natively from its API,
 no JavaScript injections like `window.resizeTo(X, Y);` are necessary any more.
 Below shows the examples on how to achieve this in Selenium WebDriver C#, Ruby and Python bindings.
 
-<div id="toc"></div>
+* Kramdown table of contents
+{:toc .toc}
 
-## <a id="ruby"></a>Ruby
+## Ruby
 
-In Ruby binding, window size can be retrieved from
-method `driver.manage.window.size`,
+In Ruby binding, window size can be retrieved from method `driver.manage.window.size`,
 which is a type of struct `Selenium::WebDriver::Dimension` defined [here][Ruby Dimension Class].
-To resize a window,
-one solution is to create a new `Dimension` object
+To resize a window, one solution is to create a new `Dimension` object
 and assign it to property `driver.manage.window.size`.
 Alternatively, Ruby binding has provided a `driver.manage.window.resize_to()` method,
-which is equivalent to `#size=`, but accepts width and height arguments
-according to API [here][Ruby resize_to()].
+which is equivalent to `#size=`, but accepts width and height arguments according to API [here][Ruby resize_to()].
 
 > Environment Tested:<br/>
 > Windows 7, Ruby 2.0.0p247, Selenium 2.39.0, Firefox 26.0
 
-### <a id="ruby-example"></a>Example
+### Example
 
 {% highlight ruby %}
 require 'selenium-webdriver'
@@ -55,28 +53,24 @@ puts driver.manage.window.size
 driver.quit
 {% endhighlight %}
 
-### <a id="ruby-output"></a>Output
+### Output
 
 >&#35;&lt;struct Selenium::WebDriver::Dimension width=1341, height=810&gt;<br />
 >&#35;&lt;struct Selenium::WebDriver::Dimension width=1024, height=768&gt;<br />
 >&#35;&lt;struct Selenium::WebDriver::Dimension width=480, height=320&gt;<br />
 >&#35;&lt;struct Selenium::WebDriver::Dimension width=1804, height=1096&gt;
 
-## <a id="csharp"></a>C&#35;
+## C&#35;
 
-Similarly in C# binding, a browser window's size can be found out
-using `driver.Manage().Window.Size` property.
-The same [IWindow interface][IWindow interface] also defines method `Maximize()`
-for maximizing the window.
-Although this interface doesn't provide a function
-to resize window directly like Ruby binding,
-it can be done by setting the
-`Size` property using `System.Drawing.Size` object{% footnote 1 %}.
+Similarly in C# binding, a browser window's size can be found out using `driver.Manage().Window.Size` property.
+The same [IWindow interface][IWindow interface] also defines method `Maximize()` for maximizing the window.
+Although this interface doesn't provide a function to resize window directly like Ruby binding,
+it can be done by setting the `Size` property using `System.Drawing.Size` object{% footnote 1 %}.
 
 > Environment Tested:<br />
 > Windows 7, Selenium 2.39.0, Firefox 26.0
 
-### <a id="csharp-example"></a>Example
+### Example
 
 {% prettify c# %}
 using System;
@@ -86,45 +80,43 @@ using OpenQA.Selenium.Firefox;
 
 namespace BrowserWindowSizeApp {
 
-	internal class Program {
+    internal class Program {
 
-		internal static void Main(string[] args) {
+        internal static void Main(string[] args) {
 
-			// get initial window size
-			IWebDriver driver = new FirefoxDriver();
-			Console.WriteLine(driver.Manage().Window.Size);
+            // get initial window size
+            IWebDriver driver = new FirefoxDriver();
+            Console.WriteLine(driver.Manage().Window.Size);
 
-			// set window size
-			driver.Manage().Window.Size = new Size(480, 320);
-			Console.WriteLine(driver.Manage().Window.Size);
+            // set window size
+            driver.Manage().Window.Size = new Size(480, 320);
+            Console.WriteLine(driver.Manage().Window.Size);
 
-			// maximize window
-			driver.Manage().Window.Maximize();
-			Console.WriteLine(driver.Manage().Window.Size);
+            // maximize window
+            driver.Manage().Window.Maximize();
+            Console.WriteLine(driver.Manage().Window.Size);
 
-			driver.Quit();
-		}
-	}
+            driver.Quit();
+        }
+    }
 }
 {% endprettify %}
 
-### <a id="csharp-output"></a>Output
+### Output
 
 >{Width=1341, Height=810}<br />
 >{Width=480, Height=320}<br />
 >{Width=1804, Height=1096}
 
-## <a id="python"></a>Python
+## Python
 
-Unlike C# and Ruby bindings,
-Python binding doesn't offer properties to get/set window size,
-all get/set/maximize actions are available 
-using methods defined in [selenium.webdriver.remote.webdriver][Python driver class].
+Unlike C# and Ruby bindings, Python binding doesn't offer properties to get/set window size,
+all get/set/maximize actions are available using methods defined in [selenium.webdriver.remote.webdriver][Python driver class].
 
 > Environment Tested:<br/>
 > Window 7, Python 2.7, Selenium 2.40.0, Firefox 26.0
 
-### <a id="python-example"></a>Example
+### Example
 
 {% highlight python %}
 from selenium import webdriver
@@ -144,13 +136,13 @@ print driver.get_window_size()
 driver.quit()
 {% endhighlight %}
 
-### <a id="python-output"></a>Output
+### Output
 
 >{u'width': 1341, u'height': 810}<br />
 >{u'width': 480, u'height': 320}<br />
 >{u'width': 1804, u'height': 1096}
 
-## <a id="comparison"></a>Comparison
+## Comparison
 
 {% datatable %}
 <tr><th colspan="2">Get window size</th></tr>
@@ -213,7 +205,7 @@ driver.quit()
 </tr>
 {% enddatatable %}
 
-## <a id="related-source-code"></a>Related source code
+## Related source code
 - [Ruby - window.rb](https://code.google.com/p/selenium/source/browse/rb/lib/selenium/webdriver/common/window.rb)
 - [Ruby - Dimension struct](https://code.google.com/p/selenium/source/browse/rb/lib/selenium/webdriver.rb)
 - [C# - IWindow interface][IWindow interface]
@@ -221,7 +213,7 @@ driver.quit()
 
 {% footnotes %}
 <p id="footnote-1">
-	[1]: Adding "System.Drawing" assembly reference to project is required first.
+[1]: Adding "System.Drawing" assembly reference to project is required first.
 </p>
 {% endfootnotes %}
 

@@ -12,4 +12,4 @@ alias: [/2013/05/19/]
 
 > machine github.com<br />
 > login yizeng<br />
-> password the_password<br />
+> password the_password

@@ -23,7 +23,7 @@ which will add this missing constructor overload to these two classes.
 > Windows 7, Selenium 2.40.0<br/>
 > Chrome 33 + ChromeDriver 2.9, IE 10 + IEDriver 2.40.0, PhantomJSDriver 1.9.7
 
-## <a id="chromedriver"></a>ChromeDriver
+## ChromeDriver
 {% prettify c# %}
 var driverService = ChromeDriverService.CreateDefaultService();
 driverService.HideCommandPromptWindow = true;
@@ -31,7 +31,7 @@ driverService.HideCommandPromptWindow = true;
 var driver = new ChromeDriver(driverService, new ChromeOptions());
 {% endprettify %}
 
-## <a id="iedriver"></a>InternetExplorerDriver
+## InternetExplorerDriver
 {% prettify c# %}
 var driverService = InternetExplorerDriverService.CreateDefaultService();
 driverService.HideCommandPromptWindow = true;
@@ -39,7 +39,7 @@ driverService.HideCommandPromptWindow = true;
 var driver = new InternetExplorerDriver(driverService, new InternetExplorerOptions());
 {% endprettify %}
 
-## <a id="phantomjsdriver"></a>PhantomJSDriver
+## PhantomJSDriver
 {% prettify c# %}
 var driverService = PhantomJSDriverService.CreateDefaultService();
 driverService.HideCommandPromptWindow = true;
@@ -49,9 +49,9 @@ var driver = new PhantomJSDriver(driverService);
 
 {% footnotes %}
 <p id="footnote-1">
-	[1]: <a href="https://code.google.com/p/selenium/source/browse/dotnet/CHANGELOG?name=selenium-2.40.0#56">CHANGELOG</a> for Selenium 2.40.0.
+[1]: <a href="https://code.google.com/p/selenium/source/browse/dotnet/CHANGELOG?name=selenium-2.40.0#56">CHANGELOG</a> for Selenium 2.40.0.
 </p>
 <p id="footnote-2">
-	[2]: <a href="https://groups.google.com/d/msg/selenium-users/3CwDvwiBmlM/X3BcnJzrGToJ">Comment</a> to "Hide the IEDriver command window" by Jim Evans.
+[2]: <a href="https://groups.google.com/d/msg/selenium-users/3CwDvwiBmlM/X3BcnJzrGToJ">Comment</a> to "Hide the IEDriver command window" by Jim Evans.
 </p>
 {% endfootnotes %}

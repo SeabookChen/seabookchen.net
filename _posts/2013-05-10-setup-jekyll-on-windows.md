@@ -258,6 +258,6 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
 {% footnotes %}
 <p id="footnote-1">
-    [1]: <a href="http://stackoverflow.com/a/6318188/1177636">Adding Python Path on Windows 7</a> by melhosseiny.
+[1]: <a href="http://stackoverflow.com/a/6318188/1177636">Adding Python Path on Windows 7</a> by melhosseiny.
 </p>
 {% endfootnotes %}
