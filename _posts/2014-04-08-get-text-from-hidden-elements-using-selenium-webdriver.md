@@ -6,6 +6,7 @@ innerHTML, innerText or textContent."
 categories: [articles, popular]
 tags: [c#, python, ruby, selenium-webdriver]
 alias: [/2014/04/08/]
+last_updated: April 20, 2014
 utilities: highlight, toc
 ---
 As defined in [WebDriver spec](http://www.w3.org/TR/webdriver/#interactable),
@@ -31,6 +32,7 @@ but sadly is not supported by IE{% footnote 2 %},
 
 > Environment Tested:<br/>
 > Windows 7, Ruby 2.0.0p451, Selenium 2.41.0, PhantomJS 1.9.7
+> Linux Mint, ruby 2.1.1p76, Selenium 2.41.0, PhantomJS 1.9.7
 
 {% highlight ruby %}
 require 'selenium-webdriver'
@@ -96,6 +98,7 @@ namespace GetHiddenText {
 
 > Environment Tested:<br/>
 > Windows 7, Python 2.7.5, Selenium 2.41.0, PhantomJS 1.9.7
+> Linux Mint 16, Python 2.7.5+, Selenium 2.41.0, PhantomJS 1.9.7
 
 {% highlight python %}
 from selenium import webdriver

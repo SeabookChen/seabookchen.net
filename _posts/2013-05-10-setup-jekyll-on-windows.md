@@ -5,7 +5,7 @@ description: "How to install and setup Jekyll on a Windows machine."
 categories: [notes, popular]
 tags: [jekyll, ruby, windows]
 alias: [/2013/05/10/]
-last_updated: March 18, 2014
+last_updated: April 20, 2014
 utilities: fancybox, toc, unveil
 ---
 <div id="toc"></div>
@@ -128,9 +128,10 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
     **Alternatives**: "python" here can also be "ruby", "gem" or "easy_install", etc.
 
-    **Possible Reason**: PATH for that particular program has not been set correctly.
+    **Reason**: Program is not properly installed, or the PATH has not been set correctly.
 
-    **Possible Solution**: Add the program to the PATH manually, see the steps below{% footnote 1 %}.
+    **Solution**: Ensure the program has been installed correctly.
+    Then add it to the PATH manually, see the steps below{% footnote 1 %}.
     > 1. Hold Win and press Pause.
     > 2. Click Advanced System Settings.
     > 3. Click Environment Variables.
@@ -140,7 +141,7 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 2. Error message:
 
         ERROR:  Error installing jekyll:
-                ERROR: Failed to build gem native extension.
+            ERROR: Failed to build gem native extension.
 
         "C:/Program Files/Ruby/Ruby200-x64/bin/ruby.exe" extconf.rb
 
@@ -150,31 +151,31 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
         ...
         make install
         /usr/bin/install -c -m 0755 stemmer.so C:/Program Files/Ruby/Ruby200-x64/lib/ruby/gems/2.0.0/gems/fast-stemmer-1.0.2/li
-         
         /usr/bin/install: target `Files/Ruby/Ruby200-x64/lib/ruby/gems/2.0.0/gems/fast-stemmer-1.0.2/lib' is not a directory
         make: *** [install-so] Error 1
 
-    **Possible Reason**: Ruby has been installed to a folder with spaces.
+    **Reason**: Ruby has been installed to a folder with spaces.
 
-    **Possible Solution**: Re-install Ruby, but this time install it to a folder without spaces,
+    **Solution**: Re-install Ruby, but this time install it to a folder without spaces,
     or simply keep the default directory when installing.
 
 3. Error message:
 
-        Generating... Liquid Exception: No such file or directory - python c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/pygments.rb-0.4.2/lib/pygments/mentos.py in 2013-04-22-hello-world.md
+        Generating... Liquid Exception: No such file or directory - python c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/pygments.rb-0.4.2/lib/pygments/mentos.py in 2013-04-22-yizeng-hello-world.md
 
-    **Possible Reason**: The PATH just set is yet to be effective.
+    **Reason**: Pygments is not properly installed or the PATH is yet to be effective.
 
-    **Possible Solution**: First make sure PATH for Python is correct without no spaces or trailing slash. Then restart Command Prompt. If it's not working, try logout Windows and log back in again.
+    **Solution**: First make sure Pygments has been installed and PATH for Python is correct without no spaces or trailing slash.
+    Then restart Command Prompt. If it's not working, try logout Windows and log back in again.
     Or even try the ultimate and most powerful solution - "turning the computer off and on again".
 
 4. Error message:
 
-        Generating... Liquid Exception: No such file or directory - /bin/sh in _posts/2013-04-22-hello-world.md
+        Generating... Liquid Exception: No such file or directory - /bin/sh in _posts/2013-04-22-yizeng-hello-world.md
 
-    **Possible Reason**: Incompatible issue with pygments.rb versions 0.5.1/0.5.2.
+    **Reason**: Incompatibility issue with pygments.rb versions 0.5.1/0.5.2.
 
-    **Possible Solution**: Downgrade pygments.rb gem from 0.5.1/0.5.2 to version 0.5.0.
+    **Solution**: Downgrade pygments.rb gem from 0.5.1/0.5.2 to version 0.5.0.
     > gem uninstall pygments.rb --version '=0.5.2'<br />
     > gem install pygments.rb --version 0.5.0
 
@@ -188,12 +189,45 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
         from c:/Ruby200-x64/lib/ruby/2.0.0/rubygems/core_ext/kernel_gem.rb:48:in`gem'
         from c:/Ruby200-x64/bin/jekyll:22:in `<main>'`
 
-    **Possible Reason**: As suggested in the message, pygments.rb 0.4.2 is needed, while version 0.5.0 is found.
+    **Reason**: As suggested in the message, pygments.rb 0.4.2 is needed, while version 0.5.0 is found.
     (This issue happened a while back with an old version of Jekyll, which should have been fixed by now.)
 
-    **Possible Solution**: Downgrade pygments.rb gem to version 0.4.2
+    **Solution**: Downgrade pygments.rb gem to version 0.4.2
     > gem uninstall pygments.rb --version “=0.5.0”<br />
     > gem install pygments.rb --version “=0.4.2”
+
+6. Error message:
+
+        Generating... You are missing a library required for Markdown. Please run:
+        $ [sudo] gem install rdiscount
+        Conversion error: There was an error converting '_posts/2013-04-22-yizeng-hello-world.md/#excerpt'.
+
+          ERROR: YOUR SITE COULD NOT BE BUILT:
+            ------------------------------------
+            Missing dependency: rdiscount
+
+    **Reason**: Dependency `rdiscount` is missing.
+    This is most likely because the site selects [rdiscount](https://github.com/davidfstr/RDiscount) as Markdown engine,
+    which is not Jekyll's default and needs to be installed manually.
+
+    **Solution**:
+    > gem install rdiscount
+
+7. Error message:
+
+        c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': cannot load such file -- wdm (LoadError)
+          from c:/Ruby200-x64/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require'
+          from c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/listen-1.3.1/lib/listen/adapter.rb:207:in `load_dependent_adapter'
+          from c:/Ruby200-x64/lib/ruby/gems/2.0.0/gems/listen-1.3.1/lib/listen/adapters/windows.rb:33:in `load_dependent_a
+        dapter'
+          ...
+
+    **Reason**: `wdm` gem could not be found.
+    Since Jekyll only supports *nix systems officially,
+    [Windows Directory Monitor](https://github.com/Maher4Ever/wdm) is therefore not included among Jekyll dependencies.
+
+    **Solution**:
+    > gem install wdm
 
 [Full installation instructions]: https://github.com/oneclick/rubyinstaller/wiki/Development-Kit#installation-instructions
 [Jekyll Quick-start guide]: http://jekyllrb.com/docs/quickstart/

@@ -6,6 +6,7 @@ PhantomJS using Selenium WebDriver Ruby binding."
 categories: [articles, popular]
 tags: [ruby, phantomjs, selenium-webdriver]
 alias: [/2014/01/08/]
+last_updated: April 20, 2014
 utilities: highlight, toc
 ---
 Selenium WebDriver is a web automation framework relies heavily on [Automation Atoms][Automation Atoms],
@@ -57,7 +58,7 @@ Here is how to achieve it using Selenium WebDriver Ruby binding.
 
 {% highlight ruby %}
 # Environment tested
-# Windows 7, Firefox 26, Selenium 2.39.0
+# Linux Mint 16, Firefox 28, Selenium 2.41.0
 
 require 'selenium-webdriver'
 
@@ -94,7 +95,7 @@ including those needed by Selenium WebDriver itself.
 
 {% highlight ruby %}
 # Environment tested
-# Linux Mint 15, PhantomJS 1.9.2, Selenium 2.39.0
+# Linux Mint 16, PhantomJS 1.9.7, Selenium 2.41.0
 
 require 'selenium-webdriver'
 
