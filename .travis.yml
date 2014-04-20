@@ -15,7 +15,7 @@ before_install:
   - gem update --system
   - gem update
 
-  - gem install sass compass jekyll rdiscount cucumber selenium-webdriver
+  - gem install sass compass jekyll kramdown cucumber selenium-webdriver
 
   - gem --version
   - sass --version
