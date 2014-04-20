@@ -35,6 +35,14 @@ module ResizeWindow
 		end
 	end
 
+	class ResizeChromeWindowTests < Test::Unit::TestCase
+		include CommonComponents
+
+		def setup
+			@driver = Selenium::WebDriver.for :chrome
+		end
+	end
+
 	class ResizePhantomJsWindowTests < Test::Unit::TestCase
 		include CommonComponents
 

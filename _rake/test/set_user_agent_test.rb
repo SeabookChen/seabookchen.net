@@ -25,6 +25,14 @@ module SetUserAgent
 			@driver.quit
 		end
 
+		def test_setting_chrome_user_agent
+			@driver = Selenium::WebDriver.for :chrome, :switches => %W[--user-agent=#{USER_AGENT}]
+
+			assert_equal(USER_AGENT, get_actual_user_agent())
+
+			@driver.quit
+		end
+
 		def test_setting_phantomjs_user_agent
 			capabilities = Selenium::WebDriver::Remote::Capabilities.phantomjs('phantomjs.page.settings.userAgent' => USER_AGENT)
 			@driver = Selenium::WebDriver.for :phantomjs, :desired_capabilities => capabilities
