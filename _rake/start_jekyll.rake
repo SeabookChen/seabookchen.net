@@ -1,6 +1,6 @@
 desc "Start Jekyll locally"
 task :jekyll do
-	puts 'Usage: rake jekyll [port=4000] [trace=true] [watch_compass=false]'
+	puts 'Usage: rake jekyll [port=4000] [trace=true]'
 
 	port = ENV['port'] || '4000'
 	trace = ENV['trace'] == 'true' ? '--trace' : ''
@@ -11,9 +11,17 @@ task :jekyll do
 		system 'chcp 65001'
 	end
 
+	system "compass compile ./assets/css"
 	system "jekyll serve --watch --drafts --port=#{port} --detach #{trace}"
 	sleep 3
+end
+
+desc "Start Jekyll on Travis CI"
+task :travis do
+	puts 'Usage: rake travis'
 
 	system "compass compile ./assets/css"
-	system "compass watch ./assets/css" unless ENV['watch_compass'] == 'false'
+
+	system "jekyll serve --detach --trace"
+	sleep 3
 end
