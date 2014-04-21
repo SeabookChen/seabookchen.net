@@ -1,11 +1,10 @@
 desc "Start Jekyll locally"
 task :jekyll do
-	puts 'Usage: rake jekyll [port=4000] [trace=true] [detach=true]'
+	puts 'Usage: rake jekyll [port=4000] [trace=true]'
 
 	if ENV['help'].nil?
 		port = ENV['port'] || '4000'
 		trace = ENV['trace'] == 'true' ? '--trace' : ''
-		detach = ENV['detach'] == 'true' ? '--detach' : ''
 
 		# Set active code page to avoid encoding issues on Windows
 		platforms = %w[mswin mingw32]
@@ -13,7 +12,10 @@ task :jekyll do
 			system 'chcp 65001'
 		end
 
-		system "compass compile  ./assets/css/"
-		system "jekyll serve --watch --drafts --port=#{port} #{trace} #{detach}"
+		system "jekyll serve --watch --drafts --port=#{port} --detach #{trace}"
+		sleep 3
+
+		system "compass compile ./assets/css"
+		system "compass watch ./assets/css"
 	end
 end
