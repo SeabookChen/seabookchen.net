@@ -10,6 +10,7 @@
 
 @import "./home/fullPage";
 
+$color-text-dark: #2D2D2D;
 $color-text-light: #fff;
 $color-link: rgba(255, 153, 0, 0.8);
 $color-link-hover: #FF9900;
@@ -18,7 +19,7 @@ $color-background-light: rgba(255, 255, 255, 0.1);
 $icon-size: 64px;
 
 body {
-	color: $color-text-light;
+	color: $color-text-dark;
 	font-family: 'Ubuntu Titling', 'Ubuntu Regular', 'DejaVu Sans', Tahoma, sans-serif;
 	font-size: 1em;
 }
@@ -60,15 +61,14 @@ h3 {
 }
 
 #section0 {
-	background: url('/assets/images/skin/background-section0.jpg') no-repeat center center;
-	@include background-size(cover);
+	background: url('/assets/images/skin/noisy_texture_F0F0F0.png') repeat 0 0 #F0F0F0
 }
 #section1 {
-	background: url('/assets/images/skin/background-section1.jpg') no-repeat center center;
-	@include background-size(cover);
+	background: url('/assets/images/skin/noisy_texture_150E1F.png') repeat 0 0 #150E1F
 }
 
-a[class^='btn'] {
+.btn-light,
+.btn-dark {
 	@include transition(all .3s ease-in-out);
 	color: $color-text-light;
 	border: 1px solid $color-text-light;
@@ -91,15 +91,33 @@ a[class^='btn'] {
 	background-color: $color-background-dark !important
 }
 
-.continue {
+#fullPage-nav span {
+	border: 1px solid #8A8A8A
+}
+#fullPage-nav li .active span {
+	background: #707070
+}
+
+.btn-continue {
+	@include transition(all .3s ease-in-out);
+	background-image: url("/assets/images/btn-more.png");
+	background-position: center center;
+	background-repeat: no-repeat;
+	display: inline-block;
 	bottom: 0;
 	left: 50%;
-	height: 20px;
-	margin-left: -75px;
-	padding: 10px;
+	margin-left: -30px;
+	padding: 16px;
 	position: absolute;
-	width: 120px;
+	text-indent: -9999em;
+	height: 32px;
+	width: 32px;
 	z-index: 2;
+
+	&:hover {
+		-webkit-animation-name: bounce;
+		animation-name: bounce;
+	}
 }
 
 .social-links {
