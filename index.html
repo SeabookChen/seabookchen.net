@@ -44,7 +44,7 @@
 		<h2><span>Software engineer &amp; test automator</span></h2>
 		<h3><span>Christchurch, New Zealand</span></h3>
 	</div>
-	<a class="btn-continue animated" data-ga="More" href="#social"></a>
+	<a class="btn-continue animated bounce" data-ga="More" href="#social"></a>
 </div>
 
 <div id="section1" class="section" data-name="social">
@@ -76,7 +76,8 @@
 
 			afterLoad: function(anchorLink, index){
 				if(index === 1){
-					$('#section0 .headings, #section0 .btn-continue').removeClass('hidden').addClass('fadeInDown');
+					$('#section0 .headings, #section0').removeClass('hidden').addClass('fadeInDown');
+					$('.btn-continue').removeClass('hidden').addClass('bounce');
 				}
 				if(index === 2){
 					$('#section1 h1, #section1 .social-links').removeClass('hidden').addClass('fadeInUp');
@@ -85,7 +86,7 @@
 
 			onLeave: function(index, direction){
 				if(index == 1 && direction =='down'){
-					$('#section0 .headings, #section0 .btn-continue').addClass('hidden').removeClass('fadeInDown fadeInLeft');
+					$('#section0 .headings, #section0 .btn-continue').addClass('hidden').removeClass('bounce fadeInDown fadeInLeft');
 				}
 				if(index == 2 && direction == 'up'){
 					$('#section1 h1, #section1 .social-links').addClass('hidden').removeClass('fadeInUp');
