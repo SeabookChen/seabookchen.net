@@ -27,7 +27,7 @@ module Pages
 		end
 
 		def btn_continue
-			return section_bio.find_element(:class => 'continue')
+			return section_bio.find_element(:class => 'btn-continue')
 		end
 # EndRegion
 
