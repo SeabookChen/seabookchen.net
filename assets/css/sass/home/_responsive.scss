@@ -8,6 +8,8 @@
 /* Continue button */
 @media only screen and (max-height: 320px) {
 	.btn-continue {
+		background-image: url("/assets/images/btn-more-small.png");
+		margin-left: -25px;
 		height: 16px;
 		width: 16px;
 	}
