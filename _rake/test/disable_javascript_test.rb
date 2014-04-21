@@ -5,12 +5,19 @@ module DisableJavaScript
 
 	class DisableJavaScriptTests < Test::Unit::TestCase
 
-		def is_javascript_enabled?
-			@driver.get('https://www.whatismybrowser.com/is-javascript-enabled')
+		DEMO_PAGE = <<-eos
+			data:text/html,
+			<noscript><p class="js-disabled">JavaScript disabled</p></noscript>
+			<div>This is a demo page.</div>
+		eos
 
-			wait = Selenium::WebDriver::Wait.new(:timeout => 10) # seconds
-			detection = wait.until { @driver.find_element(:css, '#javascript-detection') }
-			return detection.text.strip
+		def teardown
+			@driver.quit unless @driver.nil?
+		end
+
+		def is_javascript_disabled?
+			@driver.get(DEMO_PAGE)
+			return !@driver.find_element(:class, 'js-disabled').displayed?
 		end
 
 		def test_disabling_javascript_in_firefox
@@ -18,9 +25,7 @@ module DisableJavaScript
 			profile["javascript.enabled"] = false
 			@driver = Selenium::WebDriver.for(:firefox, :profile => profile)
 
-			assert_equal('No', is_javascript_enabled?)
-
-			@driver.quit
+			assert_equal(false, is_javascript_disabled?)
 		end
 
 		def test_disabling_javascript_in_phantomjs
@@ -28,9 +33,8 @@ module DisableJavaScript
 
 			capabilities = Selenium::WebDriver::Remote::Capabilities.phantomjs("phantomjs.page.settings.javascriptEnabled" => "false")
 			@driver = Selenium::WebDriver.for :phantomjs, :desired_capabilities => capabilities
-			assert_equal('No', is_javascript_enabled?)
 
-			@driver.quit
+			assert_equal(false, is_javascript_disabled?)
 		end
 	end
 end

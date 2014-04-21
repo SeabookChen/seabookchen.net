@@ -8,7 +8,7 @@ module ResizeWindow
 		NEW_HEIGHT = 1080
 
 		def teardown
-			@driver.quit
+			@driver.quit unless @driver.nil?
 		end
 
 		def test_setting_window_using_dimension

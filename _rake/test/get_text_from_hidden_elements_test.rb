@@ -14,7 +14,7 @@ module GetTextFromHiddenElements
 		EXPECTED_TEXTCONTENT = 'Demo div with a hidden paragraph inside.'
 
 		def teardown
-			@driver.quit
+			@driver.quit unless @driver.nil?
 		end
 
 		def test_getting_text_by_innerhtml
