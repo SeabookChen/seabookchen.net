@@ -67,14 +67,25 @@ h3 {
 	background: url('/assets/images/skin/noisy_texture_150E1F.png') repeat 0 0 #150E1F
 }
 
+#fullPage-nav span {
+	border: 1px solid #8A8A8A
+}
+#fullPage-nav li .active span {
+	background: #707070
+}
+
 .btn-light,
 .btn-dark {
 	@include transition(all .3s ease-in-out);
 	color: $color-text-light;
-	border: 1px solid $color-text-light;
+	border: 1px solid #150E1F;
 	outline: none;
 	text-decoration: none;
 	text-transform: uppercase;
+
+	&:hover {
+		border: 1px solid $color-text-light;
+	}
 }
 
 .btn-dark {
@@ -91,13 +102,10 @@ h3 {
 	background-color: $color-background-dark !important
 }
 
-#fullPage-nav span {
-	border: 1px solid #8A8A8A
+.btn-enter {
+	padding-left: 6px;
+	padding-right: 6px;
 }
-#fullPage-nav li .active span {
-	background: #707070
-}
-
 .btn-continue {
 	@include transition(all .3s ease-in-out);
 	background-image: url("/assets/images/btn-more.png");
@@ -123,7 +131,7 @@ h3 {
 .social-links {
 	a {
 		background-size: $icon-size $icon-size;
-		margin: 10px;
+		margin: 12px;
 		height: $icon-size;
 		width: $icon-size;
 	}
