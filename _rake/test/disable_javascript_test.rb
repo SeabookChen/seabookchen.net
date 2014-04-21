@@ -15,7 +15,7 @@ module DisableJavaScript
 			@driver.quit unless @driver.nil?
 		end
 
-		def is_javascript_enabled?
+		def is_javascript_disabled?
 			@driver.get(DEMO_PAGE)
 			return @driver.find_element(:class, 'js-disabled').displayed?
 		end
@@ -25,7 +25,7 @@ module DisableJavaScript
 			profile["javascript.enabled"] = false
 			@driver = Selenium::WebDriver.for(:firefox, :profile => profile)
 
-			assert_equal(false, is_javascript_enabled?)
+			assert_equal(true, is_javascript_disabled?)
 		end
 
 		def test_disabling_javascript_in_phantomjs
@@ -34,7 +34,7 @@ module DisableJavaScript
 			capabilities = Selenium::WebDriver::Remote::Capabilities.phantomjs("phantomjs.page.settings.javascriptEnabled" => "false")
 			@driver = Selenium::WebDriver.for :phantomjs, :desired_capabilities => capabilities
 
-			assert_equal(false, is_javascript_enabled?)
+			assert_equal(true, is_javascript_disabled?)
 		end
 	end
 end
