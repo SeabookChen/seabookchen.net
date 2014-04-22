@@ -37,6 +37,14 @@ h3 {
 	font-size: 1.725em
 }
 
+h1,
+h2,
+h3 {
+	span {
+		padding: 6px 2px
+	}
+}
+
 .site-notice {
 	background: $color-background-dark;
 	text-align: center;
@@ -61,10 +69,10 @@ h3 {
 }
 
 #section0 {
-	background: url('/assets/images/skin/noisy_texture_F0F0F0.png') repeat 0 0 #F0F0F0
+	background: url('/assets/images/skin/noisy_texture_section0-200x200.png') repeat 0 0 #F0F0F0
 }
 #section1 {
-	background: url('/assets/images/skin/noisy_texture_150E1F.png') repeat 0 0 #150E1F
+	background: url('/assets/images/skin/noisy_texture_section1-200x200.png') repeat 0 0 #150E1F
 }
 
 #fullPage-nav span {
@@ -102,7 +110,7 @@ h3 {
 }
 
 .btn-enter {
-	padding:6px 8px 0px 4px
+	padding: 6px 8px 0px 4px
 }
 
 .btn-continue {
