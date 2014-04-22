@@ -20,7 +20,7 @@ $icon-size: 64px;
 
 body {
 	color: $color-text-dark;
-	font-family: 'Ubuntu Titling', 'Ubuntu Regular', 'DejaVu Sans', Tahoma, sans-serif;
+	font-family: 'Junge Regular', 'Ubuntu Titling', 'DejaVu Sans', Tahoma, sans-serif;
 	font-size: 1em;
 }
 
@@ -81,7 +81,6 @@ h3 {
 	border: 1px solid #150E1F;
 	outline: none;
 	text-decoration: none;
-	text-transform: uppercase;
 
 	&:hover {
 		border: 1px solid $color-text-light;
@@ -103,8 +102,7 @@ h3 {
 }
 
 .btn-enter {
-	padding-left: 6px;
-	padding-right: 6px;
+	padding:6px 8px 0px 4px
 }
 
 .btn-continue {
@@ -135,7 +133,7 @@ h3 {
 .social-links {
 	a {
 		background-size: $icon-size $icon-size;
-		margin: 12px;
+		margin: 18px;
 		height: $icon-size;
 		width: $icon-size;
 	}

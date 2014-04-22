@@ -59,3 +59,9 @@
 							   "/assets/fonts/ubuntu-c-webfont.ttf",
 							   "/assets/fonts/ubuntu-c-webfont.svg#ubuntu_condensedregular"),
 							   "/assets/fonts/ubuntu-c-webfont.eot", normal, normal);
+
+@include font-face("Junge Regular",
+					font-files("/assets/fonts/junge-regular-webfont.woff",
+							   "/assets/fonts/junge-regular-webfont.ttf",
+							   "/assets/fonts/junge-regular-webfont.svg#jungeregular"),
+							   "/assets/fonts/junge-regular-webfont.eot", normal, normal);
