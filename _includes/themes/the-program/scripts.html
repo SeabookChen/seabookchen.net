@@ -43,7 +43,7 @@ $(document).ready(function () {
 		sendGaEvent('Tags', 'Click', this.title);
 	});
 
-	$('a.internal').on('click', function() {
+	$('a.internal, .unit-article .comment .show-hidden').on('click', function() {
 		label = (this.getAttribute('data-ga') !== null) ? this.getAttribute('data-ga') : this.textContent;
 		sendGaEvent('Internal Links', 'Click', label);
 	});
@@ -191,6 +191,7 @@ $(document).ready(function () {
 
 {% if page.categories != nil %}
 <!-- Click to load Disqus (http://christian-fei.com/how-to-lazy-load-disqus-comments) -->
+<!-- http://stackoverflow.com/questions/16243972/showing-disqus-comment-count-in-a-div-or-span-not-a-href -->
 <script>
 $(document).ready(function () {
 	function loadDisqus() {
@@ -200,7 +201,26 @@ $(document).ready(function () {
 		dsq.src = 'http://{{ site.JB.comments.disqus.short_name }}.disqus.com/embed.js';
 		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 	}
+	function updateCount() {
+		var disqusPublicKey = "{{ site.JB.comments.disqus.public_key }}";
+		var disqusShortname = "{{ site.JB.comments.disqus.short_name }}";
+		var urlArray = ['link:' + $('.comment .show-hidden').attr('data-disqus-url')];
+		$.ajax({
+			type: 'GET',
+			url: "https://disqus.com/api/3.0/threads/set.jsonp",
+			data: { api_key: disqusPublicKey, forum : disqusShortname, thread : urlArray }, // URL method
+			cache: false,
+			dataType: 'jsonp',
+			success: function(result) {
+				for (var i in result.response) {
+					btnText = '{{ site.translations.show_comments }} (' + result.response[i].posts + ')';
+					$('.comment .show-hidden').html(btnText);
+				}
+			}
+		});
+	}
 
+	updateCount();
 	$('.comment .show-hidden').on('click', function() {
 		loadDisqus();
 		$(this).remove();

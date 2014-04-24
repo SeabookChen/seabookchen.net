@@ -89,6 +89,7 @@ JB:
     provider: disqus
     disqus:
       short_name: yizeng
+      public_key: ULZ0b9TFdfCUJSKQd4WCKv2v3u25YoG7YG8zXPewkWrT35lZ0Se9YnxLzoV6VM8W
     livefyre:
       site_id: 123
     intensedebate:
