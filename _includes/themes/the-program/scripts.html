@@ -43,7 +43,7 @@ $(document).ready(function () {
 		sendGaEvent('Tags', 'Click', this.title);
 	});
 
-	$('a.internal').on('click', function() {
+	$('a.internal, .unit-article .comment .show-hidden').on('click', function() {
 		label = (this.getAttribute('data-ga') !== null) ? this.getAttribute('data-ga') : this.textContent;
 		sendGaEvent('Internal Links', 'Click', label);
 	});
