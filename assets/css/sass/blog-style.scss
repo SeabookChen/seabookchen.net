@@ -139,6 +139,7 @@ a:hover {
 	text-decoration: none
 }
 /* HIGHLIGHTER */
+pre,
 code,
 kbd,
 samp {
@@ -150,7 +151,6 @@ pre {
 	@include border-radius(5px);
 	color: #f2f2f2;
 	background-color: $color-code-background;
-	font-size: .8em !important;
 	line-height: 18px !important;
 	margin-left: 0;
 	margin-right: 0;
