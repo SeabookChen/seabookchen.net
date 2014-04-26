@@ -214,6 +214,7 @@ driver.quit()
 {% footnotes %}
 <p id="footnote-1">
 [1]: Adding "System.Drawing" assembly reference to project is required first.
+{% reverse_footnote 1 %}
 </p>
 {% endfootnotes %}
 

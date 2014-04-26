@@ -1,6 +1,6 @@
 module Jekyll
   module Tags
-    class FootnoteTag < Liquid::Tag
+    class ReverseFootnoteTag < Liquid::Tag
       include Liquid::StandardFilters
 
       def initialize(tag_name, text, tokens)
@@ -13,10 +13,10 @@ module Jekyll
       end
 
       def render(context)
-        "<sup><a id=\"footnote-ref-#{@num}\" href=\"#footnote-#{@num}\">[#{@num}]</a></sup>"
+        "<a class=\"reverse-footnote internal\" data-ga=\"Back to footnote-ref\" href=\"#footnote-ref-#{@num}\" title=\"Back\">↩</a>"
       end
     end
   end
 end
 
-Liquid::Template.register_tag('footnote', Jekyll::Tags::FootnoteTag)
+Liquid::Template.register_tag('reverse_footnote', Jekyll::Tags::ReverseFootnoteTag)

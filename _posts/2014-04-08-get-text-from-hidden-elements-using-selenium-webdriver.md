@@ -131,8 +131,10 @@ driver.quit
 {% footnotes %}
 <p id="footnote-1">
 [1]: W3C-compliant <a href="http://www.w3.org/TR/2004/REC-DOM-Level-3-Core-20040407/core.html#Node3-textContent">textContent </a>property
+{% reverse_footnote 1 %}
 </p>
 <p id="footnote-2">
 [2]: W3C DOM Compatibility<a href="http://www.quirksmode.org/dom/w3c_html.html#t07">#textContent</a>
+{% reverse_footnote 2 %}
 </p>
 {% endfootnotes %}

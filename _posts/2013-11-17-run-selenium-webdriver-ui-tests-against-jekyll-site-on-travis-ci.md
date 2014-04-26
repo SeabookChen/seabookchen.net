@@ -76,6 +76,7 @@ script:
 <p id="footnote-1">
 [1]: Since only the commits in master/gh-pages branches will affect the production site,
 running tests against production for branches that don't change production is somewhat redundant.
+{% reverse_footnote 1 %}
 </p>
 {% endfootnotes %}
 

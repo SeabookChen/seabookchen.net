@@ -218,8 +218,10 @@ The sample project's current status is: <a class="image-link" href="https://trav
 {% footnotes %}
 <p id="footnote-1">
 [1]: A list of supported languages can be found <a href="http://docs.travis-ci.com/user/languages/">here</a>.
+{% reverse_footnote 1 %}
 </p>
 <p id="footnote-2">
 [2]: <a href="http://docs.travis-ci.com/user/gui-and-headless-browsers/#Using-xvfb-to-Run-Tests-That-Require-GUI-(e.g.-a-Web-browser)">Using xvfb to Run Tests That Require GUI (e.g. a Web browser) </a>
+{% reverse_footnote 2 %}
 </p>
 {% endfootnotes %}
