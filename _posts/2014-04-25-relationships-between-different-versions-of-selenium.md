@@ -31,8 +31,7 @@ Any corrections or suggestions would be greatly appreciated.
 </a>
 
 ### Selenium IDE
-[Selenium IDE][Selenium IDE] is a Firefox add-on
-that allows users to record and re-play user actions in Firefox.
+Firefox add-on [Selenium IDE][Selenium IDE] allows users to record and re-play user actions in Firefox.
 It supports exporting the recorded scripts into Selenium RC or Selenium WebDriver code.
 
 ### Selenium 1 / Selenium RC
@@ -45,8 +44,7 @@ It is now officially deprecated
 but still released within [Selenium WebDriver](#selenium-2--selenium-webdriver) library for backward compatibility purpose.
 
 ### Selenium 2 / Selenium WebDriver
-[Selenium WebDriver][Selenium WebDriver],
-previously addressed as Selenium 2 incorrectly, is the latest API in Selenium project,
+Selenium 2, a.k.a. [Selenium WebDriver][Selenium WebDriver], is the latest API in Selenium project,
 which replaces Selenium RC with fundamentally different mechanisms and dominates web UI automation market right now.
 
 ### Selenium 3
@@ -154,10 +152,11 @@ For Selenium WebDriver tests that are running locally, Selenium Server is not re
 
 ### Selenium / PhantomJS
 
-[PhantomJS][PhantomJS] is an open-source, headless WebKit browser,
-while [GhostDriver][GhostDriver] is a JavaScript implementation of the [WebDriver Wire Protocol][JsonWireProtocol] for PhantomJS{% footnote 2 %}.
-Inside Selenium WebDriver project, GhostDriver is used for automating PhantomJS browser.
-This is similar to the relationship between ChromeDriver and Chrome browser in a sense.
+Being an open-source headless WebKit browser,
+[PhantomJS][PhantomJS] needs a JavaScript implementation of the [WebDriver Wire Protocol][JsonWireProtocol] in order to work with Selenium WebDriver,
+therefore [GhostDriver][GhostDriver] kicks in{% footnote 2 %}.
+Inside Selenium WebDriver project, GhostDriver is used for automating PhantomJS browser,
+which is similar to the relationship between ChromeDriver and Chrome browser in a sense.
 
 ### Selenium WebDriver / WebDriverJS
 
@@ -167,7 +166,7 @@ which confusingly may be referred to three different projects.
 - Selenium project itself has an official JavaScript binding for node.js,
   which has a [wiki page][Selenium WebDriverJS] titled as "WebDriverJS" and can be installed using:
 
-> npm install selenium-webdriver
+  > npm install selenium-webdriver
 
 - There is another common third-party WebDriver protocol JS wrapper in the market, called "WebdriverJS" as well
   and can be installed with:
@@ -180,7 +179,7 @@ which confusingly may be referred to three different projects.
 
 - [WD.js][WD.js] is also a WebDriver JavaScript client and can be found by command:
 
-> npm install wd
+  > npm install wd
 
 ### Selenium / Appium, ios-driver, Selendroid
 
