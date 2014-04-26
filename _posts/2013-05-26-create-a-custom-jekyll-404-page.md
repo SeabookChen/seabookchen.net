@@ -80,8 +80,10 @@ see how the page looks and check if it can be redirected automatically or not.
 {% footnotes %}
 <p id="footnote-1">
 [1]: This statement no longer exists in official documentation, but I haven't had a chance to verify it.
+{% reverse_footnote 1 %}
 </p>
 <p id="footnote-2">
 [2]: <a href="http://www.w3schools.com/tags/att_meta_http_equiv.asp">"HTML &lt;meta&gt; http-equiv Attribute" example</a> by W3schools.
+{% reverse_footnote 2 %}
 </p>
 {% endfootnotes %}
