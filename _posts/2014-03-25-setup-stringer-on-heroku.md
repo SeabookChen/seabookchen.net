@@ -24,7 +24,7 @@ but to download and setup it up on Heroku, two things are needed.
 If it is been forked, clone your own Stringer repository.
 Otherwise clone the original repository like this:
 
-> git clone https://github.com/swanson/stringer.git
+	git clone https://github.com/swanson/stringer.git
 
 ## Install Heroku
 
@@ -33,7 +33,7 @@ Otherwise clone the original repository like this:
 
 	- For example, on Linux Mint, run the following command in terminal to execute the installation shell script:
 
-		> wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+	  	wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 	- For those with security concerns, detailed commands can be found
 	in the script [here](https://toolbelt.heroku.com/install-ubuntu.sh) and executed manually.
@@ -42,33 +42,33 @@ Otherwise clone the original repository like this:
 
 1. Login into Heroku
 
-	> heroku login
+   	heroku login
 
 2. Create Heroku app
 
-	> cd stringer<br />
-	> heroku create
+   	cd stringer
+   	heroku create
 
 3. Push to Heroku
 
-	> git push heroku master
+   	git push heroku master
 
 4. Configure
 
-	> heroku config:set LOCALE=en<br />
-	> heroku config:set APP_URL=`heroku apps:info | grep -o 'http[^"]*'`<br />
-	> heroku config:set SECRET_TOKEN=`openssl rand -hex 20`
+   	heroku config:set LOCALE=en
+   	heroku config:set APP_URL=`heroku apps:info | grep -o 'http[^"]*'`
+   	heroku config:set SECRET_TOKEN=`openssl rand -hex 20`
 
 5. Restart
 
-	> heroku run rake db:migrate<br />
-	> heroku restart
+   	heroku run rake db:migrate
+   	heroku restart
 
 ## Add custom domain
 
 1. Detailed official documentation on how to add custom domain to this Heroku Stringer app is [here][Heroku Custom Domains].
 
-	> heroku domains:add reader.yizeng.me
+   	heroku domains:add reader.yizeng.me
 
 2. Visit domain registrar's "DNS Records" page and create a CNAME record pointing to Heroku app.<br />
    For example, record type is `CNAME`, host is `reader.yizeng.me`,
@@ -79,11 +79,12 @@ Otherwise clone the original repository like this:
 1. Add Scheduler add-ons
 
 	To fetch RSS feeds automatically, [Heroku Scheduler](https://addons.heroku.com/scheduler) needs to be added to app.
+
+		heroku addons:add scheduler
+		heroku addons:open scheduler
+
 	Then add a task called `rake fetch_feeds`
 	and set a frequency to it in [Scheduler Dashboard](https://scheduler.heroku.com/dashboard).
-
-	> heroku addons:add scheduler<br />
-	  heroku addons:open scheduler
 
 	<a class="post-image" href="/assets/images/posts/2014-03-24-heroku-scheduler-dashboard.png">
 	<img itemprop="image" data-src="/assets/images/posts/2014-03-24-heroku-scheduler-dashboard.png" src="/assets/js/unveil/loader.gif" alt="Heroku Scheduler Dashboard" />
@@ -96,8 +97,8 @@ Otherwise clone the original repository like this:
 	[Papertrail](https://addons.heroku.com/papertrail) is for logging server status.
 	Both of them have free plans available.
 
-	> heroku addons:add pgbackups:auto-week<br />
-	> heroku addons:add papertrail:choklad
+		heroku addons:add pgbackups:auto-week
+		heroku addons:add papertrail:choklad
 
 3. More settings and add-ons can be accessed from web user interface
 
@@ -107,27 +108,34 @@ Otherwise clone the original repository like this:
 
 ## Update stringer
 
-> git pull<br />
-> git push heroku master<br />
-> heroku run rake db:migrate<br />
-> heroku restart
+	git pull
+	git push heroku master
+	heroku run rake db:migrate
+	heroku restart
+
+## Clone existing stringer app
+
+In order to clone the source of an existing application from Heroku using Git,
+use the heroku git:clone command with the app name, mine is called `yizeng-reader` in this case.
+
+	heroku git:clone -a yizeng-reader
 
 ## Troubleshooting
 
 Error while executing `git push heroku master`:
 
-	Permission denied (publickey).
-	fatal: The remote end hung up unexpectedly
+> Permission denied (publickey).<br />
+> fatal: The remote end hung up unexpectedly
 
 Solution from [StackOverflow](http://stackoverflow.com/q/4269922/1177636):
 
 - Upload the public ssh key to Heroku:
 
-> heroku keys:add ~/.ssh/id_rsa.pub
+  	heroku keys:add ~/.ssh/id_rsa.pub
 
 - If no keys exist, create a new one:
 
-> heroku keys:add
+  	heroku keys:add
 
 [Stringer]: https://github.com/swanson/stringer
 [README]: https://github.com/swanson/stringer/blob/master/README.md
