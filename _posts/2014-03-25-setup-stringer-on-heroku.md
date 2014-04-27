@@ -33,7 +33,7 @@ Otherwise clone the original repository like this:
 
 	- For example, on Linux Mint, run the following command in terminal to execute the installation shell script:
 
-		> wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+		> wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh \| sh
 
 	- For those with security concerns, detailed commands can be found
 	in the script [here](https://toolbelt.heroku.com/install-ubuntu.sh) and executed manually.
@@ -56,8 +56,8 @@ Otherwise clone the original repository like this:
 4. Configure
 
 	> heroku config:set LOCALE=en<br />
-	> heroku config:set APP_URL=`heroku apps:info | grep -o 'http[^"]*'`<br />
-	> heroku config:set SECRET_TOKEN=`openssl rand -hex 20`
+	> heroku config:set APP_URL=\`heroku apps:info | grep -o 'http[^"]*'\`<br />
+	> heroku config:set SECRET_TOKEN=\`openssl rand -hex 20\`
 
 5. Restart
 
