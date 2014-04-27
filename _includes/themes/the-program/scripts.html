@@ -19,7 +19,8 @@ var sendGaEvent = function(category, action, label) {
 
 $(document).ready(function () {
 	$('.the-header .nav-link a').on('click', function() {
-		sendGaEvent('Navigation Links', 'Click', this.textContent);
+		label = (this.getAttribute('data-ga') !== null) ? this.getAttribute('data-ga') : this.textContent;
+		sendGaEvent('Internal Links', 'Click', label);
 	});
 	$('.the-header .nav-link button').on('click', function() {
 		sendGaEvent('Navigation Buttons', 'Click', this.getAttribute('data-ga'));
@@ -188,39 +189,30 @@ $(document).ready(function () {
 {% endif %}
 
 {% if page.categories != nil %}
-<!-- Click to load Disqus (http://christian-fei.com/how-to-lazy-load-disqus-comments) -->
-<!-- http://stackoverflow.com/questions/16243972/showing-disqus-comment-count-in-a-div-or-span-not-a-href -->
 <script>
 $(document).ready(function () {
-	function loadDisqus() {
-		var dsq = document.createElement('script');
-		dsq.type = 'text/javascript';
-		dsq.async = true;
-		dsq.src = 'http://{{ site.JB.comments.disqus.short_name }}.disqus.com/embed.js';
-		(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	}
-	function updateCount() {
-		var disqusPublicKey = "{{ site.JB.comments.disqus.public_key }}";
-		var disqusShortname = "{{ site.JB.comments.disqus.short_name }}";
-		var urlArray = ['link:' + $('.comment .show-hidden').attr('data-disqus-url')];
-		$.ajax({
-			type: 'GET',
-			url: "https://disqus.com/api/3.0/threads/set.jsonp",
-			data: { api_key: disqusPublicKey, forum : disqusShortname, thread : urlArray }, // URL method
-			cache: false,
-			dataType: 'jsonp',
-			success: function(result) {
-				for (var i in result.response) {
-					btnText = '{{ site.translations.show_comments }} (' + result.response[i].posts + ')';
-					$('.comment .show-hidden').html(btnText);
-				}
-			}
-		});
-	}
+	var disqusPublicKey = "{{ site.JB.comments.disqus.public_key }}";
+	var disqusShortname = "{{ site.JB.comments.disqus.short_name }}";
+	var threadUrl = 'link:' + $('.comment .show-hidden').attr('data-disqus-url');
 
-	updateCount();
+	$.ajax({
+		type: 'GET',
+		url: "https://disqus.com/api/3.0/threads/set.jsonp",
+		data: { api_key: disqusPublicKey, forum: disqusShortname, thread: threadUrl },
+		cache: false,
+		dataType: 'jsonp',
+		success: function(result) {
+			if (result.response.length === 1) {
+				btnText = '{{ site.translations.show_comments }} (' + result.response[0].posts + ')';
+				$('.comment .show-hidden').html(btnText);
+			}
+		}
+	});
+
 	$('.comment .show-hidden').on('click', function() {
-		loadDisqus();
+		$.ajaxSetup({cache:true});
+		$.getScript("http://" + disqusShortname + ".disqus.com/embed.js");
+		$.ajaxSetup({cache:false});
 		$(this).remove();
 	});
 

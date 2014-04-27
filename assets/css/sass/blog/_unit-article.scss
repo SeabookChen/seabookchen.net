@@ -17,6 +17,14 @@
 }
 
 .unit-article {
+	iframe {
+		@include border-radius(5px);
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+	}
+
 	a {
 		@include border-radius(2px);
 		@include link-colors(#0077CC, $visited:#4A6B82, $hover:$color-text);
@@ -66,6 +74,12 @@
 			border-color: $color-hover;
 			color: $color-hover;
 		}
+	}
+
+	.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.meta {
@@ -308,16 +322,8 @@
 		margin-bottom: 0
 	}
 
-	.comment {
-		a {
-			border-bottom: 0
-		}
-
-		.show-hidden {
-			display: block;
-			margin-left: auto;
-			margin-right: auto;
-		}
+	.comment a {
+		border-bottom: 0
 	}
 
 	.footnotes {
