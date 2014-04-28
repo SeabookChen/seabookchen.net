@@ -4,7 +4,7 @@
 	table {
 		background-color: #FFF;
 		border-collapse: separate;
-		border: 5px solid $color-box-border;
+		border: 5px solid $color-inline-code-background;
 
 		&:hover {
 			@include transition(all .3s ease-in-out);
