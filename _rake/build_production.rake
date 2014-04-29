@@ -2,10 +2,10 @@ require 'fileutils'
 
 # Usage: rake build
 # No arguments are allowed to avoid deleting wrong directories by mistake
-desc "Build published Jekyll site to a pre-defined folder"
+desc "Build published Jekyll site to a pre-defined submodule"
 task :build do
 
-	DIR = '../yizeng.me-gh-pages'
+	DIR = './yizeng.github.io'
 
 	# remove current _site folder and local production folder
 	FileUtils.rm_rf("./_site", :verbose => true)
