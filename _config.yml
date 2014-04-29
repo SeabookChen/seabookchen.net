@@ -1,6 +1,6 @@
 permalink: /:year/:month/:day/:title
 
-exclude: [".rvmrc", ".rbenv-version", "LICENSE", "README.md", "Rakefile", "changelog.md"]
+exclude: [".rvmrc", ".rbenv-version", "Rakefile", "changelog.md"]
 highlighter: pygements
 markdown: kramdown
 
