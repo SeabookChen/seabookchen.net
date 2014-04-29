@@ -13,7 +13,7 @@ module Jekyll
       end
 
       def render(context)
-        "<a class=\"reverse-footnote internal\" data-ga=\"Back to footnote-ref\" href=\"#footnote-ref-#{@num}\" title=\"Back\">↩</a>"
+        "<a class=\"reverse-footnote internal\" data-ga=\"Reverse Footnote\" href=\"#footnote-ref-#{@num}\" title=\"Back\">↩</a>"
       end
     end
   end
