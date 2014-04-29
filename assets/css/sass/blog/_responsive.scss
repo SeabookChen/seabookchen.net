@@ -1,4 +1,4 @@
-/* Data table on small screens */
+/* Data table and social links on small screens */
 @media only screen and (max-width: 360px) {
 	.data-table {
 		font-size: .75em
@@ -166,10 +166,27 @@
 		font-size: 1.25em
 	}
 }
+
 /*
-	Not that old computer width: [1280, infinity)
+	Hide post date when width: (0, 960)
 */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 0px) and (max-width:960px) {
+	.unit-article .date {
+		display: none
+	}
+}
+
+@media only screen and (min-width: 960px) {
+	.search-form .results .entry-date {
+		display: block;
+		float: right;
+	}
+}
+
+/*
+	Not that old computer width: [1366, infinity)
+*/
+@media only screen and (min-width: 1366px) {
 	.the-header {
 		.unit-head .nav-global .logo {
 			border-bottom: 0 none;
@@ -207,11 +224,3 @@
 	}
 }
 
-/*
-	Hide post date when width: (0, 900), (1080, 1280), (1410, 1470)
-*/
-@media only screen and (min-width: 0px) and (max-width:900px) {
-	.unit-article .date {
-		display: none
-	}
-}

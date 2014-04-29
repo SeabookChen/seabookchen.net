@@ -10,7 +10,7 @@ Feature: Test blog page body
 		Examples:
 			| width |
 			| 240   |
-			| 320   |
+			| 400   |
 			| 640   |
 			| 768   |
 			| 1280  |
@@ -24,7 +24,7 @@ Feature: Test blog page body
 		Examples:
 			| width |
 			| 240   |
-			| 320   |
+			| 400   |
 			| 640   |
 			| 768   |
 			| 1280  |
@@ -37,7 +37,7 @@ Feature: Test blog page body
 		Examples:
 			| width | see?    |
 			| 240   | not see |
-			| 320   | not see |
+			| 400   | not see |
 			| 640   | not see |
 			| 768   | not see |
 			| 1280  | see     |

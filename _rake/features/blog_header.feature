@@ -11,7 +11,7 @@ Feature: Test blog page header
 		Examples:
 			| width |
 			| 240   |
-			| 320   |
+			| 400   |
 			| 640   |
 			| 768   |
 			| 1280  |
@@ -25,7 +25,7 @@ Feature: Test blog page header
 		Examples:
 			| width | see?    |
 			| 240   | not see |
-			| 320   | not see |
+			| 400   | not see |
 			| 640   | see     |
 			| 768   | see     |
 			| 1280  | see     |
@@ -63,7 +63,7 @@ Feature: Test blog page header
 		Examples:
 			| width | see?    |
 			| 240   | not see |
-			| 320   | not see |
+			| 400   | not see |
 			| 480   | see     |
 			| 640   | see     |
 			| 768   | see     |
@@ -77,7 +77,7 @@ Feature: Test blog page header
 		Examples:
 			| width | see?    |
 			| 240   | see     |
-			| 320   | see     |
+			| 400   | see     |
 			| 480   | not see |
 			| 640   | not see |
 			| 768   | not see |
@@ -91,7 +91,7 @@ Feature: Test blog page header
 		Examples:
 			| width | element? |
 			| 240   | button   |
-			| 320   | button   |
+			| 400   | button   |
 			| 480   | link     |
 			| 640   | link     |
 			| 768   | link     |
@@ -107,7 +107,7 @@ Feature: Test blog page header
 		Examples:
 			| width | element? |
 			| 240   | button   |
-			| 320   | button   |
+			| 400   | button   |
 			| 480   | link     |
 			| 640   | link     |
 			| 768   | link     |
