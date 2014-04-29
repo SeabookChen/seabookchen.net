@@ -1,6 +1,7 @@
 # yizeng.me
 
-This repository hosts the source of Yi Zeng's personal website - [yizeng.me](http://yizeng.me).
+[yizeng/yizeng.me](https://github.com/yizeng/yizeng.me) hosts the development source of Yi Zeng's personal website - [yizeng.me](http://yizeng.me).
+[yizeng/yizeng.github.io](https://github.com/yizeng/yizeng.github.io) hosts the deployed source.
 
 ## License
 - [Creative Commons BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/) - All blog posts
