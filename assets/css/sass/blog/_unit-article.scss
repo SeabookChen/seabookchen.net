@@ -18,7 +18,6 @@
 
 .unit-article {
 	iframe {
-		@include border-radius(5px);
 		display: block;
 		margin-left: auto;
 		margin-right: auto;
@@ -26,7 +25,6 @@
 	}
 
 	a {
-		@include border-radius(2px);
 		@include link-colors(#0077CC, $visited:#4A6B82, $hover:$color-text);
 		font-size: .95em;
 		padding: 1px 2px;
@@ -123,7 +121,6 @@
 	}
 
 	blockquote {
-		@include border-radius(5px);
 		background-color: $color-inline-code-background;
 		border-left: .7em solid $color-box-border;
 		margin: 1em 16px;
@@ -244,7 +241,6 @@
 
 	p > code,
 	li > code {
-		@include border-radius(5px);
 		background-color: $color-inline-code-background;
 		font-family: $fonts-body;
 		padding: 2px 3px;
@@ -463,7 +459,6 @@
 
 	a {
 		@include background-clip(padding-box);
-		@include border-radius(0px);
 		@include user-select(none);
 		@include transition-duration(0.2s);
 
