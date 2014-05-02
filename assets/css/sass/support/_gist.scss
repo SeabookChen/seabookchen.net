@@ -8,7 +8,6 @@
 	font-family: $fonts-code !important;
 
 	.gist-data {
-		@include border-radius(5px);
 		font-size: .9em !important;
 		background-color: $color-code-background !important;
 
