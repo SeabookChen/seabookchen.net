@@ -4,16 +4,17 @@ title: "Use a button to display Disqus comments count and load comments onClick"
 description: "How to create a button to display Disqus comments count and load comments onClick event."
 categories: [notes, popular]
 tags: [disqus, javascript]
-alias: [/2014/05/01/]
+alias: [/2014/05/03/]
 utilities: highlight, show-hidden
 ---
-Considering most visitors of this site won't read comments,
+Considering most of the site visitors don't read comments,
 within those who read comments, only few of them would actually say something,
-it might be a good idea to avoid loading Disqus comments by default,
-so that page speed can be increased slightly to make the majority happier,
-as Disqus creation makes enormous amount of requests.
+it might be a good idea to avoid loading Disqus comments by default.
+Since Disqus makes enormous amount of requests during creation,
+disabling it will increase page's loading speed slightly.
 
-Therefore a "Show Comments" button is used in each post to load Disqus comments `onClick` event.
+Therefore here is a note on
+how to create a "Show Comments" button to load Disqus comments `onClick` event.
 To improve user experience,
 the comments count will be pulled using Disqus API and displayed right in this button.
 
@@ -22,7 +23,7 @@ the comments count will be pulled using Disqus API and displayed right in this b
 
 ## Demo
 
-<iframe src="/assets/demo/2014-05-01-disqus-comments-button.html"></iframe>
+<iframe src="/assets/demo/2014-05-03-disqus-comments-button.html"></iframe>
 
 ## HTML markup
 
@@ -49,7 +50,7 @@ var threadUrl = 'link:' + $('.show-comments').attr('data-disqus-url');
 
 $.ajax({
     type: 'GET',
-    url: "https://disqus.com/api/3.0/threads/set.jsonp",
+    url: 'https://disqus.com/api/3.0/threads/set.jsonp',
     data: { api_key: disqusPublicKey, forum: disqusShortname, thread: threadUrl },
     cache: false,
     dataType: 'jsonp',
@@ -64,8 +65,8 @@ $.ajax({
 
 **Notes**:
 
-1. [Register Disqus API key][Disqus API register] first, where only the public key will be needed here.
-2. Disqus API's [threads/set][threads/set] methods will be used, which takes in Disqus shortname, public key and thread URL.
+1. Register a [Disqus API key][Disqus API register] first, where only the public key will be needed here.
+2. Use Disqus API's [threads/set][threads/set] method, which takes in Disqus shortname, public key and thread URL.
 3. The quota for API calls is 1000 per hour.
    If expected requests are larger than that, please contact Disqus support team to increase the limit{% footnote 1 %}.
 
@@ -77,7 +78,7 @@ either using traditional JavaScript approach like [this][Universal Code] or jQue
 {% highlight javascript %}
 $('.show-comments').on('click', function() {
     $.ajaxSetup({cache:true});
-    $.getScript("http://" + disqusShortname + ".disqus.com/embed.js");
+    $.getScript('http://' + disqusShortname + '.disqus.com/embed.js');
     $.ajaxSetup({cache:false});
     $(this).remove();
 });
@@ -87,7 +88,7 @@ $('.show-comments').on('click', function() {
 ## Load comments if URL contains \#comment
 
 If someone enters the page directly targeting to Disqus comments,
-then they should be loaded automatically.
+then comments should be loaded automatically.
 To do so, trigger click action if `#comment` is part of the in coming URL.
 
 {% highlight javascript %}
@@ -109,7 +110,7 @@ $(document).ready(function () {
 
     $.ajax({
         type: 'GET',
-        url: "https://disqus.com/api/3.0/threads/set.jsonp",
+        url: 'https://disqus.com/api/3.0/threads/set.jsonp',
         data: { api_key: disqusPublicKey, forum: disqusShortname, thread: threadUrl },
         cache: false,
         dataType: 'jsonp',
@@ -123,7 +124,7 @@ $(document).ready(function () {
 
     $('.show-comments').on('click', function() {
         $.ajaxSetup({cache:true});
-        $.getScript("http://" + disqusShortname + ".disqus.com/embed.js");
+        $.getScript('http://' + disqusShortname + '.disqus.com/embed.js');
         $.ajaxSetup({cache:false});
         $(this).remove();
     });

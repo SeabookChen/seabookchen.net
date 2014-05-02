@@ -7,10 +7,10 @@
 </head>
 <body>
 	<div class="unit-article">
-		<button class="center-block show-comments center" data-disqus-url="http://yizeng.me/2014/05/01/use-a-button-to-display-disqus-comments-count-and-load-comments-onclick/">Show Comments</button>
+		<button class="center-block show-comments center" data-disqus-url="http://yizeng.me/2014/05/03/use-a-button-to-display-disqus-comments-count-and-load-comments-onclick/">Show Comments</button>
 		<div id="disqus_thread"></div>
 	</div>
-	<script>window.jQuery || document.write('<script src="/assets/js/jquery-1.10.2.min.js"><\/script>')</script>
+	<script>window.jQuery || document.write('<script src="/assets/js/jquery-1.11.0.min.js"><\/script>')</script>
 	<script>
 	$(document).ready(function () {
 		var disqusPublicKey = "ULZ0b9TFdfCUJSKQd4WCKv2v3u25YoG7YG8zXPewkWrT35lZ0Se9YnxLzoV6VM8W";
@@ -19,7 +19,7 @@
 
 		$.ajax({
 			type: 'GET',
-			url: "https://disqus.com/api/3.0/threads/set.jsonp",
+			url: 'https://disqus.com/api/3.0/threads/set.jsonp',
 			data: { api_key: disqusPublicKey, forum: disqusShortname, thread: threadUrl },
 			cache: false,
 			dataType: 'jsonp',
@@ -33,7 +33,7 @@
 
 		$('.show-comments').on('click', function() {
 			$.ajaxSetup({cache:true});
-			$.getScript("http://" + disqusShortname + ".disqus.com/embed.js");
+			$.getScript('http://' + disqusShortname + '.disqus.com/embed.js');
 			$.ajaxSetup({cache:false});
 			$(this).remove();
 		});
