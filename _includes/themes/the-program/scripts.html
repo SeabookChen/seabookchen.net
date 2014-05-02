@@ -159,21 +159,25 @@ $(document).ready(function () {
 
 	<script>
 		$(document).ready(function () {
-			var offset = 220, duration = 500, width = 1280;
+			var offset = 50, duration = 500, width = 1350;
 			$(window).scroll(function () {
 				if ($(window).width() > width) {
 					if ($(this).scrollTop() > offset) {
+						$('footer').css('top', '20px');
 						$('footer .back-to-top').fadeIn(duration);
 					} else {
+						$('footer').css('top', 'auto');
 						$('footer .back-to-top').fadeOut(duration);
 					}
 				}
 			});
 			$(window).resize(function () {
 				if ($(window).width() < width) {
+					$('footer').css('top', 'auto');
 					$('footer .back-to-top').fadeOut(duration);
 				}
 				if ($(window).width() >= width && $(this).scrollTop() > offset) {
+					$('footer').css('top', '20px');
 					$('footer .back-to-top').fadeIn(duration);
 				}
 			});
