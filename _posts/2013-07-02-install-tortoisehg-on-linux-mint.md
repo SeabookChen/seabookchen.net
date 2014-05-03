@@ -32,7 +32,7 @@ as TortoiseHg has strict version requirements for which versions of Mercurial it
 
 4. Check if installation succeeded
 
-	> hg --version
+	> hg \--version
 
 	Terminal output for example:
 
