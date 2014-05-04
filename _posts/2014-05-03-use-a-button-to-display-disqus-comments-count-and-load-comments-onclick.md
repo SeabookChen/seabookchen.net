@@ -22,10 +22,12 @@ the comments count will be pulled using Disqus API and displayed right in this b
 {:toc .toc}
 
 ## Demo
+{: #demo}
 
 <iframe src="/assets/demo/2014-05-03-disqus-comments-button.html"></iframe>
 
 ## HTML markup
+{: #html-markup}
 
 {% highlight html %}
 <button class="show-comments" data-disqus-url="REPLACE_WITH_DISQUS_THREAD_URL">Show Comments</button>
@@ -38,6 +40,7 @@ the comments count will be pulled using Disqus API and displayed right in this b
 2. `<div id="disqus_thread"></div>` is a placeholder which will be used by Disqus to create comments area.
 
 ## Show Disqus comments count
+{: #show-disqus-comments-count}
 
 Disqus provides [count.js][count.js] officially for generating comments count links, which only has limited functionalities.
 Luckily, Disqus API also allows getting comments in a more flexible way.
@@ -71,6 +74,7 @@ $.ajax({
    If expected requests are larger than that, please contact Disqus support team to increase the limit{% footnote 1 %}.
 
 ## Load Disqus comments onClick
+{: #load-disqus-comments-onclick}
 
 The actual Disqus comments can be loaded by calling its `embed.js`,
 either using traditional JavaScript approach like [this][Universal Code] or jQuery approach like below{% footnote 2 %}.
@@ -86,6 +90,7 @@ $('.show-comments').on('click', function() {
 
 
 ## Load comments if URL contains \#comment
+{: #load-comments-if-url-contains-comment}
 
 If someone enters the page directly targeting to Disqus comments,
 then comments should be loaded automatically.
@@ -98,6 +103,7 @@ if(/\#comment/.test(location.hash)){
 {% endhighlight %}
 
 ## Full example
+{: #full-example}
 
 <a class="show-hidden">{{ site.translations.show }}</a>
 
@@ -137,6 +143,8 @@ $(document).ready(function () {
 {% endhide %}
 
 ## Disadvantage
+{: #disadvantage}
+
 [Googlebot][Googlebot] won't be able to index those comments anymore.
 
 {% footnotes %}

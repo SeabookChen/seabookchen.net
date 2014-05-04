@@ -24,6 +24,8 @@ which will add this missing constructor overload to these two classes.
 > Chrome 33 + ChromeDriver 2.9, IE 10 + IEDriver 2.40.0, PhantomJSDriver 1.9.7
 
 ## ChromeDriver
+{: #chromedriver}
+
 {% prettify c# %}
 var driverService = ChromeDriverService.CreateDefaultService();
 driverService.HideCommandPromptWindow = true;
@@ -32,6 +34,8 @@ var driver = new ChromeDriver(driverService, new ChromeOptions());
 {% endprettify %}
 
 ## InternetExplorerDriver
+{: #internet-explorer-driver}
+
 {% prettify c# %}
 var driverService = InternetExplorerDriverService.CreateDefaultService();
 driverService.HideCommandPromptWindow = true;
@@ -40,6 +44,8 @@ var driver = new InternetExplorerDriver(driverService, new InternetExplorerOptio
 {% endprettify %}
 
 ## PhantomJSDriver
+{: #phantomjs-driver}
+
 {% prettify c# %}
 var driverService = PhantomJSDriverService.CreateDefaultService();
 driverService.HideCommandPromptWindow = true;

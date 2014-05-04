@@ -25,35 +25,46 @@ Any corrections or suggestions would be greatly appreciated.
 {:toc .toc}
 
 ## Different versions of Selenium
+{: #different-versions-of-selenium}
 
 <a class="post-image" href="/assets/images/posts/2014-04-25-history-of-selenium-project.png" title="History of Selenium Project">
 <img itemprop="image" data-src="/assets/images/posts/2014-04-25-history-of-selenium-project.png" src="/assets/js/unveil/loader.gif" alt="History of Selenium Project" />
 </a>
 
 ### Selenium IDE
+{: #selenium-ide}
+
 Firefox add-on [Selenium IDE][Selenium IDE] allows users to record and re-play user actions in Firefox.
 It supports exporting the recorded scripts into Selenium RC or Selenium WebDriver code.
 
 ### Selenium 1 / Selenium RC
+{: #selenium-rc}
+
 Also known as Selenium 1 incorrectly{% footnote 1 %},
 [Selenium Remote Control][Selenium RC] is the first version of Selenium API,
 which was generally known as "Selenium" without any version suffixes at the time.
 After the release of second generation of Selenium,
 it started to be called with version number or name in order to be distinguishable from the new API.
 It is now officially deprecated
-but still released within [Selenium WebDriver](#selenium-2--selenium-webdriver) library for backward compatibility purpose.
+but still released within [Selenium WebDriver](#selenium-webdriver) library for backward compatibility purpose.
 
 ### Selenium 2 / Selenium WebDriver
+{: #selenium-webdriver}
+
 Selenium 2, a.k.a. [Selenium WebDriver][Selenium WebDriver], is the latest API in Selenium project,
 which replaces Selenium RC with fundamentally different mechanisms and dominates web UI automation market right now.
 
 ### Selenium 3
+{: #selenium-3}
+
 The next release of Selenium project, which is only in staging at the time of writing.
 One possible major change would be breaking the backward compatibility,
 i.e. Selenium RC will be no longer a part of Selenium release.
 More details can be followed and discussed in [this post][Selenium 3 Thread] on Selenium Developers' forum.
 
 ### WebDriver
+{: #webdriver}
+
 The term "WebDriver" might have different meanings in various contexts.
 
 - Synonym for Selenium WebDriver / Selenium 2.
@@ -64,7 +75,7 @@ The term "WebDriver" might have different meanings in various contexts.
 	  while probably at the same time, developers within Google were making changes to Selenium RC.
 	  After the meeting at GTAC,
 	  the decision was made to merge these two projects together into the next generation of Selenium,
-	  which is commonly referred as [Selenium 2 / Selenium WebDriver](#selenium-2--selenium-webdriver).
+	  which is commonly referred as [Selenium 2 / Selenium WebDriver](#selenium-webdriver).
 	  At the time, some people used the word "WebDriver" alone to address this new project,
 	  so that users wouldn't get confused with then dominating project - Selenium RC.
 	  <p></p>
@@ -80,14 +91,19 @@ The term "WebDriver" might have different meanings in various contexts.
 	  This is the specification defines the WebDriver standard API, which is what Selenium WebDriver implements.
 
 ### Selenium Grid
+{: #selenium-grid}
+
 [Selenium Grid][Selenium Grid] is a tool uses Selenium Server to execute either Selenium RC
 or Selenium WebDriver tests in parallel on different machines.
 
 ### Selenium
+{: #selenium}
+
 Everything above can be referred as "Selenium" by different people, which in a way confuses the public.
 All those terminologies are either a part of the current Selenium project, or were once inside Selenium project.
 
 ## Comparison of Selenium versions
+{: #comparison-of-selenium-versions}
 
 {% datatable %}
 <tr>
@@ -138,12 +154,14 @@ All those terminologies are either a part of the current Selenium project, or we
 {% enddatatable %}
 
 ## Selenium Relationships
+{: #selenium-relationships}
 
 <a class="post-image" href="/assets/images/posts/2014-04-25-anatomy-of-selenium-project.png" title="Anatomy of Selenium Project">
 <img itemprop="image" data-src="/assets/images/posts/2014-04-25-anatomy-of-selenium-project.png" src="/assets/js/unveil/loader.gif" alt="Anatomy of Selenium Project" />
 </a>
 
 ### Selenium RC Server / Selenium Server
+{: #selenium-rc-server-selenium-server}
 
 Selenium RC Server was the Java-based package to run Selenium RC tests.
 With the release of Selenium WebDriver, Selenium (Standalone) Server was introduced as the super-set of the previous version,
@@ -151,6 +169,7 @@ so that tests can be executed remotely in Selenium Grid mode.
 For Selenium WebDriver tests that are running locally, Selenium Server is not required.
 
 ### Selenium / PhantomJS
+{: #selenium-phantomjs}
 
 Being an open-source headless WebKit browser,
 [PhantomJS][PhantomJS] needs a JavaScript implementation of the [WebDriver Wire Protocol][JsonWireProtocol] in order to work with Selenium WebDriver,
@@ -159,6 +178,7 @@ Inside Selenium WebDriver project, GhostDriver is used for automating PhantomJS 
 which is similar to the relationship between ChromeDriver and Chrome browser in a sense.
 
 ### Selenium WebDriver / WebDriverJS
+{: #selenium-webdriver-webdriverjs}
 
 WebDriverJS is a term that generally considered as the JavaScript binding of Selenium WebDriver,
 which confusingly may be referred to three different projects.
@@ -182,6 +202,7 @@ which confusingly may be referred to three different projects.
   > npm install wd
 
 ### Selenium / Appium, ios-driver, Selendroid
+{: #selenium-appium-ios-driver-selendroid}
 
 With the deprecation of Selenium's built-in [AndroidDriver][AndroidDriver] and [IPhoneDriver][iPhoneDriver]{% footnote 3 %},
 third party libraries [Appium][Appium], [ios-driver][ios-driver] and [Selendroid][Selendroid] are recommended
@@ -191,6 +212,7 @@ using the same client API and communicate using the same [JSON-over-HTTP-based w
 but are capable of automating native and hybrid applications on mobile platforms{% footnote 4 %}.
 
 ### Selenium / Watir
+{: #selenium-watir}
 
 Similar to Selenium's development,
 [Watir][Watir] has also experienced two generations,
@@ -201,7 +223,7 @@ and had nothing to do with Selenium project but both were popular at the time.
 Originally Watir was designed in Ruby to support IE only and later expanded for other browsers{% footnote 5 %}.
 Java and .NET versions were created by open source enthusiasts as third party projects, called [Watij][Watij] and [WatiN][WatiN].
 
-However, some time after [Selenium WebDriver](#selenium-2--selenium-webdriver) hit the market,
+However, some time after [Selenium WebDriver](#selenium-webdriver) hit the market,
 Watir started to wrap around Selenium WebDirver's Ruby binding to a newer high-level API{% footnote 6 %},
 which is now known as Watir WebDriver.
 Both being open source frameworks,
@@ -211,6 +233,8 @@ On the other hand, Watij and WatiN, are both no longer under active development 
 Watij and WatiN were made in 2010 and 2011 respectively.
 
 ## Additional reading
+{: #additional-reading}
+
 + StackOverflow
 	- [What's the relationship between selenium rc and webdriver?](http://stackoverflow.com/q/3619824/1177636)
 	- [What's the relation between Selenium WebDriver and these other tools?](http://sqa.stackexchange.com/q/1580/5127)

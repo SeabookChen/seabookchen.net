@@ -24,8 +24,10 @@ in Chrome, Firefox, IE and PhantomJS using Selenium WebDriver Ruby binding.
 {:toc .toc}
 
 ## Chrome
+{: #chrome}
 
 ### ChromeDriver (with Chrome 28 or under)
+{: #chromedriver-with-chrome-28-or-under}
 
 Disabling JavaScript in Chrome is possible with old ChromeDriver prior to ChromeDriver2,
 which only supports Chrome 28 or under.
@@ -40,6 +42,7 @@ driver = Selenium::WebDriver.for :chrome, :switches => %w[--disable-javascript]
 {% endhighlight %}
 
 ### ChromeDriver2 (with Chrome 29 or above)
+{: #chromedriver2-with-chrome-29-or-above}
 
 The above method no longer works for ChromeDriver2, and it will not be fixed as ChromeDriver should have
 JavaScript enabled to work properly in the first place.
@@ -51,6 +54,7 @@ Here are quotes from [Issue 3175][Issue 3175] and [Issue 6672][Issue 6672]:
 > Closing this as WontFix - the ChromeDriver (and every other WebDriver implementation I'm aware of) require JavaScript to function.
 
 ## Firefox
+{: #firefox}
 
 JavaScript can be disabled from `javascript.enabled` preference in Firefox's [about:config][about:config] page.
 Here is how to achieve it using Selenium WebDriver Ruby binding.
@@ -68,6 +72,7 @@ driver = Selenium::WebDriver.for(:firefox, :profile => profile)
 {% endhighlight %}
 
 ## IE
+{: #ie}
 
 Unfortunately, this is also not possible in IEDriver.
 
@@ -87,6 +92,7 @@ That means disabling JavaScript would render large parts of the IE driver
 (and indeed all drivers at present) useless.
 
 ## PhantomJS
+{: #phantomjs}
 
 It is possible to disable JavaScript completely in PhantomJS
 using `javascriptEnabled` setting in its [API][PhantomJS Settings API] reference.

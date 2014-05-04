@@ -38,6 +38,7 @@ the same logic also applies and should work in theory.
 {:toc .toc}
 
 ## WYSIWYG HTML editors' comparison
+{: #wysiwyg-html-editors-comparison}
 
 {% datatable %}
 <tr>
@@ -79,24 +80,30 @@ the same logic also applies and should work in theory.
 {% enddatatable %}
 
 ## Demos
+{: #demos}
 
 ### CKEditor 4.3.2 Standard
+{: #ckeditor-demo}
 
 <textarea id="ckeditor"></textarea>
 <script type="text/javascript" src="/assets/js/ckeditor/ckeditor.js"></script>
 <script>CKEDITOR.replace('ckeditor');</script>
 
 ### TinyMCE 4.0.15
+{: #tinymce-demo}
+
 <textarea id="tinymce-editor"></textarea>
 <script type="text/javascript" src="/assets/js/tinymce/tinymce.min.js"></script>
 <script type="text/javascript">tinymce.init({selector: "#tinymce-editor"});</script>
 
 ## Automate using native Selenium WebDriver API
+{: #automate-using-native-selenium-webdriver-api}
 
 Both CKEditor and TinyMCE are JavaScript based,
 which means they can be automated using Selenium WebDriver's native API just like any other HTML web applications.
 
 ### Click toolbar buttons
+{: #click-toolbar-buttons}
 
 WYSIWYG editors normally provide native methods to set raw HTML content directly through API,
 automating the toolbar doesn't seem to be really necessary.
@@ -142,6 +149,7 @@ tinymce_btn_numbered_list.click
 {% endhighlight %}
 
 ### Switch into input iframe
+{: #switch-into-input-iframe}
 
 Although CKEditor and TinyMCE are initialized with `<textarea>` tag,
 the editor body is actually constructed within an `<iframe>`, which is still technically a web element,
@@ -177,6 +185,7 @@ Markup for TinyMCE's body: <a class="show-hidden">{{ site.translations.show }}</
 {% endhide %}
 
 #### Locate the iframes
+{: #locate-the-iframes}
 
 {% highlight ruby %}
 ckeditor_frame = driver.find_element(:class => 'cke_wysiwyg_frame')
@@ -184,12 +193,14 @@ tinymce_frame = driver.find_element(:id => 'tinymce-editor_ifr')
 {% endhighlight %}
 
 #### Switch into
+{: #switch-into-iframes}
 
 {% highlight ruby %}
 driver.switch_to.frame(ckeditor_frame) # ckeditor_frame or tinymce_frame, one at a time
 {% endhighlight %}
 
 #### Switch out (if necessary)
+{: #switch-out-iframes}
 
 If the WebDriver instance is already inside any kind of frames,
 switch out the current frame to default content is required.
@@ -207,8 +218,10 @@ driver.switch_to.frame(tinymce_frame)
 {% endhighlight %}
 
 ### Automate content
+{: #automate-content}
 
 #### Send keys
+{: #send-keys}
 
 After switching into the editor's `<iframe>`,
 the text can be sent to the `<body>` directly, which is possible using Selenium's native `send_keys` method.
@@ -224,6 +237,7 @@ editor_body.send_keys("<h1>Heading</h1>Yi Zeng")
 {% endhighlight %}
 
 #### Set innerHTML
+{: #set-innerhtml}
 
 In order to set editor content with raw HTML like WYSIWYG mode,
 one approach is to change the innerHTML of editor body by injecting JavaScript.
@@ -235,6 +249,7 @@ driver.execute_script("arguments[0].innerHTML = '<h1>Heading</h1>Yi Zeng'", edit
 {% endhighlight %}
 
 #### Clear all input
+{: #clear-all-input}
 
 A quote from Selenium Ruby's API documentation on
 [clear() method](http://selenium.googlecode.com/git/docs/api/rb/Selenium/WebDriver/Element.html#clear-instance_method):
@@ -263,12 +278,15 @@ driver.action.send_keys(:backspace).perform
 {% endhighlight %}
 
 ## Automate using editors' built-in JavaScript API
+{: #automate-using-editors-built-in-javascript-api}
 
 Without worrying about frame switching like using Selenium WebDriver's native API,
 it would also be a stable solution to inject JavaScript directly
 using `driver.execute_script()` to call editors' built-in JS functions.
 
 ### Set content
+{: #set-content}
+
 Both editors have built-in methods to set the content of entire input area.
 CKEditor's [API](http://docs.ckeditor.com/#!/api/CKEDITOR.editor-method-setData) provides a method called `setData()`,
 which replaces editor data with raw input HTML data.
@@ -280,6 +298,8 @@ driver.execute_script("tinyMCE.activeEditor.setContent('<h1>Yi Zeng</h1> TinyMCE
 {% endhighlight %}
 
 ### Clear content
+{: #clear-content}
+
 With the same logic, clearing content can be done by injecting JavaScript to set the entire content to empty string.
 
 {% highlight ruby %}
@@ -288,6 +308,8 @@ driver.execute_script("tinyMCE.activeEditor.setContent('')")
 {% endhighlight %}
 
 ### Insert content
+{: #insert-content}
+
 Instead of setting the entire content, it is also possible to insert some content to the editors.
 CKEditor's has a method called `insertHTML()`, which inserts content at currently selected position,
 in TinyMCE, it's called `insertContent()`.
@@ -298,8 +320,10 @@ driver.execute_script("tinyMCE.activeEditor.insertContent('<p>Christchurch</p>')
 {% endhighlight %}
 
 ## Examples
+{: #examples}
 
 ### Set content using Selenium WebDriver API
+{: #set-content-using-selenium-webdriver-api}
 
 <a class="show-hidden">{{ site.translations.show }}</a>
 
@@ -330,6 +354,7 @@ tinymce_body.send_keys('<h1>TInyMCE</h1>Yi Zeng')
 {% endhide %}
 
 ### Select all content
+{: #select-all-content}
 
 <a class="show-hidden">{{ site.translations.show }}</a>
 
@@ -356,6 +381,7 @@ driver.action.click(ck_editor_body)
 {% endhide %}
 
 ### Click "Numbered list" from toolbar
+{: #click-numbered-list-from-toolbar}
 
 <a class="show-hidden">{{ site.translations.show }}</a>
 
@@ -379,6 +405,7 @@ tinymce_btn_numbered_list.click
 {% endhide %}
 
 ### Set content using editors' API
+{: #set-content-using-editors-api}
 
 <a class="show-hidden">{{ site.translations.show }}</a>
 
@@ -400,6 +427,7 @@ driver.execute_script("tinyMCE.activeEditor.insertContent('<p>Christchurch</p>')
 {% endhide %}
 
 ## References
+{: #references}
 
 - [Selenium Ruby binding API](http://selenium.googlecode.com/git/docs/api/rb/index.html)
 - [RubyBindings WikiPage](https://code.google.com/p/selenium/wiki/RubyBindings)

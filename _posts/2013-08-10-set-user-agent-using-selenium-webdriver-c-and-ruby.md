@@ -23,8 +23,10 @@ using Selenium WebDriver C# and Ruby bindings.
 {:toc .toc}
 
 ## Chrome
+{: #chrome}
 
 ### C&#35;
+{: #chrome-c-sharp}
 
 {% prettify c# %}
 var options = new ChromeOptions();
@@ -34,6 +36,7 @@ IWebDriver driver = new ChromeDriver(options);
 {% endprettify %}
 
 ### Ruby
+{: #chrome-ruby}
 
 {% highlight ruby %}
 require 'selenium-webdriver'
@@ -43,8 +46,10 @@ driver = Selenium::WebDriver.for :chrome, :switches => %W[--user-agent=#{USER_AG
 {% endhighlight %}
 
 ## Firefox
+{: #firefox}
 
 ### C&#35;
+{: #firefox-c-sharp}
 
 {% prettify c# %}
 var profile = new FirefoxProfile();
@@ -54,6 +59,7 @@ IWebDriver driver = new FirefoxDriver(profile);
 {% endprettify %}
 
 ### Ruby
+{: #firefox-ruby}
 
 {% highlight ruby %}
 require 'selenium-webdriver'
@@ -65,8 +71,10 @@ driver = Selenium::WebDriver.for :firefox, :profile => profile
 {% endhighlight %}
 
 ## PhantomJS
+{: #phantomjs}
 
 ### C&#35;
+{: #phantomjs-c-sharp}
 
 {% prettify c# %}
 var options = new PhantomJSOptions();
@@ -76,6 +84,7 @@ IWebDriver driver = new PhantomJSDriver(options);
 {% endprettify %}
 
 ### Ruby
+{: #phantomjs-ruby}
 
 {% highlight ruby %}
 require 'selenium-webdriver'
@@ -86,6 +95,8 @@ driver = Selenium::WebDriver.for :phantomjs, :desired_capabilities => capabiliti
 {% endhighlight %}
 
 ## IE
+{: #ie}
+
 Sadly but as expected, IE doesn't allow Selenium WebDriver to override the User Agent natively.
 [Quote][Set IEDriver UA] from IE driver's developer Jim Evans:
 

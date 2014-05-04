@@ -20,13 +20,16 @@ using Selenium WebDriver Ruby binding with headless PhantomJS browser.
 {:toc .toc}
 
 ## Create a GitHub repository
+{: #create-a-github-repository}
 
 A public GitHub repository is needed in order to be built on Travis CI for free.
 New open-source projects can be created at GitHub's '[Create a New Repository][Create a New Repository]' page.
 
 ## Create a Selenium WebDriver Ruby project
+{: #create-a-selenium-webdriver-ruby-project}
 
 ### Project Structure
+{: #project-structure}
 
 There are no requirements for how Selenium WebDriver Ruby project should be set up.
 Hence here is how this sample Selenium Ruby project is structured:
@@ -38,7 +41,8 @@ Hence here is how this sample Selenium Ruby project is structured:
 	    README.md               -- description of the project
 	    Rakefile                -- Rakefile
 
-### Create an UI test
+### Create a UI test
+{: #create-a-ui-test}
 
 - `Test::Unit` framework is used as the testing framework in this example.
 - Headless WebKit [PhantomJS][PhantomJS] will be the browser to run the UI tests.
@@ -71,6 +75,7 @@ end
 {% endhighlight %}
 
 ### Add Rakefile
+{: #add-rakefile}
 
 Travis CI uses `Rakefile` to build project and execute the tests, if it is not present, build will fail like this:
 
@@ -96,6 +101,7 @@ end
 {% endhighlight %}
 
 ### Add .travis.yml
+{: #add-travis-yml}
 
 Travis CI uses `.travis.yml` file in the root of the repository to learn about the project, which for instance includes:
 
@@ -122,10 +128,12 @@ before_install:
 {% endprettify %}
 
 ## Push to Github
+{: #push-to-github}
 
 Once the repository is properly created, push it to Github.
 
 ## Login to Travis CI and enable hook
+{: #login-to-travis-ci-and-enable-hool}
 
 1. Login to Travis CI with the GitHub account of this repository.
 2. Visit [Travis CI profile][Travis CI profile] and find the repository.
@@ -139,6 +147,7 @@ If the repository does not appear on the list, make sure
 </a>
 
 ## Run project on Travis CI
+{: #run-project-on-travis-ci}
 
 Travis CI should be able to build to the project automatically whenever new changesets are pushed to GitHub.
 However, to kick off a test run manually:
@@ -157,8 +166,10 @@ However, to kick off a test run manually:
 > 5. Click `Test Hook` button
 
 ## Analyze results on Travis CI
+{: #analyze-results-on-travis-ci}
 
 ### Project page
+{: #project-page}
 
 The project page on Travis CI is: `https://travis-ci.org/[GITHUB_USERNAME]/[REPO_NAME]`
 
@@ -167,11 +178,13 @@ The project page on Travis CI is: `https://travis-ci.org/[GITHUB_USERNAME]/[REPO
 </a>
 
 ### Build log
+{: #build-log}
 
 Clicking each job number will open up the build log for that particular job,
 which contains all console output produced during the build.
 
 ### Test Results
+{: #test-results}
 
 Test results are shown in the `rake` section of the build log.
 For example, here are the test results inside [this particular job's build log](https://travis-ci.org/yizeng/setup-selenium-webdriver-ruby-project-on-travis-ci/jobs/8109067):
@@ -189,6 +202,7 @@ For example, here are the test results inside [this particular job's build log](
 	The command "rake" exited with 0.
 
 ### Build status images
+{: #build-status-images}
 
 Travis CI provides [build status images][build status images] for projects,
 which are encouraged to be added to project sites or README files as good software development practices.

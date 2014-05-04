@@ -9,46 +9,46 @@ last_updated: March 18, 2014
 ---
 Apprently `gem --help` would be helpful but just too long to read, the following commands are just for quick references purpose.
 
-## Install/Uninstall gem
+- Install/Uninstall gem
 
-	gem install jekyll
-	gem uninstall jekyll
+  	gem install jekyll
+  	gem uninstall jekyll
 
-## Install specific version of gem
+- Install specific version of gem
 
-	gem install pygments.rb --version 0.4.2
+  	gem install pygments.rb --version 0.4.2
 
-## Uninstall specific versions of gem
+- Uninstall specific versions of gem
 
-Prompt 'Select gem to uninstall' and let the user choose
+	+ Prompt 'Select gem to uninstall' and let the user choose
 
-	gem uninstall jekyll
+		  gem uninstall jekyll
 
-Uninstall specific version
+	+ Uninstall specific version
 
-	gem uninstall jekyll --version 1.0.1
-	gem uninstall jekyll --version '<1.0.1'
+		  gem uninstall jekyll --version 1.0.1
+		  gem uninstall jekyll --version '<1.0.1'
 
-Remove all old versions of jekyll
+	+ Remove all old versions of jekyll
 
-	gem cleanup jekyll
+		  gem cleanup jekyll
 
-## List all local gem
+- List all local gem
 
-	gem list --local
+  	gem list --local
 
-## List all versions of gem
+- List all versions of gem
 
-	gem list --all
+  	gem list --all
 
-## List gem with specific name
+- List gem with specific name
 
-	gem list jekyll
+  	gem list jekyll
 
-## Update installed gem
+- Update installed gem
 
-	gem update
+  	gem update
 
-## Update installed system gem
+- Update installed system gem
 
-	gem update --system
+  	gem update --system

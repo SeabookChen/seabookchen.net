@@ -21,10 +21,12 @@ please see [Custom 404 Pages - GitHub Help][Custom 404 Pages - GitHub Help].
 {:toc .toc}
 
 ## Create 404.html file
+{: #create-404-html-file}
 
 Create `404.html` in the root directory of Jekyll site, <del>which has to be an HTML file</del>{% footnote 1 %}.
 
 ## Add YAML Front Matter
+{: #add-yaml-front-matter}
 
 The goal here is to create a custom 404 page like all other pages using the same Jekyll theme,
 without creating a separately designed 404.html.
@@ -36,6 +38,8 @@ Therefore, add [YAML Front Matter][YAML Front Matter] section to the top of the 
 	---
 
 ## Add 404 content
+{: #add-404-content}
+
 Add the actual 404 content after the [YAML Front Matter][YAML Front Matter] section.
 
 	---
@@ -45,6 +49,8 @@ Add the actual 404 content after the [YAML Front Matter][YAML Front Matter] sect
 	<p>Sorry this page does not exist =(</p>
 
 ## Redirect 404 page automatically
+{: #redirect-404-page-automatically}
+
 In order to redirect 404 page automatically, the easiest way might be using HTML meta tag, `meta http-equiv="refresh"`.
 
 1. Add a `<meta>` tag in the `<head>` into Jekyll's `default.html`
@@ -63,6 +69,7 @@ Here is a completed example of `default.html`:
 <script src="https://gist.github.com/yizeng/5428d29c3d5af224475b.js"></script>
 
 ## Test 404 page
+{: #test-404-page}
 
 1. Build Jekyll server locally using `jekyll serve`,
 then go to URL `localhost:4000/404.html`, see if the custom 404 page works or not.
