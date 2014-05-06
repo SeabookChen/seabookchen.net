@@ -11,6 +11,7 @@ which would be handy for writing Selenium WebDriver tests
 to run against Chrome/PhantomJS directly without specifying paths in code.
 
 ## Install ChromeDriver
+{: #install-chromedriver}
 
 1. Install unzip
 
@@ -33,6 +34,7 @@ to run against Chrome/PhantomJS directly without specifying paths in code.
 	   sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
 
 ## Install PhantomJS
+{: #install-phantomjs}
 
 1. Download latest version from [official website](http://phantomjs.org/download.html)
    and extract it (here for instance, to `~/Downloads`)
@@ -50,5 +52,7 @@ to run against Chrome/PhantomJS directly without specifying paths in code.
 	   sudo ln -s /usr/local/share/phantomjs-1.9.7-linux-x86_64/bin/phantomjs /usr/bin/phantomjs
 
 ## References
+{: #references}
+
 - [Running Selenium Tests with ChromeDriver on Linux](http://selftechy.com/2011/08/17/running-selenium-tests-with-chromedriver-on-linux)
 - [How can I setup & run PhantomJS on Ubuntu?](http://stackoverflow.com/q/8778513/1177636)

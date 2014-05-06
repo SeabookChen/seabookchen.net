@@ -20,6 +20,7 @@ a better way would be to build the site on Travis CI itself, and run the tests a
 {:toc .toc}
 
 ## Implement tests
+{: #implement-tests}
 
 First of all, there should be some UI tests inside the repository,
 which can be [Selenium WebDriver][Selenium WebDriver], [Watir][Watir] tests,
@@ -33,6 +34,7 @@ Since the site will be built on Travis CI locally, so the URL will be
 Bear in mind that port number 4000 can be made configurable if desired.
 
 ## Install gems
+{: #install-gems}
 
 Before building Jekyll and running Selenium UI tests on Travis CI,
 some necessary gems need to be installed.
@@ -51,6 +53,7 @@ before_install:
 {% endprettify %}
 
 ## Start Jekyll web server
+{: #start-jekyll-web-server}
 
 To build the Jekyll site locally on Travis CI, in `.travis.yml` file's `before_script` section,
 serve Jekyll site with `detach=true` option, which is available since [Jekyll 1.2.0][Jekyll 1.2.0] or later.
@@ -65,6 +68,8 @@ before_script:
 
 
 ## Run UI tests
+{: #run-ui-tests}
+
 In `.travis.yml`'s `script` section, specify the commands to run those cucumber tests.
 
 {% prettify yaml %}

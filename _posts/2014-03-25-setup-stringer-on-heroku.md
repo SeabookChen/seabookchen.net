@@ -14,6 +14,8 @@ Some of the following steps have already been covered by Project's [README file]
 {:toc .toc}
 
 ## Prerequisites
+{: #prerequisites}
+
 Stringer doesn't have any external dependencies,
 but to download and setup it up on Heroku, two things are needed.
 
@@ -21,12 +23,15 @@ but to download and setup it up on Heroku, two things are needed.
 - [Heroku][Heroku] account with valid credit card details (which won't be charged for free add-ons).
 
 ## Clone repository
+{: #clone-repository}
+
 If it is been forked, clone your own Stringer repository.
 Otherwise clone the original repository like this:
 
 	git clone https://github.com/swanson/stringer.git
 
 ## Install Heroku
+{: #install-heroku}
 
 1. Visit [Heroku Toolbelt][Heroku Toolbelt] page for different options depending on operating system.
 2. Choose a way to download and install Heroku.
@@ -39,6 +44,7 @@ Otherwise clone the original repository like this:
 	in the script [here](https://toolbelt.heroku.com/install-ubuntu.sh) and executed manually.
 
 ## Configure Stringer
+{: #configure-stringer}
 
 1. Login into Heroku
 
@@ -65,6 +71,7 @@ Otherwise clone the original repository like this:
    	heroku restart
 
 ## Add custom domain
+{: #add-custom-domain}
 
 1. Detailed official documentation on how to add custom domain to this Heroku Stringer app is [here][Heroku Custom Domains].
 
@@ -75,6 +82,7 @@ Otherwise clone the original repository like this:
    answer is `yizeng-reader.herokuapp.com` and keep the default TTL, which is `300`.
 
 ## Add add-ons
+{: #add-add-ons}
 
 1. Add Scheduler add-ons
 
@@ -107,6 +115,7 @@ Otherwise clone the original repository like this:
 </a>
 
 ## Update stringer
+{: #update-stringer}
 
 	git pull
 	git push heroku master
@@ -114,6 +123,7 @@ Otherwise clone the original repository like this:
 	heroku restart
 
 ## Clone existing stringer app
+{: #clone-existing-stringer-app}
 
 In order to clone the source of an existing application from Heroku using Git,
 use the heroku git:clone command with the app name, mine is called `yizeng-reader` in this case.
@@ -121,6 +131,7 @@ use the heroku git:clone command with the app name, mine is called `yizeng-reade
 	heroku git:clone -a yizeng-reader
 
 ## Troubleshooting
+{: #troubleshooting}
 
 Error while executing `git push heroku master`:
 

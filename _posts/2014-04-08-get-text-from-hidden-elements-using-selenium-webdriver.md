@@ -29,6 +29,7 @@ Here is a brief demonstration on how to get text from hidden elements using Sele
 {:toc .toc}
 
 ## Ruby
+{: #ruby}
 
 > Environment Tested:<br/>
 > Windows 7, Ruby 2.0.0p451, Selenium 2.41.0, PhantomJS 1.9.7<br />
@@ -58,6 +59,7 @@ driver.quit
 {% endhighlight %}
 
 ## C&#35;
+{: #c-sharp}
 
 > Environment Tested:<br/>
 > Windows 7, Selenium 2.40.0, PhantomJS 1.9.7
@@ -95,6 +97,7 @@ namespace GetHiddenText {
 {% endprettify %}
 
 ## Python
+{: #python}
 
 > Environment Tested:<br/>
 > Windows 7, Python 2.7.5, Selenium 2.41.0, PhantomJS 1.9.7<br/>
@@ -122,6 +125,8 @@ driver.quit
 {% endhighlight %}
 
 ## Output
+{: #output}
+
 >Demo div &lt;p style="display:none">with a hidden paragraph inside.&lt;/p>&lt;hr>&lt;br><br />
 >Demo div &lt;p style="display:none">with a hidden paragraph inside.&lt;/p>&lt;hr>&lt;br><br />
 >

@@ -19,8 +19,10 @@ using GNOME's [GSettings][GSettings], inspired by this [AskUbuntu question][AskU
 {:toc .toc}
 
 ## Invert touchpad
+{: #invert-touchpad}
 
 ### From Command Line
+{: #from-command-line}
 
 In Gsettings, there is a key called `left-handed` under `touchpad`,
 controlling the behaviour of touchpad clicking,
@@ -31,6 +33,7 @@ From the terminal, type in the following command to make it left-handed:
 	gsettings set org.gnome.settings-daemon.peripherals.touchpad left-handed left
 
 ### From GUI "dconf-editor"
+{: #from-gui-dconf-editor}
 
 Gsettings has a front-end GUI tool called "dconf-editor",
 which uses binary blob database to maintain all setting entries with their values.
@@ -51,6 +54,7 @@ which uses binary blob database to maintain all setting entries with their value
 </a>
 
 ## Invert mouse
+{: #invert-mouse}
 
 If the mouse needs to be inverted as well, it can be done either from command line, "System Settings" or "dconf-editor".
 However, note that the `left-handed` entry under `peripherals.mouse` is a Boolean,

@@ -5,7 +5,7 @@ highlighter: pygements
 markdown: kramdown
 
 kramdown:
-  auto_ids: true
+  auto_ids: false
   footnote_nr: 1
   entity_output: as_char
   toc_levels: 2..3

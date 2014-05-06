@@ -17,6 +17,7 @@ Below shows the examples on how to achieve this in Selenium WebDriver C#, Ruby a
 {:toc .toc}
 
 ## Ruby
+{: #ruby}
 
 In Ruby binding, window size can be retrieved from method `driver.manage.window.size`,
 which is a type of struct `Selenium::WebDriver::Dimension` defined [here][Ruby Dimension Class].
@@ -29,6 +30,7 @@ which is equivalent to `#size=`, but accepts width and height arguments accordin
 > Windows 7, Ruby 2.0.0p247, Selenium 2.39.0, Firefox 26.0
 
 ### Example
+{: #ruby-example}
 
 {% highlight ruby %}
 require 'selenium-webdriver'
@@ -54,6 +56,7 @@ driver.quit
 {% endhighlight %}
 
 ### Output
+{: #ruby-output}
 
 >&#35;&lt;struct Selenium::WebDriver::Dimension width=1341, height=810&gt;<br />
 >&#35;&lt;struct Selenium::WebDriver::Dimension width=1024, height=768&gt;<br />
@@ -61,6 +64,7 @@ driver.quit
 >&#35;&lt;struct Selenium::WebDriver::Dimension width=1804, height=1096&gt;
 
 ## C&#35;
+{: #c-sharp}
 
 Similarly in C# binding, a browser window's size can be found out using `driver.Manage().Window.Size` property.
 The same [IWindow interface][IWindow interface] also defines method `Maximize()` for maximizing the window.
@@ -71,6 +75,7 @@ it can be done by setting the `Size` property using `System.Drawing.Size` object
 > Windows 7, Selenium 2.39.0, Firefox 26.0
 
 ### Example
+{: #c-sharp-example}
 
 {% prettify c# %}
 using System;
@@ -103,12 +108,14 @@ namespace BrowserWindowSizeApp {
 {% endprettify %}
 
 ### Output
+{: #c-sharp-output}
 
 >{Width=1341, Height=810}<br />
 >{Width=480, Height=320}<br />
 >{Width=1804, Height=1096}
 
 ## Python
+{: #python}
 
 Unlike C# and Ruby bindings, Python binding doesn't offer properties to get/set window size,
 all get/set/maximize actions are available using methods defined in [selenium.webdriver.remote.webdriver][Python driver class].
@@ -117,6 +124,7 @@ all get/set/maximize actions are available using methods defined in [selenium.we
 > Window 7, Python 2.7, Selenium 2.40.0, Firefox 26.0
 
 ### Example
+{: #python-example}
 
 {% highlight python %}
 from selenium import webdriver
@@ -137,12 +145,14 @@ driver.quit()
 {% endhighlight %}
 
 ### Output
+{: #python-output}
 
 >{u'width': 1341, u'height': 810}<br />
 >{u'width': 480, u'height': 320}<br />
 >{u'width': 1804, u'height': 1096}
 
 ## Comparison
+{: #comparison}
 
 {% datatable %}
 <tr><th colspan="2">Get window size</th></tr>
@@ -206,6 +216,8 @@ driver.quit()
 {% enddatatable %}
 
 ## Related source code
+{: #related-source-code}
+
 - [Ruby - window.rb](https://code.google.com/p/selenium/source/browse/rb/lib/selenium/webdriver/common/window.rb)
 - [Ruby - Dimension struct](https://code.google.com/p/selenium/source/browse/rb/lib/selenium/webdriver.rb)
 - [C# - IWindow interface][IWindow interface]

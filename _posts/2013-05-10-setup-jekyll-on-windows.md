@@ -12,6 +12,7 @@ utilities: fancybox, unveil
 {:toc .toc}
 
 ## Install Ruby
+{: #install-ruby}
 
 1. Go to <http://rubyinstaller.org/downloads/>
 
@@ -37,6 +38,7 @@ For example, `Ruby 2.0.0-p451 (x64)` is the Windows installer for Ruby 2.0.0 x64
 	> ruby 2.0.0p451 (2014-02-24) [x64-mingw32]
 
 ## Install DevKit
+{: #install-devkit}
 
 The DevKit is a toolkit that makes it easy to build
 and use native C/C++ extensions such as RDiscount and RedCloth for Ruby on Windows.
@@ -69,6 +71,7 @@ For instance, `DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe` is for 64-bit Wind
 	> ruby dk.rb install
 
 ## Install Jekyll
+{: #install-jekyll}
 
 1. Verify that gem has been installed properly
 
@@ -83,6 +86,7 @@ For instance, `DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe` is for 64-bit Wind
 	> gem install jekyll
 
 ## Install Pygments
+{: #install-pygments}
 
 The default syntax highlighting engine in Jekyll is [Pygments](http://pygments.org/).
 It requires Python to be installed and `highlighter` field to be set to `pygments` in site’s configuration file `_config.yml`.
@@ -92,6 +96,7 @@ which doesn't support as many languages as Pygments at the moment, but it's Ruby
 More details can be followed [here](http://jekyllrb.com/docs/templates/#code_snippet_highlighting).
 
 ### Install Python
+{: #install-python}
 
 1. Go to <http://www.python.org/download/>
 2. Download appropriate version of Python windows installer, e.g. `Python 2.7.6 Windows Installer`.
@@ -107,6 +112,7 @@ Note that Python 2 is preferred since Python 3 might not be functioning as inten
 	> Python 2.7.6
 
 ### Install 'Easy Install'
+{: #install-easy-install}
 
 1. Visit <https://pypi.python.org/pypi/setuptools#installation-instructions> for detailed installation instructions.
 2. For Windows 7 machines, download [ez_setup.py](https://bitbucket.org/pypa/setuptools/raw/bootstrap/ez_setup.py)
@@ -117,6 +123,7 @@ and save it, for example, to `C:\`. Then run it using Python in a command prompt
 3. Add 'Python Scripts' directory (e.g. `C:\Python27\Scripts`) to PATH.
 
 ### Install Pygments
+{: #install-pygments-2}
 
 1. Verify easy_install is installed properly
 
@@ -131,6 +138,7 @@ and save it, for example, to `C:\`. Then run it using Python in a command prompt
 	> easy_install Pygments
 
 ## Start Jekyll
+{: #start-jekyll}
 
 Following the commands on official [Jekyll Quick-start guide][Jekyll Quick-start guide],
 a new Jekyll blog should be created and can be browsed at [localhost:4000](http://localhost:4000).
@@ -140,6 +148,7 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 > jekyll serve
 
 ## Troubleshooting
+{: #troubleshooting}
 
 1. Error message:
 

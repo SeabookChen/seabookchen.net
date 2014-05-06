@@ -15,6 +15,7 @@ and custom config sections in `App.config` at runtime.
 {:toc .toc}
 
 ## App.config file
+{: #app-config-file}
 
 Sample `App.config` file:
 
@@ -42,8 +43,10 @@ Sample `App.config` file:
 {% endhighlight %}
 
 ## Update AppSettings
+{: #update-appsettings}
 
 ### Add a new key
+{: #appsettings-add-a-new-key}
 
 {% prettify c# %}
 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
@@ -54,6 +57,7 @@ ConfigurationManager.RefreshSection("appSettings");
 {% endprettify %}
 
 ### Edit an existing key's value
+{: #appsettings-edit-an-existing-keys-value}
 
 {% prettify c# %}
 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
@@ -64,6 +68,7 @@ ConfigurationManager.RefreshSection("appSettings");
 {% endprettify %}
 
 ### Delete an existing key
+{: #appsettings-delete-an-existing-key}
 
 {% prettify c# %}
 var config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
@@ -74,8 +79,10 @@ ConfigurationManager.RefreshSection("appSettings");
 {% endprettify %}
 
 ## Update custom configuration sections
+{: #update-custom-configuration-sections}
 
 ### Add a new key
+{: #custom-sections-add-a-new-key}
 
 {% prettify c# %}
 var xmlDoc = new XmlDocument();
@@ -93,6 +100,7 @@ ConfigurationManager.RefreshSection("geoSettings/summary");
 {% endprettify %}
 
 ### Edit an existing key's value
+{: #custom-sections-edit-an-existing-keys-value}
 
 {% prettify c# %}
 var xmlDoc = new XmlDocument();
@@ -105,6 +113,7 @@ ConfigurationManager.RefreshSection("geoSettings/summary");
 {% endprettify %}
 
 ### Delete an existing key
+{: #custom-sections-delete-an-existing-key}
 
 {% prettify c# %}
 var xmlDoc = new XmlDocument();
@@ -118,6 +127,7 @@ ConfigurationManager.RefreshSection("geoSettings/summary");
 {% endprettify %}
 
 ## Print out all keys
+{: #print-out-all-keys}
 
 {% prettify c# %}
 NameValueCollection appSettings = ConfigurationManager.AppSettings;
@@ -129,6 +139,7 @@ foreach (string key in appSettings.AllKeys) {
 {% endprettify %}
 
 ## References
+{: #references}
 
 1. [Modifying app.config at runtime throws exception](http://stackoverflow.com/q/8807218/1177636)
 2. [update app.config file programatically with ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);](http://stackoverflow.com/q/8522912/1177636)

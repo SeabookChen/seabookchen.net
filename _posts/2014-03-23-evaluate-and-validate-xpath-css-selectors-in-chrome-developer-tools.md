@@ -16,6 +16,7 @@ This can be done by two approaches:
 - Execute tokens `$x("some_xpath")` or `$$("css-selectors")` in `Console` panel, which will both evaluate and validate.
 
 ## From Elements panel
+{: #from-elements-panel}
 
 1. Press `F12` to open up Chrome DevTools.
 2. `Elements` panel should be opened by default.
@@ -30,6 +31,7 @@ This can be done by two approaches:
 </a>
 
 ## From Console panel
+{: #from-console-panel}
 
 1. Press `F12` to open up Chrome DevTools.
 2. Switch to `Console` panel.
@@ -57,6 +59,7 @@ This can be done by two approaches:
 </a>
 
 ## Pros and cons
+{: #pros-and-cons}
 
 Advantages of one approach are pretty much considered as the cons of another method, and vice versa.
 
