@@ -2,8 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name="author" content="Yi Zeng">
+	<meta name="description" content="A demo for how to create a button to display Disqus comments count and load comments onClick event." />
+	<meta name="keywords" content="yizeng,disqus,comments,javascript" />
+	<title>Demo for how to create a button to display Disqus comments count and load comments onClick</title>
+
 	<link href='/assets/css/blog-style.css' rel="stylesheet" type="text/css">
-	<style type="text/css">.show-comments {margin-top: 100px}</style>
+	<style type="text/css">.show-comments {margin-top: 75px}</style>
 </head>
 <body>
 	<div class="unit-article">
@@ -37,6 +42,10 @@
 			$.ajaxSetup({cache:false});
 			$(this).remove();
 		});
+
+		if(/\#comment/.test(location.hash)){
+			$('.show-comments').trigger('click');
+		}
 	});
 	</script>
 </body>
