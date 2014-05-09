@@ -4,7 +4,7 @@ namespace :test do
 	desc "Run Cucumber Selenium WebDriver UI tests"
 	task :ui do
 		browser = ENV['browser'].nil? ? '' : 'browser=' + ENV['browser']
-		system "cucumber ./_rake/features/ #{browser} --format progress --format html --out=features_report.html"
+		system "cucumber ./_rake/features/ #{browser}"
 		raise "Cucumber tests failed!" unless $?.exitstatus == 0
 	end
 
