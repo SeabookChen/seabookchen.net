@@ -30,5 +30,7 @@ task :travis do
 	system "compass compile ./assets/css"
 
 	system "jekyll serve --detach --trace"
+	exit 1 unless $?.success?
+
 	sleep 3
 end

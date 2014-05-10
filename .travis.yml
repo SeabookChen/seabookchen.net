@@ -5,6 +5,7 @@ branches:
     - gh-pages
 
 rvm:
+  - 2.1.2
   - 2.1.1
   - 2.1
   - 2.0.0
@@ -23,16 +24,11 @@ before_install:
   - sudo ln -s /usr/local/share/chromedriver /usr/bin/chromedriver
   - which chromedriver
 
-  - gem update --system
-  - gem update
-
-  - gem install sass compass jekyll kramdown cucumber selenium-webdriver
-
-  - gem --version
-  - sass --version
-  - compass --version
   - firefox --version
   - phantomjs --version
+
+  - gem update --system
+  - gem update
 
 before_script:
   - "export DISPLAY=:99.0"
