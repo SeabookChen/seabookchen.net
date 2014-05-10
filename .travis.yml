@@ -27,8 +27,6 @@ before_install:
   - gem update --system
   - gem update
 
-  - bundle install
-
   - gem --version
   - sass --version
   - compass --version
