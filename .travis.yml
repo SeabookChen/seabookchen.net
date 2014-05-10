@@ -42,5 +42,5 @@ before_script:
   - rake travis
 
 script:
-  - rake unittests
-  - rake cucumber
+  - rake test:posts
+  - rake test:ui
