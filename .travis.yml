@@ -5,6 +5,7 @@ branches:
     - gh-pages
 
 rvm:
+  - 2.1.2
   - 2.1.1
   - 2.1
   - 2.0.0
@@ -26,7 +27,7 @@ before_install:
   - gem update --system
   - gem update
 
-  - gem install sass compass jekyll kramdown cucumber selenium-webdriver
+  - bundle install
 
   - gem --version
   - sass --version
