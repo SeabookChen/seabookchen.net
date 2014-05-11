@@ -77,10 +77,11 @@
 			afterLoad: function(anchorLink, index){
 				if(index === 1){
 					$('#section0 .headings, #section0').removeClass('hidden').addClass('fadeInDown');
-					$('.btn-continue').removeClass('hidden').addClass('bounce');
+					$('#section0 .btn-continue').removeClass('hidden').addClass('bounce');
 				}
 				if(index === 2){
-					$('#section1 h1, #section1 .social-links').removeClass('hidden').addClass('fadeInUp');
+					$('#section1 h1').removeClass('hidden').addClass('fadeInUp');
+					$('#section1 .social-links').removeClass('hidden').addClass('fadeInLeft');
 				}
 			},
 
@@ -89,7 +90,7 @@
 					$('#section0 .headings, #section0 .btn-continue').addClass('hidden').removeClass('bounce fadeInDown fadeInLeft');
 				}
 				if(index == 2 && direction == 'up'){
-					$('#section1 h1, #section1 .social-links').addClass('hidden').removeClass('fadeInUp');
+					$('#section1 h1, #section1 .social-links').addClass('hidden').removeClass('fadeInUp fadeInLeft');
 				}
 			}
 		});
