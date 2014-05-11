@@ -101,7 +101,7 @@ $(document).ready(function () {
 <script>
 	$(document).ready(function() {
 		$('.search-field').simpleJekyllSearch({
-			jsonFile : '{{ site.url }}/search.json',
+			jsonFile : '/search.json',
 			template : '<li><a href="{url}">{title} <span class="entry-date"><time datetime="{date}">{shortdate}</time></span></a></li>',
 			searchResults: '.search-wrapper .results',
 			searchResultsTitle : '<h4>{{ site.translations.search_results }}</h4>',
