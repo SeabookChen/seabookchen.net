@@ -20,8 +20,8 @@ namespace :build do
 
 		def build
 			cleanup_production()
-			build_jekyll()
 			compile_compass(compressed: true)
+			build_jekyll()
 
 			create_production()
 			compress_source()
@@ -43,15 +43,8 @@ namespace :build do
 		end
 
 		def compile_compass(options = {:compressed => true})
-			compass_command = 'compass compile ./assets/css --no-line-comments --trace --force'
-
-			if options[:compressed]
-				execute_command("#{compass_command} --output-style=compressed")
-				FileUtils.rm_rf("./_site/assets/css/sass", :verbose => true)
-				FileUtils.rm_f("./_site/assets/css/config.rb", :verbose => true)
-			else
-				execute_command("#{compass_command} --output-style=expanded")
-			end
+			output_style = options[:compressed] ? 'compressed' : 'expanded'
+			execute_command("compass compile ./assets/css --no-line-comments --trace --force --output-style=#{output_style}")
 		end
 
 		def build_jekyll
@@ -59,6 +52,11 @@ namespace :build do
 		end
 
 		def create_production
+			# remove unnecessary compass files
+			FileUtils.rm_rf("./_site/assets/css/sass", :verbose => true)
+			FileUtils.rm_f("./_site/assets/css/config.rb", :verbose => true)
+
+			# copy _site to production
 			FileUtils.cp_r(Dir.glob("./_site/*"), "#{@production_dir}/", :verbose => true)
 
 			# create and copy necessary files to production
