@@ -139,8 +139,8 @@ h3 {
 }
 
 .social-links {
-	-webkit-animation-duration: 2s;
-	animation-duration: 2s;
+	-webkit-animation-delay: .25s;
+	animation-delay: .25s;
 
 	a {
 		background-size: $icon-size $icon-size;
