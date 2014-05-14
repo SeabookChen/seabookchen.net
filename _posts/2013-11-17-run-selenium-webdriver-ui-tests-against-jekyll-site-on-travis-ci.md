@@ -8,7 +8,7 @@ tags: [cucumber, jekyll, travis-ci, selenium-webdriver]
 alias: [/2013/11/17/]
 utilities: highlight
 ---
-Imagine there is a Jekyll site project
+Imagine there is a [Jekyll][Jekyll] site repository
 which has some [Selenium WebDriver][Selenium WebDriver] UI tests written with BDD framework [Cucumber][Cucumber] inside.
 After each commit, one may find it beneficial to run those tests on [Travis CI][Travis CI]
 against this Jekyll site in that particular commit, as part of the continuous integration process.
@@ -23,7 +23,7 @@ a better way would be to build the site on Travis CI itself, and run the tests a
 {: #implement-tests}
 
 First of all, there should be some UI tests inside the repository,
-which can be [Selenium WebDriver][Selenium WebDriver], [Watir][Watir] tests,
+which can be written using [Selenium WebDriver][Selenium WebDriver], [Watir][Watir],
 or any other suitable automation frameworks,
 with or without BDD/ATDD frameworks like [Cucumber][Cucumber], [Capybara][Capybara], etc.
 To setup a simple Selenium WebDriver Ruby project on Travis CI,
@@ -47,22 +47,31 @@ before_install:
   # other before_install steps
 
   # install gems
-  - gem install jekyll
-  - gem install cucumber
-  - gem install selenium-webdriver
+  - gem install jekyll cucumber selenium-webdriver
+{% endprettify %}
+
+Alternatively, adding a `Gemfile` inside the repository would also do the job, which should be picked up by Travis Ci automatically.
+
+{% prettify yaml %}
+source 'https://rubygems.org'
+
+gem 'jekyll'
+gem 'cucumber'
+gem 'selenium-webdriver'
 {% endprettify %}
 
 ## Start Jekyll web server
 {: #start-jekyll-web-server}
 
-To build the Jekyll site locally on Travis CI, in `.travis.yml` file's `before_script` section,
-serve Jekyll site with `detach=true` option, which is available since [Jekyll 1.2.0][Jekyll 1.2.0] or later.
-With this `detach` option, WEBrick server will be running in background,
+To build the Jekyll site locally on Travis CI,
+add a command to serve Jekyll site with `--detach` option in `.travis.yml`'s `before_script` section,
+which is available since [Jekyll 1.2.0][Jekyll 1.2.0] or later.
+With this `--detach` option, web server will be running in background,
 so that any subsequent commands can be continued and whole Travis CI build won't be hanging.
 
 {% prettify yaml %}
 before_script:
-  - rake jekyll detach=true
+  - jekyll serve --detach
   - sleep 3 # give Web server some time to bind to sockets, etc
 {% endprettify %}
 
@@ -85,6 +94,7 @@ running tests against production for branches that don't change production is so
 </p>
 {% endfootnotes %}
 
+[Jekyll]: http://jekyllrb.com/
 [Travis CI]: https://travis-ci.org/
 [Selenium WebDriver]: http://docs.seleniumhq.org/
 [Watir]: http://watir.com/
