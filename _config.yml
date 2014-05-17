@@ -152,6 +152,8 @@ translations:
 
   # navigation
   archives: 'Archives'
+  articles: 'Articles'
+  notes: 'Notes'
   categories: 'Categories'
   tags: 'Tags'
   search: 'Search'
