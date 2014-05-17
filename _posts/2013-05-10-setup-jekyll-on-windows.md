@@ -105,7 +105,7 @@ Note that Python 2 is preferred since Python 3 might not be functioning as inten
 4. Set the installation directory (e.g. `C:\Python27`) to PATH. (How to? See [Troubleshooting #1](#troubleshooting))
 5. Verify Python installation
 
-	> python --version
+	> python \--version
 
 	Example output:
 
@@ -127,7 +127,7 @@ and save it, for example, to `C:\`. Then run it using Python in a command prompt
 
 1. Verify easy_install is installed properly
 
-	> easy_install --version
+	> easy_install \--version
 
 	Example output:
 
@@ -206,8 +206,8 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
 	**Solution**: Downgrade pygments.rb gem from 0.5.1/0.5.2 to version 0.5.0.
 
-	> gem uninstall pygments.rb --version '=0.5.2'<br />
-	> gem install pygments.rb --version 0.5.0
+	> gem uninstall pygments.rb \--version 0.5.2<br />
+	> gem install pygments.rb \--version 0.5.0
 
 5. Error message:
 
@@ -224,8 +224,8 @@ a new Jekyll blog should be created and can be browsed at [localhost:4000](http:
 
 	**Solution**: Downgrade pygments.rb gem to version 0.4.2
 
-	> gem uninstall pygments.rb --version “=0.5.0”<br />
-	> gem install pygments.rb --version “=0.4.2”
+	> gem uninstall pygments.rb \--version 0.5.0<br />
+	> gem install pygments.rb \--version 0.4.2
 
 6. Error message:
 
