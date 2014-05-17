@@ -151,8 +151,7 @@ translations:
   close: 'Close'
 
   # navigation
-  articles: 'Articles'
-  notes: 'Notes'
+  archives: 'Archives'
   categories: 'Categories'
   tags: 'Tags'
   search: 'Search'
