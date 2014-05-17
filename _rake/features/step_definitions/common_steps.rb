@@ -1,4 +1,4 @@
-Given(/^I visit "(home|blog|articles|notes|categories|tags|about)" page$/) do |page_name|
+Given(/^I visit "(home|blog|archives|categories|tags|about)" page$/) do |page_name|
 	url = SITE_URL
 	case page_name
 		when 'home'
@@ -7,10 +7,8 @@ Given(/^I visit "(home|blog|articles|notes|categories|tags|about)" page$/) do |p
 		when 'blog'
 			url += '/blog'
 			@page = Pages::BlogPage.new(@driver)
-		when 'articles'
-			url += '/articles'
-		when 'notes'
-			url += '/notes'
+		when 'archives'
+			url += '/archives'
 		when 'categories'
 			url += '/categories'
 		when 'tags'
