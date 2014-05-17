@@ -12,7 +12,6 @@ rvm:
 
 before_install:
   - pwd
-  - wget http://ipecho.net/plain -O - -q ; echo # print out external ip
 
   - sudo apt-get install chromium-browser unzip
 
