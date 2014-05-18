@@ -46,13 +46,11 @@ Feature: Test blog page header
 		And I should see title header "<title_header>"
 
 		Examples:
-			| link_text  | page_url              | page_title           | title_header         |
-			| Yi Zeng    | /blog/                | Blog - Yi Zeng       | Top Posts            |
-			| Archives   | /archives/            | Archives - Yi Zeng   | Archives             |
-			| Articles   | /categories/#articles | Categories - Yi Zeng | Posts By Category    |
-			| Notes      | /categories/#notes    | Categories - Yi Zeng | Posts By Category    |
-			| Categories | /categories/          | Categories - Yi Zeng | Posts By Category    |
-			| Tags       | /tags/                | Tags - Yi Zeng       | Posts By Tag         |
+			| link_text  | page_url     | page_title           | title_header         |
+			| Yi Zeng    | /blog/       | Blog - Yi Zeng       | Top Posts            |
+			| Archives   | /archives/   | Archives - Yi Zeng   | Archives             |
+			| Categories | /categories/ | Categories - Yi Zeng | Posts By Category    |
+			| Tags       | /tags/       | Tags - Yi Zeng       | Posts By Tag         |
 
 	Scenario Outline: Header's search link should be shown when width is greater then 420px
 		When I set window width to <width>px
