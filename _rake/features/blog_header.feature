@@ -11,9 +11,8 @@ Feature: Test blog page header
 		Examples:
 			| width |
 			| 240   |
-			| 400   |
-			| 640   |
-			| 768   |
+			| 480   |
+			| 720   |
 			| 1280  |
 			| 1920  |
 
@@ -25,9 +24,8 @@ Feature: Test blog page header
 		Examples:
 			| width | see?    |
 			| 240   | not see |
-			| 400   | not see |
-			| 640   | see     |
-			| 768   | see     |
+			| 480   | not see |
+			| 720   | see     |
 			| 1280  | see     |
 			| 1920  | see     |
 
@@ -37,8 +35,7 @@ Feature: Test blog page header
 
 		Examples:
 			| width |
-			| 640   |
-			| 768   |
+			| 720   |
 			| 1280  |
 			| 1920  |
 
@@ -49,11 +46,13 @@ Feature: Test blog page header
 		And I should see title header "<title_header>"
 
 		Examples:
-			| link_text  | page_url     | page_title           | title_header         |
-			| Yi Zeng    | /blog/       | Blog - Yi Zeng       | Top Posts            |
-			| Archives   | /archives/   | Archives - Yi Zeng   | Archives             |
-			| Categories | /categories/ | Categories - Yi Zeng | Posts By Category    |
-			| Tags       | /tags/       | Tags - Yi Zeng       | Posts By Tag         |
+			| link_text  | page_url              | page_title           | title_header         |
+			| Yi Zeng    | /blog/                | Blog - Yi Zeng       | Top Posts            |
+			| Archives   | /archives/            | Archives - Yi Zeng   | Archives             |
+			| Articles   | /categories/#articles | Categories - Yi Zeng | Posts By Category    |
+			| Notes      | /categories/#notes    | Categories - Yi Zeng | Posts By Category    |
+			| Categories | /categories/          | Categories - Yi Zeng | Posts By Category    |
+			| Tags       | /tags/                | Tags - Yi Zeng       | Posts By Tag         |
 
 	Scenario Outline: Header's search link should be shown when width is greater then 420px
 		When I set window width to <width>px
@@ -62,10 +61,8 @@ Feature: Test blog page header
 		Examples:
 			| width | see?    |
 			| 240   | not see |
-			| 400   | not see |
-			| 480   | see     |
-			| 640   | see     |
-			| 768   | see     |
+			| 480   | not see |
+			| 720   | see     |
 			| 1280  | see     |
 			| 1920  | see     |
 
@@ -76,10 +73,8 @@ Feature: Test blog page header
 		Examples:
 			| width | see?    |
 			| 240   | see     |
-			| 400   | see     |
-			| 480   | not see |
-			| 640   | not see |
-			| 768   | not see |
+			| 480   | see     |
+			| 720   | not see |
 			| 1280  | not see |
 			| 1920  | not see |
 
@@ -90,10 +85,8 @@ Feature: Test blog page header
 		Examples:
 			| width | element? |
 			| 240   | button   |
-			| 400   | button   |
-			| 480   | link     |
-			| 640   | link     |
-			| 768   | link     |
+			| 480   | button   |
+			| 720   | link     |
 			| 1280  | link     |
 			| 1920  | link     |
 
@@ -106,9 +99,7 @@ Feature: Test blog page header
 		Examples:
 			| width | element? |
 			| 240   | button   |
-			| 400   | button   |
-			| 480   | link     |
-			| 640   | link     |
-			| 768   | link     |
+			| 480   | button   |
+			| 720   | link     |
 			| 1280  | link     |
 			| 1920  | link     |

@@ -21,9 +21,8 @@ Feature: Test blog page post searching
 		Examples:
 			| width |
 			| 240   |
-			| 400   |
-			| 640   |
-			| 768   |
+			| 480   |
+			| 720   |
 			| 1280  |
 			| 1920  |
 
@@ -35,9 +34,8 @@ Feature: Test blog page post searching
 		Examples:
 			| width |
 			| 240   |
-			| 400   |
-			| 640   |
-			| 768   |
+			| 480   |
+			| 720   |
 			| 1280  |
 			| 1920  |
 
@@ -51,10 +49,8 @@ Feature: Test blog page post searching
 		Examples:
 			| width | element? |
 			| 240   | button   |
-			| 400   | button   |
-			| 480   | link     |
-			| 640   | link     |
-			| 768   | link     |
+			| 480   | button   |
+			| 720   | link     |
 			| 1280  | link     |
 			| 1920  | link     |
 
@@ -67,9 +63,7 @@ Feature: Test blog page post searching
 		Examples:
 			| width | see?    |
 			| 240   | not see |
-			| 400   | not see |
 			| 480   | not see |
-			| 640   | not see |
-			| 768   | not see |
+			| 720   | not see |
 			| 1280  | see     |
 			| 1920  | see     |
