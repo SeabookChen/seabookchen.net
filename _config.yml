@@ -144,7 +144,7 @@ translations:
   js_notice: 'This site requires JavaScript. Here are the instructions <a href="http://www.enable-javascript.com/" target="_blank">how to enable JavaScript in your web browser</a>.'
 
   # overlay
-  nav_placeholder: 'Menu'
+  menu: 'Menu'
   search_placeholder: 'Search...'
   search_results: 'Search results'
   search_not_found: 'Oh shucks<br/><small>Nothing found :(</small>'
