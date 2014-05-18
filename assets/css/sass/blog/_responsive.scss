@@ -8,9 +8,9 @@
 	}
 }
 /*
-	Old mobile phone width: [0, 419]
+	Old mobile phone width: [0, 520]
 */
-@media only screen and (max-width: 419px) {
+@media only screen and (max-width: 520px) {
 	h1,
 	h2,
 	.h1,
@@ -61,9 +61,9 @@
 }
 
 /*
-	Smartphone width: [0, 694]
+	Smartphone width: [0, 959]
 */
-@media only screen and (max-width:694px) {
+@media only screen and (max-width:959px) {
 	img {
 		max-width: 95%
 	}
@@ -86,19 +86,25 @@
 		text-align: center
 	}
 
-	.unit-article .year {
-		margin-top: 24px
-	}
+	.unit-article {
+		.year {
+			margin-top: 24px
+		}
 
-	.unit-article .posts li,
-	.unit-article .posts {
-		margin-top: 8px;
-		margin-bottom: 8px;
+		.posts li,
+		.posts {
+			margin-top: 8px;
+			margin-bottom: 8px;
 
-		a {
-			line-height: 1.525em;
-			padding-left: 0px;
-			padding-right: 0px;
+			a {
+				line-height: 1.525em;
+				padding-left: 0px;
+				padding-right: 0px;
+			}
+		}
+
+		.date {
+			display: none
 		}
 	}
 
@@ -124,9 +130,9 @@
 }
 
 /*
-	Tablet width: [695, infinity)
+	Tablet width: [960, infinity)
 */
-@media only screen and (min-width: 695px) {
+@media only screen and (min-width: 960px) {
 	.the-header .unit-head {
 		padding: 0;
 
@@ -165,18 +171,7 @@
 	.the-footer h4 a {
 		font-size: 1.25em
 	}
-}
 
-/*
-	Hide post date when width: (0, 960)
-*/
-@media only screen and (min-width: 0px) and (max-width:960px) {
-	.unit-article .date {
-		display: none
-	}
-}
-
-@media only screen and (min-width: 960px) {
 	.search-form .results .entry-date {
 		display: block;
 		float: right;
