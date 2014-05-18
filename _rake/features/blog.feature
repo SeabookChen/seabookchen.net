@@ -11,8 +11,7 @@ Feature: Test blog page
 		Examples:
 			| width |
 			| 240   |
-			| 400   |
-			| 640   |
-			| 768   |
+			| 480   |
+			| 720   |
 			| 1280  |
 			| 1920  |

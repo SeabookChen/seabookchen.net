@@ -37,11 +37,12 @@
 
     <div class="nav-wrapper">
         <div class="nav-form">
-            <input type="text" class="search-field" placeholder="{{ site.translations.nav_placeholder }}">
+            <span class="overlay-header menu">{{ site.translations.menu }}</span>
             <a class="btn-close">{{ site.translations.close }}</a>
             <div class="results">
-                <a href="/articles">{{ site.translations.articles }}</a>
-                <a href="/notes">{{ site.translations.notes }}</a>
+                <a href="/archives">{{ site.translations.archives }}</a>
+                <a href="/categories/#articles">{{ site.translations.articles }}</a>
+                <a href="/categories/#notes">{{ site.translations.notes }}</a>
                 <a href="/categories">{{ site.translations.categories }}</a>
                 <a href="/tags">{{ site.translations.tags }}</a>
                 <a href="/">{{ site.translations.about }}</a>
@@ -51,7 +52,7 @@
 
     <div class="search-wrapper">
         <div class="search-form">
-            <input type="text" class="search-field" placeholder="{{ site.translations.search_placeholder }}">
+            <input type="text" class="overlay-header search-field" placeholder="{{ site.translations.search_placeholder }}">
             <a class="btn-close">{{ site.translations.close }}</a>
             <ul class="results"></ul>
         </div>
@@ -68,8 +69,9 @@
                                 <a href="/blog">{{ site.title }}</a>
                                 <!--[if !IE]> --><button class="btn-search" data-ga="Search"></button><!-- <![endif]-->
                             </li>
-                            <li class="nav-link"><a data-ga="Articles" href="/articles">{{ site.translations.articles }}</a></li>
-                            <li class="nav-link"><a data-ga="Notes" href="/notes">{{ site.translations.notes }}</a></li>
+                            <li class="nav-link"><a data-ga="Archives" href="/archives">{{ site.translations.archives }}</a></li>
+                            <li class="nav-link"><a data-ga="Articles" href="/categories#articles">{{ site.translations.articles }}</a></li>
+                            <li class="nav-link"><a data-ga="Notes" href="/categories#notes">{{ site.translations.notes }}</a></li>
                             <li class="nav-link"><a data-ga="Categories" href="/categories">{{ site.translations.categories }}</a></li>
                             <li class="nav-link"><a data-ga="Tags" href="/tags">{{ site.translations.tags }}</a></li>
                             <!--[if !IE]> --><li class="nav-link"><a data-ga="Search" class="btn-search" href="#">{{ site.translations.search }}</a></li><!-- <![endif]-->

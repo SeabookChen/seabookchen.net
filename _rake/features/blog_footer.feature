@@ -10,9 +10,8 @@ Feature: Test blog page footer
 		Examples:
 			| width |
 			| 240   |
-			| 400   |
-			| 640   |
-			| 768   |
+			| 480   |
+			| 720   |
 			| 1280  |
 			| 1920  |
 
@@ -23,9 +22,8 @@ Feature: Test blog page footer
 		Examples:
 			| width | size |
 			| 240   | 36   |
-			| 400   | 36   |
-			| 640   | 42   |
-			| 768   | 42   |
+			| 480   | 36   |
+			| 720   | 42   |
 			| 1280  | 42   |
 			| 1920  | 42   |
 
@@ -36,9 +34,8 @@ Feature: Test blog page footer
 		Examples:
 			| width |
 			| 240   |
-			| 400   |
-			| 640   |
-			| 768   |
+			| 480   |
+			| 720   |
 			| 1280  |
 			| 1920  |
 

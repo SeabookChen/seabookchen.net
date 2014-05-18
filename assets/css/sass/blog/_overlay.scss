@@ -7,16 +7,27 @@
 	width: 100%;
 	z-index: 9002;
 
-	.search-field {
-		@include appearance(none);
-		@include background-clip(padding-box);
-		@include box-shadow(none);
+	.overlay-header {
 		background-color:transparent;
 		border: none;
 		border-bottom: 1px solid #fff;
 		color: #fff;
 		font-size: 2em;
+	}
+
+	.search-field {
+		@include appearance(none);
+		@include background-clip(padding-box);
+		@include box-shadow(none);
 		width: 100%;
+	}
+
+	.menu {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		padding-bottom: 12px;
+		text-align: center;
 	}
 
 	.btn-close {

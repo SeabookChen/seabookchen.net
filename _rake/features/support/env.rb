@@ -2,7 +2,7 @@ require 'selenium-webdriver'
 
 # navigation
 SITE_URL = 'http://localhost:4000'
-NAV_LINKS = %w[Articles Notes Categories Tags]
+NAV_LINKS = %w[Archives Articles Notes Categories Tags]
 
 # window
 WINDOW_WIDTH = 1200
