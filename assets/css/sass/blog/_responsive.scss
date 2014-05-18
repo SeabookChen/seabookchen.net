@@ -8,9 +8,9 @@
 	}
 }
 /*
-	Old mobile phone width: [0, 520]
+	Old mobile phone width: [0, 640]
 */
-@media only screen and (max-width: 520px) {
+@media only screen and (max-width: 640px) {
 	h1,
 	h2,
 	.h1,
@@ -109,7 +109,7 @@
 	}
 
 	.the-header .unit-head {
-		padding-bottom: 6px;
+		padding-bottom: 12px;
 
 		.nav-global .logo {
 			padding-bottom: 18px;
@@ -124,7 +124,7 @@
 		}
 
 		.nav-global li a {
-			padding: 8px
+			padding: 16px 12px
 		}
 	}
 }
@@ -144,7 +144,7 @@
 		.nav-global li div {
 			text-align: left;
 			display: block;
-			padding: 26px 24px;
+			padding: 26px;
 			height: 26px;
 		}
 
