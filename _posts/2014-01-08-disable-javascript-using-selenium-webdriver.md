@@ -68,7 +68,7 @@ require 'selenium-webdriver'
 profile = Selenium::WebDriver::Firefox::Profile.new
 profile["javascript.enabled"] = false
 
-driver = Selenium::WebDriver.for(:firefox, :profile => profile)
+driver = Selenium::WebDriver.for :firefox, :profile => profile
 {% endhighlight %}
 
 ## IE
