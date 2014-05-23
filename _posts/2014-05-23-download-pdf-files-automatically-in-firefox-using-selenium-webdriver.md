@@ -2,11 +2,11 @@
 layout: post
 title: "Download PDF files automatically in Firefox using Selenium WebDriver"
 description: "Instead of dealing with 'Save file' dialog or in-browser PDF previewing,
-this is a tutorial showing how to download PDF files automatically in Firefox using Selenium WebDriver."
+this tutorial will demonstrate how to download PDF files automatically in Firefox using Selenium WebDriver."
 categories: [articles, popular]
 tags: [firefox, ruby, selenium-webdriver]
 alias: [/2014/05/23]
-utilities: highlight
+utilities: fancybox, highlight, unveil
 ---
 ## A complete example
 {: #a-complete-example }
@@ -43,8 +43,8 @@ driver.get('http://static.mozilla.com/moco/en-US/pdf/mozilla_privacypolicy.pdf')
 {: #firefox-pops-up-save-file-dialog }
 
 As Selenium itself doesn't interact with system-level dialogs,
-in order to download PDFs as a part of the automation process,
-it requires the help from either additional frameworks or an approach that handles it automatically.
+in order to download PDFs as a part of the browser automation process,
+it requires the help from either additional frameworks or an approach that handles downloading automatically.
 
 <a class="post-image" href="/assets/images/posts/2014-05-23-firefox-save-file-dialog.png" title="'Save file' dialog in Firefox">
 <img itemprop="image" data-src="/assets/images/posts/2014-05-23-firefox-save-file-dialog.png" src="/assets/js/unveil/loader.gif" alt="'Save file' dialog in Firefox" />
@@ -64,10 +64,10 @@ profile["browser.download.dir"] = 'C:\\'
 profile["browser.helperApps.neverAsk.saveToDisk"] = 'application/pdf'
 {% endhighlight %}
 
-It is worth noting that the [MIME type][MIME type] defined here is `application/pdf`, which is a type that most PDF files use,
+It is worth noting that the [MIME type][MIME type] defined here is `application/pdf`, which is a type that most PDF files use.
 However, if the target PDF file has a non-standard MIME type, then "Save as" dialog might still pop up.
 In order to fix this issue, the actual MIME type has to be added into `browser.helperApps.neverAsk.saveToDisk` property,
-which can be found out using either of the following approach:
+which can be found out using either of the following approaches:
 
 - Upload file to online tools like [What MIME?][What MIME?]
 - Download file and monitor MIME type in Chrome's developer tool or web debugging proxy like [Fiddler][Fiddler], [Charles][Charles], etc.
@@ -96,9 +96,9 @@ If the machines has [Adobe Reader][Adobe Reader] installed,
 then default PDF viewing setting in Firefox might have been set to Adobe Acrobat without notice.
 
 To avoid previewing PDFs with those plugins,
-more [`about:config`][about:config] entries need to be configured when starting WebDriver instance.
+two more [`about:config`][about:config] entries need to be configured when starting WebDriver instance.
 
-- `plugin.scan.plid.all` needs to be false, so that Firefox won't scan and load plugins.
+- `plugin.scan.plid.all` needs to be `false`, so that Firefox won't scan and load plugins.
 - `plugin.scan.Acrobat` is a key that holds the minimum allowed version number that Adobe Acrobat is allowed to launch.
 Setting it to a number larger than currently installed Adobe Acrobat version should do the trick.
 
