@@ -12,7 +12,7 @@ utilities: fancybox, highlight, unveil
 {: #a-complete-example }
 
 For those who are willing to learn by examples right away,
-here is a complete example about how to save PDF files automatically in Firefox using Selenium WebDriver.
+here is a complete example of how to save PDF files automatically in Firefox using Selenium WebDriver.
 
 {% highlight ruby %}
 # Environment Tested:
@@ -20,7 +20,7 @@ here is a complete example about how to save PDF files automatically in Firefox 
 require 'selenium-webdriver'
 
 profile = Selenium::WebDriver::Firefox::Profile.new
-profile["browser.download.folderList"] = 2 # use the custom folder defined in "browser.download.dir" below
+profile["browser.download.folderList"] = 2
 profile["browser.download.dir"] = 'C:\\'
 profile["browser.helperApps.neverAsk.saveToDisk"] = 'application/pdf'
 
@@ -29,7 +29,7 @@ profile["pdfjs.disabled"] = true
 
 # disable Adobe Acrobat PDF preview plugin
 profile["plugin.scan.plid.all"] = false
-profile["plugin.scan.Acrobat"] = "99.0" # set the minimum allowed version to something large enough
+profile["plugin.scan.Acrobat"] = "99.0"
 
 driver = Selenium::WebDriver.for :firefox, :profile => profile
 driver.get('http://static.mozilla.com/moco/en-US/pdf/mozilla_privacypolicy.pdf')
@@ -43,18 +43,19 @@ driver.get('http://static.mozilla.com/moco/en-US/pdf/mozilla_privacypolicy.pdf')
 {: #firefox-pops-up-save-file-dialog }
 
 As Selenium itself doesn't interact with system-level dialogs,
-in order to download PDFs as a part of the browser automation process,
+in order to download PDFs as part of the browser automation process,
 it requires the help from either additional frameworks or an approach that handles downloading automatically.
 
 <a class="post-image" href="/assets/images/posts/2014-05-23-firefox-save-file-dialog.png" title="'Save file' dialog in Firefox">
 <img itemprop="image" data-src="/assets/images/posts/2014-05-23-firefox-save-file-dialog.png" src="/assets/js/unveil/loader.gif" alt="'Save file' dialog in Firefox" />
 </a>
 
-Firefox's [download preferences][Download Manager preferences] are controlled by some properties defined in [`about:config`][about:config] page,
+Firefox's [download manager preferences][Download Manager preferences] are controlled by some properties defined in [`about:config`][about:config] page,
 which can be set programmatically while instantiating `FirefoxDriver` using Selenium WebDriver.
 
- - `browser.download.folderList` controls the default downloading folder type.
- - `browser.download.dir` holds the custom destination folder for downloading, which is activated if `browser.download.folderList` has been set to 2.
+ - `browser.download.folderList` controls the default folder to download a file to.
+   `0` indicates the Desktop; `1` indicates the systems default downloads location; `2` indicates a custom folder.
+ - `browser.download.dir` holds the custom destination folder for downloading. It is activated if `browser.download.folderList` has been set to `2`.
  - `browser.helperApps.neverAsk.saveToDisk` stores a comma-separated list of MIME types to save to disk without asking what to use to open the file.
 
 {% highlight ruby %}
@@ -65,9 +66,9 @@ profile["browser.helperApps.neverAsk.saveToDisk"] = 'application/pdf'
 {% endhighlight %}
 
 It is worth noting that the [MIME type][MIME type] defined here is `application/pdf`, which is a type that most PDF files use.
-However, if the target PDF file has a non-standard MIME type, then "Save as" dialog might still pop up.
+However, if the target PDF file has a non-standard MIME type, then "Save file" dialog might still show up.
 In order to fix this issue, the actual MIME type has to be added into `browser.helperApps.neverAsk.saveToDisk` property,
-which can be found out using either of the following approaches:
+which can be checked out using either of the following approaches:
 
 - Upload file to online tools like [What MIME?][What MIME?]
 - Download file and monitor MIME type in Chrome's developer tool or web debugging proxy like [Fiddler][Fiddler], [Charles][Charles], etc.
@@ -91,8 +92,8 @@ profile["pdfjs.disabled"] = true
 #### Third party PDF viewers
 {: #third-party-pdf-viewers }
 
-Except for Firefox's built-in PDF viewer, there might be other third party plugins preventing Firefox from downloading PDF automatically.
-If the machines has [Adobe Reader][Adobe Reader] installed,
+Except for Firefox's built-in PDF viewer, there might be other third party plugins preventing Firefox from downloading PDFs automatically.
+If a machine has [Adobe Reader][Adobe Reader] installed,
 then default PDF viewing setting in Firefox might have been set to Adobe Acrobat without notice.
 
 To avoid previewing PDFs with those plugins,
