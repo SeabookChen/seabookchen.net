@@ -39,8 +39,8 @@ driver.get('http://static.mozilla.com/moco/en-US/pdf/mozilla_privacypolicy.pdf')
 ## A walk-through
 {: #a-walk-through }
 
-### Firefox pops up "Save file" dialog
-{: #firefox-pops-up-save-file-dialog }
+### Prevent Firefox from popping up "Save file" dialog
+{: #prevent-firefox-from-popping-up-save-file-dialog }
 
 As Selenium itself doesn't interact with system-level dialogs,
 in order to download PDFs as part of the browser automation process,
@@ -73,11 +73,11 @@ which can be checked out using either of the following approaches:
 - Upload file to online tools like [What MIME?][What MIME?]
 - Download file and monitor MIME type in Chrome's developer tool or web debugging proxy like [Fiddler][Fiddler], [Charles][Charles], etc.
 
-### Firefox previews PDF inside browser
-{: #firefox-previews-pdf-inside-browser }
+### Prevent Firefox from previewing PDFs inside browser
+{: #prevent-firefox-from-previewing-pdfs-inside-browser }
 
-#### Built-in PDF.js viewer
-{: #built-in-pdf-js-viewer }
+#### For Built-in PDF.js viewer
+{: #for-built-in-pdf-js-viewer }
 
 With the release of Firefox 19.0,
 [PDF.js][PDF.js] has been integrated into Firefox to provide built-in ability of displaying PDF files inside browser.
@@ -89,8 +89,8 @@ another [`about:config`][about:config] entry needs to be changed to disable PDF.
 profile["pdfjs.disabled"] = true
 {% endhighlight %}
 
-#### Third party PDF viewers
-{: #third-party-pdf-viewers }
+#### For third party PDF viewers
+{: #for-third-party-pdf-viewers }
 
 Except for Firefox's built-in PDF viewer, there might be other third party plugins preventing Firefox from downloading PDFs automatically.
 If a machine has [Adobe Reader][Adobe Reader] installed,
