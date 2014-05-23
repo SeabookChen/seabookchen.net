@@ -73,10 +73,10 @@ which can be checked out using either of the following approaches:
 - Upload file to online tools like [What MIME?][What MIME?]
 - Download file and monitor MIME type in Chrome's developer tool or web debugging proxy like [Fiddler][Fiddler], [Charles][Charles], etc.
 
-### Prevent Firefox from previewing PDFs inside browser
-{: #prevent-firefox-from-previewing-pdfs-inside-browser }
+### Prevent Firefox from previewing PDFs
+{: #prevent-firefox-from-previewing-pdfs }
 
-#### For Built-in PDF.js viewer
+#### For built-in PDF.js viewer
 {: #for-built-in-pdf-js-viewer }
 
 With the release of Firefox 19.0,
