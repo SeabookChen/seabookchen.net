@@ -1,8 +1,8 @@
 ---
 layout: post
-title: "Save PDF files automatically in Firefox using Selenium WebDriver"
-description: "Instead of dealing with 'Save as' dialog or in-browser PDF previewing,
-this is a tutorial showing how to save PDF files automatically in Firefox using Selenium WebDriver."
+title: "Download PDF files automatically in Firefox using Selenium WebDriver"
+description: "Instead of dealing with 'Save file' dialog or in-browser PDF previewing,
+this is a tutorial showing how to download PDF files automatically in Firefox using Selenium WebDriver."
 categories: [articles, popular]
 tags: [firefox, ruby, selenium-webdriver]
 alias: [/2014/05/23]
@@ -16,7 +16,7 @@ here is a complete example about how to save PDF files automatically in Firefox 
 
 {% highlight ruby %}
 # Environment Tested:
-# Windows 7, Ruby 2.0.0p451, Selenium 2.41.0, Firefox 27.0.1
+# Windows 7, Ruby 2.0.0p451, Selenium 2.41.0, Firefox 29.0.1
 require 'selenium-webdriver'
 
 profile = Selenium::WebDriver::Firefox::Profile.new
@@ -39,12 +39,16 @@ driver.get('http://static.mozilla.com/moco/en-US/pdf/mozilla_privacypolicy.pdf')
 ## A walk-through
 {: #a-walk-through }
 
-### Firefox pops up "Save as" dialog
-{: #firefox-pops-up-save-as-dialog }
+### Firefox pops up "Save file" dialog
+{: #firefox-pops-up-save-file-dialog }
 
 As Selenium itself doesn't interact with system-level dialogs,
 in order to download PDFs as a part of the automation process,
 it requires the help from either additional frameworks or an approach that handles it automatically.
+
+<a class="post-image" href="/assets/images/posts/2014-05-23-firefox-save-file-dialog.png" title="'Save file' dialog in Firefox">
+<img itemprop="image" data-src="/assets/images/posts/2014-05-23-firefox-save-file-dialog.png" src="/assets/js/unveil/loader.gif" alt="'Save file' dialog in Firefox" />
+</a>
 
 Firefox's [download preferences][Download Manager preferences] are controlled by some properties defined in [`about:config`][about:config] page,
 which can be set programmatically while instantiating `FirefoxDriver` using Selenium WebDriver.
