@@ -356,7 +356,12 @@
 	}
 
 	.gotop {
-		text-align: center
+		margin-bottom: 26px;
+
+		.addthis_toolbox {
+			display: inline-block;
+			float: right;
+		}
 	}
 }
 

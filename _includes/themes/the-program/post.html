@@ -39,7 +39,19 @@
             </div><!-- bd -->
             <footer class="unit-foot">
                 <div class="unit-inner unit-foot-inner">
-                    <p class="gotop"><a class="internal" href="#page">{{ site.translations.back_to_top }}</a></p>
+                    <div class="gotop">
+                        <a class="internal" href="#page">{{ site.translations.back_to_top }}</a>
+                        <!-- AddThis Button BEGIN -->
+                        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                            <a class="addthis_button_email"></a>
+                            <a class="addthis_button_facebook"></a>
+                            <a class="addthis_button_google_plusone_share"></a>
+                            <a class="addthis_button_reddit"></a>
+                            <a class="addthis_button_twitter"></a>
+                        </div>
+                        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ JB.sharing.addthis_public_id }}"></script>
+                        <!-- AddThis Button END -->
+                    </div>
                     <nav class="pagination">
                         {% if page.previous %}
                             <a class="internal" data-ga="Previous Post" rel="prev" href="{{ page.previous.url }}" title="{{ site.translations.view }} '{{ page.previous.title }}'"> ← {{ page.previous.title }}</a>
