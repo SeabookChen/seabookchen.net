@@ -174,8 +174,10 @@ For Selenium WebDriver tests that are running locally, Selenium Server is not re
 Being an open-source headless WebKit browser,
 [PhantomJS][PhantomJS] needs a JavaScript implementation of the [WebDriver Wire Protocol][JsonWireProtocol] in order to work with Selenium WebDriver,
 therefore [GhostDriver][GhostDriver] kicks in{% footnote 2 %}.
-Inside Selenium WebDriver project, GhostDriver is used for automating PhantomJS browser,
+GhostDriver is used for automating PhantomJS browser,
 which is similar to the relationship between ChromeDriver and Chrome browser in a sense.
+However, there is a little bit difference that PhantomJS has GhostDriver integrated inside since 1.8{% footnote 3 %},
+so that no separate GhostDriver binary will be required for running Selenium WebDriver projects.
 
 ### Selenium WebDriver / WebDriverJS
 {: #selenium-webdriver-webdriverjs}
@@ -204,12 +206,12 @@ which confusingly may be referred to three different projects.
 ### Selenium / Appium, ios-driver, Selendroid
 {: #selenium-appium-ios-driver-selendroid}
 
-With the deprecation of Selenium's built-in [AndroidDriver][AndroidDriver] and [IPhoneDriver][iPhoneDriver]{% footnote 3 %},
+With the deprecation of Selenium's built-in [AndroidDriver][AndroidDriver] and [IPhoneDriver][iPhoneDriver]{% footnote 4 %},
 third party libraries [Appium][Appium], [ios-driver][ios-driver] and [Selendroid][Selendroid] are recommended
 for automating web applications on mobile devices.
 They are based on WebDriver project,
 using the same client API and communicate using the same [JSON-over-HTTP-based wire protocol][JsonWireProtocol],
-but are capable of automating native and hybrid applications on mobile platforms{% footnote 4 %}.
+but are capable of automating native and hybrid applications on mobile platforms{% footnote 5 %}.
 
 ### Selenium / Watir
 {: #selenium-watir}
@@ -220,11 +222,11 @@ Watir Classic and [Watir WebDriver][Watir WebDriver].
 Watir Classic is to Watir as Selenium RC is to Selenium.
 During the era of Selenium 1, it was known as "Watir" without any suffixes
 and had nothing to do with Selenium project but both were popular at the time.
-Originally Watir was designed in Ruby to support IE only and later expanded for other browsers{% footnote 5 %}.
+Originally Watir was designed in Ruby to support IE only and later expanded for other browsers{% footnote 6 %}.
 Java and .NET versions were created by open source enthusiasts as third party projects, called [Watij][Watij] and [WatiN][WatiN].
 
 However, some time after [Selenium WebDriver](#selenium-webdriver) hit the market,
-Watir started to wrap around Selenium WebDirver's Ruby binding to a newer high-level API{% footnote 6 %},
+Watir started to wrap around Selenium WebDirver's Ruby binding to a newer high-level API{% footnote 7 %},
 which is now known as Watir WebDriver.
 Both being open source frameworks,
 Selenium WebDriver Ruby binding and Watir WebDriver are led by the same developer, Jari Bakken.
@@ -257,21 +259,24 @@ Watij and WatiN were made in 2010 and 2011 respectively.
 Getting started with GhostDriver - SelConf2013 - Boston</a> by Ivan De Marino.
 {% reverse_footnote 2 %}
 </p>
-<p id="footnote-3">[3]: <a href="http://seleniumhq.wordpress.com/2013/12/24/android-and-ios-support/">
-Android and iOS Support</a> (Official Selenium Blog).
+<p id="footnote-3">[3]: <a href="http://phantomjs.org/release-1.8.html">PhantomJS 1.8 Release Notes</a>
 {% reverse_footnote 3 %}
 </p>
-<p id="footnote-4">[4]: Answer made
-<a href="http://stackoverflow.com/a/18729751/1177636">here</a> by Jim Evans.
+<p id="footnote-4">[4]: <a href="http://seleniumhq.wordpress.com/2013/12/24/android-and-ios-support/">
+Android and iOS Support</a> (Official Selenium Blog).
 {% reverse_footnote 4 %}
 </p>
-<p id="footnote-5">[5]:
-<a href="http://watirmelon.com/2010/04/10/watir-selenium-webdriver/">Watir, Selenium &amp; WebDriver</a> by Alister Scott.
+<p id="footnote-5">[5]: Answer made
+<a href="http://stackoverflow.com/a/18729751/1177636">here</a> by Jim Evans.
 {% reverse_footnote 5 %}
 </p>
-<p id="footnote-6">[6]: Message from Jari Bakken in
-<a href="http://rubyforge.org/pipermail/wtr-development/2009-October/001313.html">Watir mailing list</a> back in 2009.
+<p id="footnote-6">[6]:
+<a href="http://watirmelon.com/2010/04/10/watir-selenium-webdriver/">Watir, Selenium &amp; WebDriver</a> by Alister Scott.
 {% reverse_footnote 6 %}
+</p>
+<p id="footnote-7">[7]: Message from Jari Bakken in
+<a href="http://rubyforge.org/pipermail/wtr-development/2009-October/001313.html">Watir mailing list</a> back in 2009.
+{% reverse_footnote 7 %}
 </p>
 {% endfootnotes %}
 
