@@ -340,20 +340,23 @@
 .unit-article .unit-foot {
 	border-top: 3px solid $color-text;
 	margin-top: 16px;
-	padding-top: 1.625em;
+	padding-top: 12px;
 	position: relative;
 
-	nav ul {
-		list-style: none;
-		padding: 0 !important;
+	nav {
+		display: block;
 
-		li {
-			display: inline
+		a[rel="prev"] {
+			float: left
+		}
+
+		a[rel="next"] {
+			float: right
 		}
 	}
 
 	.gotop {
-		margin-bottom: 0
+		text-align: center
 	}
 }
 
@@ -440,7 +443,7 @@
 }
 
 .misc-content {
-	margin-top: 26px
+	margin-top: 48px
 }
 
 /* post & page */
