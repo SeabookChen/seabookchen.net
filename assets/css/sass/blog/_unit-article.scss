@@ -361,6 +361,14 @@
 		.addthis_toolbox {
 			display: inline-block;
 			float: right;
+
+			a {
+				border: none;
+
+				&:hover {
+					background: transparent
+				}
+			}
 		}
 	}
 }
