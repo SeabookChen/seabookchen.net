@@ -39,20 +39,27 @@
             </div><!-- bd -->
             <footer class="unit-foot">
                 <div class="unit-inner unit-foot-inner">
+                    <div class="gotop">
+                        <a class="internal" href="#page">{{ site.translations.back_to_top }}</a>
+                        <!-- AddThis Button BEGIN -->
+                        <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+                            <a class="addthis_button_email"></a>
+                            <a class="addthis_button_facebook"></a>
+                            <a class="addthis_button_google_plusone_share"></a>
+                            <a class="addthis_button_reddit"></a>
+                            <a class="addthis_button_twitter"></a>
+                        </div>
+                        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid={{ JB.sharing.addthis_public_id }}"></script>
+                        <!-- AddThis Button END -->
+                    </div>
                     <nav class="pagination">
-                        <ul>
-                            {% if page.previous %}
-                                <li class="prev"><a class="internal" data-ga="Previous Post" rel="prev" href="{{ page.previous.url }}" title="{{ site.translations.view }} '{{ page.previous.title }}'"> &#62;&#62; {{ page.previous.title }}</a></li>
-                            {% endif %}
-                            {% if page.previous and page.next %}
-                                <li class="pipe"> | </li>
-                            {% endif %}
-                            {% if page.next %}
-                                <li class="next"><a class="internal" data-ga="Next Post" rel="next" href="{{ page.next.url }}" title="{{ site.translations.view }} '{{ page.next.title }}'">{{ page.next.title }} &#62;&#62; </a></li>
-                            {% endif %}
-                        </ul>
+                        {% if page.previous %}
+                            <a class="internal" data-ga="Previous Post" rel="prev" href="{{ page.previous.url }}" title="{{ site.translations.view }} '{{ page.previous.title }}'"> ← {{ page.previous.title }}</a>
+                        {% endif %}
+                        {% if page.next %}
+                            <a class="internal" data-ga="Next Post" rel="next" href="{{ page.next.url }}" title="{{ site.translations.view }} '{{ page.next.title }}'">{{ page.next.title }} → </a>
+                        {% endif %}
                     </nav>
-                    <p class="gotop"><a class="internal" href="#page">{{ site.translations.back_to_top }}</a></p>
                 </div>
             </footer>
             <div class="misc-content">

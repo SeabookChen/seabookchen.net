@@ -120,6 +120,7 @@ JB:
   #
   sharing:
     provider: false
+    addthis_public_id: ra-53819e27689934f9
 
   # Settings for all other include helpers can be defined by creating 
   # a hash with key named for the given helper. ex:
