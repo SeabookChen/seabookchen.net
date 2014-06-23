@@ -130,11 +130,14 @@ ConfigurationManager.RefreshSection("geoSettings/summary");
 {: #print-out-all-keys}
 
 {% prettify c# %}
-NameValueCollection appSettings = ConfigurationManager.AppSettings;
-// var customSettings = ConfigurationManager.GetSection("geoSettings/summary") as NameValueCollection;
+var appSettings = ConfigurationManager.AppSettings;
+var customSettings = ConfigurationManager.GetSection("geoSettings/summary") as NameValueCollection;
 
 foreach (string key in appSettings.AllKeys) {
-    Console.WriteLine("{0}: {1}", key, section[key]);
+    Console.WriteLine("{0}: {1}", key, appSettings[key]);
+}
+foreach (string key in customSettings.AllKeys) {
+    Console.WriteLine("{0}: {1}", key, customSettings[key]);
 }
 {% endprettify %}
 
