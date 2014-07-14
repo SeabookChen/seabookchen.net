@@ -347,11 +347,13 @@
 		display: block;
 
 		a[rel="prev"] {
-			float: left
+			float: left;
+			line-height: 1.325em;
 		}
 
 		a[rel="next"] {
-			float: right
+			float: right;
+			line-height: 1.325em;
 		}
 	}
 
