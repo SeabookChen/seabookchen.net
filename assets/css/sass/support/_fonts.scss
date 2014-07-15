@@ -65,3 +65,9 @@
 							   "/assets/fonts/junge-regular-webfont.ttf",
 							   "/assets/fonts/junge-regular-webfont.svg#jungeregular"),
 							   "/assets/fonts/junge-regular-webfont.eot", normal, normal);
+
+@include font-face("Roboto Slab",
+					font-files("/assets/fonts/RobotoSlab-Regular-webfont.woff",
+							   "/assets/fonts/RobotoSlab-Regular-webfont.ttf",
+							   "/assets/fonts/RobotoSlab-Regular-webfont.svg#roboto_slabregular"),
+							   "/assets/fonts/RobotoSlab-Regular-webfont.eot", normal, normal);
