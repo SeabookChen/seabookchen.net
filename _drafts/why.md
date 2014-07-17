@@ -1,24 +1,24 @@
 ---
 layout: post
-title: "Why you shouldn't start learning Selenium using Google’s products?"
-description: "Why people shouldn't start learning Selenium using Google’s applications like Gmail, Google Drive, Google Maps etc."
+title: "Why you shouldn't start learning Selenium using Google's products?"
+description: "Why people shouldn't start learning Selenium using Google's applications like Gmail, Google Maps etc."
 categories: [articles, popular]
 tags: [selenium-webdriver]
 alias: [/2014/07/17/]
 utilities: highlight, show-hidden
 ---
-Whenever I see questions on StackOverflow about the problems in
-automating Google's products (Google search, Gmail, Google maps, Youtube, etc.) using Selenium,
+Whenever I see questions on StackOverflow about UI automation
+against Google's products (especially Gmail, Google maps, Youtube, etc.),
 the first thing pops up in my head would be - do those OPs work for Google? I guess not.
 Then why are there so many people interested in automating Google's applications from UI?
 
 My wild guess is that this mainly includes two situations:
 
-- People who start off learning Selenium and has decided to automate Google search as a starting point.
-  Since Google search has a reasonably clean and simple UI,
-  they have the reason to believe that Google must be the best site to learn Selenium.
+- Someone who starts off learning Selenium and has decided to automate Google search as a starting point.
+  Since Google homepage has a reasonably clean and simple UI,
+  people have the reason to believe that Google must be the best site to learn Selenium.
   After playing with "Google Search" scenario, they might continue to try out automating Gmail or Youtube.
-- People who need to access Google services like Gmail, Google maps as part of their job,
+- Someone who needs to access Google services like Gmail, Google maps as part of the job,
   which can be either testing projects or applications involving browser automation.
 
 Well, for whatever the reason is, people should rarely need to automated Google's products from UI level.
@@ -42,28 +42,17 @@ This is indeed a reasonable starting point for people who have just started codi
 as it provides an intuitive way to demonstrate what Selenium does - "Selenium automates browsers"{% footnote 1 %}.
 
 However, considering the fact that it looks so easy
-purely because people have deliberately simplified it without revealing what's under the hood,
-this use case is not something totally irreplaceable.
-It doesn't have to be the first Selenium program for novice users to learn.
+purely because it was deliberately simplified for educational purposes,
+this use case doesn't have to be the first Selenium program recommended for novice users to learn.
 More importantly, the dynamic DOM structure and the instant search feature
 have made Google homepage definitely not the easiest thing for them.
-It might give newbies the false impressions that
+Without revealing what's under the hood, it might give newbies the false impressions that
 
   - Selenium projects are like some auto-generated scripts - let's copy n' paste these statements.
-  - Google's products are extremely easy to automate - let's try automating Gmail or Youtube next.
+  - Google's products are extremely straightforward to automate - let's try automating Gmail or Youtube next.
 
-If amateurs fall into the trap and continue on things like Gmail,
-few potential obstacles in web UI automation will become very likely to meet:
-
-- Element locating difficulties - XPath/CSS selectors skills are necessary
-- Poorly used waiting systems -  WebDriverWait or similar technologies are required
-- Unmaintainable project with smelly code - OO features that make a project maintainable are essential:
-  + Abstraction
-  + Encapsulation
-  + Inheritance
-  + Design Pattern - Page Objects
-
-Instead, finding something else as simple as below might be a better scenario for learning purposes.
+Instead of giving a use case that could potentially cause trouble,
+it might be better to find a scenario as simple as below for learning purposes.
 
 > 1. Search `[selenium]` on StackOverflow
 > 2. Find out how many questions are tagged with "selenium"
@@ -105,7 +94,16 @@ Learning Selenium by automating them would certainly be a poor choice.
   On one hand, modifying source code for testing purpose, like adding class names, is a common practice for making elements locating easier.
   On the other hand, monitoring UI related bug/feature tickets would greatly help developers track down what has been changed.
   Unfortunately, external automators outside Google won't be able to take advantage of this.
-  
+
+Few potential obstacles in web UI automation are very likely to be seen during the process:
+
+- Element locating difficulties - XPath/CSS selectors skills are necessary
+- Poorly used waiting systems -  WebDriverWait or similar technologies are required
+- Unmaintainable project with smelly code - OO features that make a project maintainable are essential:
+  + Abstraction
+  + Encapsulation
+  + Inheritance
+  + Design Pattern - Page Objects
 
 ### There are APIs
 {: #there-are-apis}
@@ -159,31 +157,28 @@ You agree not to use or launch any automated system, including without limitatio
 
 - UI automation team within Google
 
-  I don't know anything about Google's internal structure, but I'm sure such team exists,
-  especially taking into account that WebDriver was initially created within Google{% footnote 5 %}.
-
-  The biggest advantage for them is the accessibility to source code.
+  If such team exists, the biggest advantage for them is the accessibility to source code.
   With ability to modify source code, UI automation can be a lot easier without fighting against nasty DOM structure.
   Additionally, they can easily track down which feature/bug ticket has changed DOM structure that causing previous Selenium WebDriver code failing.
   On the other hand, instead of automating from UI level, they might also use something at lower levels,
-  like private APIs to test certain front-end functionalities.
+  like private APIs to interact with certain front-end functionalities.
 
-- People who have no other choice
+- People with no other choice
 
-  Sometimes accessing UI might be the only way to achieve a task that must be done.
+  Sometimes accessing from UI might be the only way to achieve a task that must be done.
   My suggestion for that would be "Go for it".
-  If Google doesn't provide API for that particular product and it's so important that must be done, then just do it with Selenium.
+  If Google doesn't provide API for a particular product and it's so important that must be done, then just do it from UI level.
   The project might be extremely difficult to implement and can be super fragile to maintain, but it should still be achievable.
 
 ## What should you automate then?
 {: #what-should-you-automate-then}
 
-### Your own (your company's) applications
+### Your own (or your company's) applications
 {: #your-own-applications}
 
   Don't procrastinate.
-  Instead of spending time poking around trying to find something easy enough,
-  my suggestion would be just start from what you are supposed to do right away.
+  Instead of spending time poking around and looking for something easy enough,
+  it is probably better to start from what you are supposed to do right away.
   While coding up the project gradually, many questions might be asked by yourself:
 
 >  + How can I find elements with dynamic ID?
@@ -198,8 +193,8 @@ You agree not to use or launch any automated system, including without limitatio
   As time goes by, you will be more familiar with Selenium API and the quality of the project will be improving automatically,
   as long as you are keen on getting the answers to those questions and willing to ask more.
 
-  Additionally, creating own demos would also be an option for learning Selenium.
-  For example, ["The Internet"][The Internet] is a demo application written for the similar purpose,
+  Additionally, creating own demos could also be a good alternative for learning Selenium.
+  For example, ["The Internet"][The Internet] is a demo application written for a similar purpose,
   which provides lots of examples for common web functionalities, like hovering, frames, JavaScript alerts, etc.
 
 ### Demos of JavaScript UI frameworks
@@ -220,6 +215,7 @@ To start with, even writing some code to automate their homepage would be fun, l
   - [How can i start automate the google map using selenium webdriver ?](https://groups.google.com/d/msg/selenium-users/Yd-OLaFxgCU/rE4-OWxVufYJ) (Mike Riley)
   - [Stop trying to automate GMail](https://groups.google.com/d/msg/selenium-users/8jR6Fw5ndxU/7peVDuzkNN4J) (Jim Evans)
   - [Unable to handle the elements after login to gmail acount](https://groups.google.com/d/msg/selenium-users/RfNvNAbLyLs/5-SJ5dmoELMJ) (Arran)
+  - [Selenium IDE & try to record Gmail login test case](https://groups.google.com/d/msg/selenium-users/aT465o3OEfQ/NT4LDgzj-YUJ)  (Krishnan)
 
 {% footnotes %}
 <p id="footnote-1">[1]: <a href="http://docs.seleniumhq.org/">"What is Selenium?"</a> section.
