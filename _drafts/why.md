@@ -16,7 +16,7 @@ My wild guess is that this mainly includes two situations:
 
 - Someone who starts off learning Selenium and has decided to automate Google search as a starting point.
   Since Google homepage has a reasonably clean and simple UI,
-  people have the reason to believe that Google must be the best site to learn Selenium.
+  people have the reason to believe that Google could be the best site to learn Selenium.
   After playing with "Google Search" scenario, they might continue to try out automating Gmail or Youtube.
 - Someone who needs to access Google services like Gmail, Google maps as part of the job,
   which can be either testing projects or applications involving browser automation.
@@ -62,13 +62,16 @@ it might be better to find a scenario as simple as below for learning purposes.
 
 Even though Google's products are technically automatable, it requires certain amount of time and effort to achieve{% footnote 2 %},
 especially for people who have just kicked off their web UI automation career.
-Learning Selenium by automating them would certainly be a poor choice.
+Learning Selenium or performing certain tasks by automating them from UI would certainly be a poor choice.
 
 - DOM is too complex
 
   Google is famous for its meaningless, minimized DOM structures.
   Not only straightforward approaches like `id`, `name` won't work well,
   but also advanced XPath/CSS selectors can merely be used because most of the things in DOM are not human readable.
+  Difficulties in element locating could be really common in UI automation sometimes,
+  while automating Google's products makes it inevitable.
+  Strong XPath/CSS selector skills are crucial to get the job done.
 
   What about text-free XPaths based on position relationship, like `//div[3]/div[1]/div[3]/span[10]/a`?
   They are even worse and likely to be changed frequently by Google.
@@ -76,8 +79,8 @@ Learning Selenium by automating them would certainly be a poor choice.
 
 - Some are Ajax powered
 
-  Dynamic content handling techniques are essential for UI automation,
-  but learning it against Ajax powered Google products (Google Maps, Youtube, etc.) would definitely make life miserable.
+  Dynamic content handling techniques like waiting system `WebDriverWait` are essential for UI automation,
+  but Ajax powered Google products (Google Maps, Youtube, etc.) would definitely make life even more miserable.
   For those JavaScript and Ajax heavy applications,
   wait time might vary and debugging them are difficult due to other constraints, like dynamic DOM structures.
 
@@ -85,25 +88,16 @@ Learning Selenium by automating them would certainly be a poor choice.
 
   Just like most of the active-developing web applications,
   the DOM of Google's products are constantly changed either as part of the development or deliberately in order to prevent scripting.
-  This will frequently break the existing Selenium code and make it highly unmaintainable.
+  Assuming best available locators have been used,
+  it will still frequently break the existing Selenium code and make it highly unmaintainable,
 
 - Source code is unavailable
 
   Having both read and write access to internal issue tracker,
-  source code, documentation, private APIs would be extremely useful during UI automation process.
+  source code, documentation, private APIs can be extremely useful during UI automation process.
   On one hand, modifying source code for testing purpose, like adding class names, is a common practice for making elements locating easier.
   On the other hand, monitoring UI related bug/feature tickets would greatly help developers track down what has been changed.
   Unfortunately, external automators outside Google won't be able to take advantage of this.
-
-Few potential obstacles in web UI automation are very likely to be seen during the process:
-
-- Element locating difficulties - XPath/CSS selectors skills are necessary
-- Poorly used waiting systems -  WebDriverWait or similar technologies are required
-- Unmaintainable project with smelly code - OO features that make a project maintainable are essential:
-  + Abstraction
-  + Encapsulation
-  + Inheritance
-  + Design Pattern - Page Objects
 
 ### There are APIs
 {: #there-are-apis}
