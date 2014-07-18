@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Why you shouldn't start learning Selenium using Google's products?"
-description: "Why people shouldn't start learning Selenium using Google's applications like Gmail, Google Maps etc."
+title: "Why you shouldn't start learning Selenium by automating Google's products?"
+description: "Why people shouldn't start learning Selenium by automating Google's applications like Gmail, Google Maps etc."
 categories: [articles, popular]
 tags: [selenium-webdriver]
-alias: [/2014/07/17/]
+alias: [/2014/07/19/]
 utilities: highlight, show-hidden
 ---
 Whenever I see questions on StackOverflow about UI automation
@@ -21,7 +21,8 @@ My wild guess is that this mainly includes two situations:
 - Someone who needs to access Google services like Gmail, Google maps as part of the job,
   which can be either testing projects or applications involving browser automation.
 
-Well, for whatever the reason is, people should rarely need to automated Google's products from UI level.
+Well, for whatever the reason is, people should rarely need to automated Google's applications from UI level,
+especially for those who have just started learning Selenium.
 
 * Kramdown table of contents
 {:toc .toc}
@@ -60,13 +61,12 @@ it might be better to find a scenario as simple as below for learning purposes.
 ### Everything else is too difficult
 {: #everything-else-is-too-difficult}
 
-Even though Google's products are technically automatable, it requires certain amount of time and effort to achieve{% footnote 2 %},
-especially for people who have just kicked off their web UI automation career.
+Even though Google's products are technically automatable, it requires certain amount of time and effort to achieve{% footnote 2 %}.
 Learning Selenium or performing certain tasks by automating them from UI would certainly be a poor choice.
 
 - DOM is too complex
 
-  Google is famous for its meaningless, minimized DOM structures.
+  Google is well-known for its meaningless, minimized DOM structures.
   Not only straightforward approaches like `id`, `name` won't work well,
   but also advanced XPath/CSS selectors can merely be used because most of the things in DOM are not human readable.
   Difficulties in element locating could be really common in UI automation sometimes,
