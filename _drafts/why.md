@@ -16,7 +16,7 @@ My wild guess is that this mainly includes two situations:
 
 - Someone who starts off learning Selenium and has decided to automate Google search as a starting point.
   Since Google homepage has a reasonably clean and simple UI,
-  people have the reason to believe that Google could be the best site to learn Selenium.
+  people have the reason to believe that Google could be the best site for learning Selenium.
   After playing with "Google Search" scenario, they might continue to try out automating Gmail or Youtube.
 - Someone who needs to access Google services like Gmail, Google maps as part of the job,
   which can be either testing projects or applications involving browser automation.
@@ -80,16 +80,16 @@ Learning Selenium or performing certain tasks by automating them from UI would c
 - Some are Ajax powered
 
   Dynamic content handling techniques like waiting system `WebDriverWait` are essential for UI automation,
-  but Ajax powered Google products (Google Maps, Youtube, etc.) would definitely make life even more miserable.
+  but Ajax powered Google products (Google Maps, Youtube, etc.) would be definitely considered as one of the hardest.
   For those JavaScript and Ajax heavy applications,
   wait time might vary and debugging them are difficult due to other constraints, like dynamic DOM structures.
 
 - DOM changes too frequently
 
-  Just like most of the active-developing web applications,
-  the DOM of Google's products are constantly changed either as part of the development or deliberately in order to prevent scripting.
-  Assuming best available locators have been used,
-  it will still frequently break the existing Selenium code and make it highly unmaintainable,
+  Just like many other active-developing web applications,
+  the DOM of Google's products are constantly changed either deliberately in order to prevent scripting or as part of the development process.
+  Assuming best-available locators have been used,
+  it may still frequently break the existing Selenium code and make it highly unmaintainable,
 
 - Source code is unavailable
 
@@ -146,8 +146,8 @@ You agree not to use or launch any automated system, including without limitatio
 
 {% endhide %}
 
-## Who might still need to do it?
-{: #who-might--still-need-to-do-it}
+## Who might still do it?
+{: #who-might-still-do-it}
 
 - UI automation team within Google
 
@@ -160,9 +160,9 @@ You agree not to use or launch any automated system, including without limitatio
 - People with no other choice
 
   Sometimes accessing from UI might be the only way to achieve a task that must be done.
-  My suggestion for that would be "Go for it".
   If Google doesn't provide API for a particular product and it's so important that must be done, then just do it from UI level.
   The project might be extremely difficult to implement and can be super fragile to maintain, but it should still be achievable.
+  However, from my experience, I can't think of any valid use cases for this.
 
 ## What should you automate then?
 {: #what-should-you-automate-then}
