@@ -66,7 +66,7 @@ task :post do
     post.puts 'description: ""'
     post.puts "categories: [uncategorized]"
     post.puts "tags: #{tags}"
-    post.puts "alias: [/#{date.gsub(/-/,'/')}]"
+    post.puts "alias: [/#{date.gsub(/-/,'/')}/]"
     post.puts "---"
   end
 end # task :post
