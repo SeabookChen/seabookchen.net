@@ -15,7 +15,7 @@ kramdown:
 # so be sure to set them if your theme uses them.
 #
 title: Yi Zeng
-description: "Personal blog for Yi Zeng, a software engineer and test automator based in Christchurch, New Zealand."
+description: "Personal blog for Yi Zeng, a software engineer based in Christchurch, New Zealand."
 # tagline: Site Tagline
 author:
   name: Yi Zeng
@@ -167,7 +167,7 @@ translations:
   acknowledgements: 'Acknowledgements'
   acknowledgements_link: 'https://github.com/yizeng/yizeng.me/wiki/Acknowledgements'
   show_details: true
-  job_title: 'a software developer and test automator'
+  job_title: 'a software developer'
   based_in: ' based in '
   city: 'Christchurch'
   country: 'New Zealand'
