@@ -7,7 +7,7 @@
 @import "./support/animate";
 
 $fonts-heading: 'Ubuntu Condensed', 'DejaVu Sans Mono', sans-serif;
-$fonts-body: 'TeX Gyre Pagella', Georgia, serif;
+$fonts-body: 'Bitter', Georgia, serif;
 $fonts-code: monospace, 'DejaVu Sans Mono', Arial, sans-serif;
 
 $color-text: #2D2D2D;
@@ -37,7 +37,7 @@ $color-linenos-background: #4B4B4B;
 body {
 	font-family: $fonts-body;
 	font-size: 1em;
-	line-height: 1.625em;
+	line-height: 1.75em;
 }
 
 h1,
