@@ -33,6 +33,7 @@ author:
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
 production_url: http://yizeng.me
+url: http://yizeng.me
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -184,3 +185,17 @@ translations:
   # 404.html
   404_heading: 'Sorry, the page is not found.'
   404_content: 'You will be redirected to <a href="/blog">yizeng.me/blog/</a> in few seconds.'
+
+sitemap:
+  file: "/sitemap.xml"
+  exclude:
+      - "/atom.xml"
+      - "/feed.xml"
+      - "/feed/index.xml"
+      - "/404.html"
+      - "/rss.xml"
+      - "/search.json"
+  include_posts:
+      - "/index.html"
+  change_frequency_name: "change_frequency"
+  priority_name: "priority"
