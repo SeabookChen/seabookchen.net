@@ -28,7 +28,6 @@ before_install:
 
   - gem update --system
   - gem update
-  - gem list
 
 before_script:
   - "export DISPLAY=:99.0"
