@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello World!"
-description: "The first 'Hello world' post for Yi Zeng's personal website
+description: "The first 'Hello world' post for Seabook Chen's personal website
 'yizeng.me' in order to test Jekyll code highlightings."
 categories: [random]
 tags: [jekyll]

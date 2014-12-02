@@ -18,7 +18,7 @@ $icon-size: 42px;
 		margin: 1.5px;
 		height: $icon-size;
 		width: $icon-size;
-		opacity: .3;
+		opacity: .5;
 		filter: alpha(opacity=30); /* IE6-9 */
 
 		&:hover {
@@ -62,5 +62,10 @@ $icon-size: 42px;
 }
 .social-links .ico-steam {
 	@include get-ico-image(steam, 48);
+	background-color: #262523;
+}
+
+.social-links .ico-twitter {
+	@include get-ico-image(twitter, 48);
 	background-color: #262523;
 }

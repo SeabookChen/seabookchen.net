@@ -11,29 +11,29 @@ kramdown:
   smart_quotes: lsquo,rsquo,ldquo,rdquo
   use_coderay: false
 
-# Themes are encouraged to use these universal variables 
+# Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title: Yi Zeng
-description: "Personal blog for Yi Zeng, a software engineer based in Christchurch, New Zealand."
+title: Seabook Chen
+description: "Personal blog for Seabook Chen (Lihong Chen), a software developer based in Mlebourne, Australia."
 # tagline: Site Tagline
 author:
-  name: Yi Zeng
-  username: yizeng
-  stackoverflow: 1177636/yi-zeng
-  # twitter: username
+  name: Seabook Chen
+  username: seabookchen
+  stackoverflow: 1539800/seabook
+  twitter: IamSeabook
   # feedburner: feedname
 
 # The production_url is only used when full-domain names are needed
-# such as sitemap.txt 
+# such as sitemap.txt
 # Most places will/should use BASE_PATH to make the urls
 #
 # If you have set a CNAME (pages.github.com) set your custom domain here.
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url: http://yizeng.me
-url: http://yizeng.me
+production_url: http://seabookchen.net
+url: http://seabookchen.net
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #
@@ -45,11 +45,11 @@ JB:
   # however this value will be dynamically changed depending on your deployment situation.
   #
   # CNAME (http://yourcustomdomain.com)
-  #   DO NOT SET BASE_PATH 
+  #   DO NOT SET BASE_PATH
   #   (urls will be prefixed with "/" and work relatively)
   #
   # GitHub Pages (http://username.github.io)
-  #   DO NOT SET BASE_PATH 
+  #   DO NOT SET BASE_PATH
   #   (urls will be prefixed with "/" and work relatively)
   #
   # GitHub Project Pages (http://username.github.io/project-name)
@@ -68,7 +68,7 @@ JB:
   # ex: [BASE_PATH]/assets/themes/[THEME-NAME]
   #
   # Override this by defining an absolute path to assets here.
-  # ex: 
+  # ex:
   #   http://s3.amazonaws.com/yoursite/themes/watermelon
   #   /assets
   #
@@ -89,17 +89,8 @@ JB:
   comments:
     provider: disqus
     disqus:
-      short_name: yizeng
-      public_key: ULZ0b9TFdfCUJSKQd4WCKv2v3u25YoG7YG8zXPewkWrT35lZ0Se9YnxLzoV6VM8W
-    livefyre:
-      site_id: 123
-    intensedebate:
-      account: 123abc
-    facebook:
-      appid: 123
-      num_posts: 5
-      width: 580
-      colorscheme: light
+      short_name: seabookchen
+      public_key: KFzbWZl4jsWRpxveM8AZ7nFLFlOJHotx0Ih4jyIKrGi5L66K2opIcmThlG96rGpl
 
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
@@ -114,7 +105,7 @@ JB:
     mixpanel:
         token: 'cd4f8c5df37ef872805e7ab03962f043'
 
-  # Settings for sharing helper. 
+  # Settings for sharing helper.
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.
   # Set 'provider' to the sharing provider you want to use.
   # Set 'provider' to false to turn sharing off globally.
@@ -123,7 +114,7 @@ JB:
     provider: false
     addthis_public_id: ra-53819e27689934f9
 
-  # Settings for all other include helpers can be defined by creating 
+  # Settings for all other include helpers can be defined by creating
   # a hash with key named for the given helper. ex:
   #
   #   pages_list :
@@ -140,7 +131,7 @@ translations:
   last_updated: 'Last updated'
 
   # <head>
-  keywords: 'software,engineer,testing,christchurch,newzealand'
+  keywords: 'software,developer,code,java,javascript,js,ruby,meteor,angular,cq5,hybris,aem,melbourne,shanghai,china'
 
   # site notices
   old_ie_notice: 'You are using an outdated browser. Please <a href="http://browsehappy.com/" target="_blank">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true" target="_blank">activate Google Chrome Frame</a> to improve your experience.'
@@ -155,8 +146,6 @@ translations:
 
   # navigation
   archives: 'Archives'
-  articles: 'Articles'
-  notes: 'Notes'
   categories: 'Categories'
   tags: 'Tags'
   search: 'Search'
@@ -164,14 +153,12 @@ translations:
   # the-footer
   about: 'About'
   license: 'License'
-  license_link: 'https://github.com/yizeng/yizeng.me#license'
   acknowledgements: 'Acknowledgements'
-  acknowledgements_link: 'https://github.com/yizeng/yizeng.me/wiki/Acknowledgements'
   show_details: true
   job_title: 'a software developer'
   based_in: ' based in '
-  city: 'Christchurch'
-  country: 'New Zealand'
+  city: 'Melbourne'
+  country: 'Australia'
   extra_info: ''
   back_to_top: 'Back to Top'
 
